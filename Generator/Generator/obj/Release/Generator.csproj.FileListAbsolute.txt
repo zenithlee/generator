@@ -1,0 +1,10 @@
+I:\root\dev\NewsNet\Generator\Generator\bin\Release\Generator.exe.config
+I:\root\dev\NewsNet\Bin\Generator\Generator.exe.config
+I:\root\dev\NewsNet\Bin\Generator\Generator.exe
+I:\root\dev\NewsNet\Bin\Generator\Generator.pdb
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.csprojResolveAssemblyReference.cache
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.Form1.resources
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.Properties.Resources.resources
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.csproj.GenerateResource.Cache
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.exe
+I:\root\dev\NewsNet\Generator\Generator\obj\Release\Generator.pdb
