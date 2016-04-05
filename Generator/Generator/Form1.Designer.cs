@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
+      System.Windows.Forms.TabPage metrics;
       this.button1 = new System.Windows.Forms.Button();
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,20 +48,31 @@
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.tabControl1 = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
-      this.LoadButton = new System.Windows.Forms.Button();
       this.report = new System.Windows.Forms.TextBox();
       this.tabPage2 = new System.Windows.Forms.TabPage();
       this.RefreshButton = new System.Windows.Forms.Button();
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-      this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
       this.Test = new System.Windows.Forms.Button();
+      this.pictureBox2 = new System.Windows.Forms.PictureBox();
+      this.pictureBox3 = new System.Windows.Forms.PictureBox();
+      this.label5 = new System.Windows.Forms.Label();
+      this.label6 = new System.Windows.Forms.Label();
+      this.strapline = new System.Windows.Forms.TextBox();
+      this.label7 = new System.Windows.Forms.Label();
+      this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.GETButton = new System.Windows.Forms.Button();
+      this.ServiceResult = new System.Windows.Forms.TextBox();
+      metrics = new System.Windows.Forms.TabPage();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.tabControl1.SuspendLayout();
       this.tabPage1.SuspendLayout();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+      metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -77,14 +89,12 @@
       // 
       // textBox1
       // 
-      this.textBox1.Location = new System.Drawing.Point(6, 113);
+      this.textBox1.Location = new System.Drawing.Point(6, 146);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(335, 331);
+      this.textBox1.Size = new System.Drawing.Size(335, 298);
       this.textBox1.TabIndex = 1;
-      this.textBox1.Text = "Good. Here are some of the basic operations. You can also change voice, volume , " +
-    "rate and other parameters. You can also save the spoken audio stream directly in" +
-    "to a \"wave\" file.";
+      this.textBox1.Text = "Test 1. Test 2. Test 3.";
       // 
       // textBox2
       // 
@@ -95,11 +105,11 @@
       // 
       // Visemes
       // 
-      this.Visemes.Location = new System.Drawing.Point(355, 113);
+      this.Visemes.Location = new System.Drawing.Point(355, 130);
       this.Visemes.Multiline = true;
       this.Visemes.Name = "Visemes";
       this.Visemes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.Visemes.Size = new System.Drawing.Size(182, 331);
+      this.Visemes.Size = new System.Drawing.Size(182, 314);
       this.Visemes.TabIndex = 3;
       // 
       // voicebox
@@ -159,7 +169,7 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(6, 92);
+      this.label2.Location = new System.Drawing.Point(6, 130);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(28, 13);
       this.label2.TabIndex = 10;
@@ -210,17 +220,17 @@
       this.pictureBox1.InitialImage = null;
       this.pictureBox1.Location = new System.Drawing.Point(355, 5);
       this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(101, 102);
+      this.pictureBox1.Size = new System.Drawing.Size(111, 102);
       this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
       this.pictureBox1.TabIndex = 15;
       this.pictureBox1.TabStop = false;
-      this.pictureBox1.Visible = false;
       this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
       // 
       // tabControl1
       // 
       this.tabControl1.Controls.Add(this.tabPage1);
       this.tabControl1.Controls.Add(this.tabPage2);
+      this.tabControl1.Controls.Add(metrics);
       this.tabControl1.Location = new System.Drawing.Point(12, 13);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
@@ -229,7 +239,12 @@
       // 
       // tabPage1
       // 
-      this.tabPage1.Controls.Add(this.LoadButton);
+      this.tabPage1.Controls.Add(this.strapline);
+      this.tabPage1.Controls.Add(this.label7);
+      this.tabPage1.Controls.Add(this.label6);
+      this.tabPage1.Controls.Add(this.label5);
+      this.tabPage1.Controls.Add(this.pictureBox3);
+      this.tabPage1.Controls.Add(this.pictureBox2);
       this.tabPage1.Controls.Add(this.report);
       this.tabPage1.Controls.Add(this.label4);
       this.tabPage1.Controls.Add(this.pictureBox1);
@@ -248,22 +263,12 @@
       this.tabPage1.Text = "Text";
       this.tabPage1.UseVisualStyleBackColor = true;
       // 
-      // LoadButton
-      // 
-      this.LoadButton.Location = new System.Drawing.Point(463, 7);
-      this.LoadButton.Name = "LoadButton";
-      this.LoadButton.Size = new System.Drawing.Size(75, 23);
-      this.LoadButton.TabIndex = 17;
-      this.LoadButton.Text = "Load...";
-      this.LoadButton.UseVisualStyleBackColor = true;
-      this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
-      // 
       // report
       // 
-      this.report.Location = new System.Drawing.Point(543, 3);
+      this.report.Location = new System.Drawing.Point(543, 130);
       this.report.Multiline = true;
       this.report.Name = "report";
-      this.report.Size = new System.Drawing.Size(170, 441);
+      this.report.Size = new System.Drawing.Size(170, 314);
       this.report.TabIndex = 16;
       // 
       // tabPage2
@@ -303,10 +308,6 @@
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
       // 
-      // analysisBindingSource
-      // 
-      this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
-      // 
       // Test
       // 
       this.Test.Location = new System.Drawing.Point(749, 146);
@@ -316,6 +317,98 @@
       this.Test.Text = "TestButton";
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
+      // 
+      // pictureBox2
+      // 
+      this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.pictureBox2.InitialImage = null;
+      this.pictureBox2.Location = new System.Drawing.Point(472, 5);
+      this.pictureBox2.Name = "pictureBox2";
+      this.pictureBox2.Size = new System.Drawing.Size(111, 102);
+      this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.pictureBox2.TabIndex = 17;
+      this.pictureBox2.TabStop = false;
+      this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+      // 
+      // pictureBox3
+      // 
+      this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.pictureBox3.InitialImage = null;
+      this.pictureBox3.Location = new System.Drawing.Point(589, 5);
+      this.pictureBox3.Name = "pictureBox3";
+      this.pictureBox3.Size = new System.Drawing.Size(111, 102);
+      this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.pictureBox3.TabIndex = 18;
+      this.pictureBox3.TabStop = false;
+      this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+      // 
+      // label5
+      // 
+      this.label5.AutoSize = true;
+      this.label5.Location = new System.Drawing.Point(543, 113);
+      this.label5.Name = "label5";
+      this.label5.Size = new System.Drawing.Size(70, 13);
+      this.label5.TabIndex = 19;
+      this.label5.Text = "Missing Items";
+      // 
+      // label6
+      // 
+      this.label6.AutoSize = true;
+      this.label6.Location = new System.Drawing.Point(352, 113);
+      this.label6.Name = "label6";
+      this.label6.Size = new System.Drawing.Size(42, 13);
+      this.label6.TabIndex = 20;
+      this.label6.Text = "Results";
+      // 
+      // strapline
+      // 
+      this.strapline.Location = new System.Drawing.Point(6, 100);
+      this.strapline.Name = "strapline";
+      this.strapline.Size = new System.Drawing.Size(335, 20);
+      this.strapline.TabIndex = 21;
+      // 
+      // label7
+      // 
+      this.label7.AutoSize = true;
+      this.label7.Location = new System.Drawing.Point(6, 83);
+      this.label7.Name = "label7";
+      this.label7.Size = new System.Drawing.Size(32, 13);
+      this.label7.TabIndex = 22;
+      this.label7.Text = "Strap";
+      // 
+      // metrics
+      // 
+      metrics.Controls.Add(this.ServiceResult);
+      metrics.Controls.Add(this.GETButton);
+      metrics.Location = new System.Drawing.Point(4, 22);
+      metrics.Name = "metrics";
+      metrics.Padding = new System.Windows.Forms.Padding(3);
+      metrics.Size = new System.Drawing.Size(719, 525);
+      metrics.TabIndex = 2;
+      metrics.Text = "Global Metrics";
+      metrics.UseVisualStyleBackColor = true;
+      // 
+      // analysisBindingSource
+      // 
+      this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
+      // 
+      // GETButton
+      // 
+      this.GETButton.Location = new System.Drawing.Point(7, 7);
+      this.GETButton.Name = "GETButton";
+      this.GETButton.Size = new System.Drawing.Size(75, 23);
+      this.GETButton.TabIndex = 0;
+      this.GETButton.Text = "GET";
+      this.GETButton.UseVisualStyleBackColor = true;
+      this.GETButton.Click += new System.EventHandler(this.GETButton_Click);
+      // 
+      // ServiceResult
+      // 
+      this.ServiceResult.Location = new System.Drawing.Point(7, 43);
+      this.ServiceResult.Multiline = true;
+      this.ServiceResult.Name = "ServiceResult";
+      this.ServiceResult.Size = new System.Drawing.Size(524, 210);
+      this.ServiceResult.TabIndex = 1;
       // 
       // Analysis
       // 
@@ -340,6 +433,10 @@
       this.tabPage1.PerformLayout();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+      metrics.ResumeLayout(false);
+      metrics.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -368,12 +465,19 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox report;
-        private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView SentimentGrid;
     private System.Windows.Forms.BindingSource analysisBindingSource;
     private System.Windows.Forms.Button RefreshButton;
     private System.Windows.Forms.Button Test;
+    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.PictureBox pictureBox3;
+    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label label6;
+    private System.Windows.Forms.TextBox strapline;
+    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.TextBox ServiceResult;
+    private System.Windows.Forms.Button GETButton;
   }
 }
 

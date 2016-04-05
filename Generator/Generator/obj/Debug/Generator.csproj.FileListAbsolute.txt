@@ -31,3 +31,15 @@ I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.Gen
 I:\root\dev\NewsNet_Generator\Bin\Generator.exe.config
 I:\root\dev\NewsNet_Generator\Bin\Generator.exe
 I:\root\dev\NewsNet_Generator\Bin\Generator.pdb
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojResolveAssemblyReference.cache
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Properties.Resources.resources
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.exe
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.pdb
+C:\development\Unity\NewsNet_Generator\Generator\Generator\bin\Debug\Generator.exe.config
+C:\development\Unity\NewsNet_Generator\Generator\Generator\bin\Debug\Generator.exe
+C:\development\Unity\NewsNet_Generator\Generator\Generator\bin\Debug\Generator.pdb
+C:\development\Unity\NewsNet_Generator\Bin\Generator.exe.config
+C:\development\Unity\NewsNet_Generator\Bin\Generator.exe
+C:\development\Unity\NewsNet_Generator\Bin\Generator.pdb
+C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Analysis.resources

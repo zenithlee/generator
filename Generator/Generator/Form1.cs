@@ -28,8 +28,15 @@
   List<string> items = new List<string>();
   List<string> missing = new List<string>();
   public BindingSource source = new BindingSource();
-        
-  string VoiceName = "";
+
+    Bitmap image1;
+    Bitmap image2;
+    Bitmap image3;
+
+    string VoiceName = "";
+
+    Weather _weather = new Weather();
+
   public Analysis()
   {
       CurrentProject = path + CurrentFile;
@@ -113,7 +120,44 @@
       {
       Headline.Text = File.ReadAllText(CurrentProject + "/headline.txt");
       }
-  }
+
+      if (File.Exists(CurrentProject + "/strapline.txt"))
+      {
+        strapline.Text = File.ReadAllText(CurrentProject + "/strapline.txt");
+      }
+      else
+      {
+        strapline.Text = "";
+      }
+
+      if (File.Exists(CurrentProject + "/image1.png"))
+      {
+        pictureBox1.ImageLocation = CurrentProject + "/image1.png";
+        pictureBox1.Load();
+      }
+      else {
+        pictureBox1.Image = null;
+      }
+      if (File.Exists(CurrentProject + "/image2.png"))
+      {
+        pictureBox2.ImageLocation = CurrentProject + "/image2.png";
+        pictureBox2.Load();
+      }
+      else
+      {
+        pictureBox2.Image = null;
+      }
+
+      if (File.Exists(CurrentProject + "/image3.png"))
+      {
+        pictureBox3.ImageLocation = CurrentProject + "/image3.png";
+        pictureBox3.Load();
+      }
+      else
+      {
+        pictureBox3.Image = null;
+      }
+    }
 
   void SetupReader()
   {
@@ -193,7 +237,6 @@
       {
           reader.SetOutputToDefaultAudioDevice();
       }
-
       
       reader.SpeakAsync(sText);            
 
@@ -226,30 +269,60 @@
       File.WriteAllLines(CurrentProject + "/sequence.txt", items);
       File.WriteAllText(CurrentProject + "/input.txt", textBox1.Text);
       File.WriteAllText(CurrentProject + "/headline.txt", Headline.Text);
+      File.WriteAllText(CurrentProject + "/strapline.txt", strapline.Text);
       File.WriteAllLines(CurrentProject + "/missing.txt", missing.ToArray());
       textBox2.Text = "IDLE. Wrote to :" + CurrentProject;
   }
 
-  private void button3_Click(object sender, EventArgs e)
-  {
-      SaveProject();
-  }
+    private void button3_Click(object sender, EventArgs e)
+    {
+        SaveProject();
+    }
 
-  private void pictureBox1_Click(object sender, EventArgs e)
-  {
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
+      FileInfo fi = new FileInfo(path);
+      openFileDialog1.InitialDirectory = fi.FullName;
+      DialogResult result = openFileDialog1.ShowDialog();
+      string fullname = openFileDialog1.FileName;
+      //pictureBox1.ImageLocation = fullname;
+      image1 = new Bitmap(fullname);
+      pictureBox1.Image = image1;
+      
+      image1.Save(CurrentProject + "/image1.png");
+    }
 
-  }
-      private void LoadButton_Click(object sender, EventArgs e)
-      {
-          FileInfo fi = new FileInfo(path);
-          openFileDialog1.InitialDirectory = fi.FullName;
-          DialogResult result = openFileDialog1.ShowDialog();
-      }
+    private void pictureBox2_Click(object sender, EventArgs e)
+    {
+      FileInfo fi = new FileInfo(path);
+      openFileDialog1.InitialDirectory = fi.FullName;
+      DialogResult result = openFileDialog1.ShowDialog();
+      string fullname = openFileDialog1.FileName;
+      //pictureBox1.ImageLocation = fullname;
+      image2 = new Bitmap(fullname);
+      pictureBox2.Image = image2;
 
-      private void trackBar1_Scroll(object sender, EventArgs e)
-      {
+      image2.Save(CurrentProject + "/image2.png");
+    }
+
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+      FileInfo fi = new FileInfo(path);
+      openFileDialog1.InitialDirectory = fi.FullName;
+      DialogResult result = openFileDialog1.ShowDialog();
+      string fullname = openFileDialog1.FileName;
+      //pictureBox1.ImageLocation = fullname;
+      image3 = new Bitmap(fullname);
+      pictureBox3.Image = image3;
+
+      image1.Save(CurrentProject + "/image3.png");
+    }
+
+
+    private void trackBar1_Scroll(object sender, EventArgs e)
+    {
         
-      }
+    }
 
     private void SentimentGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
     {
@@ -315,8 +388,14 @@
       catch ( Exception ee)
       {
 
-      }
-      
+      }      
+    }
+
+    private void GETButton_Click(object sender, EventArgs e)
+    {
+      string temp = _weather.GenerateReport();
+      ServiceResult.Text = temp;
+      File.WriteAllText(CurrentProject + "/weather.txt", temp);
     }
   }
   }
