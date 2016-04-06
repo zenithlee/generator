@@ -72,23 +72,21 @@
       string[] items = File.ReadAllLines(SentimentFile);
       foreach( string item in items)
       {
-          string[] pair = item.Split(',');
-          string sword = pair[0];
+        string[] pair = item.Split(',');
+        string sword = pair[0];
         if (pair[1] == "") pair[1] = "0";
-          float value = (float)Convert.ToDouble(pair[1]);
-              if ( !Sentiments.ContainsKey(sword)) { 
-                  Sentiments.Add(sword, value);
-              }
-          }
+        float value = (float)Convert.ToDouble(pair[1]);
+        if ( !Sentiments.ContainsKey(sword)) { 
+            Sentiments.Add(sword, value);
+        }
+      }
   }
 
   void GetExistingProjects()
   {
-
       DirectoryInfo di = new DirectoryInfo(path);
       DirectoryInfo[] dirs = di.GetDirectories();      
-      foreach( DirectoryInfo dir in dirs)
-      {
+      foreach( DirectoryInfo dir in dirs) {
         ProjectNames.Items.Add(dir.Name);
       }
 
@@ -114,11 +112,12 @@
   {
       if (File.Exists(CurrentProject + "/input.txt"))
       {
-      textBox1.Text = File.ReadAllText(CurrentProject + "/input.txt");
+        textBox1.Text = File.ReadAllText(CurrentProject + "/input.txt");
       }
+
       if (File.Exists(CurrentProject + "/headline.txt"))
       {
-      Headline.Text = File.ReadAllText(CurrentProject + "/headline.txt");
+        Headline.Text = File.ReadAllText(CurrentProject + "/headline.txt");
       }
 
       if (File.Exists(CurrentProject + "/strapline.txt"))
@@ -170,9 +169,8 @@
       VoiceName = reader.Voice.Name;
       if ( VoiceName != "" ) {
         reader.SelectVoice(VoiceName);
-      }
-      
-    }
+      }      
+  }
 
   private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
   {
@@ -229,16 +227,13 @@
 
       items.Add("H " + Headline.Text);
       Visemes.Text += "H " + Headline.Text + "\r\n";
-      if (checkBox1.Checked)
-      {
+      if (checkBox1.Checked) {
           reader.SetOutputToWaveFile(CurrentProject+ "/audio.wav");
-      }
-      else
-      {
+      } else {
           reader.SetOutputToDefaultAudioDevice();
       }
       
-      reader.SpeakAsync(sText);            
+      reader.SpeakAsync(sText);
 
       textBox2.Text = "SPEAKING";
   }
@@ -360,11 +355,7 @@
     private void Test_Click(object sender, EventArgs e)
     {
 
-      string sml = @"
-          hello. Mary has a sheep.
-        how are you
-       ";
-
+      string sml = @"hello.";
 
       //SpeechSynthesizer synth = new SpeechSynthesizer();
       PromptBuilder pb = new PromptBuilder();      
@@ -373,15 +364,15 @@
       pb.StartVoice(VoiceName);      
       //pb.AppendText("Hello, how are you today?");      
       pb.AppendSsmlMarkup(sml);
-      pb.EndVoice();
-      //string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Normal pitch. </prosody>";
-      //string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
-      //pb.AppendSsmlMarkup(high);
-      //pb.AppendSsmlMarkup(low);
+      
+      string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Normal pitch. </prosody>";
+      string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
+      pb.AppendSsmlMarkup(high);
+      pb.AppendSsmlMarkup(low);
       //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
       //pb.AppendSsmlMarkup(test);
-      
       //pb.AppendSsmlMarkup("</voice>");      
+      pb.EndVoice();
       try {
         reader.Speak(pb);
       }
@@ -393,7 +384,8 @@
 
     private void GETButton_Click(object sender, EventArgs e)
     {
-      string temp = _weather.GenerateReport();
+      WeatherClass o = _weather.GetWeatherReport(CountryCodes.LONDON_UK);
+      string temp = _weather.GenerateReport(o);
       ServiceResult.Text = temp;
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
     }

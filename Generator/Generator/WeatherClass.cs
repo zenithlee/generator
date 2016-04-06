@@ -44,6 +44,16 @@ public class Sys
   public int sunset { get; set; }
 }
 
+public class Temp
+{
+  public double min { get; set; }
+  public double max { get; set; }
+  public double day { get; set; }
+  public double night { get; set; }
+  public double eve { get; set; }
+  public double morn { get; set; }
+}
+
 public class WeatherClass
 {
   public Coord coord { get; set; }
@@ -57,4 +67,5 @@ public class WeatherClass
   public int id { get; set; }
   public string name { get; set; }
   public int cod { get; set; }
+  public Temp temp;
 }

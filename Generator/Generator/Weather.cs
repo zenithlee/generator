@@ -12,9 +12,10 @@ namespace Generator
 {
   class Weather
   {
-
     string APIKey = "796ad2e53acc694482ab556883295fb0";
-    string URL = "http://api.openweathermap.org/data/2.5/weather?q=London&APPID=";
+    string URL = "http://api.openweathermap.org/data/2.5/weather?";
+    string Result = "";
+    WeatherCodes _weatherCodes = new WeatherCodes();
 
     public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
     {
@@ -26,28 +27,11 @@ namespace Generator
 
     string GetStormForCode(int n)
     {
-      switch (n) {
-        case 200:
-          return "thunderstorm with light rain";
-        case 201:
-          return "thunderstorm with rain";
-        case 202:
-          return "thunderstorm with heavy rain";
-        case 210:
-          return "light thunderstorm";
-        case 211:
-          return "thunderstorm";
-        case 212:
-          return "heavy thunderstorm";
-        case 221:
-          return "ragged thunderstorm";
-        case 230:
-          return "thunderstorm with light drizzle";
-        case 231:
-          return "thunderstorm with drizzle";
-        case 232:
-          return "thunderstorm with heavy drizzle";
+      WeatherItem item = _weatherCodes.GetWeatherFromCode(n);
+      if ( item != null ) {
+        return item.description;
       }
+      
       return "";
     }
 
@@ -56,9 +40,9 @@ namespace Generator
       return (int)(n - Math.Ceiling(273.15f));
     }
 
-    public string GenerateReport()
+    public WeatherClass GetWeatherReport(string PlaceCode)
     {
-      WebRequest r = WebRequest.Create(URL+APIKey);
+      WebRequest r = WebRequest.Create(URL + "id="+PlaceCode + "&APPID=" + APIKey);
 
       //WebProxy myProxy = new WebProxy("myproxy", 80);
       //myProxy.BypassProxyOnLocal = true;
@@ -71,20 +55,29 @@ namespace Generator
 
       string sLine = "";
       int i = 0;
-      string result = "";
+      Result = "";
+      
       while (sLine != null)
       {
         i++;
-        
+
         sLine = objReader.ReadLine();
 
         if (sLine != null)
         {
-          result += sLine;          
+          Result += sLine;
         }
       }
 
-      WeatherClass o = JsonConvert.DeserializeObject<WeatherClass>(result);
+      WeatherClass o = JsonConvert.DeserializeObject<WeatherClass>(Result);
+      return o;
+    }
+
+    /**
+     Generates a report from the JSON created class
+    */
+    public string GenerateReport(WeatherClass o)
+    {      
 
       string w = "In " + o.name;
 
@@ -100,6 +93,11 @@ namespace Generator
       }
 
       w += " we have " + o.weather[0].description;
+
+      if ( o.weather.Count > 1 ) {
+        w += " and " + o.weather[1].description;
+      }
+
       w += " with winds reaching " + o.wind.speed + " meters per second";
       if (( o.wind.deg > 90) && (o.wind.deg < 270))
       {
@@ -109,7 +107,7 @@ namespace Generator
       {
         w += " in a northerly direction.";
       }
-      w += " Outside temperature is " + KelvinToC(o.main.temp) + " degrees";
+      w += " The outside temperature is " + KelvinToC(o.main.temp) + " degrees";
       if (o.main.temp_min != o.main.temp_max) {
         w += " and will reach a low of " + KelvinToC(o.main.temp_min) + " and a high of " + KelvinToC(o.main.temp_max);
       } else
@@ -119,7 +117,7 @@ namespace Generator
 
       //Console.ReadLine();
 
-      return w + ":" + result;
+      return w;
     }
 
   }
