@@ -80,10 +80,10 @@ public class WeatherClass
 public class ForecastClass
 {
   public City city { get; set; }
-  public Coord coord { get; set; }
+  /*public Coord coord { get; set; }
   public string country { get; set; }
   public int cod { get; set; }
   public double message{ get; set; }
   public int cnt{ get; set; }
-  public List<WeatherClass> list { get; set; }
+  public List<WeatherClass> list { get; set; }*/
 }

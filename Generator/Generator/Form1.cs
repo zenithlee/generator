@@ -162,7 +162,7 @@
   void SetupReader()
   {
       reader = new SpeechSynthesizer(); //create new object
-                  //reader.SetOutputToWaveFile(path + CurrentFile + "/audio.wav");                                              
+      //reader.SetOutputToWaveFile(path + CurrentFile + "/audio.wav");                                              
       reader.VoiceChange += Reader_VoiceChange;
       reader.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(reader_SpeakCompleted);
       reader.VisemeReached += new EventHandler<VisemeReachedEventArgs>(reader_VisemeReached);
@@ -379,7 +379,7 @@
       catch ( Exception ee)
       {
 
-      }      
+      }
     }
 
     private void GETButton_Click(object sender, EventArgs e)
