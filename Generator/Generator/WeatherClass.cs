@@ -23,6 +23,7 @@ public class Main
   public double temp_max { get; set; }
   public double sea_level { get; set; }
   public double grnd_level { get; set; }
+  public string dt_text { get; set; }
 }
 
 public class Wind
@@ -54,6 +55,12 @@ public class Temp
   public double morn { get; set; }
 }
 
+public class City
+{
+  public int id;
+  public string name;
+}
+
 public class WeatherClass
 {
   public Coord coord { get; set; }
@@ -68,4 +75,15 @@ public class WeatherClass
   public string name { get; set; }
   public int cod { get; set; }
   public Temp temp;
+}
+
+public class ForecastClass
+{
+  public City city { get; set; }
+  public Coord coord { get; set; }
+  public string country { get; set; }
+  public int cod { get; set; }
+  public double message{ get; set; }
+  public int cnt{ get; set; }
+  public List<WeatherClass> list { get; set; }
 }

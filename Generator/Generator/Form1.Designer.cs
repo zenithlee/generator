@@ -60,9 +60,10 @@
       this.label6 = new System.Windows.Forms.Label();
       this.strapline = new System.Windows.Forms.TextBox();
       this.label7 = new System.Windows.Forms.Label();
-      this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
       this.GETButton = new System.Windows.Forms.Button();
       this.ServiceResult = new System.Windows.Forms.TextBox();
+      this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.iconBox = new System.Windows.Forms.PictureBox();
       metrics = new System.Windows.Forms.TabPage();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +75,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       this.SuspendLayout();
       // 
       // button1
@@ -378,6 +380,7 @@
       // 
       // metrics
       // 
+      metrics.Controls.Add(this.iconBox);
       metrics.Controls.Add(this.ServiceResult);
       metrics.Controls.Add(this.GETButton);
       metrics.Location = new System.Drawing.Point(4, 22);
@@ -387,10 +390,6 @@
       metrics.TabIndex = 2;
       metrics.Text = "Global Metrics";
       metrics.UseVisualStyleBackColor = true;
-      // 
-      // analysisBindingSource
-      // 
-      this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
       // GETButton
       // 
@@ -409,6 +408,18 @@
       this.ServiceResult.Name = "ServiceResult";
       this.ServiceResult.Size = new System.Drawing.Size(524, 210);
       this.ServiceResult.TabIndex = 1;
+      // 
+      // analysisBindingSource
+      // 
+      this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
+      // 
+      // iconBox
+      // 
+      this.iconBox.Location = new System.Drawing.Point(548, 43);
+      this.iconBox.Name = "iconBox";
+      this.iconBox.Size = new System.Drawing.Size(100, 91);
+      this.iconBox.TabIndex = 2;
+      this.iconBox.TabStop = false;
       // 
       // Analysis
       // 
@@ -438,6 +449,7 @@
       metrics.ResumeLayout(false);
       metrics.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -478,6 +490,7 @@
     private System.Windows.Forms.Label label7;
     private System.Windows.Forms.TextBox ServiceResult;
     private System.Windows.Forms.Button GETButton;
+    private System.Windows.Forms.PictureBox iconBox;
   }
 }
 

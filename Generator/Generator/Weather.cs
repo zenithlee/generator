@@ -13,7 +13,8 @@ namespace Generator
   class Weather
   {
     string APIKey = "796ad2e53acc694482ab556883295fb0";
-    string URL = "http://api.openweathermap.org/data/2.5/weather?";
+    public string URL = "http://api.openweathermap.org/data/2.5/weather?";
+    public string URL_Forecast = "http://api.openweathermap.org/data/2.5/forecast?";
     string Result = "";
     WeatherCodes _weatherCodes = new WeatherCodes();
 
@@ -40,9 +41,9 @@ namespace Generator
       return (int)(n - Math.Ceiling(273.15f));
     }
 
-    public WeatherClass GetWeatherReport(string PlaceCode)
+    public string MakeWebRequest( string sURL, string PlaceCode)
     {
-      WebRequest r = WebRequest.Create(URL + "id="+PlaceCode + "&APPID=" + APIKey);
+      WebRequest r = WebRequest.Create(sURL + "id=" + PlaceCode + "&APPID=" + APIKey);
 
       //WebProxy myProxy = new WebProxy("myproxy", 80);
       //myProxy.BypassProxyOnLocal = true;
@@ -50,32 +51,47 @@ namespace Generator
       //wrGETURL.Proxy = WebProxy.GetDefaultProxy();
       Stream objStream;
       objStream = r.GetResponse().GetResponseStream();
-
       StreamReader objReader = new StreamReader(objStream);
 
       string sLine = "";
       int i = 0;
       Result = "";
-      
+
       while (sLine != null)
       {
         i++;
-
         sLine = objReader.ReadLine();
-
         if (sLine != null)
         {
           Result += sLine;
         }
       }
+      return Result;
+    }
 
+
+    public WeatherClass GetWeatherReport(string sURL, string PlaceCode)
+    {
+      Result = MakeWebRequest(sURL, PlaceCode);            
       WeatherClass o = JsonConvert.DeserializeObject<WeatherClass>(Result);
       return o;
     }
 
+    public ForecastClass GetWeatherForecast(string sURL, string PlaceCode)
+    {
+      Result = MakeWebRequest(sURL, PlaceCode);
+      ForecastClass o = JsonConvert.DeserializeObject<ForecastClass>(Result);      
+      return o;
+    }
+
+    public string GenerateForecast(ForecastClass o)
+    {
+      return "";
+    }
+
     /**
-     Generates a report from the JSON created class
-    */
+     * Generates a report from the JSON created class
+     */
     public string GenerateReport(WeatherClass o)
     {      
 

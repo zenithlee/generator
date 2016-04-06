@@ -21,6 +21,7 @@
   string path = "../../NewsNet_Bin/Output/";
   string CurrentFile = "test";
   string CurrentProject;
+    string DataPath = "../Data/";
   string SentimentFile = "../Data/sentiments2.csv";
   Dictionary<string, float> Sentiments = new Dictionary<string, float>();
 
@@ -354,7 +355,6 @@
 
     private void Test_Click(object sender, EventArgs e)
     {
-
       string sml = @"hello.";
 
       //SpeechSynthesizer synth = new SpeechSynthesizer();
@@ -362,7 +362,7 @@
       //pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">"); 
 
       pb.StartVoice(VoiceName);      
-      //pb.AppendText("Hello, how are you today?");      
+      //pb.AppendText("Hello, how are you today?");
       pb.AppendSsmlMarkup(sml);
       
       string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Normal pitch. </prosody>";
@@ -384,10 +384,19 @@
 
     private void GETButton_Click(object sender, EventArgs e)
     {
-      WeatherClass o = _weather.GetWeatherReport(CountryCodes.LONDON_UK);
+      WeatherClass o = _weather.GetWeatherReport(_weather.URL, CountryCodes.LONDON_UK);
+      string sIcon = o.weather[0].icon;
+      iconBox.ImageLocation = DataPath + "\\icons\\" + sIcon + ".png";
+      iconBox.Load();
+      //image2 = new Bitmap(fullname);
+      //pictureBox2.Image = image2;
       string temp = _weather.GenerateReport(o);
       ServiceResult.Text = temp;
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
+
+      ForecastClass Forecast = _weather.GetWeatherForecast(_weather.URL_Forecast, CountryCodes.LONDON_UK);
+      temp = _weather.GenerateForecast(Forecast);
+      ServiceResult.Text += temp;
     }
   }
   }
