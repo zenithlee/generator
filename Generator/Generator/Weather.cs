@@ -80,21 +80,69 @@ namespace Generator
     public ForecastClass GetWeatherForecast(string sURL, string PlaceCode)
     {
       Result = MakeWebRequest(sURL, PlaceCode);
-      ForecastClass o = JsonConvert.DeserializeObject<ForecastClass>(Result);      
+      Result = Result.Replace("3h", "_3h");
+      ForecastClass o = JsonConvert.DeserializeObject<ForecastClass>(Result);
+      File.WriteAllText("test.txt", Result);
       return o;
     }
 
-    public string GenerateForecast(ForecastClass o)
+    public string ParseForTTS(string s)
     {
-      return "";
+      s = s.Replace("winds", "whinds");
+      return s;
+    }
+
+    public string GenerateForecast(ForecastClass fc)
+    {
+      WeatherClass o = (WeatherClass)fc.list[fc.list.Count-1];
+      string w = ". By tomorrow in " + o.name;
+
+      DateTime dt = UnixTimeStampToDateTime(o.dt);
+
+      if (dt.Hour < 12)
+      {
+        w += " the morning";
+      }
+      else
+      {
+        w += " the afternoon";
+      }
+
+      w += " we will have " + o.weather[0].description;
+
+      if (o.weather.Count > 1)
+      {
+        w += " and " + o.weather[1].description;
+      }
+
+
+      w += " with winds reaching " + o.wind.speed + " meters per second";
+      if ((o.wind.deg > 90) && (o.wind.deg < 270))
+      {
+        w += " in a southerly direction.";
+      }
+      else
+      {
+        w += " in a northerly direction.";
+      }
+      w += " The outside temperature will be " + KelvinToC(o.main.temp) + " degrees";
+      if (o.main.temp_min != o.main.temp_max)
+      {
+        w += " and will reach a low of " + KelvinToC(o.main.temp_min) + " and a high of " + KelvinToC(o.main.temp_max);
+      }
+      else
+      {
+        w += " likely to stay the same until the day after tomorrow.";
+      }
+
+      return w;
     }
 
     /**
      * Generates a report from the JSON created class
      */
     public string GenerateReport(WeatherClass o)
-    {      
-
+    {
       string w = "In " + o.name;
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);

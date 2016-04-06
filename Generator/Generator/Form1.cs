@@ -390,13 +390,16 @@
       iconBox.Load();
       //image2 = new Bitmap(fullname);
       //pictureBox2.Image = image2;
-      string temp = _weather.GenerateReport(o);
-      ServiceResult.Text = temp;
+      string temp = _weather.GenerateReport(o);      
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
 
       ForecastClass Forecast = _weather.GetWeatherForecast(_weather.URL_Forecast, CountryCodes.LONDON_UK);
-      temp = _weather.GenerateForecast(Forecast);
-      ServiceResult.Text += temp;
+      temp += _weather.GenerateForecast(Forecast);
+      ServiceResult.Text = _weather.ParseForTTS(temp); ;
+
+      textBox1.Text = ServiceResult.Text;
+
+
     }
   }
   }
