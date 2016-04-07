@@ -1,20 +1,21 @@
-﻿  using System;
-  using System.Collections.Generic;
-  using System.ComponentModel;
-  using System.Data;
-  using System.Drawing;
-  using System.Linq;
-  using System.Text;
-  using System.Threading.Tasks;
-  using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-  using System.Speech;
-  using System.Speech.Synthesis;
-  using System.Speech.Synthesis.TtsEngine;
-  using System.IO;
-  using System.Collections.ObjectModel;
+using System.Speech;
+using System.Speech.Synthesis;
+using System.Speech.Synthesis.TtsEngine;
+using System.IO;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
-  namespace Generator
+namespace Generator
   {
   public partial class Analysis : Form
   {
@@ -382,24 +383,48 @@
       }
     }
 
-    private void GETButton_Click(object sender, EventArgs e)
+    void Getfor(string Country)
     {
-      WeatherClass o = _weather.GetWeatherReport(_weather.URL, CountryCodes.LONDON_UK);
+      WeatherClass o = _weather.GetWeatherReport(_weather.URL, Country);
+      ProjectNames.Text = _weather.GetReportName(o);
+      RawWeather.Text = _weather.SaveReport(o);
       string sIcon = o.weather[0].icon;
       iconBox.ImageLocation = DataPath + "\\icons\\" + sIcon + ".png";
       iconBox.Load();
       //image2 = new Bitmap(fullname);
       //pictureBox2.Image = image2;
-      string temp = _weather.GenerateReport(o);      
+      ForecastClass Forecast = _weather.GetWeatherForecast(_weather.URL_Forecast, Country);
+
+      RawWeather.Text += JsonConvert.SerializeObject(Forecast);
+
+      string temp = _weather.GenerateReport(o, Forecast);
+      Directory.CreateDirectory(CurrentProject);
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
 
-      ForecastClass Forecast = _weather.GetWeatherForecast(_weather.URL_Forecast, CountryCodes.LONDON_UK);
+      
       temp += _weather.GenerateForecast(Forecast);
-      ServiceResult.Text = _weather.ParseForTTS(temp); ;
+      ServiceResult.Text = _weather.ParseForTTS(temp);
 
       textBox1.Text = ServiceResult.Text;
 
+      
 
+      //ProjectNames.Text = CurrentProject;
+    }
+
+    private void GETButton_Click(object sender, EventArgs e)
+    {
+      Getfor(CountryCodes.LONDON_UK);
+    }
+
+    private void button5_Click(object sender, EventArgs e)
+    {
+      Getfor(CountryCodes.NEWYORK_US);
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+      Getfor(CountryCodes.CAPETOWN_ZA);
     }
   }
   }

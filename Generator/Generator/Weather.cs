@@ -92,20 +92,87 @@ namespace Generator
       return s;
     }
 
+    public string GetReportName(WeatherClass c)
+    {
+      string ds = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+      return "WEATHER_" + ds + "_" + c.name;
+    }
+
+    public string SaveReport(WeatherClass c)
+    {
+      string s = JsonConvert.SerializeObject(c);
+      Directory.CreateDirectory("../data/reports/"+ c.id);
+      string ds = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+      string ReportPath = "../data/reports/" + c.id + "/";
+      File.WriteAllText(ReportPath + ds + ".txt", s);
+      string icon = c.weather[0].icon;
+      if (!File.Exists(ReportPath + icon + ".png"))
+      {
+        File.Copy("../data/icons/" + icon + ".png", ReportPath + icon + ".png");
+      }
+      return s;
+    }
+
+    string GetWindDirection(float angle)
+    {
+      string w = "";
+
+      if (angle >= 0 && (angle < 25))
+      {
+        w += " in a northerly direction";
+      }
+      else
+        if (angle >= 25 && (angle < 65))
+      {
+        w += " in a north-easterly direction";
+      }
+      else
+      if ((angle >= 65) && (angle < 110))
+      {
+        w += " in an easterly direction";
+      }
+      else if ((angle >= 110) && (angle < 150))
+      {
+        w += " in a south easterly direction";
+      }
+      else if ((angle >= 150) && (angle < 215))
+      {
+        w += " in a southerly direction";
+      }
+      else if ((angle >= 215) && (angle < 250))
+      {
+        w += " in a south westerly direction";
+      }
+      else if ((angle >= 250) && (angle < 290))
+      {
+        w += " in a westerly direction";
+      }
+      else if ((angle >= 290) && (angle < 320))
+      {
+        w += " in a north-westerly direction";
+      }
+      else
+      {
+        w += " in a northerly direction";
+      }
+      return w;
+
+    }
+
     public string GenerateForecast(ForecastClass fc)
     {
       WeatherClass o = (WeatherClass)fc.list[fc.list.Count-1];
-      string w = ". By tomorrow in " + o.name;
+      string w = ". By tomorrow" + o.name;
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);
 
       if (dt.Hour < 12)
       {
-        w += " the morning";
+        w += " morning";
       }
       else
       {
-        w += " the afternoon";
+        w += " afternoon";
       }
 
       w += " we will have " + o.weather[0].description;
@@ -115,16 +182,8 @@ namespace Generator
         w += " and " + o.weather[1].description;
       }
 
-
-      w += " with winds reaching " + o.wind.speed + " meters per second";
-      if ((o.wind.deg > 90) && (o.wind.deg < 270))
-      {
-        w += " in a southerly direction.";
-      }
-      else
-      {
-        w += " in a northerly direction.";
-      }
+      w += " with winds reaching " + Math.Ceiling(o.wind.speed) + " meters per second";
+      w += GetWindDirection((float)o.wind.deg) + ".";
       w += " The outside temperature will be " + KelvinToC(o.main.temp) + " degrees";
       if (o.main.temp_min != o.main.temp_max)
       {
@@ -138,12 +197,49 @@ namespace Generator
       return w;
     }
 
+
+    string GetQuirk( double temp, double windspeed)
+    {
+      string w = "";
+      if (temp<10)
+      {
+        w += "Dress warm";
+      }
+      if (temp > 50)
+      {
+        w += "Heat wave";
+      }
+
+
+      if (( windspeed > 10 ) && ( windspeed < 20 ))
+      {
+        w += "It's windy";
+      }
+
+      if ((windspeed >= 20) && (windspeed < 30))
+      {
+        w += "High wind warning";
+      }
+
+      if (windspeed >= 30)
+      {
+        w += "Hurricane Warning";
+      }
+
+      return w;
+    }
+
     /**
      * Generates a report from the JSON created class
      */
-    public string GenerateReport(WeatherClass o)
+    public string GenerateReport(WeatherClass o, ForecastClass f)
     {
-      string w = "In " + o.name;
+      string w = "";
+
+      w+= GetQuirk(KelvinToC(o.main.temp), o.wind.speed) + ". ";
+
+        w += "In " + o.name;
+      WeatherClass tomorrow = (WeatherClass)f.list[f.list.Count - 1];
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);
 
@@ -162,22 +258,35 @@ namespace Generator
         w += " and " + o.weather[1].description;
       }
 
-      w += " with winds reaching " + o.wind.speed + " meters per second";
-      if (( o.wind.deg > 90) && (o.wind.deg < 270))
+      w += " with winds reaching " + Math.Ceiling(o.wind.speed) + " meters per second";
+
+      w += GetWindDirection((float)o.wind.deg) + ".";
+
+      w += " The outside temperature is " + KelvinToC(o.main.temp) + " degrees";
+
+      if ( o.main.temp > tomorrow.main.temp)
       {
-        w += " in a southerly direction.";
+        w += " falling to " + KelvinToC(tomorrow.main.temp);
+      }
+      else if ( o.main.temp < tomorrow.main.temp)
+      {
+        w += " rising to " + KelvinToC(tomorrow.main.temp);
       }
       else
       {
-        w += " in a northerly direction.";
+        w += " staying at " + KelvinToC(tomorrow.main.temp);
       }
-      w += " The outside temperature is " + KelvinToC(o.main.temp) + " degrees";
+
+      w += " degrees tomorrow";
+
+      /*
       if (o.main.temp_min != o.main.temp_max) {
         w += " and will reach a low of " + KelvinToC(o.main.temp_min) + " and a high of " + KelvinToC(o.main.temp_max);
       } else
       {
         w += " likely to stay the same until tomorrow.";
       }
+      */
 
       //Console.ReadLine();
 

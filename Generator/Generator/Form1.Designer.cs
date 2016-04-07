@@ -30,6 +30,9 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
+      this.iconBox = new System.Windows.Forms.PictureBox();
+      this.ServiceResult = new System.Windows.Forms.TextBox();
+      this.GETButton = new System.Windows.Forms.Button();
       this.button1 = new System.Windows.Forms.Button();
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,35 +51,80 @@
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.tabControl1 = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
+      this.strapline = new System.Windows.Forms.TextBox();
+      this.label7 = new System.Windows.Forms.Label();
+      this.label6 = new System.Windows.Forms.Label();
+      this.label5 = new System.Windows.Forms.Label();
+      this.pictureBox3 = new System.Windows.Forms.PictureBox();
+      this.pictureBox2 = new System.Windows.Forms.PictureBox();
       this.report = new System.Windows.Forms.TextBox();
       this.tabPage2 = new System.Windows.Forms.TabPage();
       this.RefreshButton = new System.Windows.Forms.Button();
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
-      this.pictureBox2 = new System.Windows.Forms.PictureBox();
-      this.pictureBox3 = new System.Windows.Forms.PictureBox();
-      this.label5 = new System.Windows.Forms.Label();
-      this.label6 = new System.Windows.Forms.Label();
-      this.strapline = new System.Windows.Forms.TextBox();
-      this.label7 = new System.Windows.Forms.Label();
-      this.GETButton = new System.Windows.Forms.Button();
-      this.ServiceResult = new System.Windows.Forms.TextBox();
+      this.pictureBox4 = new System.Windows.Forms.PictureBox();
+      this.button4 = new System.Windows.Forms.Button();
+      this.button5 = new System.Windows.Forms.Button();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.iconBox = new System.Windows.Forms.PictureBox();
+      this.RawWeather = new System.Windows.Forms.TextBox();
       metrics = new System.Windows.Forms.TabPage();
+      metrics.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.tabControl1.SuspendLayout();
       this.tabPage1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-      metrics.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       this.SuspendLayout();
+      // 
+      // metrics
+      // 
+      metrics.Controls.Add(this.RawWeather);
+      metrics.Controls.Add(this.button5);
+      metrics.Controls.Add(this.button4);
+      metrics.Controls.Add(this.pictureBox4);
+      metrics.Controls.Add(this.iconBox);
+      metrics.Controls.Add(this.ServiceResult);
+      metrics.Controls.Add(this.GETButton);
+      metrics.Location = new System.Drawing.Point(4, 22);
+      metrics.Name = "metrics";
+      metrics.Padding = new System.Windows.Forms.Padding(3);
+      metrics.Size = new System.Drawing.Size(719, 525);
+      metrics.TabIndex = 2;
+      metrics.Text = "Global Metrics";
+      metrics.UseVisualStyleBackColor = true;
+      // 
+      // iconBox
+      // 
+      this.iconBox.Location = new System.Drawing.Point(375, 43);
+      this.iconBox.Name = "iconBox";
+      this.iconBox.Size = new System.Drawing.Size(100, 91);
+      this.iconBox.TabIndex = 2;
+      this.iconBox.TabStop = false;
+      // 
+      // ServiceResult
+      // 
+      this.ServiceResult.Location = new System.Drawing.Point(7, 43);
+      this.ServiceResult.Multiline = true;
+      this.ServiceResult.Name = "ServiceResult";
+      this.ServiceResult.Size = new System.Drawing.Size(362, 210);
+      this.ServiceResult.TabIndex = 1;
+      // 
+      // GETButton
+      // 
+      this.GETButton.Location = new System.Drawing.Point(7, 7);
+      this.GETButton.Name = "GETButton";
+      this.GETButton.Size = new System.Drawing.Size(108, 23);
+      this.GETButton.TabIndex = 0;
+      this.GETButton.Text = "GET UK";
+      this.GETButton.UseVisualStyleBackColor = true;
+      this.GETButton.Click += new System.EventHandler(this.GETButton_Click);
       // 
       // button1
       // 
@@ -265,6 +313,64 @@
       this.tabPage1.Text = "Text";
       this.tabPage1.UseVisualStyleBackColor = true;
       // 
+      // strapline
+      // 
+      this.strapline.Location = new System.Drawing.Point(6, 100);
+      this.strapline.Name = "strapline";
+      this.strapline.Size = new System.Drawing.Size(335, 20);
+      this.strapline.TabIndex = 21;
+      // 
+      // label7
+      // 
+      this.label7.AutoSize = true;
+      this.label7.Location = new System.Drawing.Point(6, 83);
+      this.label7.Name = "label7";
+      this.label7.Size = new System.Drawing.Size(32, 13);
+      this.label7.TabIndex = 22;
+      this.label7.Text = "Strap";
+      // 
+      // label6
+      // 
+      this.label6.AutoSize = true;
+      this.label6.Location = new System.Drawing.Point(352, 113);
+      this.label6.Name = "label6";
+      this.label6.Size = new System.Drawing.Size(42, 13);
+      this.label6.TabIndex = 20;
+      this.label6.Text = "Results";
+      // 
+      // label5
+      // 
+      this.label5.AutoSize = true;
+      this.label5.Location = new System.Drawing.Point(543, 113);
+      this.label5.Name = "label5";
+      this.label5.Size = new System.Drawing.Size(70, 13);
+      this.label5.TabIndex = 19;
+      this.label5.Text = "Missing Items";
+      // 
+      // pictureBox3
+      // 
+      this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.pictureBox3.InitialImage = null;
+      this.pictureBox3.Location = new System.Drawing.Point(589, 5);
+      this.pictureBox3.Name = "pictureBox3";
+      this.pictureBox3.Size = new System.Drawing.Size(111, 102);
+      this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.pictureBox3.TabIndex = 18;
+      this.pictureBox3.TabStop = false;
+      this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+      // 
+      // pictureBox2
+      // 
+      this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.pictureBox2.InitialImage = null;
+      this.pictureBox2.Location = new System.Drawing.Point(472, 5);
+      this.pictureBox2.Name = "pictureBox2";
+      this.pictureBox2.Size = new System.Drawing.Size(111, 102);
+      this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.pictureBox2.TabIndex = 17;
+      this.pictureBox2.TabStop = false;
+      this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+      // 
       // report
       // 
       this.report.Location = new System.Drawing.Point(543, 130);
@@ -320,106 +426,45 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
-      // pictureBox2
+      // pictureBox4
       // 
-      this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.pictureBox2.InitialImage = null;
-      this.pictureBox2.Location = new System.Drawing.Point(472, 5);
-      this.pictureBox2.Name = "pictureBox2";
-      this.pictureBox2.Size = new System.Drawing.Size(111, 102);
-      this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox2.TabIndex = 17;
-      this.pictureBox2.TabStop = false;
-      this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+      this.pictureBox4.Location = new System.Drawing.Point(481, 43);
+      this.pictureBox4.Name = "pictureBox4";
+      this.pictureBox4.Size = new System.Drawing.Size(186, 178);
+      this.pictureBox4.TabIndex = 3;
+      this.pictureBox4.TabStop = false;
       // 
-      // pictureBox3
+      // button4
       // 
-      this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.pictureBox3.InitialImage = null;
-      this.pictureBox3.Location = new System.Drawing.Point(589, 5);
-      this.pictureBox3.Name = "pictureBox3";
-      this.pictureBox3.Size = new System.Drawing.Size(111, 102);
-      this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox3.TabIndex = 18;
-      this.pictureBox3.TabStop = false;
-      this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+      this.button4.Location = new System.Drawing.Point(121, 7);
+      this.button4.Name = "button4";
+      this.button4.Size = new System.Drawing.Size(108, 23);
+      this.button4.TabIndex = 4;
+      this.button4.Text = "GET Cape Town";
+      this.button4.UseVisualStyleBackColor = true;
+      this.button4.Click += new System.EventHandler(this.button4_Click);
       // 
-      // label5
+      // button5
       // 
-      this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(543, 113);
-      this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(70, 13);
-      this.label5.TabIndex = 19;
-      this.label5.Text = "Missing Items";
-      // 
-      // label6
-      // 
-      this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(352, 113);
-      this.label6.Name = "label6";
-      this.label6.Size = new System.Drawing.Size(42, 13);
-      this.label6.TabIndex = 20;
-      this.label6.Text = "Results";
-      // 
-      // strapline
-      // 
-      this.strapline.Location = new System.Drawing.Point(6, 100);
-      this.strapline.Name = "strapline";
-      this.strapline.Size = new System.Drawing.Size(335, 20);
-      this.strapline.TabIndex = 21;
-      // 
-      // label7
-      // 
-      this.label7.AutoSize = true;
-      this.label7.Location = new System.Drawing.Point(6, 83);
-      this.label7.Name = "label7";
-      this.label7.Size = new System.Drawing.Size(32, 13);
-      this.label7.TabIndex = 22;
-      this.label7.Text = "Strap";
-      // 
-      // metrics
-      // 
-      metrics.Controls.Add(this.iconBox);
-      metrics.Controls.Add(this.ServiceResult);
-      metrics.Controls.Add(this.GETButton);
-      metrics.Location = new System.Drawing.Point(4, 22);
-      metrics.Name = "metrics";
-      metrics.Padding = new System.Windows.Forms.Padding(3);
-      metrics.Size = new System.Drawing.Size(719, 525);
-      metrics.TabIndex = 2;
-      metrics.Text = "Global Metrics";
-      metrics.UseVisualStyleBackColor = true;
-      // 
-      // GETButton
-      // 
-      this.GETButton.Location = new System.Drawing.Point(7, 7);
-      this.GETButton.Name = "GETButton";
-      this.GETButton.Size = new System.Drawing.Size(75, 23);
-      this.GETButton.TabIndex = 0;
-      this.GETButton.Text = "GET";
-      this.GETButton.UseVisualStyleBackColor = true;
-      this.GETButton.Click += new System.EventHandler(this.GETButton_Click);
-      // 
-      // ServiceResult
-      // 
-      this.ServiceResult.Location = new System.Drawing.Point(7, 43);
-      this.ServiceResult.Multiline = true;
-      this.ServiceResult.Name = "ServiceResult";
-      this.ServiceResult.Size = new System.Drawing.Size(524, 210);
-      this.ServiceResult.TabIndex = 1;
+      this.button5.Location = new System.Drawing.Point(235, 7);
+      this.button5.Name = "button5";
+      this.button5.Size = new System.Drawing.Size(108, 23);
+      this.button5.TabIndex = 5;
+      this.button5.Text = "GET New York";
+      this.button5.UseVisualStyleBackColor = true;
+      this.button5.Click += new System.EventHandler(this.button5_Click);
       // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // iconBox
+      // RawWeather
       // 
-      this.iconBox.Location = new System.Drawing.Point(548, 43);
-      this.iconBox.Name = "iconBox";
-      this.iconBox.Size = new System.Drawing.Size(100, 91);
-      this.iconBox.TabIndex = 2;
-      this.iconBox.TabStop = false;
+      this.RawWeather.Location = new System.Drawing.Point(7, 260);
+      this.RawWeather.Multiline = true;
+      this.RawWeather.Name = "RawWeather";
+      this.RawWeather.Size = new System.Drawing.Size(362, 223);
+      this.RawWeather.TabIndex = 6;
       // 
       // Analysis
       // 
@@ -437,19 +482,20 @@
       this.Controls.Add(this.button1);
       this.Name = "Analysis";
       this.Text = "Analysis";
+      metrics.ResumeLayout(false);
+      metrics.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.tabControl1.ResumeLayout(false);
       this.tabPage1.ResumeLayout(false);
       this.tabPage1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-      metrics.ResumeLayout(false);
-      metrics.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -491,6 +537,10 @@
     private System.Windows.Forms.TextBox ServiceResult;
     private System.Windows.Forms.Button GETButton;
     private System.Windows.Forms.PictureBox iconBox;
+    private System.Windows.Forms.PictureBox pictureBox4;
+    private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.TextBox RawWeather;
   }
 }
 
