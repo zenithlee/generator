@@ -22,15 +22,6 @@ I:\root\dev\NewsNet\Generator\Generator\obj\Debug\Generator.Properties.Resources
 I:\root\dev\NewsNet\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
 I:\root\dev\NewsNet\Generator\Generator\obj\Debug\Generator.exe
 I:\root\dev\NewsNet\Generator\Generator\obj\Debug\Generator.pdb
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.exe
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.pdb
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojResolveAssemblyReference.cache
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Analysis.resources
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Properties.Resources.resources
-I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
-I:\root\dev\NewsNet_Generator\Bin\Generator.exe.config
-I:\root\dev\NewsNet_Generator\Bin\Generator.exe
-I:\root\dev\NewsNet_Generator\Bin\Generator.pdb
 C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojResolveAssemblyReference.cache
 C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Properties.Resources.resources
 C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
@@ -43,3 +34,11 @@ C:\development\Unity\NewsNet_Generator\Bin\Generator.exe.config
 C:\development\Unity\NewsNet_Generator\Bin\Generator.exe
 C:\development\Unity\NewsNet_Generator\Bin\Generator.pdb
 C:\development\Unity\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Analysis.resources
+I:\root\dev\NewsNet_Generator\Bin\Generator.exe.config
+I:\root\dev\NewsNet_Generator\Bin\Generator.exe
+I:\root\dev\NewsNet_Generator\Bin\Generator.pdb
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Analysis.resources
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Properties.Resources.resources
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.exe
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.pdb
