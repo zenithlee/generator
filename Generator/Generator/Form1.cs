@@ -39,6 +39,8 @@ namespace Generator
 
     Weather _weather = new Weather();
 
+    int PreviousVisemeMs = 0; //used to reduce overlap data
+
   public Analysis()
   {
       CurrentProject = path + CurrentFile;
@@ -212,11 +214,17 @@ namespace Generator
 
   private void reader_VisemeReached(object sender, VisemeReachedEventArgs e)
   {
-      string s = "V " + Math.Round(e.AudioPosition.TotalMilliseconds) + " " + e.Viseme.ToString();
+      int ms = (int)e.AudioPosition.TotalMilliseconds;
+      if ( PreviousVisemeMs == ms )
+      {        
+        ms += 30;
+      }
+      string s = "V " + ms + " " + e.Viseme.ToString();
       Visemes.Text += s + "\r\n";
       items.Add(s);
+      PreviousVisemeMs = (int)e.AudioPosition.TotalMilliseconds;
       //Console.WriteLine(e.Viseme);
-  }
+    }
 
   private void button1_Click(object sender, EventArgs e)
   {
@@ -400,7 +408,6 @@ namespace Generator
       string temp = _weather.GenerateReport(o, Forecast);
       Directory.CreateDirectory(CurrentProject);
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
-
       
       temp += _weather.GenerateForecast(Forecast);
       ServiceResult.Text = _weather.ParseForTTS(temp);
