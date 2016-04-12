@@ -42,3 +42,4 @@ I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.Properties
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.GenerateResource.Cache
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.exe
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.pdb
+I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojResolveAssemblyReference.cache

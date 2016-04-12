@@ -30,6 +30,10 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
+      this.RawWeather = new System.Windows.Forms.TextBox();
+      this.button5 = new System.Windows.Forms.Button();
+      this.button4 = new System.Windows.Forms.Button();
+      this.pictureBox4 = new System.Windows.Forms.PictureBox();
       this.iconBox = new System.Windows.Forms.PictureBox();
       this.ServiceResult = new System.Windows.Forms.TextBox();
       this.GETButton = new System.Windows.Forms.Button();
@@ -63,13 +67,12 @@
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
-      this.pictureBox4 = new System.Windows.Forms.PictureBox();
-      this.button4 = new System.Windows.Forms.Button();
-      this.button5 = new System.Windows.Forms.Button();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.RawWeather = new System.Windows.Forms.TextBox();
+      this.label8 = new System.Windows.Forms.Label();
+      this.Meta1 = new System.Windows.Forms.TextBox();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,7 +82,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -99,6 +101,42 @@
       metrics.TabIndex = 2;
       metrics.Text = "Global Metrics";
       metrics.UseVisualStyleBackColor = true;
+      // 
+      // RawWeather
+      // 
+      this.RawWeather.Location = new System.Drawing.Point(7, 260);
+      this.RawWeather.Multiline = true;
+      this.RawWeather.Name = "RawWeather";
+      this.RawWeather.Size = new System.Drawing.Size(362, 223);
+      this.RawWeather.TabIndex = 6;
+      // 
+      // button5
+      // 
+      this.button5.Location = new System.Drawing.Point(235, 7);
+      this.button5.Name = "button5";
+      this.button5.Size = new System.Drawing.Size(108, 23);
+      this.button5.TabIndex = 5;
+      this.button5.Text = "GET New York";
+      this.button5.UseVisualStyleBackColor = true;
+      this.button5.Click += new System.EventHandler(this.button5_Click);
+      // 
+      // button4
+      // 
+      this.button4.Location = new System.Drawing.Point(121, 7);
+      this.button4.Name = "button4";
+      this.button4.Size = new System.Drawing.Size(108, 23);
+      this.button4.TabIndex = 4;
+      this.button4.Text = "GET Cape Town";
+      this.button4.UseVisualStyleBackColor = true;
+      this.button4.Click += new System.EventHandler(this.button4_Click);
+      // 
+      // pictureBox4
+      // 
+      this.pictureBox4.Location = new System.Drawing.Point(481, 43);
+      this.pictureBox4.Name = "pictureBox4";
+      this.pictureBox4.Size = new System.Drawing.Size(186, 178);
+      this.pictureBox4.TabIndex = 3;
+      this.pictureBox4.TabStop = false;
       // 
       // iconBox
       // 
@@ -139,10 +177,10 @@
       // 
       // textBox1
       // 
-      this.textBox1.Location = new System.Drawing.Point(6, 146);
+      this.textBox1.Location = new System.Drawing.Point(6, 156);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(335, 298);
+      this.textBox1.Size = new System.Drawing.Size(335, 288);
       this.textBox1.TabIndex = 1;
       this.textBox1.Text = "Test 1. Test 2. Test 3.";
       // 
@@ -155,11 +193,11 @@
       // 
       // Visemes
       // 
-      this.Visemes.Location = new System.Drawing.Point(355, 130);
+      this.Visemes.Location = new System.Drawing.Point(355, 156);
       this.Visemes.Multiline = true;
       this.Visemes.Name = "Visemes";
       this.Visemes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.Visemes.Size = new System.Drawing.Size(182, 314);
+      this.Visemes.Size = new System.Drawing.Size(182, 288);
       this.Visemes.TabIndex = 3;
       // 
       // voicebox
@@ -202,15 +240,15 @@
       // 
       // Headline
       // 
-      this.Headline.Location = new System.Drawing.Point(6, 60);
+      this.Headline.Location = new System.Drawing.Point(56, 46);
       this.Headline.Name = "Headline";
-      this.Headline.Size = new System.Drawing.Size(335, 20);
+      this.Headline.Size = new System.Drawing.Size(285, 20);
       this.Headline.TabIndex = 8;
       // 
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(6, 43);
+      this.label1.Location = new System.Drawing.Point(4, 49);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(49, 13);
       this.label1.TabIndex = 9;
@@ -219,7 +257,7 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(6, 130);
+      this.label2.Location = new System.Drawing.Point(6, 140);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(28, 13);
       this.label2.TabIndex = 10;
@@ -289,6 +327,8 @@
       // 
       // tabPage1
       // 
+      this.tabPage1.Controls.Add(this.Meta1);
+      this.tabPage1.Controls.Add(this.label8);
       this.tabPage1.Controls.Add(this.strapline);
       this.tabPage1.Controls.Add(this.label7);
       this.tabPage1.Controls.Add(this.label6);
@@ -315,15 +355,15 @@
       // 
       // strapline
       // 
-      this.strapline.Location = new System.Drawing.Point(6, 100);
+      this.strapline.Location = new System.Drawing.Point(56, 72);
       this.strapline.Name = "strapline";
-      this.strapline.Size = new System.Drawing.Size(335, 20);
+      this.strapline.Size = new System.Drawing.Size(285, 20);
       this.strapline.TabIndex = 21;
       // 
       // label7
       // 
       this.label7.AutoSize = true;
-      this.label7.Location = new System.Drawing.Point(6, 83);
+      this.label7.Location = new System.Drawing.Point(6, 75);
       this.label7.Name = "label7";
       this.label7.Size = new System.Drawing.Size(32, 13);
       this.label7.TabIndex = 22;
@@ -332,7 +372,7 @@
       // label6
       // 
       this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(352, 113);
+      this.label6.Location = new System.Drawing.Point(352, 140);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(42, 13);
       this.label6.TabIndex = 20;
@@ -341,7 +381,7 @@
       // label5
       // 
       this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(543, 113);
+      this.label5.Location = new System.Drawing.Point(543, 140);
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(70, 13);
       this.label5.TabIndex = 19;
@@ -373,10 +413,10 @@
       // 
       // report
       // 
-      this.report.Location = new System.Drawing.Point(543, 130);
+      this.report.Location = new System.Drawing.Point(543, 156);
       this.report.Multiline = true;
       this.report.Name = "report";
-      this.report.Size = new System.Drawing.Size(170, 314);
+      this.report.Size = new System.Drawing.Size(170, 288);
       this.report.TabIndex = 16;
       // 
       // tabPage2
@@ -426,45 +466,25 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
-      // pictureBox4
-      // 
-      this.pictureBox4.Location = new System.Drawing.Point(481, 43);
-      this.pictureBox4.Name = "pictureBox4";
-      this.pictureBox4.Size = new System.Drawing.Size(186, 178);
-      this.pictureBox4.TabIndex = 3;
-      this.pictureBox4.TabStop = false;
-      // 
-      // button4
-      // 
-      this.button4.Location = new System.Drawing.Point(121, 7);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(108, 23);
-      this.button4.TabIndex = 4;
-      this.button4.Text = "GET Cape Town";
-      this.button4.UseVisualStyleBackColor = true;
-      this.button4.Click += new System.EventHandler(this.button4_Click);
-      // 
-      // button5
-      // 
-      this.button5.Location = new System.Drawing.Point(235, 7);
-      this.button5.Name = "button5";
-      this.button5.Size = new System.Drawing.Size(108, 23);
-      this.button5.TabIndex = 5;
-      this.button5.Text = "GET New York";
-      this.button5.UseVisualStyleBackColor = true;
-      this.button5.Click += new System.EventHandler(this.button5_Click);
-      // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // RawWeather
+      // label8
       // 
-      this.RawWeather.Location = new System.Drawing.Point(7, 260);
-      this.RawWeather.Multiline = true;
-      this.RawWeather.Name = "RawWeather";
-      this.RawWeather.Size = new System.Drawing.Size(362, 223);
-      this.RawWeather.TabIndex = 6;
+      this.label8.AutoSize = true;
+      this.label8.Location = new System.Drawing.Point(7, 107);
+      this.label8.Name = "label8";
+      this.label8.Size = new System.Drawing.Size(31, 13);
+      this.label8.TabIndex = 23;
+      this.label8.Text = "Meta";
+      // 
+      // Meta1
+      // 
+      this.Meta1.Location = new System.Drawing.Point(56, 104);
+      this.Meta1.Name = "Meta1";
+      this.Meta1.Size = new System.Drawing.Size(285, 20);
+      this.Meta1.TabIndex = 24;
       // 
       // Analysis
       // 
@@ -484,6 +504,7 @@
       this.Text = "Analysis";
       metrics.ResumeLayout(false);
       metrics.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -494,7 +515,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -541,6 +561,8 @@
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.TextBox RawWeather;
+    private System.Windows.Forms.Label label8;
+    private System.Windows.Forms.TextBox Meta1;
   }
 }
 
