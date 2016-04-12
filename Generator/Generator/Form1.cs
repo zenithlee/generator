@@ -169,6 +169,7 @@ namespace Generator
       reader.VoiceChange += Reader_VoiceChange;
       reader.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(reader_SpeakCompleted);
       reader.VisemeReached += new EventHandler<VisemeReachedEventArgs>(reader_VisemeReached);
+      reader.BookmarkReached += new Action<object, SpeakProgressEventArgs>(reader_BookmarkReached);
       reader.SpeakProgress += reader_SpeakProgress;
       VoiceName = reader.Voice.Name;
       if ( VoiceName != "" ) {
@@ -176,7 +177,14 @@ namespace Generator
       }      
   }
 
-  private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
+    private void reader_BookmarkReached(object arg1, SpeakProgressEventArgs arg2)
+    {
+      string s = "S " + e.Voice.Name + "," + e.Voice.Gender + "," + e.Voice.Age + "," + e.Voice.Culture + "," + e.Voice.Description;
+      Visemes.Text += s + "\r\n";
+      //items.Add(s);
+    }
+
+    private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
   {
       string s = "S " + e.Voice.Name + "," + e.Voice.Gender + "," + e.Voice.Age + "," + e.Voice.Culture + "," + e.Voice.Description;
       Visemes.Text += s + "\r\n";
@@ -242,11 +250,42 @@ namespace Generator
       } else {
           reader.SetOutputToDefaultAudioDevice();
       }
-      
-      reader.SpeakAsync(sText);
+
+      //reader.SpeakAsync(sText);
+      ReadWithMarkup(sText);
 
       textBox2.Text = "SPEAKING";
   }
+
+    void ReadWithMarkup(string s)
+    {
+      //SpeechSynthesizer synth = new SpeechSynthesizer();
+      PromptBuilder pb = new PromptBuilder();
+      pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">");
+
+      pb.StartVoice(VoiceName);
+      //pb.AppendText("Hello, how are you today?");
+      //s = @"<bookmark mark=""bookmark_start""/> " + s;
+      pb.AppendBookmark("bm1");
+      pb.AppendSsmlMarkup(s);
+
+      //string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Higher pitch. </prosody>";
+      //string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
+      //pb.AppendSsmlMarkup(high);
+      //pb.AppendSsmlMarkup(low);
+      //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
+      //pb.AppendSsmlMarkup(test);
+      pb.AppendSsmlMarkup("</voice>");
+      pb.EndVoice();
+      try
+      {
+        reader.SpeakAsync(pb);
+      }
+      catch (Exception ee)
+      {
+        Console.WriteLine("error" + ee.Message);
+      }
+    }
 
   void reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
   {
@@ -368,7 +407,7 @@ namespace Generator
 
       //SpeechSynthesizer synth = new SpeechSynthesizer();
       PromptBuilder pb = new PromptBuilder();      
-      //pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">"); 
+      pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">"); 
 
       pb.StartVoice(VoiceName);      
       //pb.AppendText("Hello, how are you today?");
@@ -380,10 +419,10 @@ namespace Generator
       pb.AppendSsmlMarkup(low);
       //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
       //pb.AppendSsmlMarkup(test);
-      //pb.AppendSsmlMarkup("</voice>");      
+      pb.AppendSsmlMarkup("</voice>");      
       pb.EndVoice();
       try {
-        reader.Speak(pb);
+        reader.SpeakAsync(pb);
       }
       catch ( Exception ee)
       {
