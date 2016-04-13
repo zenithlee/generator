@@ -169,7 +169,7 @@ namespace Generator
       reader.VoiceChange += Reader_VoiceChange;
       reader.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(reader_SpeakCompleted);
       reader.VisemeReached += new EventHandler<VisemeReachedEventArgs>(reader_VisemeReached);
-      reader.BookmarkReached += new Action<object, SpeakProgressEventArgs>(reader_BookmarkReached);
+      reader.BookmarkReached += Reader_BookmarkReached;
       reader.SpeakProgress += reader_SpeakProgress;
       VoiceName = reader.Voice.Name;
       if ( VoiceName != "" ) {
@@ -177,11 +177,10 @@ namespace Generator
       }      
   }
 
-    private void reader_BookmarkReached(object arg1, SpeakProgressEventArgs arg2)
+    private void Reader_BookmarkReached(object sender, BookmarkReachedEventArgs e)
     {
-      string s = "S " + e.Voice.Name + "," + e.Voice.Gender + "," + e.Voice.Age + "," + e.Voice.Culture + "," + e.Voice.Description;
+      string s = "B " + e.Bookmark;
       Visemes.Text += s + "\r\n";
-      //items.Add(s);
     }
 
     private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
@@ -267,7 +266,16 @@ namespace Generator
       //pb.AppendText("Hello, how are you today?");
       //s = @"<bookmark mark=""bookmark_start""/> " + s;
       pb.AppendBookmark("bm1");
-      pb.AppendSsmlMarkup(s);
+
+      string[] lines = s.Split('\n');
+      foreach( string line in lines)
+      {
+        string[] br = line.Split('~');
+        if (br[0] == "B") pb.AppendBookmark(br[1] + "~" + br[2]);
+        if (br[0] == "S") pb.AppendText(br[1]);
+      }
+
+      //pb.AppendSsmlMarkup(s);
 
       //string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Higher pitch. </prosody>";
       //string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
@@ -409,11 +417,13 @@ namespace Generator
       PromptBuilder pb = new PromptBuilder();      
       pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">"); 
 
-      pb.StartVoice(VoiceName);      
+      pb.StartVoice(VoiceName);
+      pb.AppendBookmark("test");
       //pb.AppendText("Hello, how are you today?");
       pb.AppendSsmlMarkup(sml);
       
       string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Normal pitch. </prosody>";
+      pb.AppendBookmark("low");
       string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
       pb.AppendSsmlMarkup(high);
       pb.AppendSsmlMarkup(low);
@@ -447,14 +457,12 @@ namespace Generator
       string temp = _weather.GenerateReport(o, Forecast);
       Directory.CreateDirectory(CurrentProject);
       File.WriteAllText(CurrentProject + "/weather.txt", temp);
+      temp += "B~H4I~" + sIcon + _weather.NL;
       
       temp += _weather.GenerateForecast(Forecast);
       ServiceResult.Text = _weather.ParseForTTS(temp);
 
       textBox1.Text = ServiceResult.Text;
-
-      
-
       //ProjectNames.Text = CurrentProject;
     }
 
