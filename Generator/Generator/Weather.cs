@@ -12,6 +12,8 @@ namespace Generator
 {
   class Weather
   {
+    public string NL = "\r\n";
+
     string APIKey = "796ad2e53acc694482ab556883295fb0";
     public string URL = "http://api.openweathermap.org/data/2.5/weather?";
     public string URL_Forecast = "http://api.openweathermap.org/data/2.5/forecast?";
@@ -161,8 +163,11 @@ namespace Generator
 
     public string GenerateForecast(ForecastClass fc)
     {
+    
+
       WeatherClass o = (WeatherClass)fc.list[fc.list.Count-1];
-      string w = ". By tomorrow" + o.name;
+      string w = "B~H4T~Tomorrow" + NL;
+      w += "S~By tomorrow" + o.name;
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);
 
@@ -185,6 +190,10 @@ namespace Generator
       w += " with winds reaching " + Math.Ceiling(o.wind.speed) + " meters per second";
       w += GetWindDirection((float)o.wind.deg) + ".";
       w += " The outside temperature will be " + KelvinToC(o.main.temp) + " degrees";
+
+      w += NL;
+      w += "B~H5T~" + o.main.temp + "°C" + NL;
+      w += "S~";
       if (o.main.temp_min != o.main.temp_max)
       {
         w += " and will reach a low of " + KelvinToC(o.main.temp_min) + " and a high of " + KelvinToC(o.main.temp_max);
@@ -231,17 +240,36 @@ namespace Generator
 
     /**
      * Generates a report from the JSON created class
+     * S~ Say
+     * B~ Bookmark
+     * H1T~ Header 1 Text
+     * H1I~ Header 1 image
+
+     * S Hello how are you
+     * B Part 1
+     * S Fine Thanks
+     * H1T In the news today
+     * H1I Image1.png
+     * H2T Things are happening
+     * H3T Tomorrow
+     * H4T 45'
+     * H4I Mild.png
+     * S What are you saying
      */
     public string GenerateReport(WeatherClass o, ForecastClass f)
     {
-      string w = "";
+    
+      string w = "B~B~Start" + NL;
 
-      w+= GetQuirk(KelvinToC(o.main.temp), o.wind.speed) + ". ";
-
-        w += "In " + o.name;
+      w+= "S~" + GetQuirk(KelvinToC(o.main.temp), o.wind.speed) + ". ";
+      w += NL;
+      w += "S~In " + o.name + NL;
       WeatherClass tomorrow = (WeatherClass)f.list[f.list.Count - 1];
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);
+      w += "B~H4T~Now"+NL;
+
+      w += "S~";
 
       if ( dt.Hour< 12 )
       {
@@ -262,7 +290,11 @@ namespace Generator
 
       w += GetWindDirection((float)o.wind.deg) + ".";
 
-      w += " The outside temperature is " + KelvinToC(o.main.temp) + " degrees";
+      w += NL;
+
+      w += "B~H5T~" + o.main.temp + "°C" + NL;
+
+      w += "S~The outside temperature is " + KelvinToC(o.main.temp) + " degrees";
 
       if ( o.main.temp > tomorrow.main.temp)
       {
@@ -277,7 +309,7 @@ namespace Generator
         w += " staying at " + KelvinToC(tomorrow.main.temp);
       }
 
-      w += " degrees tomorrow";
+      w += " degrees tomorrow." + NL;
 
       /*
       if (o.main.temp_min != o.main.temp_max) {
