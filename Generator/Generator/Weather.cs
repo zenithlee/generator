@@ -20,12 +20,25 @@ namespace Generator
     string Result = "";
     WeatherCodes _weatherCodes = new WeatherCodes();
 
+    public string[] coldquirks = {"Dress warm", "Break out the hot chocolate", "Snuggle down"};
+    public string[] hotquirks = { "Get the swimming costume ready", "Don't forget the sunscreen", "It's hot" };
+
+    public string[] own = { "We have", "There is a", "It is", "Conditions are" };
+
+
     public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
     {
       // Unix timestamp is seconds past epoch
       System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
       dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
       return dtDateTime;
+    }
+
+    string GetRandomOf(string[] items)
+    {
+      Random r = new Random();
+      int n = r.Next(0, items.Length);
+      return items[n];
     }
 
     string GetStormForCode(int n)
@@ -163,7 +176,6 @@ namespace Generator
 
     public string GenerateForecast(ForecastClass fc)
     {
-    
 
       WeatherClass o = (WeatherClass)fc.list[fc.list.Count-1];
       string w = "B~H4T~Tomorrow" + NL;
@@ -210,13 +222,13 @@ namespace Generator
     string GetQuirk( double temp, double windspeed)
     {
       string w = "";
-      if (temp<10)
+      if (temp<15)
       {
-        w += "Dress warm";
+        w += GetRandomOf(coldquirks);
       }
       if (temp > 50)
       {
-        w += "Heat wave";
+        w += GetRandomOf(hotquirks);
       }
 
 
@@ -236,6 +248,55 @@ namespace Generator
       }
 
       return w;
+    }
+
+    public string TemperatureComment( int temp)
+    {
+      string s = "";
+
+      if (temp <= 0)
+      {
+        s = "Freezing weather";
+      }
+      else
+      if ((temp > 0) && (temp < 10))
+      {
+        s = "Chilly weather";
+      }
+      else
+      if ((temp > 10) && (temp < 20))
+      {
+        s = "Cool weather";
+      }
+      else
+      if ((temp > 20) && (temp < 30))
+      {
+        s = "Warm weather";
+      }
+      else
+      if ((temp > 30) && (temp < 40))
+      {
+        s = "Hot weather";
+      }
+      else
+      if (temp > 40)
+      {
+        s = "Heatwave";
+      }
+      return s;
+    }
+
+    public string GetHeadline( WeatherClass o)
+    {
+      string s = "";
+      int temp = KelvinToC(o.main.temp);
+      s += TemperatureComment(temp);
+
+      s += " for ";
+      s += o.name;
+
+      return s;
+
     }
 
     /**
@@ -280,7 +341,9 @@ namespace Generator
         w += " this afternoon";
       }
 
-      w += " we have " + o.weather[0].description;
+      w += " " + GetRandomOf(own) + " ";
+      
+      w += o.weather[0].description;
 
       if ( o.weather.Count > 1 ) {
         w += " and " + o.weather[1].description;

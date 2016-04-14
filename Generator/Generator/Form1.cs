@@ -14,22 +14,26 @@ using System.Speech.Synthesis.TtsEngine;
 using System.IO;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
+using System.IO.Pipes;
 
 namespace Generator
   {
   public partial class Analysis : Form
   {
-  string path = "../../NewsNet_Bin/Output/";
-  string CurrentFile = "test";
-  string CurrentProject;
-    string DataPath = "../Data/";
-  string SentimentFile = "../Data/sentiments2.csv";
-  Dictionary<string, float> Sentiments = new Dictionary<string, float>();
 
-  SpeechSynthesizer reader;
-  List<string> items = new List<string>();
-  List<string> missing = new List<string>();
-  public BindingSource source = new BindingSource();
+    NamedPipeClientStream clientStream;
+
+    string path = "../../NewsNet_Bin/Output/";
+    string CurrentFile = "test";
+    string CurrentProject;
+    string DataPath = "../Data/";
+    string SentimentFile = "../Data/sentiments2.csv";
+    Dictionary<string, float> Sentiments = new Dictionary<string, float>();
+
+    SpeechSynthesizer reader;
+    List<string> items = new List<string>();
+    List<string> missing = new List<string>();
+    public BindingSource source = new BindingSource();
 
     Bitmap image1;
     Bitmap image2;
@@ -242,11 +246,27 @@ namespace Generator
       }      
   }
 
+    void SendToPipe(string s)
+    {
+      return;
+
+      byte[] buffer = ASCIIEncoding.ASCII.GetBytes(s);
+      clientStream = new NamedPipeClientStream("aipipe");
+      clientStream.Connect(TimeSpan.MaxValue.Seconds);
+      clientStream.WaitForPipeDrain();
+      clientStream.Write(buffer, 0, buffer.Length);
+
+      clientStream.Flush();
+      clientStream.Dispose();
+      clientStream.Close();
+    }
+
     private void Reader_BookmarkReached(object sender, BookmarkReachedEventArgs e)
     {
       string s = "B " + e.Bookmark;
       Visemes.Text += s + "\r\n";
       items.Add(s);
+      SendToPipe(s);
     }
 
     private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
@@ -254,7 +274,8 @@ namespace Generator
       string s = "S " + e.Voice.Name + "," + e.Voice.Gender + "," + e.Voice.Age + "," + e.Voice.Culture + "," + e.Voice.Description;
       Visemes.Text += s + "\r\n";
       items.Add(s);
-  }
+      SendToPipe(s);
+    }
 
   void reader_SpeakProgress(object sender, SpeakProgressEventArgs e)
   {
@@ -297,9 +318,8 @@ namespace Generator
       items.Add(s);
       PreviousVisemeMs = (int)e.AudioPosition.TotalMilliseconds;
       //Console.WriteLine(e.Viseme);
+      SendToPipe(s);
     }
-
-   
 
   void reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
   {
@@ -456,6 +476,9 @@ namespace Generator
       iconBox.Load();
       //image2 = new Bitmap(fullname);
       //pictureBox2.Image = image2;
+
+      Headline.Text = _weather.GetHeadline(o);
+
       ForecastClass Forecast = _weather.GetWeatherForecast(_weather.URL_Forecast, Country);
 
       RawWeather.Text += JsonConvert.SerializeObject(Forecast);
