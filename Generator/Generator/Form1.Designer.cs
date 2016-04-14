@@ -38,7 +38,7 @@
       this.ServiceResult = new System.Windows.Forms.TextBox();
       this.GETButton = new System.Windows.Forms.Button();
       this.button1 = new System.Windows.Forms.Button();
-      this.textBox1 = new System.Windows.Forms.TextBox();
+      this.MainText = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.Visemes = new System.Windows.Forms.TextBox();
       this.voicebox = new System.Windows.Forms.ComboBox();
@@ -67,9 +67,12 @@
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
+      this.SpeechAdd = new System.Windows.Forms.Button();
+      this.button6 = new System.Windows.Forms.Button();
+      this.button7 = new System.Windows.Forms.Button();
+      this.button8 = new System.Windows.Forms.Button();
+      this.button9 = new System.Windows.Forms.Button();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.label8 = new System.Windows.Forms.Label();
-      this.Meta1 = new System.Windows.Forms.TextBox();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -175,14 +178,13 @@
       this.button1.UseVisualStyleBackColor = false;
       this.button1.Click += new System.EventHandler(this.button1_Click);
       // 
-      // textBox1
+      // MainText
       // 
-      this.textBox1.Location = new System.Drawing.Point(6, 156);
-      this.textBox1.Multiline = true;
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(335, 288);
-      this.textBox1.TabIndex = 1;
-      this.textBox1.Text = "Test 1. Test 2. Test 3.";
+      this.MainText.Location = new System.Drawing.Point(6, 154);
+      this.MainText.Multiline = true;
+      this.MainText.Name = "MainText";
+      this.MainText.Size = new System.Drawing.Size(335, 290);
+      this.MainText.TabIndex = 1;
       // 
       // textBox2
       // 
@@ -193,11 +195,11 @@
       // 
       // Visemes
       // 
-      this.Visemes.Location = new System.Drawing.Point(355, 156);
+      this.Visemes.Location = new System.Drawing.Point(355, 130);
       this.Visemes.Multiline = true;
       this.Visemes.Name = "Visemes";
       this.Visemes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.Visemes.Size = new System.Drawing.Size(182, 288);
+      this.Visemes.Size = new System.Drawing.Size(182, 314);
       this.Visemes.TabIndex = 3;
       // 
       // voicebox
@@ -240,15 +242,15 @@
       // 
       // Headline
       // 
-      this.Headline.Location = new System.Drawing.Point(56, 46);
+      this.Headline.Location = new System.Drawing.Point(6, 60);
       this.Headline.Name = "Headline";
-      this.Headline.Size = new System.Drawing.Size(285, 20);
+      this.Headline.Size = new System.Drawing.Size(335, 20);
       this.Headline.TabIndex = 8;
       // 
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(4, 49);
+      this.label1.Location = new System.Drawing.Point(6, 43);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(49, 13);
       this.label1.TabIndex = 9;
@@ -257,7 +259,7 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(6, 140);
+      this.label2.Location = new System.Drawing.Point(6, 130);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(28, 13);
       this.label2.TabIndex = 10;
@@ -327,8 +329,11 @@
       // 
       // tabPage1
       // 
-      this.tabPage1.Controls.Add(this.Meta1);
-      this.tabPage1.Controls.Add(this.label8);
+      this.tabPage1.Controls.Add(this.button9);
+      this.tabPage1.Controls.Add(this.button8);
+      this.tabPage1.Controls.Add(this.button7);
+      this.tabPage1.Controls.Add(this.button6);
+      this.tabPage1.Controls.Add(this.SpeechAdd);
       this.tabPage1.Controls.Add(this.strapline);
       this.tabPage1.Controls.Add(this.label7);
       this.tabPage1.Controls.Add(this.label6);
@@ -338,7 +343,7 @@
       this.tabPage1.Controls.Add(this.report);
       this.tabPage1.Controls.Add(this.label4);
       this.tabPage1.Controls.Add(this.pictureBox1);
-      this.tabPage1.Controls.Add(this.textBox1);
+      this.tabPage1.Controls.Add(this.MainText);
       this.tabPage1.Controls.Add(this.ProjectNames);
       this.tabPage1.Controls.Add(this.Headline);
       this.tabPage1.Controls.Add(this.label1);
@@ -355,15 +360,15 @@
       // 
       // strapline
       // 
-      this.strapline.Location = new System.Drawing.Point(56, 72);
+      this.strapline.Location = new System.Drawing.Point(6, 100);
       this.strapline.Name = "strapline";
-      this.strapline.Size = new System.Drawing.Size(285, 20);
+      this.strapline.Size = new System.Drawing.Size(335, 20);
       this.strapline.TabIndex = 21;
       // 
       // label7
       // 
       this.label7.AutoSize = true;
-      this.label7.Location = new System.Drawing.Point(6, 75);
+      this.label7.Location = new System.Drawing.Point(6, 83);
       this.label7.Name = "label7";
       this.label7.Size = new System.Drawing.Size(32, 13);
       this.label7.TabIndex = 22;
@@ -372,7 +377,7 @@
       // label6
       // 
       this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(352, 140);
+      this.label6.Location = new System.Drawing.Point(352, 113);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(42, 13);
       this.label6.TabIndex = 20;
@@ -381,7 +386,7 @@
       // label5
       // 
       this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(543, 140);
+      this.label5.Location = new System.Drawing.Point(543, 113);
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(70, 13);
       this.label5.TabIndex = 19;
@@ -413,10 +418,10 @@
       // 
       // report
       // 
-      this.report.Location = new System.Drawing.Point(543, 156);
+      this.report.Location = new System.Drawing.Point(543, 130);
       this.report.Multiline = true;
       this.report.Name = "report";
-      this.report.Size = new System.Drawing.Size(170, 288);
+      this.report.Size = new System.Drawing.Size(170, 314);
       this.report.TabIndex = 16;
       // 
       // tabPage2
@@ -466,25 +471,59 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
+      // SpeechAdd
+      // 
+      this.SpeechAdd.Location = new System.Drawing.Point(40, 126);
+      this.SpeechAdd.Name = "SpeechAdd";
+      this.SpeechAdd.Size = new System.Drawing.Size(38, 23);
+      this.SpeechAdd.TabIndex = 23;
+      this.SpeechAdd.Text = "S";
+      this.SpeechAdd.UseVisualStyleBackColor = true;
+      this.SpeechAdd.Click += new System.EventHandler(this.SpeechAdd_Click);
+      // 
+      // button6
+      // 
+      this.button6.Location = new System.Drawing.Point(84, 126);
+      this.button6.Name = "button6";
+      this.button6.Size = new System.Drawing.Size(38, 23);
+      this.button6.TabIndex = 24;
+      this.button6.Text = "B";
+      this.button6.UseVisualStyleBackColor = true;
+      this.button6.Click += new System.EventHandler(this.button6_Click);
+      // 
+      // button7
+      // 
+      this.button7.Location = new System.Drawing.Point(128, 126);
+      this.button7.Name = "button7";
+      this.button7.Size = new System.Drawing.Size(38, 23);
+      this.button7.TabIndex = 25;
+      this.button7.Text = "H1T";
+      this.button7.UseVisualStyleBackColor = true;
+      this.button7.Click += new System.EventHandler(this.button7_Click);
+      // 
+      // button8
+      // 
+      this.button8.Location = new System.Drawing.Point(172, 126);
+      this.button8.Name = "button8";
+      this.button8.Size = new System.Drawing.Size(38, 23);
+      this.button8.TabIndex = 26;
+      this.button8.Text = "H2T";
+      this.button8.UseVisualStyleBackColor = true;
+      this.button8.Click += new System.EventHandler(this.button8_Click);
+      // 
+      // button9
+      // 
+      this.button9.Location = new System.Drawing.Point(216, 126);
+      this.button9.Name = "button9";
+      this.button9.Size = new System.Drawing.Size(38, 23);
+      this.button9.TabIndex = 27;
+      this.button9.Text = "H3T";
+      this.button9.UseVisualStyleBackColor = true;
+      this.button9.Click += new System.EventHandler(this.button9_Click);
+      // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
-      // 
-      // label8
-      // 
-      this.label8.AutoSize = true;
-      this.label8.Location = new System.Drawing.Point(7, 107);
-      this.label8.Name = "label8";
-      this.label8.Size = new System.Drawing.Size(31, 13);
-      this.label8.TabIndex = 23;
-      this.label8.Text = "Meta";
-      // 
-      // Meta1
-      // 
-      this.Meta1.Location = new System.Drawing.Point(56, 104);
-      this.Meta1.Name = "Meta1";
-      this.Meta1.Size = new System.Drawing.Size(285, 20);
-      this.Meta1.TabIndex = 24;
       // 
       // Analysis
       // 
@@ -524,7 +563,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MainText;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox Visemes;
         private System.Windows.Forms.ComboBox voicebox;
@@ -561,8 +600,11 @@
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.TextBox RawWeather;
-    private System.Windows.Forms.Label label8;
-    private System.Windows.Forms.TextBox Meta1;
+    private System.Windows.Forms.Button button9;
+    private System.Windows.Forms.Button button8;
+    private System.Windows.Forms.Button button7;
+    private System.Windows.Forms.Button button6;
+    private System.Windows.Forms.Button SpeechAdd;
   }
 }
 
