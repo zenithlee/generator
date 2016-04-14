@@ -71,7 +71,72 @@ namespace Generator
 
     }
 
-  void LoadSentiments()
+    private void button1_Click(object sender, EventArgs e)
+    {
+      Directory.CreateDirectory(CurrentProject);
+      string sText = MainText.Text;
+      items.Clear();
+      Visemes.Clear();
+      missing.Clear();
+      report.Clear();
+
+      items.Add("H " + Headline.Text);
+      Visemes.Text += "H " + Headline.Text + "\r\n";
+      if (checkBox1.Checked)
+      {
+        reader.SetOutputToWaveFile(CurrentProject + "/audio.wav");
+      }
+      else
+      {
+        reader.SetOutputToDefaultAudioDevice();
+      }
+
+      //reader.SpeakAsync(sText);
+      ReadWithMarkup(sText);
+
+      textBox2.Text = "SPEAKING";
+    }
+
+    void ReadWithMarkup(string s)
+    {
+      //SpeechSynthesizer synth = new SpeechSynthesizer();
+      PromptBuilder pb = new PromptBuilder();
+      pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">");
+
+      pb.StartVoice(VoiceName);
+      //pb.AppendText("Hello, how are you today?");
+      //s = @"<bookmark mark=""bookmark_start""/> " + s;
+      pb.AppendBookmark("bm1");
+
+      string[] lines = s.Split('\n');
+      foreach (string line in lines)
+      {
+        string[] br = line.Split('~');
+        if (br[0] == "B") pb.AppendBookmark(br[1] + "~" + br[2]);
+        if (br[0] == "S") pb.AppendText(br[1]);
+      }
+
+      //pb.AppendSsmlMarkup(s);
+
+      //string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Higher pitch. </prosody>";
+      //string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
+      //pb.AppendSsmlMarkup(high);
+      //pb.AppendSsmlMarkup(low);
+      //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
+      //pb.AppendSsmlMarkup(test);
+      pb.AppendSsmlMarkup("</voice>");
+      pb.EndVoice();
+      try
+      {
+        reader.SpeakAsync(pb);
+      }
+      catch (Exception ee)
+      {
+        Console.WriteLine("error" + ee.Message);
+      }
+    }
+
+    void LoadSentiments()
   {
       string[] items = File.ReadAllLines(SentimentFile);
       foreach( string item in items)
@@ -116,7 +181,7 @@ namespace Generator
   {
       if (File.Exists(CurrentProject + "/input.txt"))
       {
-        textBox1.Text = File.ReadAllText(CurrentProject + "/input.txt");
+        MainText.Text = File.ReadAllText(CurrentProject + "/input.txt");
       }
 
       if (File.Exists(CurrentProject + "/headline.txt"))
@@ -181,6 +246,7 @@ namespace Generator
     {
       string s = "B " + e.Bookmark;
       Visemes.Text += s + "\r\n";
+      items.Add(s);
     }
 
     private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
@@ -233,67 +299,7 @@ namespace Generator
       //Console.WriteLine(e.Viseme);
     }
 
-  private void button1_Click(object sender, EventArgs e)
-  {
-      Directory.CreateDirectory(CurrentProject);
-      string sText = textBox1.Text;
-      items.Clear();
-      Visemes.Clear();
-      missing.Clear();
-      report.Clear();
-
-      items.Add("H " + Headline.Text);
-      Visemes.Text += "H " + Headline.Text + "\r\n";
-      if (checkBox1.Checked) {
-          reader.SetOutputToWaveFile(CurrentProject+ "/audio.wav");
-      } else {
-          reader.SetOutputToDefaultAudioDevice();
-      }
-
-      //reader.SpeakAsync(sText);
-      ReadWithMarkup(sText);
-
-      textBox2.Text = "SPEAKING";
-  }
-
-    void ReadWithMarkup(string s)
-    {
-      //SpeechSynthesizer synth = new SpeechSynthesizer();
-      PromptBuilder pb = new PromptBuilder();
-      pb.AppendSsmlMarkup("<voice xml:lang=\"en-US\">");
-
-      pb.StartVoice(VoiceName);
-      //pb.AppendText("Hello, how are you today?");
-      //s = @"<bookmark mark=""bookmark_start""/> " + s;
-      pb.AppendBookmark("bm1");
-
-      string[] lines = s.Split('\n');
-      foreach( string line in lines)
-      {
-        string[] br = line.Split('~');
-        if (br[0] == "B") pb.AppendBookmark(br[1] + "~" + br[2]);
-        if (br[0] == "S") pb.AppendText(br[1]);
-      }
-
-      //pb.AppendSsmlMarkup(s);
-
-      //string high = "This is Normal pitch <prosody pitch=\"+20\"> This is Higher pitch. </prosody>";
-      //string low = "<prosody pitch=\"-10\">This is extra low pitch. </prosody>";
-      //pb.AppendSsmlMarkup(high);
-      //pb.AppendSsmlMarkup(low);
-      //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
-      //pb.AppendSsmlMarkup(test);
-      pb.AppendSsmlMarkup("</voice>");
-      pb.EndVoice();
-      try
-      {
-        reader.SpeakAsync(pb);
-      }
-      catch (Exception ee)
-      {
-        Console.WriteLine("error" + ee.Message);
-      }
-    }
+   
 
   void reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
   {
@@ -319,7 +325,7 @@ namespace Generator
       CurrentProject = path + ProjectNames.Text;
       Directory.CreateDirectory(CurrentProject);
       File.WriteAllLines(CurrentProject + "/sequence.txt", items);
-      File.WriteAllText(CurrentProject + "/input.txt", textBox1.Text);
+      File.WriteAllText(CurrentProject + "/input.txt", MainText.Text);
       File.WriteAllText(CurrentProject + "/headline.txt", Headline.Text);
       File.WriteAllText(CurrentProject + "/strapline.txt", strapline.Text);
       File.WriteAllLines(CurrentProject + "/missing.txt", missing.ToArray());
@@ -429,7 +435,7 @@ namespace Generator
       pb.AppendSsmlMarkup(low);
       //string test= "This is extra <prosody pitch=\"-10\">extra</prosody> low pitch. ";
       //pb.AppendSsmlMarkup(test);
-      pb.AppendSsmlMarkup("</voice>");      
+      pb.AppendSsmlMarkup("</voice>");
       pb.EndVoice();
       try {
         reader.SpeakAsync(pb);
@@ -462,7 +468,7 @@ namespace Generator
       temp += _weather.GenerateForecast(Forecast);
       ServiceResult.Text = _weather.ParseForTTS(temp);
 
-      textBox1.Text = ServiceResult.Text;
+      MainText.Text = ServiceResult.Text;
       //ProjectNames.Text = CurrentProject;
     }
 
@@ -479,6 +485,31 @@ namespace Generator
     private void button4_Click(object sender, EventArgs e)
     {
       Getfor(CountryCodes.CAPETOWN_ZA);
+    }
+
+    private void SpeechAdd_Click(object sender, EventArgs e)
+    {
+      MainText.Text += "\r\nS~";
+    }
+
+    private void button6_Click(object sender, EventArgs e)
+    {
+      MainText.Text += "\r\nB~";
+    }
+
+    private void button7_Click(object sender, EventArgs e)
+    {
+      MainText.Text += "\r\nB~H1T~";
+    }
+
+    private void button8_Click(object sender, EventArgs e)
+    {
+      MainText.Text += "\r\nB~H2T~";
+    }
+
+    private void button9_Click(object sender, EventArgs e)
+    {
+      MainText.Text += "\r\nB~H3T~";
     }
   }
   }

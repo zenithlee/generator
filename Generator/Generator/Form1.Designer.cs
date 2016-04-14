@@ -30,11 +30,15 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
+      this.RawWeather = new System.Windows.Forms.TextBox();
+      this.button5 = new System.Windows.Forms.Button();
+      this.button4 = new System.Windows.Forms.Button();
+      this.pictureBox4 = new System.Windows.Forms.PictureBox();
       this.iconBox = new System.Windows.Forms.PictureBox();
       this.ServiceResult = new System.Windows.Forms.TextBox();
       this.GETButton = new System.Windows.Forms.Button();
       this.button1 = new System.Windows.Forms.Button();
-      this.textBox1 = new System.Windows.Forms.TextBox();
+      this.MainText = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.Visemes = new System.Windows.Forms.TextBox();
       this.voicebox = new System.Windows.Forms.ComboBox();
@@ -63,13 +67,15 @@
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
-      this.pictureBox4 = new System.Windows.Forms.PictureBox();
-      this.button4 = new System.Windows.Forms.Button();
-      this.button5 = new System.Windows.Forms.Button();
+      this.SpeechAdd = new System.Windows.Forms.Button();
+      this.button6 = new System.Windows.Forms.Button();
+      this.button7 = new System.Windows.Forms.Button();
+      this.button8 = new System.Windows.Forms.Button();
+      this.button9 = new System.Windows.Forms.Button();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.RawWeather = new System.Windows.Forms.TextBox();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,7 +85,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -99,6 +104,42 @@
       metrics.TabIndex = 2;
       metrics.Text = "Global Metrics";
       metrics.UseVisualStyleBackColor = true;
+      // 
+      // RawWeather
+      // 
+      this.RawWeather.Location = new System.Drawing.Point(7, 260);
+      this.RawWeather.Multiline = true;
+      this.RawWeather.Name = "RawWeather";
+      this.RawWeather.Size = new System.Drawing.Size(362, 223);
+      this.RawWeather.TabIndex = 6;
+      // 
+      // button5
+      // 
+      this.button5.Location = new System.Drawing.Point(235, 7);
+      this.button5.Name = "button5";
+      this.button5.Size = new System.Drawing.Size(108, 23);
+      this.button5.TabIndex = 5;
+      this.button5.Text = "GET New York";
+      this.button5.UseVisualStyleBackColor = true;
+      this.button5.Click += new System.EventHandler(this.button5_Click);
+      // 
+      // button4
+      // 
+      this.button4.Location = new System.Drawing.Point(121, 7);
+      this.button4.Name = "button4";
+      this.button4.Size = new System.Drawing.Size(108, 23);
+      this.button4.TabIndex = 4;
+      this.button4.Text = "GET Cape Town";
+      this.button4.UseVisualStyleBackColor = true;
+      this.button4.Click += new System.EventHandler(this.button4_Click);
+      // 
+      // pictureBox4
+      // 
+      this.pictureBox4.Location = new System.Drawing.Point(481, 43);
+      this.pictureBox4.Name = "pictureBox4";
+      this.pictureBox4.Size = new System.Drawing.Size(186, 178);
+      this.pictureBox4.TabIndex = 3;
+      this.pictureBox4.TabStop = false;
       // 
       // iconBox
       // 
@@ -137,14 +178,13 @@
       this.button1.UseVisualStyleBackColor = false;
       this.button1.Click += new System.EventHandler(this.button1_Click);
       // 
-      // textBox1
+      // MainText
       // 
-      this.textBox1.Location = new System.Drawing.Point(6, 146);
-      this.textBox1.Multiline = true;
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(335, 298);
-      this.textBox1.TabIndex = 1;
-      this.textBox1.Text = "Test 1. Test 2. Test 3.";
+      this.MainText.Location = new System.Drawing.Point(6, 154);
+      this.MainText.Multiline = true;
+      this.MainText.Name = "MainText";
+      this.MainText.Size = new System.Drawing.Size(335, 290);
+      this.MainText.TabIndex = 1;
       // 
       // textBox2
       // 
@@ -289,6 +329,11 @@
       // 
       // tabPage1
       // 
+      this.tabPage1.Controls.Add(this.button9);
+      this.tabPage1.Controls.Add(this.button8);
+      this.tabPage1.Controls.Add(this.button7);
+      this.tabPage1.Controls.Add(this.button6);
+      this.tabPage1.Controls.Add(this.SpeechAdd);
       this.tabPage1.Controls.Add(this.strapline);
       this.tabPage1.Controls.Add(this.label7);
       this.tabPage1.Controls.Add(this.label6);
@@ -298,7 +343,7 @@
       this.tabPage1.Controls.Add(this.report);
       this.tabPage1.Controls.Add(this.label4);
       this.tabPage1.Controls.Add(this.pictureBox1);
-      this.tabPage1.Controls.Add(this.textBox1);
+      this.tabPage1.Controls.Add(this.MainText);
       this.tabPage1.Controls.Add(this.ProjectNames);
       this.tabPage1.Controls.Add(this.Headline);
       this.tabPage1.Controls.Add(this.label1);
@@ -426,45 +471,59 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
-      // pictureBox4
+      // SpeechAdd
       // 
-      this.pictureBox4.Location = new System.Drawing.Point(481, 43);
-      this.pictureBox4.Name = "pictureBox4";
-      this.pictureBox4.Size = new System.Drawing.Size(186, 178);
-      this.pictureBox4.TabIndex = 3;
-      this.pictureBox4.TabStop = false;
+      this.SpeechAdd.Location = new System.Drawing.Point(40, 126);
+      this.SpeechAdd.Name = "SpeechAdd";
+      this.SpeechAdd.Size = new System.Drawing.Size(38, 23);
+      this.SpeechAdd.TabIndex = 23;
+      this.SpeechAdd.Text = "S";
+      this.SpeechAdd.UseVisualStyleBackColor = true;
+      this.SpeechAdd.Click += new System.EventHandler(this.SpeechAdd_Click);
       // 
-      // button4
+      // button6
       // 
-      this.button4.Location = new System.Drawing.Point(121, 7);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(108, 23);
-      this.button4.TabIndex = 4;
-      this.button4.Text = "GET Cape Town";
-      this.button4.UseVisualStyleBackColor = true;
-      this.button4.Click += new System.EventHandler(this.button4_Click);
+      this.button6.Location = new System.Drawing.Point(84, 126);
+      this.button6.Name = "button6";
+      this.button6.Size = new System.Drawing.Size(38, 23);
+      this.button6.TabIndex = 24;
+      this.button6.Text = "B";
+      this.button6.UseVisualStyleBackColor = true;
+      this.button6.Click += new System.EventHandler(this.button6_Click);
       // 
-      // button5
+      // button7
       // 
-      this.button5.Location = new System.Drawing.Point(235, 7);
-      this.button5.Name = "button5";
-      this.button5.Size = new System.Drawing.Size(108, 23);
-      this.button5.TabIndex = 5;
-      this.button5.Text = "GET New York";
-      this.button5.UseVisualStyleBackColor = true;
-      this.button5.Click += new System.EventHandler(this.button5_Click);
+      this.button7.Location = new System.Drawing.Point(128, 126);
+      this.button7.Name = "button7";
+      this.button7.Size = new System.Drawing.Size(38, 23);
+      this.button7.TabIndex = 25;
+      this.button7.Text = "H1T";
+      this.button7.UseVisualStyleBackColor = true;
+      this.button7.Click += new System.EventHandler(this.button7_Click);
+      // 
+      // button8
+      // 
+      this.button8.Location = new System.Drawing.Point(172, 126);
+      this.button8.Name = "button8";
+      this.button8.Size = new System.Drawing.Size(38, 23);
+      this.button8.TabIndex = 26;
+      this.button8.Text = "H2T";
+      this.button8.UseVisualStyleBackColor = true;
+      this.button8.Click += new System.EventHandler(this.button8_Click);
+      // 
+      // button9
+      // 
+      this.button9.Location = new System.Drawing.Point(216, 126);
+      this.button9.Name = "button9";
+      this.button9.Size = new System.Drawing.Size(38, 23);
+      this.button9.TabIndex = 27;
+      this.button9.Text = "H3T";
+      this.button9.UseVisualStyleBackColor = true;
+      this.button9.Click += new System.EventHandler(this.button9_Click);
       // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
-      // 
-      // RawWeather
-      // 
-      this.RawWeather.Location = new System.Drawing.Point(7, 260);
-      this.RawWeather.Multiline = true;
-      this.RawWeather.Name = "RawWeather";
-      this.RawWeather.Size = new System.Drawing.Size(362, 223);
-      this.RawWeather.TabIndex = 6;
       // 
       // Analysis
       // 
@@ -484,6 +543,7 @@
       this.Text = "Analysis";
       metrics.ResumeLayout(false);
       metrics.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -494,7 +554,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -504,7 +563,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MainText;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox Visemes;
         private System.Windows.Forms.ComboBox voicebox;
@@ -541,6 +600,11 @@
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.TextBox RawWeather;
+    private System.Windows.Forms.Button button9;
+    private System.Windows.Forms.Button button8;
+    private System.Windows.Forms.Button button7;
+    private System.Windows.Forms.Button button6;
+    private System.Windows.Forms.Button SpeechAdd;
   }
 }
 
