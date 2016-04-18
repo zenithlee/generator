@@ -259,22 +259,22 @@ namespace Generator
         s = "Freezing weather";
       }
       else
-      if ((temp > 0) && (temp < 10))
+      if ((temp > 0) && (temp <= 10))
       {
         s = "Chilly weather";
       }
       else
-      if ((temp > 10) && (temp < 20))
+      if ((temp > 10) && (temp <= 20))
       {
         s = "Cool weather";
       }
       else
-      if ((temp > 20) && (temp < 30))
+      if ((temp > 20) && (temp <= 30))
       {
         s = "Warm weather";
       }
       else
-      if ((temp > 30) && (temp < 40))
+      if ((temp > 30) && (temp <= 40))
       {
         s = "Hot weather";
       }
