@@ -606,12 +606,12 @@ namespace Generator
       InsertText("B~H1I~image3");
     }
 
-    private void GetAppleStockbutton_Click(object sender, EventArgs e)
+    private void GetApple_Click(object sender, EventArgs e)
     {
       //string s = _stocks.MakeWebRequest(_stocks.URL, "AAPL");
       //MarketResponse.Text = s;
       StockClassObject o = _stocks.GetStockInfo("AAPL");
-      StockReport.Text = _stocks.CreateReport(o);
+      MarketStory.Text = _stocks.CreateReport(o);
     }
   }
   }

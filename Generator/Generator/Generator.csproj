@@ -92,6 +92,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockClass.cs" />
+    <Compile Include="StockMarket.cs" />
     <Compile Include="TwitterBot.cs" />
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherClass.cs" />
