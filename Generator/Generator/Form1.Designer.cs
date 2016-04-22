@@ -53,7 +53,7 @@
       this.label4 = new System.Windows.Forms.Label();
       this.button3 = new System.Windows.Forms.Button();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.MainTab = new System.Windows.Forms.TabControl();
+      this.tabControl1 = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
       this.button9 = new System.Windows.Forms.Button();
       this.button8 = new System.Windows.Forms.Button();
@@ -70,26 +70,36 @@
       this.tabPage2 = new System.Windows.Forms.TabPage();
       this.RefreshButton = new System.Windows.Forms.Button();
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
+      this.Twitter = new System.Windows.Forms.TabPage();
+      this.TwitterInfo = new System.Windows.Forms.TextBox();
+      this.TestTwitterbutton = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
-      this.Market = new System.Windows.Forms.TabPage();
-      this.GetAppleStockbutton = new System.Windows.Forms.Button();
-      this.MarketResponse = new System.Windows.Forms.TextBox();
+      this.MakeTweetButton = new System.Windows.Forms.Button();
+      this.TweetBox = new System.Windows.Forms.TextBox();
+      this.HashTagsBox = new System.Windows.Forms.TextBox();
+      this.label8 = new System.Windows.Forms.Label();
+      this.label9 = new System.Windows.Forms.Label();
+      this.TestSearchButton = new System.Windows.Forms.Button();
+      this.SearchBox = new System.Windows.Forms.TextBox();
+      this.button10 = new System.Windows.Forms.Button();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.StockReport = new System.Windows.Forms.TextBox();
+      this.button11 = new System.Windows.Forms.Button();
+      this.button12 = new System.Windows.Forms.Button();
+      this.button13 = new System.Windows.Forms.Button();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-      this.MainTab.SuspendLayout();
+      this.tabControl1.SuspendLayout();
       this.tabPage1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
-      this.Market.SuspendLayout();
+      this.Twitter.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -185,10 +195,11 @@
       // 
       // MainText
       // 
-      this.MainText.Location = new System.Drawing.Point(6, 154);
+      this.MainText.Location = new System.Drawing.Point(6, 183);
       this.MainText.Multiline = true;
       this.MainText.Name = "MainText";
-      this.MainText.Size = new System.Drawing.Size(335, 290);
+      this.MainText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+      this.MainText.Size = new System.Drawing.Size(335, 261);
       this.MainText.TabIndex = 1;
       // 
       // textBox2
@@ -321,20 +332,24 @@
       this.pictureBox1.TabStop = false;
       this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
       // 
-      // MainTab
+      // tabControl1
       // 
-      this.MainTab.Controls.Add(this.tabPage1);
-      this.MainTab.Controls.Add(this.tabPage2);
-      this.MainTab.Controls.Add(metrics);
-      this.MainTab.Controls.Add(this.Market);
-      this.MainTab.Location = new System.Drawing.Point(12, 13);
-      this.MainTab.Name = "MainTab";
-      this.MainTab.SelectedIndex = 0;
-      this.MainTab.Size = new System.Drawing.Size(727, 551);
-      this.MainTab.TabIndex = 16;
+      this.tabControl1.Controls.Add(this.tabPage1);
+      this.tabControl1.Controls.Add(this.tabPage2);
+      this.tabControl1.Controls.Add(metrics);
+      this.tabControl1.Controls.Add(this.Twitter);
+      this.tabControl1.Location = new System.Drawing.Point(12, 13);
+      this.tabControl1.Name = "tabControl1";
+      this.tabControl1.SelectedIndex = 0;
+      this.tabControl1.Size = new System.Drawing.Size(727, 551);
+      this.tabControl1.TabIndex = 16;
       // 
       // tabPage1
       // 
+      this.tabPage1.Controls.Add(this.button13);
+      this.tabPage1.Controls.Add(this.button12);
+      this.tabPage1.Controls.Add(this.button11);
+      this.tabPage1.Controls.Add(this.button10);
       this.tabPage1.Controls.Add(this.button9);
       this.tabPage1.Controls.Add(this.button8);
       this.tabPage1.Controls.Add(this.button7);
@@ -366,7 +381,7 @@
       // 
       // button9
       // 
-      this.button9.Location = new System.Drawing.Point(216, 126);
+      this.button9.Location = new System.Drawing.Point(186, 126);
       this.button9.Name = "button9";
       this.button9.Size = new System.Drawing.Size(38, 23);
       this.button9.TabIndex = 27;
@@ -376,7 +391,7 @@
       // 
       // button8
       // 
-      this.button8.Location = new System.Drawing.Point(172, 126);
+      this.button8.Location = new System.Drawing.Point(142, 126);
       this.button8.Name = "button8";
       this.button8.Size = new System.Drawing.Size(38, 23);
       this.button8.TabIndex = 26;
@@ -386,7 +401,7 @@
       // 
       // button7
       // 
-      this.button7.Location = new System.Drawing.Point(128, 126);
+      this.button7.Location = new System.Drawing.Point(98, 126);
       this.button7.Name = "button7";
       this.button7.Size = new System.Drawing.Size(38, 23);
       this.button7.TabIndex = 25;
@@ -396,9 +411,9 @@
       // 
       // button6
       // 
-      this.button6.Location = new System.Drawing.Point(84, 126);
+      this.button6.Location = new System.Drawing.Point(69, 126);
       this.button6.Name = "button6";
-      this.button6.Size = new System.Drawing.Size(38, 23);
+      this.button6.Size = new System.Drawing.Size(23, 23);
       this.button6.TabIndex = 24;
       this.button6.Text = "B";
       this.button6.UseVisualStyleBackColor = true;
@@ -408,7 +423,7 @@
       // 
       this.SpeechAdd.Location = new System.Drawing.Point(40, 126);
       this.SpeechAdd.Name = "SpeechAdd";
-      this.SpeechAdd.Size = new System.Drawing.Size(38, 23);
+      this.SpeechAdd.Size = new System.Drawing.Size(23, 23);
       this.SpeechAdd.TabIndex = 23;
       this.SpeechAdd.Text = "S";
       this.SpeechAdd.UseVisualStyleBackColor = true;
@@ -513,6 +528,43 @@
       this.SentimentGrid.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.SentimentGrid_CellValidating);
       this.SentimentGrid.Validated += new System.EventHandler(this.SentimentGrid_Validated);
       // 
+      // Twitter
+      // 
+      this.Twitter.Controls.Add(this.SearchBox);
+      this.Twitter.Controls.Add(this.TestSearchButton);
+      this.Twitter.Controls.Add(this.label9);
+      this.Twitter.Controls.Add(this.label8);
+      this.Twitter.Controls.Add(this.HashTagsBox);
+      this.Twitter.Controls.Add(this.TweetBox);
+      this.Twitter.Controls.Add(this.MakeTweetButton);
+      this.Twitter.Controls.Add(this.TwitterInfo);
+      this.Twitter.Controls.Add(this.TestTwitterbutton);
+      this.Twitter.Location = new System.Drawing.Point(4, 22);
+      this.Twitter.Name = "Twitter";
+      this.Twitter.Size = new System.Drawing.Size(719, 525);
+      this.Twitter.TabIndex = 3;
+      this.Twitter.Text = "Twitter";
+      this.Twitter.UseVisualStyleBackColor = true;
+      // 
+      // TwitterInfo
+      // 
+      this.TwitterInfo.Location = new System.Drawing.Point(84, 313);
+      this.TwitterInfo.Multiline = true;
+      this.TwitterInfo.Name = "TwitterInfo";
+      this.TwitterInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+      this.TwitterInfo.Size = new System.Drawing.Size(617, 145);
+      this.TwitterInfo.TabIndex = 1;
+      // 
+      // TestTwitterbutton
+      // 
+      this.TestTwitterbutton.Location = new System.Drawing.Point(3, 311);
+      this.TestTwitterbutton.Name = "TestTwitterbutton";
+      this.TestTwitterbutton.Size = new System.Drawing.Size(75, 23);
+      this.TestTwitterbutton.TabIndex = 0;
+      this.TestTwitterbutton.Text = "TestTwitter";
+      this.TestTwitterbutton.UseVisualStyleBackColor = true;
+      this.TestTwitterbutton.Click += new System.EventHandler(this.TestTwitterbutton_Click);
+      // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
@@ -527,50 +579,114 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
-      // Market
+      // MakeTweetButton
       // 
-      this.Market.Controls.Add(this.StockReport);
-      this.Market.Controls.Add(this.MarketResponse);
-      this.Market.Controls.Add(this.GetAppleStockbutton);
-      this.Market.Location = new System.Drawing.Point(4, 22);
-      this.Market.Name = "Market";
-      this.Market.Padding = new System.Windows.Forms.Padding(3);
-      this.Market.Size = new System.Drawing.Size(719, 525);
-      this.Market.TabIndex = 3;
-      this.Market.Text = "Market";
-      this.Market.UseVisualStyleBackColor = true;
+      this.MakeTweetButton.Location = new System.Drawing.Point(626, 111);
+      this.MakeTweetButton.Name = "MakeTweetButton";
+      this.MakeTweetButton.Size = new System.Drawing.Size(75, 23);
+      this.MakeTweetButton.TabIndex = 2;
+      this.MakeTweetButton.Text = "Tweet";
+      this.MakeTweetButton.UseVisualStyleBackColor = true;
+      this.MakeTweetButton.Click += new System.EventHandler(this.MakeTweetButton_Click);
       // 
-      // GetAppleStockbutton
+      // TweetBox
       // 
-      this.GetAppleStockbutton.Location = new System.Drawing.Point(6, 6);
-      this.GetAppleStockbutton.Name = "GetAppleStockbutton";
-      this.GetAppleStockbutton.Size = new System.Drawing.Size(108, 23);
-      this.GetAppleStockbutton.TabIndex = 1;
-      this.GetAppleStockbutton.Text = "GET AAPL";
-      this.GetAppleStockbutton.UseVisualStyleBackColor = true;
-      this.GetAppleStockbutton.Click += new System.EventHandler(this.GetAppleStockbutton_Click);
+      this.TweetBox.Location = new System.Drawing.Point(84, 24);
+      this.TweetBox.MaxLength = 144;
+      this.TweetBox.Multiline = true;
+      this.TweetBox.Name = "TweetBox";
+      this.TweetBox.Size = new System.Drawing.Size(617, 47);
+      this.TweetBox.TabIndex = 3;
       // 
-      // MarketResponse
+      // HashTagsBox
       // 
-      this.MarketResponse.Location = new System.Drawing.Point(6, 36);
-      this.MarketResponse.Multiline = true;
-      this.MarketResponse.Name = "MarketResponse";
-      this.MarketResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.MarketResponse.Size = new System.Drawing.Size(247, 483);
-      this.MarketResponse.TabIndex = 2;
-      this.MarketResponse.WordWrap = false;
+      this.HashTagsBox.Location = new System.Drawing.Point(84, 77);
+      this.HashTagsBox.MaxLength = 144;
+      this.HashTagsBox.Multiline = true;
+      this.HashTagsBox.Name = "HashTagsBox";
+      this.HashTagsBox.Size = new System.Drawing.Size(617, 28);
+      this.HashTagsBox.TabIndex = 4;
+      this.HashTagsBox.Text = "#ai #sentient #aliceai";
+      // 
+      // label8
+      // 
+      this.label8.AutoSize = true;
+      this.label8.Location = new System.Drawing.Point(4, 77);
+      this.label8.Name = "label8";
+      this.label8.Size = new System.Drawing.Size(52, 13);
+      this.label8.TabIndex = 5;
+      this.label8.Text = "Hashtags";
+      // 
+      // label9
+      // 
+      this.label9.AutoSize = true;
+      this.label9.Location = new System.Drawing.Point(4, 27);
+      this.label9.Name = "label9";
+      this.label9.Size = new System.Drawing.Size(28, 13);
+      this.label9.TabIndex = 6;
+      this.label9.Text = "Text";
+      // 
+      // TestSearchButton
+      // 
+      this.TestSearchButton.Location = new System.Drawing.Point(7, 266);
+      this.TestSearchButton.Name = "TestSearchButton";
+      this.TestSearchButton.Size = new System.Drawing.Size(75, 23);
+      this.TestSearchButton.TabIndex = 7;
+      this.TestSearchButton.Text = "Search";
+      this.TestSearchButton.UseVisualStyleBackColor = true;
+      this.TestSearchButton.Click += new System.EventHandler(this.TestSearchButton_Click);
+      // 
+      // SearchBox
+      // 
+      this.SearchBox.Location = new System.Drawing.Point(84, 269);
+      this.SearchBox.Name = "SearchBox";
+      this.SearchBox.Size = new System.Drawing.Size(617, 20);
+      this.SearchBox.TabIndex = 8;
+      this.SearchBox.Text = "#ai";
+      // 
+      // button10
+      // 
+      this.button10.Location = new System.Drawing.Point(303, 126);
+      this.button10.Name = "button10";
+      this.button10.Size = new System.Drawing.Size(38, 23);
+      this.button10.TabIndex = 28;
+      this.button10.Text = "Auto";
+      this.button10.UseVisualStyleBackColor = true;
+      this.button10.Click += new System.EventHandler(this.button10_Click);
       // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // StockReport
+      // button11
       // 
-      this.StockReport.Location = new System.Drawing.Point(260, 36);
-      this.StockReport.Multiline = true;
-      this.StockReport.Name = "StockReport";
-      this.StockReport.Size = new System.Drawing.Size(440, 228);
-      this.StockReport.TabIndex = 3;
+      this.button11.Location = new System.Drawing.Point(40, 154);
+      this.button11.Name = "button11";
+      this.button11.Size = new System.Drawing.Size(53, 23);
+      this.button11.TabIndex = 29;
+      this.button11.Text = "image1";
+      this.button11.UseVisualStyleBackColor = true;
+      this.button11.Click += new System.EventHandler(this.button11_Click);
+      // 
+      // button12
+      // 
+      this.button12.Location = new System.Drawing.Point(98, 154);
+      this.button12.Name = "button12";
+      this.button12.Size = new System.Drawing.Size(53, 23);
+      this.button12.TabIndex = 30;
+      this.button12.Text = "image2";
+      this.button12.UseVisualStyleBackColor = true;
+      this.button12.Click += new System.EventHandler(this.button12_Click);
+      // 
+      // button13
+      // 
+      this.button13.Location = new System.Drawing.Point(157, 154);
+      this.button13.Name = "button13";
+      this.button13.Size = new System.Drawing.Size(53, 23);
+      this.button13.TabIndex = 31;
+      this.button13.Text = "image3";
+      this.button13.UseVisualStyleBackColor = true;
+      this.button13.Click += new System.EventHandler(this.button13_Click);
       // 
       // Analysis
       // 
@@ -578,7 +694,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(944, 568);
       this.Controls.Add(this.Test);
-      this.Controls.Add(this.MainTab);
+      this.Controls.Add(this.tabControl1);
       this.Controls.Add(this.button3);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.trackBar1);
@@ -594,15 +710,15 @@
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-      this.MainTab.ResumeLayout(false);
+      this.tabControl1.ResumeLayout(false);
       this.tabPage1.ResumeLayout(false);
       this.tabPage1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
-      this.Market.ResumeLayout(false);
-      this.Market.PerformLayout();
+      this.Twitter.ResumeLayout(false);
+      this.Twitter.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -627,7 +743,7 @@
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl MainTab;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox report;
@@ -654,10 +770,20 @@
     private System.Windows.Forms.Button button7;
     private System.Windows.Forms.Button button6;
     private System.Windows.Forms.Button SpeechAdd;
-    private System.Windows.Forms.TabPage Market;
-    private System.Windows.Forms.Button GetAppleStockbutton;
-    private System.Windows.Forms.TextBox MarketResponse;
-    private System.Windows.Forms.TextBox StockReport;
+    private System.Windows.Forms.TabPage Twitter;
+    private System.Windows.Forms.TextBox TwitterInfo;
+    private System.Windows.Forms.Button TestTwitterbutton;
+    private System.Windows.Forms.TextBox TweetBox;
+    private System.Windows.Forms.Button MakeTweetButton;
+    private System.Windows.Forms.Label label8;
+    private System.Windows.Forms.TextBox HashTagsBox;
+    private System.Windows.Forms.Label label9;
+    private System.Windows.Forms.Button TestSearchButton;
+    private System.Windows.Forms.TextBox SearchBox;
+    private System.Windows.Forms.Button button10;
+    private System.Windows.Forms.Button button11;
+    private System.Windows.Forms.Button button13;
+    private System.Windows.Forms.Button button12;
   }
 }
 

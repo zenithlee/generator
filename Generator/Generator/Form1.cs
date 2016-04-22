@@ -46,6 +46,8 @@ namespace Generator
     Weather _weather = new Weather();
     StockMarket _stocks = new StockMarket();
 
+    TwitterBot _Twitter = new TwitterBot();
+
     int PreviousVisemeMs = 0; //used to reduce overlap data
 
   public Analysis()
@@ -87,8 +89,8 @@ namespace Generator
       missing.Clear();
       report.Clear();
 
-      items.Add("H " + Headline.Text);
-      Visemes.Text += "H " + Headline.Text + "\r\n";
+      items.Add("0~H~" + Headline.Text);
+      Visemes.Text += "0~H~" + Headline.Text + "\r\n";
       if (checkBox1.Checked)
       {
         reader.SetOutputToWaveFile(CurrentProject + "/audio.wav");
@@ -266,7 +268,8 @@ namespace Generator
 
     private void Reader_BookmarkReached(object sender, BookmarkReachedEventArgs e)
     {
-      string s = "B " + e.Bookmark;
+       int ms = (int)e.AudioPosition.TotalMilliseconds;
+      string s = ms +"~B~" +e.Bookmark;
       Visemes.Text += s + "\r\n";
       items.Add(s);
       SendToPipe(s);
@@ -274,7 +277,8 @@ namespace Generator
 
     private void Reader_VoiceChange(object sender, VoiceChangeEventArgs e)
   {
-      string s = "S " + e.Voice.Name + "," + e.Voice.Gender + "," + e.Voice.Age + "," + e.Voice.Culture + "," + e.Voice.Description;
+      
+      string s = "0~S~" + e.Voice.Name + "~" + e.Voice.Gender + "~" + e.Voice.Age + "~" + e.Voice.Culture + "~" + e.Voice.Description;
       Visemes.Text += s + "\r\n";
       items.Add(s);
       SendToPipe(s);
@@ -282,7 +286,10 @@ namespace Generator
 
   void reader_SpeakProgress(object sender, SpeakProgressEventArgs e)
   {
-      string s = "W " + e.Text.Replace(" ", "_") ;
+      int ms = (int)e.AudioPosition.TotalMilliseconds;
+
+      string s = ms.ToString()+"~W~" + e.Text.Replace(" ", "_") ;      
+
       string slower = e.Text.ToLower();
       float sentiment = 0f;
       if (Sentiments.ContainsKey(slower))
@@ -299,8 +306,8 @@ namespace Generator
             report.Text += slower + "\r\n";
         }            
       }
-      Visemes.Text += s + " " + sentiment + "\r\n";
-      items.Add(s + " " + sentiment);
+      Visemes.Text += s + "~" + sentiment + "\r\n";
+      items.Add(s + "~" + sentiment);
   }
 
   private void voicebox_SelectedValueChanged(object sender, EventArgs e)
@@ -316,7 +323,7 @@ namespace Generator
       {        
         ms += 30;
       }
-      string s = "V " + ms + " " + e.Viseme.ToString();
+      string s = ms + "~V~" + e.Viseme.ToString();
       Visemes.Text += s + "\r\n";
       items.Add(s);
       PreviousVisemeMs = (int)e.AudioPosition.TotalMilliseconds;
@@ -327,9 +334,12 @@ namespace Generator
   void reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
   {
       textBox2.Text = "IDLE.";
+      Visemes.Text += "0~X~X";
+      items.Add("0~X~X");
       SaveProject();
       textBox2.Text = "SAVED.";
-  } 
+      
+    } 
 
   private void checkBox1_CheckedChanged(object sender, EventArgs e)
   {
@@ -365,12 +375,14 @@ namespace Generator
       FileInfo fi = new FileInfo(path);
       openFileDialog1.InitialDirectory = fi.FullName;
       DialogResult result = openFileDialog1.ShowDialog();
+      
       string fullname = openFileDialog1.FileName;
       //pictureBox1.ImageLocation = fullname;
-      image1 = new Bitmap(fullname);
-      pictureBox1.Image = image1;
-      
-      image1.Save(CurrentProject + "/image1.png");
+      if ( File.Exists(fullname)) { 
+        image1 = new Bitmap(fullname);
+        pictureBox1.Image = image1;      
+        image1.Save(CurrentProject + "/image1.png");
+      }
     }
 
     private void pictureBox2_Click(object sender, EventArgs e)
@@ -396,7 +408,7 @@ namespace Generator
       image3 = new Bitmap(fullname);
       pictureBox3.Image = image3;
 
-      image1.Save(CurrentProject + "/image3.png");
+      image3.Save(CurrentProject + "/image3.png");
     }
 
 
@@ -515,27 +527,83 @@ namespace Generator
 
     private void SpeechAdd_Click(object sender, EventArgs e)
     {
-      MainText.Text += "\r\nS~";
+      InsertText("S~");      
     }
 
     private void button6_Click(object sender, EventArgs e)
     {
-      MainText.Text += "\r\nB~";
+      InsertText("B~");
     }
 
     private void button7_Click(object sender, EventArgs e)
+    { 
+      InsertText("~B~H1T~");
+    }
+
+    void InsertText(string s)
     {
-      MainText.Text += "\r\nB~H1T~";
+      string ss = "\r\n" + s;
+      var selectionIndex = MainText.SelectionStart;
+      MainText.Text = MainText.Text.Insert(selectionIndex, ss);
+      MainText.SelectionStart = selectionIndex + ss.Length+1;
+      MainText.Select();
     }
 
     private void button8_Click(object sender, EventArgs e)
     {
-      MainText.Text += "\r\nB~H2T~";
+      InsertText("~B~H2T~");
     }
 
     private void button9_Click(object sender, EventArgs e)
     {
-      MainText.Text += "\r\nB~H3T~";
+      InsertText("~B~H3T~");
+    }
+
+    private void TestTwitterbutton_Click(object sender, EventArgs e)
+    {
+      TwitterInfo.Text = _Twitter.GetInfo();      
+    }
+
+    private void MakeTweetButton_Click(object sender, EventArgs e)
+    {
+      TwitterInfo.Text = "Tweeting...";
+      _Twitter.MakeTweet(TweetBox.Text + " " + HashTagsBox.Text);
+      TwitterInfo.Text = "OK";
+    }
+
+    private void TestSearchButton_Click(object sender, EventArgs e)
+    {
+      TwitterInfo.Text = _Twitter.DoSearchParams(SearchBox.Text);
+    }
+
+    private void button10_Click(object sender, EventArgs e)
+    {
+      string s = MainText.Text;
+
+      s = s.Replace("\r", "");
+      string[] items = s.Split('\n');
+      string r = "";
+      foreach( string item in items)
+      {
+        r += "S~" + item + "\r\n\r\n";
+      }
+
+      MainText.Text = r;
+    }
+
+    private void button11_Click(object sender, EventArgs e)
+    {
+      InsertText("B~H1I~image1");
+    }
+
+    private void button12_Click(object sender, EventArgs e)
+    {
+      InsertText("B~H1I~image2");
+    }
+
+    private void button13_Click(object sender, EventArgs e)
+    {
+      InsertText("B~H1I~image3");
     }
 
     private void GetAppleStockbutton_Click(object sender, EventArgs e)
