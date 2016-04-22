@@ -25,7 +25,6 @@ namespace Generator
 
     public string[] own = { "We have", "There is a", "It is", "Conditions are" };
 
-
     public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
     {
       // Unix timestamp is seconds past epoch

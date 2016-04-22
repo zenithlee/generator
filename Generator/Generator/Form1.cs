@@ -16,6 +16,8 @@ using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using System.IO.Pipes;
 
+using Generator;
+
 namespace Generator
   {
   public partial class Analysis : Form
@@ -42,6 +44,7 @@ namespace Generator
     string VoiceName = "";
 
     Weather _weather = new Weather();
+    StockMarket _stocks = new StockMarket();
 
     int PreviousVisemeMs = 0; //used to reduce overlap data
 
@@ -533,6 +536,14 @@ namespace Generator
     private void button9_Click(object sender, EventArgs e)
     {
       MainText.Text += "\r\nB~H3T~";
+    }
+
+    private void GetAppleStockbutton_Click(object sender, EventArgs e)
+    {
+      //string s = _stocks.MakeWebRequest(_stocks.URL, "AAPL");
+      //MarketResponse.Text = s;
+      StockClassObject o = _stocks.GetStockInfo("AAPL");
+      StockReport.Text = _stocks.CreateReport(o);
     }
   }
   }

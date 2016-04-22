@@ -53,8 +53,13 @@
       this.label4 = new System.Windows.Forms.Label();
       this.button3 = new System.Windows.Forms.Button();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.tabControl1 = new System.Windows.Forms.TabControl();
+      this.MainTab = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
+      this.button9 = new System.Windows.Forms.Button();
+      this.button8 = new System.Windows.Forms.Button();
+      this.button7 = new System.Windows.Forms.Button();
+      this.button6 = new System.Windows.Forms.Button();
+      this.SpeechAdd = new System.Windows.Forms.Button();
       this.strapline = new System.Windows.Forms.TextBox();
       this.label7 = new System.Windows.Forms.Label();
       this.label6 = new System.Windows.Forms.Label();
@@ -67,24 +72,24 @@
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.Test = new System.Windows.Forms.Button();
-      this.SpeechAdd = new System.Windows.Forms.Button();
-      this.button6 = new System.Windows.Forms.Button();
-      this.button7 = new System.Windows.Forms.Button();
-      this.button8 = new System.Windows.Forms.Button();
-      this.button9 = new System.Windows.Forms.Button();
+      this.Market = new System.Windows.Forms.TabPage();
+      this.GetAppleStockbutton = new System.Windows.Forms.Button();
+      this.MarketResponse = new System.Windows.Forms.TextBox();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.StockReport = new System.Windows.Forms.TextBox();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-      this.tabControl1.SuspendLayout();
+      this.MainTab.SuspendLayout();
       this.tabPage1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
+      this.Market.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -316,16 +321,17 @@
       this.pictureBox1.TabStop = false;
       this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
       // 
-      // tabControl1
+      // MainTab
       // 
-      this.tabControl1.Controls.Add(this.tabPage1);
-      this.tabControl1.Controls.Add(this.tabPage2);
-      this.tabControl1.Controls.Add(metrics);
-      this.tabControl1.Location = new System.Drawing.Point(12, 13);
-      this.tabControl1.Name = "tabControl1";
-      this.tabControl1.SelectedIndex = 0;
-      this.tabControl1.Size = new System.Drawing.Size(727, 551);
-      this.tabControl1.TabIndex = 16;
+      this.MainTab.Controls.Add(this.tabPage1);
+      this.MainTab.Controls.Add(this.tabPage2);
+      this.MainTab.Controls.Add(metrics);
+      this.MainTab.Controls.Add(this.Market);
+      this.MainTab.Location = new System.Drawing.Point(12, 13);
+      this.MainTab.Name = "MainTab";
+      this.MainTab.SelectedIndex = 0;
+      this.MainTab.Size = new System.Drawing.Size(727, 551);
+      this.MainTab.TabIndex = 16;
       // 
       // tabPage1
       // 
@@ -357,6 +363,56 @@
       this.tabPage1.TabIndex = 0;
       this.tabPage1.Text = "Text";
       this.tabPage1.UseVisualStyleBackColor = true;
+      // 
+      // button9
+      // 
+      this.button9.Location = new System.Drawing.Point(216, 126);
+      this.button9.Name = "button9";
+      this.button9.Size = new System.Drawing.Size(38, 23);
+      this.button9.TabIndex = 27;
+      this.button9.Text = "H3T";
+      this.button9.UseVisualStyleBackColor = true;
+      this.button9.Click += new System.EventHandler(this.button9_Click);
+      // 
+      // button8
+      // 
+      this.button8.Location = new System.Drawing.Point(172, 126);
+      this.button8.Name = "button8";
+      this.button8.Size = new System.Drawing.Size(38, 23);
+      this.button8.TabIndex = 26;
+      this.button8.Text = "H2T";
+      this.button8.UseVisualStyleBackColor = true;
+      this.button8.Click += new System.EventHandler(this.button8_Click);
+      // 
+      // button7
+      // 
+      this.button7.Location = new System.Drawing.Point(128, 126);
+      this.button7.Name = "button7";
+      this.button7.Size = new System.Drawing.Size(38, 23);
+      this.button7.TabIndex = 25;
+      this.button7.Text = "H1T";
+      this.button7.UseVisualStyleBackColor = true;
+      this.button7.Click += new System.EventHandler(this.button7_Click);
+      // 
+      // button6
+      // 
+      this.button6.Location = new System.Drawing.Point(84, 126);
+      this.button6.Name = "button6";
+      this.button6.Size = new System.Drawing.Size(38, 23);
+      this.button6.TabIndex = 24;
+      this.button6.Text = "B";
+      this.button6.UseVisualStyleBackColor = true;
+      this.button6.Click += new System.EventHandler(this.button6_Click);
+      // 
+      // SpeechAdd
+      // 
+      this.SpeechAdd.Location = new System.Drawing.Point(40, 126);
+      this.SpeechAdd.Name = "SpeechAdd";
+      this.SpeechAdd.Size = new System.Drawing.Size(38, 23);
+      this.SpeechAdd.TabIndex = 23;
+      this.SpeechAdd.Text = "S";
+      this.SpeechAdd.UseVisualStyleBackColor = true;
+      this.SpeechAdd.Click += new System.EventHandler(this.SpeechAdd_Click);
       // 
       // strapline
       // 
@@ -471,59 +527,50 @@
       this.Test.UseVisualStyleBackColor = true;
       this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
-      // SpeechAdd
+      // Market
       // 
-      this.SpeechAdd.Location = new System.Drawing.Point(40, 126);
-      this.SpeechAdd.Name = "SpeechAdd";
-      this.SpeechAdd.Size = new System.Drawing.Size(38, 23);
-      this.SpeechAdd.TabIndex = 23;
-      this.SpeechAdd.Text = "S";
-      this.SpeechAdd.UseVisualStyleBackColor = true;
-      this.SpeechAdd.Click += new System.EventHandler(this.SpeechAdd_Click);
+      this.Market.Controls.Add(this.StockReport);
+      this.Market.Controls.Add(this.MarketResponse);
+      this.Market.Controls.Add(this.GetAppleStockbutton);
+      this.Market.Location = new System.Drawing.Point(4, 22);
+      this.Market.Name = "Market";
+      this.Market.Padding = new System.Windows.Forms.Padding(3);
+      this.Market.Size = new System.Drawing.Size(719, 525);
+      this.Market.TabIndex = 3;
+      this.Market.Text = "Market";
+      this.Market.UseVisualStyleBackColor = true;
       // 
-      // button6
+      // GetAppleStockbutton
       // 
-      this.button6.Location = new System.Drawing.Point(84, 126);
-      this.button6.Name = "button6";
-      this.button6.Size = new System.Drawing.Size(38, 23);
-      this.button6.TabIndex = 24;
-      this.button6.Text = "B";
-      this.button6.UseVisualStyleBackColor = true;
-      this.button6.Click += new System.EventHandler(this.button6_Click);
+      this.GetAppleStockbutton.Location = new System.Drawing.Point(6, 6);
+      this.GetAppleStockbutton.Name = "GetAppleStockbutton";
+      this.GetAppleStockbutton.Size = new System.Drawing.Size(108, 23);
+      this.GetAppleStockbutton.TabIndex = 1;
+      this.GetAppleStockbutton.Text = "GET AAPL";
+      this.GetAppleStockbutton.UseVisualStyleBackColor = true;
+      this.GetAppleStockbutton.Click += new System.EventHandler(this.GetAppleStockbutton_Click);
       // 
-      // button7
+      // MarketResponse
       // 
-      this.button7.Location = new System.Drawing.Point(128, 126);
-      this.button7.Name = "button7";
-      this.button7.Size = new System.Drawing.Size(38, 23);
-      this.button7.TabIndex = 25;
-      this.button7.Text = "H1T";
-      this.button7.UseVisualStyleBackColor = true;
-      this.button7.Click += new System.EventHandler(this.button7_Click);
-      // 
-      // button8
-      // 
-      this.button8.Location = new System.Drawing.Point(172, 126);
-      this.button8.Name = "button8";
-      this.button8.Size = new System.Drawing.Size(38, 23);
-      this.button8.TabIndex = 26;
-      this.button8.Text = "H2T";
-      this.button8.UseVisualStyleBackColor = true;
-      this.button8.Click += new System.EventHandler(this.button8_Click);
-      // 
-      // button9
-      // 
-      this.button9.Location = new System.Drawing.Point(216, 126);
-      this.button9.Name = "button9";
-      this.button9.Size = new System.Drawing.Size(38, 23);
-      this.button9.TabIndex = 27;
-      this.button9.Text = "H3T";
-      this.button9.UseVisualStyleBackColor = true;
-      this.button9.Click += new System.EventHandler(this.button9_Click);
+      this.MarketResponse.Location = new System.Drawing.Point(6, 36);
+      this.MarketResponse.Multiline = true;
+      this.MarketResponse.Name = "MarketResponse";
+      this.MarketResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+      this.MarketResponse.Size = new System.Drawing.Size(247, 483);
+      this.MarketResponse.TabIndex = 2;
+      this.MarketResponse.WordWrap = false;
       // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
+      // 
+      // StockReport
+      // 
+      this.StockReport.Location = new System.Drawing.Point(260, 36);
+      this.StockReport.Multiline = true;
+      this.StockReport.Name = "StockReport";
+      this.StockReport.Size = new System.Drawing.Size(440, 228);
+      this.StockReport.TabIndex = 3;
       // 
       // Analysis
       // 
@@ -531,7 +578,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(944, 568);
       this.Controls.Add(this.Test);
-      this.Controls.Add(this.tabControl1);
+      this.Controls.Add(this.MainTab);
       this.Controls.Add(this.button3);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.trackBar1);
@@ -547,13 +594,15 @@
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-      this.tabControl1.ResumeLayout(false);
+      this.MainTab.ResumeLayout(false);
       this.tabPage1.ResumeLayout(false);
       this.tabPage1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tabPage2.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
+      this.Market.ResumeLayout(false);
+      this.Market.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -578,7 +627,7 @@
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl MainTab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox report;
@@ -605,6 +654,10 @@
     private System.Windows.Forms.Button button7;
     private System.Windows.Forms.Button button6;
     private System.Windows.Forms.Button SpeechAdd;
+    private System.Windows.Forms.TabPage Market;
+    private System.Windows.Forms.Button GetAppleStockbutton;
+    private System.Windows.Forms.TextBox MarketResponse;
+    private System.Windows.Forms.TextBox StockReport;
   }
 }
 
