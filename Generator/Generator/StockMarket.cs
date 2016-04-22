@@ -12,6 +12,8 @@ namespace Generator
   class StockMarket
   {
     public string URL = "http://www.google.com/finance/info?";
+    //http://finance.google.com/finance/info?client=ig&q=NASDAQ:GOOG
+    //http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg
     //q=NSE:AAPL,AAPL,
     string Result = "";
 
@@ -49,9 +51,12 @@ namespace Generator
    ,"yld" : "1.96"
    }
    ]
+
+      Starbucks Corp. shares SBUX, -3.27% slid 4.7% in after-hours trade Thursday, after the company posted weaker-than-expected sales for its second fiscal quarter. Starbucks said it had net income of $575.1 million, or 39 cents a share, compared with $494.9 million, or 33 cents a share, in the year-earlier period. Revenue rose to $4.99 billion from $4.56 billion. The FactSet consensus was for EPS of 39 cents and revenue of $5.03 billion. Same-store sales rose 6%, below the FactSet consensus of 6.5%. Looking ahead, the company said it expects third-quarter EPS of 48 cents to 49 cents, compared with the current consensus of 49 cents. The board has agreed to add an additional 100 million shares to the company's share buyback authorization. Shares are up 1% in the year so far, while the S&P 500 has gained about 2%.
+
    */
 
-      string CompanyFromCode(string s)
+    string CompanyFromCode(string s)
     {
       switch( s)
       {
@@ -66,7 +71,9 @@ namespace Generator
     {
       string s = "";
       if (o == null) return "No data";
-      s += CompanyFromCode(o.t) + " reported ";
+
+      s += "~B~H1T~" + o.t;
+      s += CompanyFromCode(o.t) + " reported on the " + o.e + " stock exchance today";
       s += " closing at " + o.l;
       return s;
     }

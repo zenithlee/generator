@@ -610,7 +610,7 @@ namespace Generator
     {
       //string s = _stocks.MakeWebRequest(_stocks.URL, "AAPL");
       //MarketResponse.Text = s;
-      StockClassObject o = _stocks.GetStockInfo("AAPL");
+      StockClassObject o = _stocks.GetStockInfo("AAPL");      
       MarketStory.Text = _stocks.CreateReport(o);
     }
   }
