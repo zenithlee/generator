@@ -15,6 +15,18 @@ namespace Generator
     //http://finance.google.com/finance/info?client=ig&q=NASDAQ:GOOG
     //http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg
     //q=NSE:AAPL,AAPL,
+
+//    q - Stock symbol
+//    x - Stock exchange symbol on which stock is traded(ex: NASD)
+//    i - Interval size in seconds(86400 = 1 day intervals)
+//    p - Period. (A number followed by a "d" or "Y", eg.Days or years.Ex: 40Y = 40 years.)
+//    f - What data do you want? d(date - timestamp/interval, c - close, v - volume, etc...) Note: Column order may not match what you specify here
+//    df - ??
+//    auto - ??
+//    ei - ??
+//    ts - Starting timestamp(Unix format). If blank, it uses today.
+//    http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg
+
     string Result = "";
 
 
