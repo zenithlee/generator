@@ -297,6 +297,17 @@ namespace Generator
       return s;
 
     }
+    string GetPrefixForCity(string s)
+    {
+      string r = "";
+      switch( s.ToLower() )
+      {
+        case "city of london":
+          r = "the";
+          break;
+      }
+      return r + " ";
+    }
 
     /**
      * Generates a report from the JSON created class
@@ -323,7 +334,7 @@ namespace Generator
 
       w+= "S~" + GetQuirk(KelvinToC(o.main.temp), o.wind.speed) + ". ";
       w += NL;
-      w += "S~In " + o.name + NL;
+      w += "S~In " + GetPrefixForCity(o.name) + o.name + NL;
       WeatherClass tomorrow = (WeatherClass)f.list[f.list.Count - 1];
 
       DateTime dt = UnixTimeStampToDateTime(o.dt);

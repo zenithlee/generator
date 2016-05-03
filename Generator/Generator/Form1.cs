@@ -17,20 +17,19 @@ using Newtonsoft.Json;
 using System.IO.Pipes;
 
 using Generator;
+using System.Collections;
 
 namespace Generator
   {
   public partial class Analysis : Form
-  {
-
+  {    
     NamedPipeClientStream clientStream;
 
     string path = "../../NewsNet_Bin/Output/";
     string CurrentFile = "test";
     string CurrentProject;
-    string DataPath = "../Data/";
-    string SentimentFile = "../Data/sentiments2.csv";
-    Dictionary<string, float> Sentiments = new Dictionary<string, float>();
+    string DataPath = "../Data/";    
+    
 
     SpeechSynthesizer reader;
     List<string> items = new List<string>();
@@ -72,12 +71,11 @@ namespace Generator
       voicebox.SelectedValueChanged +=voicebox_SelectedValueChanged;
       voicebox.Text = voices[0].VoiceInfo.Name;
       LoadSentiments();
-      var SentiData = from row in Sentiments select new { word = row.Key, sentiment = row.Value };
-      SentimentGrid.DataSource = SentiData.ToArray();
+     
 
       GetExistingProjects();
       Application.EnableVisualStyles();
-
+      Analysis_Campaign();
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -145,20 +143,7 @@ namespace Generator
       }
     }
 
-    void LoadSentiments()
-  {
-      string[] items = File.ReadAllLines(SentimentFile);
-      foreach( string item in items)
-      {
-        string[] pair = item.Split(',');
-        string sword = pair[0];
-        if (pair[1] == "") pair[1] = "0";
-        float value = (float)Convert.ToDouble(pair[1]);
-        if ( !Sentiments.ContainsKey(sword)) { 
-            Sentiments.Add(sword, value);
-        }
-      }
-  }
+   
 
   void GetExistingProjects()
   {
@@ -288,24 +273,10 @@ namespace Generator
   {
       int ms = (int)e.AudioPosition.TotalMilliseconds;
 
-      string s = ms.ToString()+"~W~" + e.Text.Replace(" ", "_") ;      
-
-      string slower = e.Text.ToLower();
-      float sentiment = 0f;
-      if (Sentiments.ContainsKey(slower))
-      {
-          sentiment = Sentiments[slower];
-      }
-      else
-      {
-        sentiment = 0;
-        if (!missing.Contains(slower))
-        {
-          //slower = slower.Replace(" ", "_");
-            missing.Add(slower);
-            report.Text += slower + "\r\n";
-        }            
-      }
+      string word = e.Text;
+      string s = ms.ToString()+"~W~" + word.Replace(" ", "_") ;      
+      
+      float sentiment = AnalyseWord(word);
       Visemes.Text += s + "~" + sentiment + "\r\n";
       items.Add(s + "~" + sentiment);
   }
@@ -573,7 +544,20 @@ namespace Generator
 
     private void TestSearchButton_Click(object sender, EventArgs e)
     {
-      TwitterInfo.Text = _Twitter.DoSearchParams(SearchBox.Text);
+      TweetResults.Clear();
+      IEnumerable<Tweetinvi.Core.Interfaces.ITweet> results = _Twitter.DoSearchParams(SearchBox.Text);
+
+      foreach(Tweetinvi.Core.Interfaces.ITweet  tweet in results)
+      {
+        AddToList(tweet.Text, tweet.CreatedBy.ScreenName, tweet.Retweets.ToString(), tweet.Id.ToString(), TweetResults);
+      }
+    }
+
+    public void AddToList(string text, string author, string Popularity, string id, ListView list)
+    {
+      string[] row = { text, author, Popularity, id };
+      ListViewItem item = new ListViewItem(row);
+      list.Items.Add(item);
     }
 
     private void button10_Click(object sender, EventArgs e)
@@ -613,5 +597,107 @@ namespace Generator
       StockClassObject o = _stocks.GetStockInfo("AAPL");      
       MarketStory.Text = _stocks.CreateReport(o);
     }
+
+    private void button14_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void Popularity_CheckedChanged(object sender, EventArgs e)
+    {
+      _Twitter.PopularResults = Popularity.Checked;
+    }
+
+    private void RecentCheck_CheckedChanged(object sender, EventArgs e)
+    {
+      _Twitter.RecentResults = RecentCheck.Checked;
+    }
+
+    private void ReTweet_Click(object sender, EventArgs e)
+    {
+      ListView.SelectedListViewItemCollection selected = TweetResults.SelectedItems;
+
+      string s = selected[0].SubItems[0].Text;
+      string sid = selected[0].SubItems[3].Text;
+      long id = Convert.ToInt64(sid);
+
+      TwitterInfo.Text = "Tweeting...";
+
+      //_Twitter.MakeTweet(TweetBox.Text + " " + HashTagsBox.Text);
+      _Twitter.MakeRetweet(id);
+      TwitterInfo.Text = "OK";
+
+    }
+
+    private void CopyToTweet_Click(object sender, EventArgs e)
+    {
+      ListView.SelectedListViewItemCollection selected = TweetResults.SelectedItems;
+      string s = selected[0].SubItems[0].Text;
+      s += "\r\n" + selected[0].SubItems[1].Text;
+      s += "\r\n" + selected[0].SubItems[2].Text;
+      TwitterInfo.Text = s;
+    }
+
+    private void TweetResults_ColumnClick(object sender, ColumnClickEventArgs e)
+    {
+      this.TweetResults.ListViewItemSorter = new ListViewItemComparer(e.Column);
+      // Call the sort method to manually sort.
+      TweetResults.Sort();
+    }
+
+    private void CampaignResults_ColumnClick(object sender, ColumnClickEventArgs e)
+    {
+    
+      this.CampaignResults.ListViewItemSorter = new ListViewItemComparer(e.Column);
+      // Call the sort method to manually sort.
+      CampaignResults.Sort();
+    
   }
+
+    private void CampaignChart_Click(object sender, EventArgs e)
+    {
+
+    }
+
   }
+
+  class ListViewItemComparer : IComparer
+  {
+    private int col;
+    public ListViewItemComparer()
+    {
+      col = 0;
+    }
+    public ListViewItemComparer(int column)
+    {
+      col = column;
+    }
+    public bool IsNumeric(object Expression)
+    {
+      double retNum;
+
+      bool isNum = Double.TryParse(Convert.ToString(Expression), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum);
+      return isNum;
+    }
+    public int Compare(object x, object y)
+    {
+      int returnVal = -1;
+
+      if (IsNumeric(((ListViewItem)x).SubItems[col].Text) && IsNumeric(((ListViewItem)y).SubItems[col].Text))
+      {
+
+        double ix = Convert.ToDouble(((ListViewItem)x).SubItems[col].Text);
+        double iy = Convert.ToDouble(((ListViewItem)y).SubItems[col].Text);
+
+        returnVal = ix > iy ? -1 : 1;
+      }
+      else
+      {
+        returnVal = String.Compare(((ListViewItem)y).SubItems[col].Text.ToString(), ((ListViewItem)y).SubItems[col].Text.ToString());
+      }
+        return returnVal;
+      
+    }
+  }
+
+}

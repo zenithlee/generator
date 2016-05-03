@@ -68,6 +68,7 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +84,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CountryCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -92,8 +96,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SentimentAnalyser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StockClass.cs" />
     <Compile Include="StockMarket.cs" />
+    <Content Include="Templates\Weather_UK.txt" />
+    <Compile Include="Templates\Quantify.cs" />
     <Compile Include="TwitterBot.cs" />
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherClass.cs" />

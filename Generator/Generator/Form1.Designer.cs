@@ -2,10 +2,12 @@
 {
     partial class Analysis
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+    
+
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -30,6 +32,13 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.RawWeather = new System.Windows.Forms.TextBox();
       this.button5 = new System.Windows.Forms.Button();
       this.button4 = new System.Windows.Forms.Button();
@@ -48,13 +57,12 @@
       this.Headline = new System.Windows.Forms.TextBox();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
-      this.trackBar1 = new System.Windows.Forms.TrackBar();
-      this.label3 = new System.Windows.Forms.Label();
       this.label4 = new System.Windows.Forms.Label();
       this.button3 = new System.Windows.Forms.Button();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.tabControl1 = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
+      this.Test = new System.Windows.Forms.Button();
       this.button13 = new System.Windows.Forms.Button();
       this.button12 = new System.Windows.Forms.Button();
       this.button11 = new System.Windows.Forms.Button();
@@ -75,7 +83,17 @@
       this.RefreshButton = new System.Windows.Forms.Button();
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.Twitter = new System.Windows.Forms.TabPage();
-      this.SearchBox = new System.Windows.Forms.TextBox();
+      this.label10 = new System.Windows.Forms.Label();
+      this.CopyToTweet = new System.Windows.Forms.Button();
+      this.SearchBox = new System.Windows.Forms.ComboBox();
+      this.TweetResults = new System.Windows.Forms.ListView();
+      this.TweetText = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.Popular = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.TweetID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.ReTweet = new System.Windows.Forms.Button();
+      this.RecentCheck = new System.Windows.Forms.CheckBox();
+      this.Popularity = new System.Windows.Forms.CheckBox();
       this.TestSearchButton = new System.Windows.Forms.Button();
       this.label9 = new System.Windows.Forms.Label();
       this.label8 = new System.Windows.Forms.Label();
@@ -84,18 +102,44 @@
       this.MakeTweetButton = new System.Windows.Forms.Button();
       this.TwitterInfo = new System.Windows.Forms.TextBox();
       this.TestTwitterbutton = new System.Windows.Forms.Button();
+      this.TwitterCampaign = new System.Windows.Forms.TabPage();
+      this.SaveGraph = new System.Windows.Forms.Button();
+      this.CampaignActive = new System.Windows.Forms.CheckBox();
+      this.panel1 = new System.Windows.Forms.Panel();
+      this.btn_Campaign_New = new System.Windows.Forms.Button();
+      this.BtnSaveCampaign = new System.Windows.Forms.Button();
+      this.CampaignName = new System.Windows.Forms.ComboBox();
+      this.CampaignQuery1 = new System.Windows.Forms.TextBox();
+      this.AddToCampaign = new System.Windows.Forms.Button();
+      this.CampaignList = new System.Windows.Forms.ListBox();
+      this.RunCampaignNow = new System.Windows.Forms.Button();
+      this.CampaignSummary = new System.Windows.Forms.ListBox();
+      this.label13 = new System.Windows.Forms.Label();
+      this.CampaignMineButton = new System.Windows.Forms.Button();
+      this.CampaginGraphBar = new System.Windows.Forms.Button();
+      this.CampaignGraphLine = new System.Windows.Forms.Button();
+      this.CampaignChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+      this.label12 = new System.Windows.Forms.Label();
+      this.label11 = new System.Windows.Forms.Label();
+      this.CampaignResults = new System.Windows.Forms.ListView();
+      this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.SentimentColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.Market = new System.Windows.Forms.TabPage();
+      this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+      this.button14 = new System.Windows.Forms.Button();
       this.MarketStory = new System.Windows.Forms.TextBox();
       this.StockBox = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-      this.Test = new System.Windows.Forms.Button();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.tabControl1.SuspendLayout();
       this.tabPage1.SuspendLayout();
@@ -104,7 +148,11 @@
       this.tabPage2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).BeginInit();
       this.Twitter.SuspendLayout();
+      this.TwitterCampaign.SuspendLayout();
+      this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).BeginInit();
       this.Market.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -120,7 +168,7 @@
       metrics.Location = new System.Drawing.Point(4, 22);
       metrics.Name = "metrics";
       metrics.Padding = new System.Windows.Forms.Padding(3);
-      metrics.Size = new System.Drawing.Size(719, 525);
+      metrics.Size = new System.Drawing.Size(1120, 574);
       metrics.TabIndex = 2;
       metrics.Text = "Global Metrics";
       metrics.UseVisualStyleBackColor = true;
@@ -190,7 +238,7 @@
       // button1
       // 
       this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-      this.button1.Location = new System.Drawing.Point(749, 294);
+      this.button1.Location = new System.Drawing.Point(734, 256);
       this.button1.Name = "button1";
       this.button1.Size = new System.Drawing.Size(141, 38);
       this.button1.TabIndex = 0;
@@ -226,7 +274,7 @@
       // voicebox
       // 
       this.voicebox.FormattingEnabled = true;
-      this.voicebox.Location = new System.Drawing.Point(745, 35);
+      this.voicebox.Location = new System.Drawing.Point(734, 6);
       this.voicebox.Name = "voicebox";
       this.voicebox.Size = new System.Drawing.Size(174, 21);
       this.voicebox.TabIndex = 4;
@@ -234,7 +282,7 @@
       // checkBox1
       // 
       this.checkBox1.AutoSize = true;
-      this.checkBox1.Location = new System.Drawing.Point(749, 271);
+      this.checkBox1.Location = new System.Drawing.Point(734, 130);
       this.checkBox1.Name = "checkBox1";
       this.checkBox1.Size = new System.Drawing.Size(86, 17);
       this.checkBox1.TabIndex = 5;
@@ -245,7 +293,7 @@
       // button2
       // 
       this.button2.BackColor = System.Drawing.Color.Brown;
-      this.button2.Location = new System.Drawing.Point(749, 191);
+      this.button2.Location = new System.Drawing.Point(734, 212);
       this.button2.Name = "button2";
       this.button2.Size = new System.Drawing.Size(141, 38);
       this.button2.TabIndex = 6;
@@ -286,25 +334,6 @@
       this.label2.TabIndex = 10;
       this.label2.Text = "Text";
       // 
-      // trackBar1
-      // 
-      this.trackBar1.Location = new System.Drawing.Point(745, 97);
-      this.trackBar1.Maximum = 100;
-      this.trackBar1.Name = "trackBar1";
-      this.trackBar1.Size = new System.Drawing.Size(174, 45);
-      this.trackBar1.TabIndex = 11;
-      this.trackBar1.Value = 50;
-      this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-      // 
-      // label3
-      // 
-      this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(746, 78);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(31, 13);
-      this.label3.TabIndex = 12;
-      this.label3.Text = "Pitch";
-      // 
       // label4
       // 
       this.label4.AutoSize = true;
@@ -317,7 +346,7 @@
       // button3
       // 
       this.button3.BackColor = System.Drawing.Color.SandyBrown;
-      this.button3.Location = new System.Drawing.Point(749, 338);
+      this.button3.Location = new System.Drawing.Point(734, 300);
       this.button3.Name = "button3";
       this.button3.Size = new System.Drawing.Size(141, 38);
       this.button3.TabIndex = 14;
@@ -343,22 +372,29 @@
       this.tabControl1.Controls.Add(this.tabPage2);
       this.tabControl1.Controls.Add(metrics);
       this.tabControl1.Controls.Add(this.Twitter);
+      this.tabControl1.Controls.Add(this.TwitterCampaign);
       this.tabControl1.Controls.Add(this.Market);
       this.tabControl1.Location = new System.Drawing.Point(12, 13);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
-      this.tabControl1.Size = new System.Drawing.Size(727, 551);
+      this.tabControl1.Size = new System.Drawing.Size(1128, 600);
       this.tabControl1.TabIndex = 16;
       // 
       // tabPage1
       // 
+      this.tabPage1.Controls.Add(this.Test);
+      this.tabPage1.Controls.Add(this.button3);
       this.tabPage1.Controls.Add(this.button13);
       this.tabPage1.Controls.Add(this.button12);
       this.tabPage1.Controls.Add(this.button11);
+      this.tabPage1.Controls.Add(this.button1);
+      this.tabPage1.Controls.Add(this.checkBox1);
+      this.tabPage1.Controls.Add(this.button2);
       this.tabPage1.Controls.Add(this.button10);
       this.tabPage1.Controls.Add(this.button9);
       this.tabPage1.Controls.Add(this.button8);
       this.tabPage1.Controls.Add(this.button7);
+      this.tabPage1.Controls.Add(this.voicebox);
       this.tabPage1.Controls.Add(this.button6);
       this.tabPage1.Controls.Add(this.SpeechAdd);
       this.tabPage1.Controls.Add(this.strapline);
@@ -380,10 +416,20 @@
       this.tabPage1.Location = new System.Drawing.Point(4, 22);
       this.tabPage1.Name = "tabPage1";
       this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage1.Size = new System.Drawing.Size(719, 525);
+      this.tabPage1.Size = new System.Drawing.Size(1120, 574);
       this.tabPage1.TabIndex = 0;
-      this.tabPage1.Text = "Text";
+      this.tabPage1.Text = "Render";
       this.tabPage1.UseVisualStyleBackColor = true;
+      // 
+      // Test
+      // 
+      this.Test.Location = new System.Drawing.Point(734, 57);
+      this.Test.Name = "Test";
+      this.Test.Size = new System.Drawing.Size(75, 23);
+      this.Test.TabIndex = 17;
+      this.Test.Text = "TestButton";
+      this.Test.UseVisualStyleBackColor = true;
+      this.Test.Click += new System.EventHandler(this.Test_Click);
       // 
       // button13
       // 
@@ -538,6 +584,7 @@
       this.report.Location = new System.Drawing.Point(543, 130);
       this.report.Multiline = true;
       this.report.Name = "report";
+      this.report.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
       this.report.Size = new System.Drawing.Size(170, 314);
       this.report.TabIndex = 16;
       // 
@@ -548,7 +595,7 @@
       this.tabPage2.Location = new System.Drawing.Point(4, 22);
       this.tabPage2.Name = "tabPage2";
       this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage2.Size = new System.Drawing.Size(719, 525);
+      this.tabPage2.Size = new System.Drawing.Size(1120, 574);
       this.tabPage2.TabIndex = 1;
       this.tabPage2.Text = "Sentiment";
       this.tabPage2.UseVisualStyleBackColor = true;
@@ -576,7 +623,13 @@
       // 
       // Twitter
       // 
+      this.Twitter.Controls.Add(this.label10);
+      this.Twitter.Controls.Add(this.CopyToTweet);
       this.Twitter.Controls.Add(this.SearchBox);
+      this.Twitter.Controls.Add(this.TweetResults);
+      this.Twitter.Controls.Add(this.ReTweet);
+      this.Twitter.Controls.Add(this.RecentCheck);
+      this.Twitter.Controls.Add(this.Popularity);
       this.Twitter.Controls.Add(this.TestSearchButton);
       this.Twitter.Controls.Add(this.label9);
       this.Twitter.Controls.Add(this.label8);
@@ -587,22 +640,118 @@
       this.Twitter.Controls.Add(this.TestTwitterbutton);
       this.Twitter.Location = new System.Drawing.Point(4, 22);
       this.Twitter.Name = "Twitter";
-      this.Twitter.Size = new System.Drawing.Size(719, 525);
+      this.Twitter.Size = new System.Drawing.Size(1120, 574);
       this.Twitter.TabIndex = 3;
       this.Twitter.Text = "Twitter";
       this.Twitter.UseVisualStyleBackColor = true;
       // 
+      // label10
+      // 
+      this.label10.AutoSize = true;
+      this.label10.Location = new System.Drawing.Point(389, 27);
+      this.label10.Name = "label10";
+      this.label10.Size = new System.Drawing.Size(79, 13);
+      this.label10.TabIndex = 17;
+      this.label10.Text = "Search Results";
+      // 
+      // CopyToTweet
+      // 
+      this.CopyToTweet.Location = new System.Drawing.Point(389, 482);
+      this.CopyToTweet.Name = "CopyToTweet";
+      this.CopyToTweet.Size = new System.Drawing.Size(99, 23);
+      this.CopyToTweet.TabIndex = 15;
+      this.CopyToTweet.Text = "CopyToTweet";
+      this.CopyToTweet.UseVisualStyleBackColor = true;
+      this.CopyToTweet.Click += new System.EventHandler(this.CopyToTweet_Click);
+      // 
       // SearchBox
       // 
-      this.SearchBox.Location = new System.Drawing.Point(84, 269);
+      this.SearchBox.FormattingEnabled = true;
+      this.SearchBox.Items.AddRange(new object[] {
+            "#ai",
+            "#showerthoughts",
+            "#aliceai",
+            "#alexai",
+            "#sentient",
+            "#sentientlabs",
+            "#robot"});
+      this.SearchBox.Location = new System.Drawing.Point(23, 257);
       this.SearchBox.Name = "SearchBox";
-      this.SearchBox.Size = new System.Drawing.Size(617, 20);
-      this.SearchBox.TabIndex = 8;
-      this.SearchBox.Text = "#ai";
+      this.SearchBox.Size = new System.Drawing.Size(157, 21);
+      this.SearchBox.TabIndex = 14;
+      this.SearchBox.Text = "#showerthoughts";
+      // 
+      // TweetResults
+      // 
+      this.TweetResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.TweetText,
+            this.Author,
+            this.Popular,
+            this.TweetID});
+      this.TweetResults.FullRowSelect = true;
+      this.TweetResults.GridLines = true;
+      this.TweetResults.Location = new System.Drawing.Point(389, 43);
+      this.TweetResults.Name = "TweetResults";
+      this.TweetResults.Size = new System.Drawing.Size(530, 433);
+      this.TweetResults.TabIndex = 13;
+      this.TweetResults.UseCompatibleStateImageBehavior = false;
+      this.TweetResults.View = System.Windows.Forms.View.Details;
+      this.TweetResults.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.TweetResults_ColumnClick);
+      // 
+      // TweetText
+      // 
+      this.TweetText.Text = "Tweet Text";
+      this.TweetText.Width = 340;
+      // 
+      // Author
+      // 
+      this.Author.Text = "Author";
+      // 
+      // Popular
+      // 
+      this.Popular.Text = "Popular";
+      // 
+      // TweetID
+      // 
+      this.TweetID.Text = "ID";
+      // 
+      // ReTweet
+      // 
+      this.ReTweet.Location = new System.Drawing.Point(844, 482);
+      this.ReTweet.Name = "ReTweet";
+      this.ReTweet.Size = new System.Drawing.Size(75, 23);
+      this.ReTweet.TabIndex = 12;
+      this.ReTweet.Text = "ReTweet";
+      this.ReTweet.UseVisualStyleBackColor = true;
+      this.ReTweet.Click += new System.EventHandler(this.ReTweet_Click);
+      // 
+      // RecentCheck
+      // 
+      this.RecentCheck.AutoSize = true;
+      this.RecentCheck.Checked = true;
+      this.RecentCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+      this.RecentCheck.Location = new System.Drawing.Point(183, 258);
+      this.RecentCheck.Name = "RecentCheck";
+      this.RecentCheck.Size = new System.Drawing.Size(61, 17);
+      this.RecentCheck.TabIndex = 10;
+      this.RecentCheck.Text = "Recent";
+      this.RecentCheck.UseVisualStyleBackColor = true;
+      this.RecentCheck.CheckedChanged += new System.EventHandler(this.RecentCheck_CheckedChanged);
+      // 
+      // Popularity
+      // 
+      this.Popularity.AutoSize = true;
+      this.Popularity.Location = new System.Drawing.Point(250, 259);
+      this.Popularity.Name = "Popularity";
+      this.Popularity.Size = new System.Drawing.Size(62, 17);
+      this.Popularity.TabIndex = 9;
+      this.Popularity.Text = "Popular";
+      this.Popularity.UseVisualStyleBackColor = true;
+      this.Popularity.CheckedChanged += new System.EventHandler(this.Popularity_CheckedChanged);
       // 
       // TestSearchButton
       // 
-      this.TestSearchButton.Location = new System.Drawing.Point(7, 266);
+      this.TestSearchButton.Location = new System.Drawing.Point(311, 257);
       this.TestSearchButton.Name = "TestSearchButton";
       this.TestSearchButton.Size = new System.Drawing.Size(75, 23);
       this.TestSearchButton.TabIndex = 7;
@@ -634,7 +783,7 @@
       this.HashTagsBox.MaxLength = 144;
       this.HashTagsBox.Multiline = true;
       this.HashTagsBox.Name = "HashTagsBox";
-      this.HashTagsBox.Size = new System.Drawing.Size(617, 28);
+      this.HashTagsBox.Size = new System.Drawing.Size(299, 28);
       this.HashTagsBox.TabIndex = 4;
       this.HashTagsBox.Text = "#ai #sentient #aliceai";
       // 
@@ -644,12 +793,12 @@
       this.TweetBox.MaxLength = 144;
       this.TweetBox.Multiline = true;
       this.TweetBox.Name = "TweetBox";
-      this.TweetBox.Size = new System.Drawing.Size(617, 47);
+      this.TweetBox.Size = new System.Drawing.Size(299, 47);
       this.TweetBox.TabIndex = 3;
       // 
       // MakeTweetButton
       // 
-      this.MakeTweetButton.Location = new System.Drawing.Point(626, 111);
+      this.MakeTweetButton.Location = new System.Drawing.Point(308, 111);
       this.MakeTweetButton.Name = "MakeTweetButton";
       this.MakeTweetButton.Size = new System.Drawing.Size(75, 23);
       this.MakeTweetButton.TabIndex = 2;
@@ -659,16 +808,16 @@
       // 
       // TwitterInfo
       // 
-      this.TwitterInfo.Location = new System.Drawing.Point(84, 313);
+      this.TwitterInfo.Location = new System.Drawing.Point(23, 293);
       this.TwitterInfo.Multiline = true;
       this.TwitterInfo.Name = "TwitterInfo";
       this.TwitterInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-      this.TwitterInfo.Size = new System.Drawing.Size(617, 145);
+      this.TwitterInfo.Size = new System.Drawing.Size(360, 145);
       this.TwitterInfo.TabIndex = 1;
       // 
       // TestTwitterbutton
       // 
-      this.TestTwitterbutton.Location = new System.Drawing.Point(3, 311);
+      this.TestTwitterbutton.Location = new System.Drawing.Point(311, 444);
       this.TestTwitterbutton.Name = "TestTwitterbutton";
       this.TestTwitterbutton.Size = new System.Drawing.Size(75, 23);
       this.TestTwitterbutton.TabIndex = 0;
@@ -676,35 +825,322 @@
       this.TestTwitterbutton.UseVisualStyleBackColor = true;
       this.TestTwitterbutton.Click += new System.EventHandler(this.TestTwitterbutton_Click);
       // 
+      // TwitterCampaign
+      // 
+      this.TwitterCampaign.Controls.Add(this.SaveGraph);
+      this.TwitterCampaign.Controls.Add(this.panel1);
+      this.TwitterCampaign.Controls.Add(this.CampaignMineButton);
+      this.TwitterCampaign.Controls.Add(this.CampaginGraphBar);
+      this.TwitterCampaign.Controls.Add(this.CampaignGraphLine);
+      this.TwitterCampaign.Controls.Add(this.CampaignChart);
+      this.TwitterCampaign.Controls.Add(this.label12);
+      this.TwitterCampaign.Controls.Add(this.label11);
+      this.TwitterCampaign.Controls.Add(this.CampaignResults);
+      this.TwitterCampaign.Location = new System.Drawing.Point(4, 22);
+      this.TwitterCampaign.Name = "TwitterCampaign";
+      this.TwitterCampaign.Padding = new System.Windows.Forms.Padding(3);
+      this.TwitterCampaign.Size = new System.Drawing.Size(1120, 574);
+      this.TwitterCampaign.TabIndex = 5;
+      this.TwitterCampaign.Text = "Campaign";
+      this.TwitterCampaign.UseVisualStyleBackColor = true;
+      // 
+      // SaveGraph
+      // 
+      this.SaveGraph.Location = new System.Drawing.Point(943, 531);
+      this.SaveGraph.Name = "SaveGraph";
+      this.SaveGraph.Size = new System.Drawing.Size(75, 23);
+      this.SaveGraph.TabIndex = 34;
+      this.SaveGraph.Text = "Save";
+      this.SaveGraph.UseVisualStyleBackColor = true;
+      this.SaveGraph.Click += new System.EventHandler(this.SaveGraph_Click);
+      // 
+      // CampaignActive
+      // 
+      this.CampaignActive.AutoSize = true;
+      this.CampaignActive.Location = new System.Drawing.Point(165, 16);
+      this.CampaignActive.Name = "CampaignActive";
+      this.CampaignActive.Size = new System.Drawing.Size(56, 17);
+      this.CampaignActive.TabIndex = 33;
+      this.CampaignActive.Text = "Active";
+      this.CampaignActive.UseVisualStyleBackColor = true;
+      this.CampaignActive.CheckedChanged += new System.EventHandler(this.CampaignActive_CheckedChanged);
+      // 
+      // panel1
+      // 
+      this.panel1.BackColor = System.Drawing.Color.BurlyWood;
+      this.panel1.Controls.Add(this.btn_Campaign_New);
+      this.panel1.Controls.Add(this.CampaignActive);
+      this.panel1.Controls.Add(this.BtnSaveCampaign);
+      this.panel1.Controls.Add(this.CampaignName);
+      this.panel1.Controls.Add(this.CampaignQuery1);
+      this.panel1.Controls.Add(this.AddToCampaign);
+      this.panel1.Controls.Add(this.CampaignList);
+      this.panel1.Controls.Add(this.RunCampaignNow);
+      this.panel1.Controls.Add(this.CampaignSummary);
+      this.panel1.Controls.Add(this.label13);
+      this.panel1.Location = new System.Drawing.Point(1, 29);
+      this.panel1.Margin = new System.Windows.Forms.Padding(0);
+      this.panel1.Name = "panel1";
+      this.panel1.Size = new System.Drawing.Size(232, 542);
+      this.panel1.TabIndex = 32;
+      // 
+      // btn_Campaign_New
+      // 
+      this.btn_Campaign_New.Location = new System.Drawing.Point(8, 12);
+      this.btn_Campaign_New.Name = "btn_Campaign_New";
+      this.btn_Campaign_New.Size = new System.Drawing.Size(51, 23);
+      this.btn_Campaign_New.TabIndex = 31;
+      this.btn_Campaign_New.Text = "New";
+      this.btn_Campaign_New.UseVisualStyleBackColor = true;
+      this.btn_Campaign_New.Click += new System.EventHandler(this.btn_Campaign_New_Click);
+      // 
+      // BtnSaveCampaign
+      // 
+      this.BtnSaveCampaign.Location = new System.Drawing.Point(171, 46);
+      this.BtnSaveCampaign.Name = "BtnSaveCampaign";
+      this.BtnSaveCampaign.Size = new System.Drawing.Size(51, 23);
+      this.BtnSaveCampaign.TabIndex = 30;
+      this.BtnSaveCampaign.Text = "Save";
+      this.BtnSaveCampaign.UseVisualStyleBackColor = true;
+      this.BtnSaveCampaign.Click += new System.EventHandler(this.SaveCampaign_Click);
+      // 
+      // CampaignName
+      // 
+      this.CampaignName.FormattingEnabled = true;
+      this.CampaignName.Location = new System.Drawing.Point(3, 48);
+      this.CampaignName.Name = "CampaignName";
+      this.CampaignName.Size = new System.Drawing.Size(168, 21);
+      this.CampaignName.TabIndex = 29;
+      this.CampaignName.SelectedIndexChanged += new System.EventHandler(this.CampaignName_SelectedIndexChanged);
+      // 
+      // CampaignQuery1
+      // 
+      this.CampaignQuery1.Location = new System.Drawing.Point(2, 78);
+      this.CampaignQuery1.Name = "CampaignQuery1";
+      this.CampaignQuery1.Size = new System.Drawing.Size(168, 20);
+      this.CampaignQuery1.TabIndex = 18;
+      // 
+      // AddToCampaign
+      // 
+      this.AddToCampaign.Location = new System.Drawing.Point(171, 75);
+      this.AddToCampaign.Name = "AddToCampaign";
+      this.AddToCampaign.Size = new System.Drawing.Size(51, 23);
+      this.AddToCampaign.TabIndex = 22;
+      this.AddToCampaign.Text = "Add";
+      this.AddToCampaign.UseVisualStyleBackColor = true;
+      this.AddToCampaign.Click += new System.EventHandler(this.AddToCampaign_Click);
+      // 
+      // CampaignList
+      // 
+      this.CampaignList.FormattingEnabled = true;
+      this.CampaignList.Location = new System.Drawing.Point(2, 104);
+      this.CampaignList.Name = "CampaignList";
+      this.CampaignList.Size = new System.Drawing.Size(219, 108);
+      this.CampaignList.TabIndex = 21;
+      // 
+      // RunCampaignNow
+      // 
+      this.RunCampaignNow.Location = new System.Drawing.Point(147, 218);
+      this.RunCampaignNow.Name = "RunCampaignNow";
+      this.RunCampaignNow.Size = new System.Drawing.Size(75, 23);
+      this.RunCampaignNow.TabIndex = 23;
+      this.RunCampaignNow.Text = "RunNow";
+      this.RunCampaignNow.UseVisualStyleBackColor = true;
+      this.RunCampaignNow.Click += new System.EventHandler(this.RunCampaignNow_Click);
+      // 
+      // CampaignSummary
+      // 
+      this.CampaignSummary.FormattingEnabled = true;
+      this.CampaignSummary.Location = new System.Drawing.Point(6, 248);
+      this.CampaignSummary.Name = "CampaignSummary";
+      this.CampaignSummary.Size = new System.Drawing.Size(216, 277);
+      this.CampaignSummary.TabIndex = 24;
+      // 
+      // label13
+      // 
+      this.label13.AutoSize = true;
+      this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+      this.label13.Location = new System.Drawing.Point(5, 228);
+      this.label13.Name = "label13";
+      this.label13.Size = new System.Drawing.Size(50, 13);
+      this.label13.TabIndex = 25;
+      this.label13.Text = "Summary";
+      // 
+      // CampaignMineButton
+      // 
+      this.CampaignMineButton.Location = new System.Drawing.Point(943, 502);
+      this.CampaignMineButton.Name = "CampaignMineButton";
+      this.CampaignMineButton.Size = new System.Drawing.Size(75, 23);
+      this.CampaignMineButton.TabIndex = 31;
+      this.CampaignMineButton.Text = "Mine";
+      this.CampaignMineButton.UseVisualStyleBackColor = true;
+      this.CampaignMineButton.Click += new System.EventHandler(this.CampaignMineButton_Click);
+      // 
+      // CampaginGraphBar
+      // 
+      this.CampaginGraphBar.Location = new System.Drawing.Point(943, 348);
+      this.CampaginGraphBar.Name = "CampaginGraphBar";
+      this.CampaginGraphBar.Size = new System.Drawing.Size(75, 23);
+      this.CampaginGraphBar.TabIndex = 28;
+      this.CampaginGraphBar.Text = "Bar";
+      this.CampaginGraphBar.UseVisualStyleBackColor = true;
+      this.CampaginGraphBar.Click += new System.EventHandler(this.CampaginGraphBar_Click);
+      // 
+      // CampaignGraphLine
+      // 
+      this.CampaignGraphLine.Location = new System.Drawing.Point(943, 319);
+      this.CampaignGraphLine.Name = "CampaignGraphLine";
+      this.CampaignGraphLine.Size = new System.Drawing.Size(75, 23);
+      this.CampaignGraphLine.TabIndex = 27;
+      this.CampaignGraphLine.Text = "Line";
+      this.CampaignGraphLine.UseVisualStyleBackColor = true;
+      this.CampaignGraphLine.Click += new System.EventHandler(this.CampaignGraphLine_Click);
+      // 
+      // CampaignChart
+      // 
+      this.CampaignChart.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+      this.CampaignChart.BackSecondaryColor = System.Drawing.Color.White;
+      this.CampaignChart.BorderlineColor = System.Drawing.Color.Gainsboro;
+      this.CampaignChart.BorderSkin.BackColor = System.Drawing.Color.SteelBlue;
+      this.CampaignChart.BorderSkin.PageColor = System.Drawing.Color.LightGray;
+      chartArea1.Name = "ChartArea1";
+      this.CampaignChart.ChartAreas.Add(chartArea1);
+      legend1.Name = "Titles";
+      this.CampaignChart.Legends.Add(legend1);
+      this.CampaignChart.Location = new System.Drawing.Point(251, 261);
+      this.CampaignChart.Name = "CampaignChart";
+      series1.ChartArea = "ChartArea1";
+      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      series1.Legend = "Titles";
+      series1.Name = "Series1";
+      this.CampaignChart.Series.Add(series1);
+      this.CampaignChart.Size = new System.Drawing.Size(675, 307);
+      this.CampaignChart.TabIndex = 26;
+      this.CampaignChart.Text = "chart2";
+      title1.Name = "Title1";
+      title1.Text = "Opinion";
+      this.CampaignChart.Titles.Add(title1);
+      this.CampaignChart.Click += new System.EventHandler(this.CampaignChart_Click);
+      // 
+      // label12
+      // 
+      this.label12.BackColor = System.Drawing.Color.Tomato;
+      this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+      this.label12.Location = new System.Drawing.Point(0, 0);
+      this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+      this.label12.Name = "label12";
+      this.label12.Padding = new System.Windows.Forms.Padding(3);
+      this.label12.Size = new System.Drawing.Size(1120, 29);
+      this.label12.TabIndex = 20;
+      this.label12.Text = "Campaign";
+      // 
+      // label11
+      // 
+      this.label11.AutoSize = true;
+      this.label11.Location = new System.Drawing.Point(248, 37);
+      this.label11.Name = "label11";
+      this.label11.Size = new System.Drawing.Size(92, 13);
+      this.label11.TabIndex = 19;
+      this.label11.Text = "Campaign Results";
+      // 
+      // CampaignResults
+      // 
+      this.CampaignResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.SentimentColumn});
+      this.CampaignResults.FullRowSelect = true;
+      this.CampaignResults.GridLines = true;
+      this.CampaignResults.Location = new System.Drawing.Point(251, 59);
+      this.CampaignResults.Name = "CampaignResults";
+      this.CampaignResults.Size = new System.Drawing.Size(675, 196);
+      this.CampaignResults.TabIndex = 17;
+      this.CampaignResults.UseCompatibleStateImageBehavior = false;
+      this.CampaignResults.View = System.Windows.Forms.View.Details;
+      this.CampaignResults.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.CampaignResults_ColumnClick);
+      // 
+      // columnHeader1
+      // 
+      this.columnHeader1.Text = "Tweet Text";
+      this.columnHeader1.Width = 340;
+      // 
+      // columnHeader2
+      // 
+      this.columnHeader2.Text = "Author";
+      // 
+      // columnHeader3
+      // 
+      this.columnHeader3.Text = "Popular";
+      // 
+      // columnHeader4
+      // 
+      this.columnHeader4.Text = "ID";
+      // 
+      // SentimentColumn
+      // 
+      this.SentimentColumn.Text = "Sentiment";
+      // 
       // Market
       // 
+      this.Market.Controls.Add(this.chart1);
+      this.Market.Controls.Add(this.button14);
       this.Market.Controls.Add(this.MarketStory);
       this.Market.Controls.Add(this.StockBox);
       this.Market.Controls.Add(this.GetApple);
       this.Market.Location = new System.Drawing.Point(4, 22);
       this.Market.Name = "Market";
       this.Market.Padding = new System.Windows.Forms.Padding(3);
-      this.Market.Size = new System.Drawing.Size(719, 525);
+      this.Market.Size = new System.Drawing.Size(1120, 574);
       this.Market.TabIndex = 4;
       this.Market.Text = "Market";
       this.Market.UseVisualStyleBackColor = true;
       // 
+      // chart1
+      // 
+      chartArea2.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea2);
+      legend2.Name = "Legend1";
+      this.chart1.Legends.Add(legend2);
+      this.chart1.Location = new System.Drawing.Point(452, 74);
+      this.chart1.Name = "chart1";
+      series2.ChartArea = "ChartArea1";
+      series2.Legend = "Legend1";
+      series2.Name = "Series1";
+      this.chart1.Series.Add(series2);
+      this.chart1.Size = new System.Drawing.Size(474, 388);
+      this.chart1.TabIndex = 4;
+      this.chart1.Text = "chart1";
+      // 
+      // button14
+      // 
+      this.button14.Location = new System.Drawing.Point(7, 33);
+      this.button14.Name = "button14";
+      this.button14.Size = new System.Drawing.Size(75, 23);
+      this.button14.TabIndex = 3;
+      this.button14.Text = "Get AAPL";
+      this.button14.UseVisualStyleBackColor = true;
+      this.button14.Click += new System.EventHandler(this.button14_Click);
+      // 
       // MarketStory
       // 
-      this.MarketStory.Location = new System.Drawing.Point(229, 37);
+      this.MarketStory.Location = new System.Drawing.Point(229, 74);
       this.MarketStory.Multiline = true;
       this.MarketStory.Name = "MarketStory";
       this.MarketStory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.MarketStory.Size = new System.Drawing.Size(216, 425);
+      this.MarketStory.Size = new System.Drawing.Size(216, 388);
       this.MarketStory.TabIndex = 2;
       // 
       // StockBox
       // 
-      this.StockBox.Location = new System.Drawing.Point(7, 37);
+      this.StockBox.Location = new System.Drawing.Point(7, 74);
       this.StockBox.Multiline = true;
       this.StockBox.Name = "StockBox";
       this.StockBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.StockBox.Size = new System.Drawing.Size(216, 425);
+      this.StockBox.Size = new System.Drawing.Size(216, 388);
       this.StockBox.TabIndex = 1;
       // 
       // GetApple
@@ -721,15 +1157,11 @@
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
       // 
-      // Test
+      // timer1
       // 
-      this.Test.Location = new System.Drawing.Point(749, 146);
-      this.Test.Name = "Test";
-      this.Test.Size = new System.Drawing.Size(75, 23);
-      this.Test.TabIndex = 17;
-      this.Test.Text = "TestButton";
-      this.Test.UseVisualStyleBackColor = true;
-      this.Test.Click += new System.EventHandler(this.Test_Click);
+      this.timer1.Enabled = true;
+      this.timer1.Interval = 125000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // analysisBindingSource
       // 
@@ -739,23 +1171,14 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(944, 568);
-      this.Controls.Add(this.Test);
+      this.ClientSize = new System.Drawing.Size(1152, 619);
       this.Controls.Add(this.tabControl1);
-      this.Controls.Add(this.button3);
-      this.Controls.Add(this.label3);
-      this.Controls.Add(this.trackBar1);
-      this.Controls.Add(this.button2);
-      this.Controls.Add(this.checkBox1);
-      this.Controls.Add(this.voicebox);
-      this.Controls.Add(this.button1);
       this.Name = "Analysis";
-      this.Text = "Analysis";
+      this.Text = "SENTiENT GENERATOR";
       metrics.ResumeLayout(false);
       metrics.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.tabControl1.ResumeLayout(false);
       this.tabPage1.ResumeLayout(false);
@@ -766,11 +1189,16 @@
       ((System.ComponentModel.ISupportInitialize)(this.SentimentGrid)).EndInit();
       this.Twitter.ResumeLayout(false);
       this.Twitter.PerformLayout();
+      this.TwitterCampaign.ResumeLayout(false);
+      this.TwitterCampaign.PerformLayout();
+      this.panel1.ResumeLayout(false);
+      this.panel1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).EndInit();
       this.Market.ResumeLayout(false);
       this.Market.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
-      this.PerformLayout();
 
         }
 
@@ -787,8 +1215,6 @@
     private System.Windows.Forms.TextBox Headline;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TrackBar trackBar1;
-    private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.PictureBox pictureBox1;
@@ -828,7 +1254,6 @@
     private System.Windows.Forms.TextBox HashTagsBox;
     private System.Windows.Forms.Label label9;
     private System.Windows.Forms.Button TestSearchButton;
-    private System.Windows.Forms.TextBox SearchBox;
     private System.Windows.Forms.Button button10;
     private System.Windows.Forms.Button button11;
     private System.Windows.Forms.Button button13;
@@ -837,6 +1262,45 @@
     private System.Windows.Forms.Button GetApple;
     private System.Windows.Forms.TextBox StockBox;
     private System.Windows.Forms.TextBox MarketStory;
+    private System.Windows.Forms.Button button14;
+    private System.Windows.Forms.CheckBox Popularity;
+    private System.Windows.Forms.CheckBox RecentCheck;
+    private System.Windows.Forms.Button ReTweet;
+    private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+    private System.Windows.Forms.ListView TweetResults;
+    private System.Windows.Forms.ColumnHeader TweetText;
+    private System.Windows.Forms.ColumnHeader Author;
+    private System.Windows.Forms.ColumnHeader TweetID;
+    private System.Windows.Forms.ComboBox SearchBox;
+    private System.Windows.Forms.ColumnHeader Popular;
+    private System.Windows.Forms.Button CopyToTweet;
+    private System.Windows.Forms.Timer timer1;
+    private System.Windows.Forms.Label label10;
+    private System.Windows.Forms.TabPage TwitterCampaign;
+    private System.Windows.Forms.Label label11;
+    private System.Windows.Forms.TextBox CampaignQuery1;
+    private System.Windows.Forms.ListView CampaignResults;
+    private System.Windows.Forms.ColumnHeader columnHeader1;
+    private System.Windows.Forms.ColumnHeader columnHeader2;
+    private System.Windows.Forms.ColumnHeader columnHeader3;
+    private System.Windows.Forms.ColumnHeader columnHeader4;
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.Button AddToCampaign;
+    private System.Windows.Forms.ListBox CampaignList;
+    private System.Windows.Forms.Button RunCampaignNow;
+    private System.Windows.Forms.ColumnHeader SentimentColumn;
+    private System.Windows.Forms.Label label13;
+    private System.Windows.Forms.ListBox CampaignSummary;
+    private System.Windows.Forms.DataVisualization.Charting.Chart CampaignChart;
+    private System.Windows.Forms.Button CampaignGraphLine;
+    private System.Windows.Forms.Button CampaginGraphBar;
+    private System.Windows.Forms.Button BtnSaveCampaign;
+    private System.Windows.Forms.ComboBox CampaignName;
+    private System.Windows.Forms.Button CampaignMineButton;
+    private System.Windows.Forms.Panel panel1;
+    private System.Windows.Forms.Button btn_Campaign_New;
+    private System.Windows.Forms.CheckBox CampaignActive;
+    private System.Windows.Forms.Button SaveGraph;
   }
 }
 

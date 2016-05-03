@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,16 @@ using System.Threading.Tasks;
 using Tweetinvi;
 using Tweetinvi.Core.Enum;
 using Tweetinvi.Core.Parameters;
+using System.Windows.Forms;
 
 namespace Generator
 {
   class TwitterBot
   {
+
+    public bool PopularResults = false; //when true return only popular results
+    public bool RecentResults = true; //when true return only recent results
+    public bool MixedResults = false; //when true return only mixed results
 
     public TwitterBot()
     {
@@ -54,26 +60,54 @@ namespace Generator
       return s;
     }
 
-    public string DoSearchParams(string sTopic)
+    public IEnumerable<Tweetinvi.Core.Interfaces.ITweet> DoSearchParams(string sTopic)
     {
       var searchParameter = new TweetSearchParameters(sTopic)
       {
         //GeoCode = new GeoCode(-122.398720, 37.781157, 1, DistanceMeasure.Miles),
         Lang = Language.English,
-        SearchType = SearchResultType.Popular,
-        MaximumNumberOfResults = 10,
-        //Until = new DateTime(2016, 06, 02),
+        //SearchType = SearchResultType.Popular,
+        MaximumNumberOfResults = 50,
+        Until = DateTime.Now,
         //SinceId = 399616835892781056,
         //MaxId = 405001488843284480,
         //Filters = TweetSearchFilters.Images
       };
-      string s = "";
+
+      searchParameter.TweetSearchType = TweetSearchType.OriginalTweetsOnly;
+
+      if ( PopularResults )
+      {
+        searchParameter.SearchType = SearchResultType.Popular;
+      }
+      if (RecentResults)
+      {
+        searchParameter.SearchType = SearchResultType.Recent;
+      }
+      if (MixedResults)
+      {
+        searchParameter.SearchType = SearchResultType.Mixed;
+      }
+
+      
       var tweets = Search.SearchTweets(searchParameter);
+      if (tweets == null) return null;
       foreach (var t in tweets)
       {
-        s += t.Id + "~" + t.CreatedBy.Name + "~" + t.CreatedBy.ScreenName + "~" + t.RetweetCount + "~" + t.Text + "\r\n\r\n";
+        string item = t.Id + "~" + t.CreatedBy.ScreenName + "~" + t.RetweetCount + "~" + t.Text ;                
+        SaveToMine(t.Id.ToString(), item);
       }
-      return s;      
+      return tweets;
+    }
+
+   
+
+    public void SaveToMine(string id, string text)
+    {
+      string MinePath = "../data/mine/twitter";
+      if (!Directory.Exists(MinePath)) Directory.CreateDirectory(MinePath);
+      File.WriteAllText(MinePath + "/" + id + ".txt", text);
+
     }
 
     public void ReplyTo(string user, string s)

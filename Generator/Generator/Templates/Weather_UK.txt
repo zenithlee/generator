@@ -1,0 +1,11 @@
+﻿[temperature<0]=It's freezing.
+[temperature>0&<10]=It's cold outside.
+[temperature>10]It's mild.
+In {cityname} 
+[time>=12:00]this afternoon
+[time<12:00]this morning
+[random]there is|we have|it is
+{windtype}.
+
+Today the {cityname} area will be partly cloudly with an 80% chance of rain. Expect a high of 20degrees and a low of 15 degrees.
+The humidity is at 60% while the winds are blowing in the South West.

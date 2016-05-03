@@ -1,0 +1,1 @@
+726198284931330048~SladeGrantham~1~@kdnuggets Im thinking of using #SVM &amp; deep learning NN together as a hybrid so SVM could filter #data before #NN #AI #cognitive #functions

@@ -1,0 +1,9 @@
+#sugar=13.94
+#candy=-2.04
+#vegetables=-0.22
+#veggies=5.56
+#fitness=19.01
+#fat=4.57
+#diet=7.39
+#health=8.96
+#vegan=-0.88
