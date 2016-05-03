@@ -1,0 +1,65 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/amaranth/Amaranth-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(../fonts/league-gothic/LeagueGothic-Regular.otf);
+    font-weight: bold;
+}
+
+#bg {
+ position:absolute;
+ left:0;
+ top:0;
+ width:1920px;
+ height:1080px;
+ z-index:-1;
+}
+
+#yellowblock {
+ position:absolute;
+ left:0;
+ top:0;
+ width:1920px;
+ height:200px;
+}
+
+#title {
+ position:absolute;
+ left:10px;
+ top:0;
+ font-size:50px;
+ color:white;
+}
+
+#subtitle {
+ position:absolute;
+ left:10px;
+ top:53px;
+ font-size:20px;
+ color:dark-grey;
+ font-family: mySecondFont;
+ letter-spacing: 5px;
+}
+
+#line {
+ position:absolute;
+ left:10px;
+ top:53px;
+ width:120px;
+ height:1px;
+ font-size:20px;
+ color:white;
+ background-image: url("../img/grey_block.png");
+}
+
+div {
+    font-family: myFirstFont;
+}
