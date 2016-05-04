@@ -4,25 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="basic/basic.css">        
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="scripts/services.js"></script>
+    <link rel="stylesheet" type="text/css" href="basic/basic.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     TEST
-    <img id="yellowblock" src="img/yellow_block.png" />
-    <img id="bg" src="img/grey_block.png" />
+    
+    <div id="bg" ></div>
+    <div id="banner" >    </div>
     <div id="title">TITLE</div>
     <div id="line"></div>
     <div id="subtitle">subtitle</div>
 
     <script>
-        function GetData() {
-            $.getJSON("http://sentientlabs.co/infographics/service/a=123", function (e) {
-                console.log(e);
-            });
-        }
-
+        console.log("page loaded");
         $(document).ready(GetData);
     </script>
 </body>
