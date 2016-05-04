@@ -81,3 +81,10 @@
 div {
     font-family: myFirstFont;
 }
+
+#canvas-holder{
+ position:absolute;
+ display:block;
+ top:170px;
+ left:10px;
+}
