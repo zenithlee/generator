@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -13,6 +14,7 @@ namespace Generator
   {
 
     string MinePath = @"..\Data\mine\twitter";
+    bool CancelMining = false;
 
     void Analysis_Campaign()
     {
@@ -75,9 +77,21 @@ namespace Generator
 
     float ClassifyText(string key, string s)
     {
-      float Sentiment = AnalyseSentence(s);
-      CampaignChart.Series[key].Points.Add(Sentiment);
+      float Sentiment = AnalyseSentence(s);      
       return Sentiment;
+    }
+
+    public void AddGraphPoint(string key, float val)
+    {
+      CampaignChart.Series[key].Points.Add(val);
+    }
+
+    public void AddGraphPoints( Dictionary<string,float> data)
+    {
+      foreach( KeyValuePair<string,float> kv in data)
+      {
+        AddGraphPoint(kv.Key, kv.Value);
+      }
     }
 
     public void AddToList(string text, string author, string Popularity, string id, string sentiment, ListView list)
@@ -189,7 +203,7 @@ namespace Generator
       SaveCampaign();
     }
 
-    void MineData()
+    async Task MineData()
     {
       DirectoryInfo di = new DirectoryInfo(MinePath);
       FileInfo[] fi = di.GetFiles();
@@ -198,8 +212,10 @@ namespace Generator
       string Summary = "";
 
       float count = 0;
+      int TotalCount = 0;
       foreach (string s in CampaignList.Items)
       {
+        TotalCount++;
         float totalSentiment = 0;
         foreach (FileInfo f in fi)
         {          
@@ -211,9 +227,17 @@ namespace Generator
           {
             count++;
             //CampaignSummary.Items.Add(sFile);
-            totalSentiment += ClassifyText(s, data);
+            float sentiment = ClassifyText(s, data);
+            totalSentiment += sentiment;
+            AddGraphPoint(s, sentiment);
           }
+
+          toolStripStatusLabel1.Text = "Mining " + TotalCount + "/" + fi.Length;
+          await Task.Delay(10);
+
+          if (CancelMining == true) break;
         }
+
 
         totalSentiment /= count;
         double corrected = CorrectSentiment(totalSentiment);
@@ -224,6 +248,84 @@ namespace Generator
       }
     }
 
+    //CancellationToken token
+    async Task MineAverage()    
+    {
+      DirectoryInfo di = new DirectoryInfo(MinePath);
+      FileInfo[] fi = di.GetFiles();
+
+      Dictionary<string, float> Averages = new Dictionary<string, float>();
+      string Summary = "";      
+
+      float count = 0;
+      int TotalCount = 0;
+      int AverageEveryNItems = 10;
+
+      foreach (string s in CampaignList.Items)
+      {
+        Averages.Add(s, 0);
+      }
+
+        foreach (FileInfo f in fi)
+        {
+        TotalCount++;
+          String data = File.ReadAllText(f.FullName);
+          data = data.ToLower();
+          data = StripAuthorFromTweet(data);
+        if (CancelMining == true) break;
+        count++;
+        bool gotdata = false;
+        foreach (string s in CampaignList.Items)
+          {        
+            if (data.Contains(s))
+              {
+            gotdata = true;
+            //CampaignSummary.Items.Add(sFile);
+            float sentiment = ClassifyText(s, data);
+              double corrected = CorrectSentiment(sentiment);
+            
+              if (Averages.ContainsKey(s)) { 
+                Averages[s] = (Averages[s] + sentiment)/2.0f;
+              }              
+            }
+          } //foreach
+
+        if ((count > AverageEveryNItems) )
+        {
+          AddGraphPoints(Averages);
+          count = 0;
+        }
+
+        if (TotalCount % 5 == 1)
+        {
+          toolStripStatusLabel1.Text = "Mining " + TotalCount + "/" + fi.Length;
+          await Task.Delay(2);
+        }
+
+
+
+        //CampaignSummary.Items.Add(s + "=" + corrected);
+        //Summary += s + "=" + sentiment + "\r\n";
+
+
+      }
+
+
+        foreach( KeyValuePair<string,float> k in Averages)
+      {
+        Summary += k.Key + "=" + CorrectSentiment(k.Value) + "\n";
+        CampaignSummary.Items.Add(k.Key + "=" + CorrectSentiment(k.Value));
+      }
+      
+      File.WriteAllText(CampaignPath() + "\\summary_Average.txt", Summary);
+      CancelMining = false;
+    }
+
+    private void CampaignMineStop_Click(object sender, EventArgs e)
+    {
+      CancelMining = true;
+    }
+
     double CorrectSentiment(double s)
     {
       return Math.Round(s * 1000, 2);
@@ -232,6 +334,17 @@ namespace Generator
     private void CampaignMineButton_Click(object sender, EventArgs e)
     {
       MineData();
+    }
+
+    private void CampaignMineAverage_Click(object sender, EventArgs e)
+    {
+      MineAverage();
+    }
+
+    private void CampaignClearGraph_Click(object sender, EventArgs e)
+    {
+      CampaignChart.Series.Clear();
+      SetupCampaignGraph();
     }
 
     private void CampaignActive_CheckedChanged(object sender, EventArgs e)

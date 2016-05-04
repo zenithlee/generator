@@ -1,9 +1,1 @@
-#oreo=27.88
-#cookie=16.91
-#letwonderout=3.93
-#wonderfilled=1.46
-#waterfront=2.39
-#capetown=2.3
-#joburg=-2.19
-#durban=1.98
-wonderfilled=-0.78
+#oreo=26.06

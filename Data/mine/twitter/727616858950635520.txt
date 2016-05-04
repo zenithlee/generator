@@ -1,0 +1,1 @@
+727616858950635520~jonasbjork~0~Open security group (22/tcp) to #ec2 for your current IP with a script: https://t.co/USxciAObHJ   #AWS #awssummit #Stockholm #waterfront

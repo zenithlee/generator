@@ -1,7 +1,7 @@
 #toyota=6.32
 #bmw=5.88
 #vw=0.31
-#mercedes=3.22
-#tata=3.81
+#mercedes=3.21
+#tata=3.8
 #nissan=1.92
 #renault=0.09

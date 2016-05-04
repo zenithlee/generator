@@ -1,4 +1,4 @@
-726792048376963072~SouthAfricaRail~4~#TouristClassTrain
+726792048376963072~SouthAfricaRail~5~#TouristClassTrain
 #EastLondon - #Joburg
 R 490 p/adult, p/journey
 Wed,Fri,Sun   3 x p/week

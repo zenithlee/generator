@@ -103,10 +103,13 @@
       this.TwitterInfo = new System.Windows.Forms.TextBox();
       this.TestTwitterbutton = new System.Windows.Forms.Button();
       this.TwitterCampaign = new System.Windows.Forms.TabPage();
+      this.CampaignClearGraph = new System.Windows.Forms.Button();
+      this.CampaignMineStop = new System.Windows.Forms.Button();
+      this.CampaignMineAverage = new System.Windows.Forms.Button();
       this.SaveGraph = new System.Windows.Forms.Button();
-      this.CampaignActive = new System.Windows.Forms.CheckBox();
       this.panel1 = new System.Windows.Forms.Panel();
       this.btn_Campaign_New = new System.Windows.Forms.Button();
+      this.CampaignActive = new System.Windows.Forms.CheckBox();
       this.BtnSaveCampaign = new System.Windows.Forms.Button();
       this.CampaignName = new System.Windows.Forms.ComboBox();
       this.CampaignQuery1 = new System.Windows.Forms.TextBox();
@@ -135,6 +138,8 @@
       this.GetApple = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
+      this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+      this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
@@ -153,6 +158,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).BeginInit();
       this.Market.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+      this.statusStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -827,6 +833,9 @@
       // 
       // TwitterCampaign
       // 
+      this.TwitterCampaign.Controls.Add(this.CampaignClearGraph);
+      this.TwitterCampaign.Controls.Add(this.CampaignMineStop);
+      this.TwitterCampaign.Controls.Add(this.CampaignMineAverage);
       this.TwitterCampaign.Controls.Add(this.SaveGraph);
       this.TwitterCampaign.Controls.Add(this.panel1);
       this.TwitterCampaign.Controls.Add(this.CampaignMineButton);
@@ -844,26 +853,45 @@
       this.TwitterCampaign.Text = "Campaign";
       this.TwitterCampaign.UseVisualStyleBackColor = true;
       // 
+      // CampaignClearGraph
+      // 
+      this.CampaignClearGraph.Location = new System.Drawing.Point(943, 483);
+      this.CampaignClearGraph.Name = "CampaignClearGraph";
+      this.CampaignClearGraph.Size = new System.Drawing.Size(95, 23);
+      this.CampaignClearGraph.TabIndex = 37;
+      this.CampaignClearGraph.Text = "Clear";
+      this.CampaignClearGraph.UseVisualStyleBackColor = true;
+      this.CampaignClearGraph.Click += new System.EventHandler(this.CampaignClearGraph_Click);
+      // 
+      // CampaignMineStop
+      // 
+      this.CampaignMineStop.Location = new System.Drawing.Point(943, 454);
+      this.CampaignMineStop.Name = "CampaignMineStop";
+      this.CampaignMineStop.Size = new System.Drawing.Size(95, 23);
+      this.CampaignMineStop.TabIndex = 36;
+      this.CampaignMineStop.Text = "Stop";
+      this.CampaignMineStop.UseVisualStyleBackColor = true;
+      this.CampaignMineStop.Click += new System.EventHandler(this.CampaignMineStop_Click);
+      // 
+      // CampaignMineAverage
+      // 
+      this.CampaignMineAverage.Location = new System.Drawing.Point(943, 396);
+      this.CampaignMineAverage.Name = "CampaignMineAverage";
+      this.CampaignMineAverage.Size = new System.Drawing.Size(95, 23);
+      this.CampaignMineAverage.TabIndex = 35;
+      this.CampaignMineAverage.Text = "Mine Average";
+      this.CampaignMineAverage.UseVisualStyleBackColor = true;
+      this.CampaignMineAverage.Click += new System.EventHandler(this.CampaignMineAverage_Click);
+      // 
       // SaveGraph
       // 
       this.SaveGraph.Location = new System.Drawing.Point(943, 531);
       this.SaveGraph.Name = "SaveGraph";
-      this.SaveGraph.Size = new System.Drawing.Size(75, 23);
+      this.SaveGraph.Size = new System.Drawing.Size(95, 23);
       this.SaveGraph.TabIndex = 34;
       this.SaveGraph.Text = "Save";
       this.SaveGraph.UseVisualStyleBackColor = true;
       this.SaveGraph.Click += new System.EventHandler(this.SaveGraph_Click);
-      // 
-      // CampaignActive
-      // 
-      this.CampaignActive.AutoSize = true;
-      this.CampaignActive.Location = new System.Drawing.Point(165, 16);
-      this.CampaignActive.Name = "CampaignActive";
-      this.CampaignActive.Size = new System.Drawing.Size(56, 17);
-      this.CampaignActive.TabIndex = 33;
-      this.CampaignActive.Text = "Active";
-      this.CampaignActive.UseVisualStyleBackColor = true;
-      this.CampaignActive.CheckedChanged += new System.EventHandler(this.CampaignActive_CheckedChanged);
       // 
       // panel1
       // 
@@ -893,6 +921,17 @@
       this.btn_Campaign_New.Text = "New";
       this.btn_Campaign_New.UseVisualStyleBackColor = true;
       this.btn_Campaign_New.Click += new System.EventHandler(this.btn_Campaign_New_Click);
+      // 
+      // CampaignActive
+      // 
+      this.CampaignActive.AutoSize = true;
+      this.CampaignActive.Location = new System.Drawing.Point(165, 16);
+      this.CampaignActive.Name = "CampaignActive";
+      this.CampaignActive.Size = new System.Drawing.Size(56, 17);
+      this.CampaignActive.TabIndex = 33;
+      this.CampaignActive.Text = "Active";
+      this.CampaignActive.UseVisualStyleBackColor = true;
+      this.CampaignActive.CheckedChanged += new System.EventHandler(this.CampaignActive_CheckedChanged);
       // 
       // BtnSaveCampaign
       // 
@@ -968,9 +1007,9 @@
       // 
       // CampaignMineButton
       // 
-      this.CampaignMineButton.Location = new System.Drawing.Point(943, 502);
+      this.CampaignMineButton.Location = new System.Drawing.Point(943, 425);
       this.CampaignMineButton.Name = "CampaignMineButton";
-      this.CampaignMineButton.Size = new System.Drawing.Size(75, 23);
+      this.CampaignMineButton.Size = new System.Drawing.Size(95, 23);
       this.CampaignMineButton.TabIndex = 31;
       this.CampaignMineButton.Text = "Mine";
       this.CampaignMineButton.UseVisualStyleBackColor = true;
@@ -980,7 +1019,7 @@
       // 
       this.CampaginGraphBar.Location = new System.Drawing.Point(943, 348);
       this.CampaginGraphBar.Name = "CampaginGraphBar";
-      this.CampaginGraphBar.Size = new System.Drawing.Size(75, 23);
+      this.CampaginGraphBar.Size = new System.Drawing.Size(95, 23);
       this.CampaginGraphBar.TabIndex = 28;
       this.CampaginGraphBar.Text = "Bar";
       this.CampaginGraphBar.UseVisualStyleBackColor = true;
@@ -990,7 +1029,7 @@
       // 
       this.CampaignGraphLine.Location = new System.Drawing.Point(943, 319);
       this.CampaignGraphLine.Name = "CampaignGraphLine";
-      this.CampaignGraphLine.Size = new System.Drawing.Size(75, 23);
+      this.CampaignGraphLine.Size = new System.Drawing.Size(95, 23);
       this.CampaignGraphLine.TabIndex = 27;
       this.CampaignGraphLine.Text = "Line";
       this.CampaignGraphLine.UseVisualStyleBackColor = true;
@@ -1159,9 +1198,24 @@
       // 
       // timer1
       // 
-      this.timer1.Enabled = true;
       this.timer1.Interval = 125000;
       this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      // 
+      // statusStrip1
+      // 
+      this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+      this.statusStrip1.Location = new System.Drawing.Point(0, 626);
+      this.statusStrip1.Name = "statusStrip1";
+      this.statusStrip1.Size = new System.Drawing.Size(1152, 22);
+      this.statusStrip1.TabIndex = 17;
+      this.statusStrip1.Text = "statusStrip1";
+      // 
+      // toolStripStatusLabel1
+      // 
+      this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+      this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+      this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
       // 
       // analysisBindingSource
       // 
@@ -1171,7 +1225,8 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1152, 619);
+      this.ClientSize = new System.Drawing.Size(1152, 648);
+      this.Controls.Add(this.statusStrip1);
       this.Controls.Add(this.tabControl1);
       this.Name = "Analysis";
       this.Text = "SENTiENT GENERATOR";
@@ -1197,8 +1252,11 @@
       this.Market.ResumeLayout(false);
       this.Market.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+      this.statusStrip1.ResumeLayout(false);
+      this.statusStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
+      this.PerformLayout();
 
         }
 
@@ -1301,6 +1359,11 @@
     private System.Windows.Forms.Button btn_Campaign_New;
     private System.Windows.Forms.CheckBox CampaignActive;
     private System.Windows.Forms.Button SaveGraph;
+    private System.Windows.Forms.Button CampaignMineAverage;
+    private System.Windows.Forms.Button CampaignMineStop;
+    private System.Windows.Forms.Button CampaignClearGraph;
+    private System.Windows.Forms.StatusStrip statusStrip1;
+    private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
   }
 }
 
