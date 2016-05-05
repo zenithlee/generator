@@ -71,7 +71,7 @@
  display:block;
  left:10px;
  top:53px;
- width:120px;
+ width:220px;
  height:1px;
  font-size:20px;
  color:white;
@@ -86,5 +86,12 @@ div {
  position:absolute;
  display:block;
  top:170px;
+ left:10px;
+}
+
+#addDataset {
+ position:absolute;
+ display:block;
+ bottom:200px;
  left:10px;
 }

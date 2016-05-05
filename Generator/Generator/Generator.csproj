@@ -101,6 +101,15 @@
     </Compile>
     <Compile Include="StockClass.cs" />
     <Compile Include="StockMarket.cs" />
+    <Content Include="Infographics\basic.xml" />
+    <Content Include="Infographics\basic\basic.css" />
+    <Content Include="Infographics\basic\spreadsheet.css" />
+    <Content Include="Infographics\img\banner.png" />
+    <Content Include="Infographics\img\grey_block.png" />
+    <Content Include="Infographics\index.html" />
+    <Content Include="Infographics\img\yellow_block.png" />
+    <Content Include="Infographics\scripts\services.js" />
+    <Content Include="Infographics\scripts\spreadsheet.js" />
     <Content Include="Templates\Weather_UK.txt" />
     <Compile Include="Templates\Quantify.cs" />
     <Compile Include="TwitterBot.cs" />
@@ -119,6 +128,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Infographics\fonts\amaranth.zip" />
+    <None Include="Infographics\fonts\theleagueof-league-gothic-64c3ede.zip" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,6 +147,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
