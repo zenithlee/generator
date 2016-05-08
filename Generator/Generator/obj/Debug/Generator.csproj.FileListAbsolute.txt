@@ -43,3 +43,6 @@ I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csproj.Gen
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.exe
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.pdb
 I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojResolveAssemblyReference.cache
+I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.exe.config
+I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.exe
+I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.pdb

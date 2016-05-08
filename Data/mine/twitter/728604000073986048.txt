@@ -1,0 +1,6 @@
+728604000073986048~SouthAfricaRail~1~#TouristClassTrain
+#Joburg - #CapeTown
+R 690 p/adult p/journey
+Departs: Tue,Wed,Fri,Sun
+#SouthAfricaRail #SARail
+https://t.co/WL24IkMmka

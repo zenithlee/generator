@@ -162,6 +162,10 @@ namespace Generator
 
     void GetCampaigns()
     {
+      if ( !Directory.Exists(DataPath + "\\Campaigns\\"))
+      {
+        Directory.CreateDirectory(DataPath + "\\Campaigns\\");
+      }
       DirectoryInfo d = new DirectoryInfo(DataPath + "\\Campaigns\\");
       DirectoryInfo[] infos = d.GetDirectories();
       foreach( DirectoryInfo di in infos)

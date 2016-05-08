@@ -14,6 +14,12 @@ namespace Generator
 
     void LoadSentiments()
     {
+
+      if (!File.Exists(SentimentFile))
+      {
+        toolStripStatusLabel1.Text = "Sentiments not found:" + SentimentFile;
+        return;
+      }
       string[] items = File.ReadAllLines(SentimentFile);
       foreach (string item in items)
       {

@@ -18,6 +18,7 @@ using System.IO.Pipes;
 
 using Generator;
 using System.Collections;
+using Generator.Database;
 
 namespace Generator
   {
@@ -46,6 +47,8 @@ namespace Generator
     StockMarket _stocks = new StockMarket();
 
     TwitterBot _Twitter = new TwitterBot();
+
+    MySQL db = new MySQL();
 
     int PreviousVisemeMs = 0; //used to reduce overlap data
 
@@ -659,8 +662,46 @@ namespace Generator
 
     }
 
+    private void btnUpload_Click(object sender, EventArgs e)
+    {
+      
 
- 
+      StringBuilder sq = new StringBuilder("INSERT INTO sl_sentimentwords VALUES");
+      string[] items = File.ReadAllLines(SentimentFile);
+
+      int counter = 0;
+      foreach (string item in items)
+      {
+        counter++;
+        string[] pair = item.Split(',');
+        string sword = pair[0];
+        if (pair[1] == "") pair[1] = "0";
+        float sentiment= (float)Convert.ToDouble(pair[1]);
+
+        string pos = pair[2];
+        if (pos == "") pos = "";
+
+        sword = db.Escape(sword);
+        sq.AppendFormat(" (NULL,'{0}',{1},'-','{2}'),", sword, sentiment, pos);
+
+        if ( counter > 100 )
+        {
+          string q = sq.ToString();
+          q = q.TrimEnd(',');
+          q += ";";
+
+          db.Open();
+          db.Query(q);
+          db.Close();
+
+          sq = new StringBuilder("INSERT INTO sl_sentimentwords VALUES");
+          counter = 0;
+        }
+       
+      }
+
+      
+    }
   }
 
   class ListViewItemComparer : IComparer
