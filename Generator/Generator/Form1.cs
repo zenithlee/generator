@@ -80,7 +80,17 @@ namespace Generator
       Application.EnableVisualStyles();
       Analysis_Campaign();
 
+      SetupStocks();
+
       SetupTimers();
+    }
+
+    void SetupStocks()
+    {
+      List<string> stocks = _stocks.LoadPortfolio();
+      if ( stocks != null ) { 
+        StockBox.Items.AddRange(stocks.ToArray());
+      }
     }
 
     void SetupTimers()
@@ -719,10 +729,40 @@ namespace Generator
       
     }
 
+    #region Stocks
+
     private void MarketAuto_CheckedChanged(object sender, EventArgs e)
     {
       MarketTimer.Enabled = MarketAuto.Checked;
     }
+
+    private void btnAddStock_Click(object sender, EventArgs e)
+    {
+      StockBox.Items.Add(txtStockToWatch.Text);
+      _stocks.AddToPortfolio(txtStockToWatch.Text);
+    }
+
+    private void btnRemoveStock_Click(object sender, EventArgs e)
+    {
+      string s = StockBox.Items[StockBox.SelectedIndex].ToString();
+      StockBox.Items.RemoveAt(StockBox.SelectedIndex);
+      _stocks.RemoveFromPortfolio(s);
+    }
+
+    private void btnMarketRun_Click(object sender, EventArgs e)
+    {
+      _stocks.SetGraph(MarketChart);
+      _stocks.Analyse_Stocks();
+    }
+
+    private void MarketTimer_Tick_1(object sender, EventArgs e)
+    {
+      _stocks.SetGraph(MarketChart);
+      _stocks.Analyse_Stocks();
+    }
+
+    #endregion
+
   }
 
   class ListViewItemComparer : IComparer

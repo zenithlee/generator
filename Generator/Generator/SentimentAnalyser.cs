@@ -9,15 +9,17 @@ namespace Generator
 {
   partial class Analysis
   {
-    string SentimentFile = "../../../../Data/sentiments2.csv";
+    string SentimentFile = @"..\..\Data\sentiments2.csv";
     Dictionary<string, float> Sentiments = new Dictionary<string, float>();
 
     void LoadSentiments()
     {
-
+      string sFile = Directory.GetCurrentDirectory() + SentimentFile;
+      FileInfo fi = new FileInfo(sFile);
+      sFile = fi.FullName;
       if (!File.Exists(SentimentFile))
       {
-        FileInfo fi = new FileInfo(SentimentFile);
+        
         toolStripStatusLabel1.Text = "Sentiments not found:" + fi.FullName;
         return;
       }

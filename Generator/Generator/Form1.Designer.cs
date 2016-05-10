@@ -133,11 +133,15 @@
       this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.SentimentColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.Market = new System.Windows.Forms.TabPage();
+      this.btnMarketRun = new System.Windows.Forms.Button();
+      this.StockBox = new System.Windows.Forms.ListBox();
+      this.btnRemoveStock = new System.Windows.Forms.Button();
+      this.btnAddStock = new System.Windows.Forms.Button();
+      this.txtStockToWatch = new System.Windows.Forms.TextBox();
       this.MarketAuto = new System.Windows.Forms.CheckBox();
       this.MarketChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.GetMicrosoft = new System.Windows.Forms.Button();
       this.MarketStory = new System.Windows.Forms.TextBox();
-      this.StockBox = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -1157,11 +1161,15 @@
       // 
       // Market
       // 
+      this.Market.Controls.Add(this.btnMarketRun);
+      this.Market.Controls.Add(this.StockBox);
+      this.Market.Controls.Add(this.btnRemoveStock);
+      this.Market.Controls.Add(this.btnAddStock);
+      this.Market.Controls.Add(this.txtStockToWatch);
       this.Market.Controls.Add(this.MarketAuto);
       this.Market.Controls.Add(this.MarketChart);
       this.Market.Controls.Add(this.GetMicrosoft);
       this.Market.Controls.Add(this.MarketStory);
-      this.Market.Controls.Add(this.StockBox);
       this.Market.Controls.Add(this.GetApple);
       this.Market.Location = new System.Drawing.Point(4, 22);
       this.Market.Name = "Market";
@@ -1170,6 +1178,52 @@
       this.Market.TabIndex = 4;
       this.Market.Text = "Market";
       this.Market.UseVisualStyleBackColor = true;
+      // 
+      // btnMarketRun
+      // 
+      this.btnMarketRun.Location = new System.Drawing.Point(185, 45);
+      this.btnMarketRun.Name = "btnMarketRun";
+      this.btnMarketRun.Size = new System.Drawing.Size(72, 23);
+      this.btnMarketRun.TabIndex = 10;
+      this.btnMarketRun.Text = "Run Now";
+      this.btnMarketRun.UseVisualStyleBackColor = true;
+      this.btnMarketRun.Click += new System.EventHandler(this.btnMarketRun_Click);
+      // 
+      // StockBox
+      // 
+      this.StockBox.FormattingEnabled = true;
+      this.StockBox.Location = new System.Drawing.Point(9, 74);
+      this.StockBox.Name = "StockBox";
+      this.StockBox.ScrollAlwaysVisible = true;
+      this.StockBox.Size = new System.Drawing.Size(173, 394);
+      this.StockBox.TabIndex = 9;
+      // 
+      // btnRemoveStock
+      // 
+      this.btnRemoveStock.Location = new System.Drawing.Point(143, 45);
+      this.btnRemoveStock.Name = "btnRemoveStock";
+      this.btnRemoveStock.Size = new System.Drawing.Size(33, 23);
+      this.btnRemoveStock.TabIndex = 8;
+      this.btnRemoveStock.Text = "-";
+      this.btnRemoveStock.UseVisualStyleBackColor = true;
+      this.btnRemoveStock.Click += new System.EventHandler(this.btnRemoveStock_Click);
+      // 
+      // btnAddStock
+      // 
+      this.btnAddStock.Location = new System.Drawing.Point(104, 45);
+      this.btnAddStock.Name = "btnAddStock";
+      this.btnAddStock.Size = new System.Drawing.Size(33, 23);
+      this.btnAddStock.TabIndex = 7;
+      this.btnAddStock.Text = "+";
+      this.btnAddStock.UseVisualStyleBackColor = true;
+      this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
+      // 
+      // txtStockToWatch
+      // 
+      this.txtStockToWatch.Location = new System.Drawing.Point(9, 48);
+      this.txtStockToWatch.Name = "txtStockToWatch";
+      this.txtStockToWatch.Size = new System.Drawing.Size(86, 20);
+      this.txtStockToWatch.TabIndex = 6;
       // 
       // MarketAuto
       // 
@@ -1202,7 +1256,7 @@
       // 
       // GetMicrosoft
       // 
-      this.GetMicrosoft.Location = new System.Drawing.Point(62, 33);
+      this.GetMicrosoft.Location = new System.Drawing.Point(143, 7);
       this.GetMicrosoft.Name = "GetMicrosoft";
       this.GetMicrosoft.Size = new System.Drawing.Size(75, 23);
       this.GetMicrosoft.TabIndex = 3;
@@ -1212,21 +1266,12 @@
       // 
       // MarketStory
       // 
-      this.MarketStory.Location = new System.Drawing.Point(229, 74);
+      this.MarketStory.Location = new System.Drawing.Point(188, 74);
       this.MarketStory.Multiline = true;
       this.MarketStory.Name = "MarketStory";
       this.MarketStory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.MarketStory.Size = new System.Drawing.Size(216, 388);
+      this.MarketStory.Size = new System.Drawing.Size(257, 388);
       this.MarketStory.TabIndex = 2;
-      // 
-      // StockBox
-      // 
-      this.StockBox.Location = new System.Drawing.Point(7, 74);
-      this.StockBox.Multiline = true;
-      this.StockBox.Name = "StockBox";
-      this.StockBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.StockBox.Size = new System.Drawing.Size(216, 388);
-      this.StockBox.TabIndex = 1;
       // 
       // GetApple
       // 
@@ -1245,7 +1290,6 @@
       // timer1
       // 
       this.timer1.Interval = 125000;
-      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // statusStrip1
       // 
@@ -1369,7 +1413,8 @@
       // 
       // MarketTimer
       // 
-      this.MarketTimer.Interval = 160000;
+      this.MarketTimer.Interval = 60000;
+      this.MarketTimer.Tick += new System.EventHandler(this.MarketTimer_Tick_1);
       // 
       // analysisBindingSource
       // 
@@ -1483,7 +1528,6 @@
     private System.Windows.Forms.Button button12;
     private System.Windows.Forms.TabPage Market;
     private System.Windows.Forms.Button GetApple;
-    private System.Windows.Forms.TextBox StockBox;
     private System.Windows.Forms.TextBox MarketStory;
     private System.Windows.Forms.Button GetMicrosoft;
     private System.Windows.Forms.CheckBox Popularity;
@@ -1544,6 +1588,11 @@
     private System.Windows.Forms.Button btnUpload;
     private System.Windows.Forms.CheckBox MarketAuto;
     private System.Windows.Forms.Timer MarketTimer;
+    private System.Windows.Forms.Button btnAddStock;
+    private System.Windows.Forms.TextBox txtStockToWatch;
+    private System.Windows.Forms.Button btnRemoveStock;
+    private System.Windows.Forms.ListBox StockBox;
+    private System.Windows.Forms.Button btnMarketRun;
   }
 }
 

@@ -12,6 +12,11 @@ namespace Generator
 {
   class StockMarket
   {
+
+    string PortfolioPath = "../../Data/Portfolio/";
+    List<String> Portfolio = new List<string>();
+    Chart MarketChart;
+
     public string URL = "http://www.google.com/finance/info?";
     //http://finance.google.com/finance/info?client=ig&q=NASDAQ:GOOG
     //http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg
@@ -38,7 +43,7 @@ namespace Generator
    "id": "22144"
    ,"t" : "AAPL"
    ,"e" : "NASDAQ"
-   ,"l" : "105.97"
+   ,"l" : "105.97" //latest
    ,"l_fix" : "105.97"
    ,"l_cur" : "105.97"
    ,"s": "2"
@@ -51,7 +56,7 @@ namespace Generator
    ,"cp_fix" : "-1.08"
    ,"ccol" : "chr"
    ,"pcls_fix" : "107.13"
-   ,"el": "105.20"
+   ,"el": "105.20" //after hours price
    ,"el_fix": "105.20"
    ,"el_cur": "105.20"
    ,"elt" : "Apr 21, 8:00PM EDT"
@@ -68,6 +73,52 @@ namespace Generator
       Starbucks Corp. shares SBUX, -3.27% slid 4.7% in after-hours trade Thursday, after the company posted weaker-than-expected sales for its second fiscal quarter. Starbucks said it had net income of $575.1 million, or 39 cents a share, compared with $494.9 million, or 33 cents a share, in the year-earlier period. Revenue rose to $4.99 billion from $4.56 billion. The FactSet consensus was for EPS of 39 cents and revenue of $5.03 billion. Same-store sales rose 6%, below the FactSet consensus of 6.5%. Looking ahead, the company said it expects third-quarter EPS of 48 cents to 49 cents, compared with the current consensus of 49 cents. The board has agreed to add an additional 100 million shares to the company's share buyback authorization. Shares are up 1% in the year so far, while the S&P 500 has gained about 2%.
 
    */
+
+    public void SetGraph(Chart inMarketChart)
+    {
+      MarketChart = inMarketChart;
+    }
+
+
+    public void Analyse_Stocks()
+    {
+      foreach( string s in Portfolio) { 
+        StockClassObject o = GetStockInfo(s.ToUpper());        
+        PlotTo(o, MarketChart);
+      }
+    }
+
+    public void AddToPortfolio(string s)
+    {
+      Portfolio.Add(s);
+      SavePortfolio();
+    }
+
+    public void RemoveFromPortfolio(string s)
+    {
+      Portfolio.Remove(s);
+      SavePortfolio();
+    }
+
+    public void SavePortfolio()
+    {
+      if (!Directory.Exists(PortfolioPath))
+      {
+        Directory.CreateDirectory(PortfolioPath);
+      }
+      File.WriteAllLines(PortfolioPath + "portfolio.txt", Portfolio);
+    }
+
+    public List<string> LoadPortfolio()
+    {
+      string sPort = PortfolioPath + "portfolio.txt";
+      if ( !File.Exists(sPort))
+      {
+        return null;
+      }
+      Portfolio = new List<string>(File.ReadAllLines(sPort));
+      return Portfolio;
+    }
 
     string CompanyFromCode(string s)
     {
@@ -135,15 +186,18 @@ namespace Generator
       {
         Series s = MarketChart.Series.Add(so.t);
         s.ChartType = SeriesChartType.Stock;
-        MarketChart.Titles.Add(so.t);
-        MarketChart.Titles.Add(so.e);
+        //MarketChart.Titles.Add(so.t);
+        //MarketChart.Titles.Add(so.e);
         s.MarkerSize = 1;
         s.MarkerStep = 20;
         s.MarkerStyle = MarkerStyle.Diamond;
-
       }
 
-      MarketChart.Series[so.t].Points.AddY(new object[] { so.el, so.el+1, so.l_fix, so.l_fix+1 });      
+      double p1 = Convert.ToDouble(so.el);
+      double p2 = Convert.ToDouble(so.l);
+      double p3 = Convert.ToDouble(so.el) + Convert.ToDouble(so.cp);
+      double p4 = Convert.ToDouble(so.l) - Convert.ToDouble(so.cp);
+      MarketChart.Series[so.t].Points.AddY(new object[] { p1, p2, p3, p4 });      
     }
   }
 

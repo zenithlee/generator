@@ -11,7 +11,7 @@ public class StockHolder {
         public string id { get; set; }
         public string t { get; set; }
         public string e { get; set; }
-        public string l { get; set; }
+        public string l { get; set; } //most recent price
         public string l_fix { get; set; }
         public string l_cur { get; set; }
         public string s { get; set; }
@@ -24,7 +24,7 @@ public class StockHolder {
         public string cp_fix { get; set; }
         public string ccol { get; set; }
         public string pcls_fix { get; set; }
-        public string el { get; set; }
+        public string el { get; set; } //overnight price
         public string el_fix { get; set; }
         public string el_cur { get; set; }
         public string elt { get; set; }

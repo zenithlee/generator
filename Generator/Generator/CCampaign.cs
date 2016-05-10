@@ -13,7 +13,7 @@ namespace Generator
   partial class Analysis
   {
 
-    string MinePath = @"..\Data\mine\twitter";
+    string MinePath = @"..\..\Data\mine\twitter";
     bool CancelMining = false;
 
     void Analysis_Campaign()
