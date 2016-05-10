@@ -81,6 +81,7 @@
       this.pictureBox2 = new System.Windows.Forms.PictureBox();
       this.report = new System.Windows.Forms.TextBox();
       this.tabPage2 = new System.Windows.Forms.TabPage();
+      this.btnUpload = new System.Windows.Forms.Button();
       this.RefreshButton = new System.Windows.Forms.Button();
       this.SentimentGrid = new System.Windows.Forms.DataGridView();
       this.Twitter = new System.Windows.Forms.TabPage();
@@ -132,8 +133,9 @@
       this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.SentimentColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.Market = new System.Windows.Forms.TabPage();
-      this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-      this.button14 = new System.Windows.Forms.Button();
+      this.MarketAuto = new System.Windows.Forms.CheckBox();
+      this.MarketChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+      this.GetMicrosoft = new System.Windows.Forms.Button();
       this.MarketStory = new System.Windows.Forms.TextBox();
       this.StockBox = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
@@ -142,7 +144,7 @@
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
       this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-      this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+      this.pictureBox5 = new System.Windows.Forms.PictureBox();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.campaignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,9 +154,9 @@
       this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.pictureBox5 = new System.Windows.Forms.PictureBox();
+      this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+      this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.btnUpload = new System.Windows.Forms.Button();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -171,13 +173,13 @@
       this.panel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).BeginInit();
       this.Market.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).BeginInit();
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.ContentPanel.SuspendLayout();
       this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
-      this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+      this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -625,6 +627,16 @@
       this.tabPage2.TabIndex = 1;
       this.tabPage2.Text = "Sentiment";
       this.tabPage2.UseVisualStyleBackColor = true;
+      // 
+      // btnUpload
+      // 
+      this.btnUpload.Location = new System.Drawing.Point(608, 37);
+      this.btnUpload.Name = "btnUpload";
+      this.btnUpload.Size = new System.Drawing.Size(105, 23);
+      this.btnUpload.TabIndex = 2;
+      this.btnUpload.Text = "Upload";
+      this.btnUpload.UseVisualStyleBackColor = true;
+      this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
       // 
       // RefreshButton
       // 
@@ -1145,8 +1157,9 @@
       // 
       // Market
       // 
-      this.Market.Controls.Add(this.chart1);
-      this.Market.Controls.Add(this.button14);
+      this.Market.Controls.Add(this.MarketAuto);
+      this.Market.Controls.Add(this.MarketChart);
+      this.Market.Controls.Add(this.GetMicrosoft);
       this.Market.Controls.Add(this.MarketStory);
       this.Market.Controls.Add(this.StockBox);
       this.Market.Controls.Add(this.GetApple);
@@ -1158,31 +1171,44 @@
       this.Market.Text = "Market";
       this.Market.UseVisualStyleBackColor = true;
       // 
-      // chart1
+      // MarketAuto
+      // 
+      this.MarketAuto.AutoSize = true;
+      this.MarketAuto.Location = new System.Drawing.Point(8, 7);
+      this.MarketAuto.Name = "MarketAuto";
+      this.MarketAuto.Size = new System.Drawing.Size(48, 17);
+      this.MarketAuto.TabIndex = 5;
+      this.MarketAuto.Text = "Auto";
+      this.MarketAuto.UseVisualStyleBackColor = true;
+      this.MarketAuto.CheckedChanged += new System.EventHandler(this.MarketAuto_CheckedChanged);
+      // 
+      // MarketChart
       // 
       chartArea2.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea2);
+      this.MarketChart.ChartAreas.Add(chartArea2);
       legend2.Name = "Legend1";
-      this.chart1.Legends.Add(legend2);
-      this.chart1.Location = new System.Drawing.Point(452, 74);
-      this.chart1.Name = "chart1";
+      this.MarketChart.Legends.Add(legend2);
+      this.MarketChart.Location = new System.Drawing.Point(452, 74);
+      this.MarketChart.Name = "MarketChart";
       series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
       series2.Legend = "Legend1";
       series2.Name = "Series1";
-      this.chart1.Series.Add(series2);
-      this.chart1.Size = new System.Drawing.Size(474, 388);
-      this.chart1.TabIndex = 4;
-      this.chart1.Text = "chart1";
+      series2.YValuesPerPoint = 4;
+      this.MarketChart.Series.Add(series2);
+      this.MarketChart.Size = new System.Drawing.Size(662, 388);
+      this.MarketChart.TabIndex = 4;
+      this.MarketChart.Text = "chart1";
       // 
-      // button14
+      // GetMicrosoft
       // 
-      this.button14.Location = new System.Drawing.Point(7, 33);
-      this.button14.Name = "button14";
-      this.button14.Size = new System.Drawing.Size(75, 23);
-      this.button14.TabIndex = 3;
-      this.button14.Text = "Get AAPL";
-      this.button14.UseVisualStyleBackColor = true;
-      this.button14.Click += new System.EventHandler(this.button14_Click);
+      this.GetMicrosoft.Location = new System.Drawing.Point(62, 33);
+      this.GetMicrosoft.Name = "GetMicrosoft";
+      this.GetMicrosoft.Size = new System.Drawing.Size(75, 23);
+      this.GetMicrosoft.TabIndex = 3;
+      this.GetMicrosoft.Text = "Get MSFT";
+      this.GetMicrosoft.UseVisualStyleBackColor = true;
+      this.GetMicrosoft.Click += new System.EventHandler(this.button14_Click);
       // 
       // MarketStory
       // 
@@ -1204,7 +1230,7 @@
       // 
       // GetApple
       // 
-      this.GetApple.Location = new System.Drawing.Point(7, 7);
+      this.GetApple.Location = new System.Drawing.Point(62, 7);
       this.GetApple.Name = "GetApple";
       this.GetApple.Size = new System.Drawing.Size(75, 23);
       this.GetApple.TabIndex = 0;
@@ -1234,8 +1260,8 @@
       // toolStripStatusLabel1
       // 
       this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-      this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-      this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+      this.toolStripStatusLabel1.Size = new System.Drawing.Size(24, 17);
+      this.toolStripStatusLabel1.Text = "Q>";
       // 
       // toolStripContainer1
       // 
@@ -1256,13 +1282,13 @@
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
       // 
-      // toolStrip1
+      // pictureBox5
       // 
-      this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-      this.toolStrip1.Location = new System.Drawing.Point(3, 24);
-      this.toolStrip1.Name = "toolStrip1";
-      this.toolStrip1.Size = new System.Drawing.Size(111, 25);
-      this.toolStrip1.TabIndex = 0;
+      this.pictureBox5.Location = new System.Drawing.Point(4, -46);
+      this.pictureBox5.Name = "pictureBox5";
+      this.pictureBox5.Size = new System.Drawing.Size(30, 25);
+      this.pictureBox5.TabIndex = 0;
+      this.pictureBox5.TabStop = false;
       // 
       // menuStrip1
       // 
@@ -1333,27 +1359,21 @@
       this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
       this.helpToolStripMenuItem.Text = "Help";
       // 
-      // pictureBox5
+      // toolStrip1
       // 
-      this.pictureBox5.Location = new System.Drawing.Point(4, -46);
-      this.pictureBox5.Name = "pictureBox5";
-      this.pictureBox5.Size = new System.Drawing.Size(30, 25);
-      this.pictureBox5.TabIndex = 0;
-      this.pictureBox5.TabStop = false;
+      this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+      this.toolStrip1.Location = new System.Drawing.Point(3, 24);
+      this.toolStrip1.Name = "toolStrip1";
+      this.toolStrip1.Size = new System.Drawing.Size(111, 25);
+      this.toolStrip1.TabIndex = 0;
+      // 
+      // MarketTimer
+      // 
+      this.MarketTimer.Interval = 160000;
       // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
-      // 
-      // btnUpload
-      // 
-      this.btnUpload.Location = new System.Drawing.Point(608, 37);
-      this.btnUpload.Name = "btnUpload";
-      this.btnUpload.Size = new System.Drawing.Size(105, 23);
-      this.btnUpload.TabIndex = 2;
-      this.btnUpload.Text = "Upload";
-      this.btnUpload.UseVisualStyleBackColor = true;
-      this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
       // 
       // Analysis
       // 
@@ -1388,7 +1408,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).EndInit();
       this.Market.ResumeLayout(false);
       this.Market.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).EndInit();
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
       this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -1396,9 +1416,9 @@
       this.toolStripContainer1.TopToolStripPanel.PerformLayout();
       this.toolStripContainer1.ResumeLayout(false);
       this.toolStripContainer1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -1465,11 +1485,11 @@
     private System.Windows.Forms.Button GetApple;
     private System.Windows.Forms.TextBox StockBox;
     private System.Windows.Forms.TextBox MarketStory;
-    private System.Windows.Forms.Button button14;
+    private System.Windows.Forms.Button GetMicrosoft;
     private System.Windows.Forms.CheckBox Popularity;
     private System.Windows.Forms.CheckBox RecentCheck;
     private System.Windows.Forms.Button ReTweet;
-    private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+    private System.Windows.Forms.DataVisualization.Charting.Chart MarketChart;
     private System.Windows.Forms.ListView TweetResults;
     private System.Windows.Forms.ColumnHeader TweetText;
     private System.Windows.Forms.ColumnHeader Author;
@@ -1522,6 +1542,8 @@
     private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     private System.Windows.Forms.ToolStrip toolStrip1;
     private System.Windows.Forms.Button btnUpload;
+    private System.Windows.Forms.CheckBox MarketAuto;
+    private System.Windows.Forms.Timer MarketTimer;
   }
 }
 

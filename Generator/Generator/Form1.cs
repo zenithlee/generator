@@ -79,6 +79,21 @@ namespace Generator
       GetExistingProjects();
       Application.EnableVisualStyles();
       Analysis_Campaign();
+
+      SetupTimers();
+    }
+
+    void SetupTimers()
+    {
+      MarketTimer.Tick += MarketTimer_Tick;
+    }
+
+    private void MarketTimer_Tick(object sender, EventArgs e)
+    {
+      StockClassObject so = _stocks.GetStockInfo("AAPL");
+      _stocks.PlotTo(so, MarketChart);
+      so = _stocks.GetStockInfo("MSFT");
+      _stocks.PlotTo(so, MarketChart);
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -599,6 +614,7 @@ namespace Generator
       //MarketResponse.Text = s;
       StockClassObject o = _stocks.GetStockInfo("AAPL");      
       MarketStory.Text = _stocks.CreateReport(o);
+      _stocks.PlotTo(o, MarketChart);
     }
 
     private void button14_Click(object sender, EventArgs e)
@@ -701,6 +717,11 @@ namespace Generator
       }
 
       
+    }
+
+    private void MarketAuto_CheckedChanged(object sender, EventArgs e)
+    {
+      MarketTimer.Enabled = MarketAuto.Checked;
     }
   }
 

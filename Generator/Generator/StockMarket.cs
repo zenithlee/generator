@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Generator
 {
@@ -127,5 +128,24 @@ namespace Generator
       }
       return Result;
     }
+
+    public void PlotTo(StockClassObject so, Chart MarketChart)
+    {
+      if (MarketChart.Series.IndexOf(so.t)<0)
+      {
+        Series s = MarketChart.Series.Add(so.t);
+        s.ChartType = SeriesChartType.Stock;
+        MarketChart.Titles.Add(so.t);
+        MarketChart.Titles.Add(so.e);
+        s.MarkerSize = 1;
+        s.MarkerStep = 20;
+        s.MarkerStyle = MarkerStyle.Diamond;
+
+      }
+
+      MarketChart.Series[so.t].Points.AddY(new object[] { so.el, so.el+1, so.l_fix, so.l_fix+1 });      
+    }
   }
+
+  
 }
