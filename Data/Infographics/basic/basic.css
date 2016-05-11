@@ -1,0 +1,97 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/amaranth/Amaranth-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(../fonts/league-gothic/LeagueGothic-Regular.otf);
+    font-weight: bold;
+}
+
+#bg {
+ position:absolute;
+ display:block;
+ left:0;
+ top:0;
+ width:1920px;
+ height:1080px;
+ z-index:-1;
+ background-image:url("../img/grey_block.png");
+}
+
+#banner{
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	width:1920px;
+	height:156px;
+	background-repeat:repeat;
+	background-image:url("../img/banner.png");
+	background-size:contain;
+	z-index:0;
+}
+
+#yellowblock {
+ position:absolute;
+ display:block;
+ left:0;
+ top:0;
+ width:1920px;
+ height:200px;
+}
+
+#title {
+ position:absolute;
+ left:10px;
+ top:0;
+ font-size:50px;
+ color:white;
+  z-index:21;
+}
+
+#subtitle {
+ position:absolute;
+ left:10px;
+ top:53px;
+ font-size:20px;
+ color:dark-grey;
+ font-family: mySecondFont;
+ letter-spacing: 5px;
+}
+
+#line {
+ position:absolute;
+ display:block;
+ left:10px;
+ top:53px;
+ width:220px;
+ height:1px;
+ font-size:20px;
+ color:white;
+ background-image: url("../img/grey_block.png");
+}
+
+div {
+    font-family: myFirstFont;
+}
+
+#canvas-holder{
+ position:absolute;
+ display:block;
+ top:170px;
+ left:10px;
+}
+
+#addDataset {
+ position:absolute;
+ display:block;
+ bottom:200px;
+ left:10px;
+}

@@ -1197,6 +1197,7 @@
       this.StockBox.ScrollAlwaysVisible = true;
       this.StockBox.Size = new System.Drawing.Size(173, 394);
       this.StockBox.TabIndex = 9;
+      this.StockBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StockBox_MouseClick);
       // 
       // btnRemoveStock
       // 
@@ -1246,6 +1247,7 @@
       this.MarketChart.Name = "MarketChart";
       series2.ChartArea = "ChartArea1";
       series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
+      series2.CustomProperties = "OpenCloseStyle=Triangle";
       series2.Legend = "Legend1";
       series2.Name = "Series1";
       series2.YValuesPerPoint = 4;

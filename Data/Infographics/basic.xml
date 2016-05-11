@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<infographic>
+  <image x="1" y="1" w="100" h="100" src="abc.png">    
+  </image>
+  <label x="1" y="1" w="100" h="100">
+    <text>Hello</text>
+  </label>
+</infographic>

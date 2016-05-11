@@ -122,11 +122,12 @@ namespace Generator
 
     string CompanyFromCode(string s)
     {
-      switch( s)
+      switch(s)
       {
         case "AAPL":
-          return "Apple";
-          break;
+          return "Apple";          
+        case "MSFT":
+          return "Microsoft";                  
       }
       return "";
     }
@@ -184,20 +185,32 @@ namespace Generator
     {
       if (MarketChart.Series.IndexOf(so.t)<0)
       {
+        MarketChart.BorderlineColor = System.Drawing.Color.Gray;
+
+        Series sm = MarketChart.Series.Add(so.t + "_mean");
+        sm.ChartType = SeriesChartType.Line;
+
         Series s = MarketChart.Series.Add(so.t);
-        s.ChartType = SeriesChartType.Stock;
+        s.ChartType = SeriesChartType.Candlestick;
+        s.Label = so.t;
+        s.MarkerStyle = MarkerStyle.Circle;
+        s.Color = sm.Color;
+        
         //MarketChart.Titles.Add(so.t);
         //MarketChart.Titles.Add(so.e);
         s.MarkerSize = 1;
         s.MarkerStep = 20;
         s.MarkerStyle = MarkerStyle.Diamond;
+        s.IsValueShownAsLabel = true;        
       }
 
+      //low high open close
       double p1 = Convert.ToDouble(so.el);
       double p2 = Convert.ToDouble(so.l);
       double p3 = Convert.ToDouble(so.el) + Convert.ToDouble(so.cp);
       double p4 = Convert.ToDouble(so.l) - Convert.ToDouble(so.cp);
-      MarketChart.Series[so.t].Points.AddY(new object[] { p1, p2, p3, p4 });      
+      MarketChart.Series[so.t+"_mean"].Points.AddY(new object[] { p1 });
+      MarketChart.Series[so.t].Points.AddY(new object[] { p1, p2, p3, p4 });
     }
   }
 

@@ -95,15 +95,7 @@ namespace Generator
 
     void SetupTimers()
     {
-      MarketTimer.Tick += MarketTimer_Tick;
-    }
-
-    private void MarketTimer_Tick(object sender, EventArgs e)
-    {
-      StockClassObject so = _stocks.GetStockInfo("AAPL");
-      _stocks.PlotTo(so, MarketChart);
-      so = _stocks.GetStockInfo("MSFT");
-      _stocks.PlotTo(so, MarketChart);
+      MarketTimer.Tick += MarketTimer_Tick_1;
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -761,7 +753,20 @@ namespace Generator
       _stocks.Analyse_Stocks();
     }
 
+    private void StockBox_MouseClick(object sender, MouseEventArgs e)
+    {
+      if (StockBox.SelectedIndex > -1) { 
+        string sStock = StockBox.Items[StockBox.SelectedIndex].ToString();
+
+        StockClassObject so = _stocks.GetStockInfo(sStock);
+        _stocks.PlotTo(so, MarketChart);
+        MarketStory.Text = _stocks.CreateReport(so);
+      }
+
+    }
+
     #endregion
+
 
   }
 

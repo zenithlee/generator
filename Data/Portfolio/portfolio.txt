@@ -1,4 +1,4 @@
-aapl
-msft
+AAPL
+MSFT
 SODA
 CROX

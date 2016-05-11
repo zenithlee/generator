@@ -46,3 +46,6 @@ I:\root\dev\NewsNet_Generator\Generator\Generator\obj\Debug\Generator.csprojReso
 I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.exe.config
 I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.exe
 I:\root\dev\NewsNet_Generator\Bin\Debug\Generator.pdb
+C:\development\Unity\NewsNet_Generator\Bin\Debug\Generator.exe.config
+C:\development\Unity\NewsNet_Generator\Bin\Debug\Generator.exe
+C:\development\Unity\NewsNet_Generator\Bin\Debug\Generator.pdb

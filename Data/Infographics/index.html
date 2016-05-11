@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="scripts/services.js"></script>
+    
+    <script src="scripts/spreadsheet.js"></script>
+    <link rel="stylesheet" type="text/css" href="basic/spreadsheet.css"/>
+
+    <script src="scripts/charts/Chart.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="basic/basic.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <table></table>
+     <div id="canvas-holder" style="width:80%">
+        <canvas id="chart-area" width="300" height="300" />
+    </div>
+    <div id="bg" ></div>
+    <div id="banner"></div>
+    <div id="title">QUANTIFY</div>
+    <div id="line"></div>
+    <div id="subtitle">infographics</div>
+    <div id="addDataset">Add</div>
+
+    <script>
+        //<script src="//d3js.org/d3.v3.min.js">
+        console.log("page loaded");
+        function OnReady() {
+            SetupSpreadSheet();
+            CreateGraph();
+        }
+        window.dataUpdated = function(){
+            console.log("updated");
+            SetGraphData(DATA);
+        }
+
+        $(document).ready(OnReady);
+        $('#addDataset').click(function () {
+            Test();
+        });
+    </script>
+</body>
+</html>
