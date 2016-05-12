@@ -16,6 +16,7 @@ namespace Generator
     string PortfolioPath = "../../Data/Portfolio/";
     List<String> Portfolio = new List<string>();
     Chart MarketChart;
+    string StockFolder = "../../Data/mine/stocks/";
 
     public string URL = "http://www.google.com/finance/info?";
     //http://finance.google.com/finance/info?client=ig&q=NASDAQ:GOOG
@@ -85,6 +86,7 @@ namespace Generator
       foreach( string s in Portfolio) { 
         StockClassObject o = GetStockInfo(s.ToUpper());        
         PlotTo(o, MarketChart);
+        AddToMine(o.t, o.e, o.lt_dts, o.el, o.l, o.c, o.yld);
       }
     }
 
@@ -181,6 +183,14 @@ namespace Generator
       return Result;
     }
 
+    public void AddToMine(string stock, string exchange, string time, string low, string high, string open, string close)
+    {      
+      if ( !Directory.Exists(StockFolder)) { 
+        Directory.CreateDirectory(StockFolder);
+      }
+      File.AppendAllText(StockFolder + stock + ".txt", "" + exchange + "," + time + "," + low + "," + high + "," + open + "," + close + "\r\n");
+    }
+
     public void PlotTo(StockClassObject so, Chart MarketChart)
     {
       if (MarketChart.Series.IndexOf(so.t)<0)
@@ -195,6 +205,7 @@ namespace Generator
         s.Label = so.t;
         s.MarkerStyle = MarkerStyle.Circle;
         s.Color = sm.Color;
+        s.LabelAngle = 45;
         
         //MarketChart.Titles.Add(so.t);
         //MarketChart.Titles.Add(so.e);

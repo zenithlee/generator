@@ -14,6 +14,7 @@ namespace Generator
   {
 
     string MinePath = @"..\..\Data\mine\twitter";
+    string CampaignsPath = @"..\..\Data\Campaigns\";
     bool CancelMining = false;
 
     void Analysis_Campaign()
@@ -162,11 +163,11 @@ namespace Generator
 
     void GetCampaigns()
     {
-      if ( !Directory.Exists(DataPath + "\\Campaigns\\"))
+      if ( !Directory.Exists(CampaignsPath))
       {
-        Directory.CreateDirectory(DataPath + "\\Campaigns\\");
+        Directory.CreateDirectory(CampaignsPath);
       }
-      DirectoryInfo d = new DirectoryInfo(DataPath + "\\Campaigns\\");
+      DirectoryInfo d = new DirectoryInfo(CampaignsPath);
       DirectoryInfo[] infos = d.GetDirectories();
       foreach( DirectoryInfo di in infos)
       {
@@ -176,13 +177,13 @@ namespace Generator
 
     void LoadCampaign(string s)
     {      
-      string[] items = File.ReadAllLines(CampaignPath() + "\\keywords.txt");
+      string[] items = File.ReadAllLines(CampaignsPath + s + "\\keywords.txt");
       CampaignList.Items.Clear();
       CampaignList.Items.AddRange(items);
       SetupCampaignGraph();
     }
 
-    void SaveCampaign()
+    void SaveCampaign(string sc)
     {
       string sItems = "";
 
@@ -190,9 +191,12 @@ namespace Generator
       {
         sItems += s + "\r\n";
       }
-      
-      Directory.CreateDirectory(CampaignPath());
-      File.WriteAllText(CampaignPath() + "\\keywords.txt", sItems);
+
+      if (!Directory.Exists(CampaignsPath))
+      {
+        Directory.CreateDirectory(CampaignsPath);
+      }
+      File.WriteAllText(CampaignsPath + sc + "\\keywords.txt", sItems);
       GetCampaigns();
     }
 
@@ -204,10 +208,11 @@ namespace Generator
 
     private void SaveCampaign_Click(object sender, EventArgs e)
     {
-      SaveCampaign();
+      string s = CampaignName.Text;
+      SaveCampaign(s);
     }
 
-    async Task MineData()
+    async Task MineData(string sCampaign)
     {
       DirectoryInfo di = new DirectoryInfo(MinePath);
       FileInfo[] fi = di.GetFiles();
@@ -248,12 +253,12 @@ namespace Generator
         CampaignSummary.Items.Add(s + "=" + corrected);
         Summary += s + "=" + corrected + "\r\n";
         
-        File.WriteAllText(CampaignPath() + "\\summary.txt", Summary);
+        File.WriteAllText(CampaignsPath + sCampaign + "\\summary.txt", Summary);
       }
     }
 
     //CancellationToken token
-    async Task MineAverage()    
+    async Task MineAverage(string sCampaign)    
     {
       DirectoryInfo di = new DirectoryInfo(MinePath);
       FileInfo[] fi = di.GetFiles();
@@ -264,12 +269,6 @@ namespace Generator
       float count = 0;
       int TotalCount = 0;
       int AverageEveryNItems = 10;
-
-      foreach (string s in CampaignList.Items)
-      {
-        Averages.Add(s, 0);
-      }
-
         foreach (FileInfo f in fi)
         {
         TotalCount++;
@@ -286,11 +285,16 @@ namespace Generator
             gotdata = true;
             //CampaignSummary.Items.Add(sFile);
             float sentiment = ClassifyText(s, data);
-              double corrected = CorrectSentiment(sentiment);
+            double corrected = CorrectSentiment(sentiment);
             
-              if (Averages.ContainsKey(s)) { 
+            if (Averages.ContainsKey(s)) { 
                 Averages[s] = (Averages[s] + sentiment)/2.0f;
-              }              
+            }  
+              else
+            {
+              Averages.Add(s, sentiment);
+            }            
+
             }
           } //foreach
 
@@ -321,7 +325,7 @@ namespace Generator
         CampaignSummary.Items.Add(k.Key + "=" + CorrectSentiment(k.Value));
       }
       
-      File.WriteAllText(CampaignPath() + "\\summary_Average.txt", Summary);
+      File.WriteAllText(CampaignsPath + sCampaign + "\\summary_Average.txt", Summary);
       CancelMining = false;
     }
 
@@ -337,12 +341,14 @@ namespace Generator
 
     private void CampaignMineButton_Click(object sender, EventArgs e)
     {
-      MineData();
+      string s = CampaignName.Text;
+      MineData(s);
     }
 
     private void CampaignMineAverage_Click(object sender, EventArgs e)
     {
-      MineAverage();
+      string s = CampaignName.Text;
+      MineAverage(s);
     }
 
     private void CampaignClearGraph_Click(object sender, EventArgs e)
@@ -358,14 +364,8 @@ namespace Generator
 
     private void SaveGraph_Click(object sender, EventArgs e)
     {
-      CampaignChart.SaveImage(CampaignPath() + "\\chart.png", ChartImageFormat.Png);
+      string s = CampaignName.Text;
+      CampaignChart.SaveImage(CampaignsPath + s + "\\chart.png", ChartImageFormat.Png);
     }
-
-    string CampaignPath()
-    {
-      string CPath = DataPath + "\\Campaigns\\" + CampaignName.Text;
-      return CPath;
-    }
-
   }
 }
