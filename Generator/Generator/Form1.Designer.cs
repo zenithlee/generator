@@ -161,6 +161,8 @@
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.VisualAI = new System.Windows.Forms.TabPage();
+      this.VisualTest = new System.Windows.Forms.Button();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -185,6 +187,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
       this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
+      this.VisualAI.SuspendLayout();
       this.SuspendLayout();
       // 
       // metrics
@@ -405,6 +408,7 @@
       this.tabControl1.Controls.Add(this.Twitter);
       this.tabControl1.Controls.Add(this.TwitterCampaign);
       this.tabControl1.Controls.Add(this.Market);
+      this.tabControl1.Controls.Add(this.VisualAI);
       this.tabControl1.Location = new System.Drawing.Point(0, 60);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
@@ -1422,6 +1426,27 @@
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
+      // VisualAI
+      // 
+      this.VisualAI.Controls.Add(this.VisualTest);
+      this.VisualAI.Location = new System.Drawing.Point(4, 22);
+      this.VisualAI.Name = "VisualAI";
+      this.VisualAI.Padding = new System.Windows.Forms.Padding(3);
+      this.VisualAI.Size = new System.Drawing.Size(1120, 574);
+      this.VisualAI.TabIndex = 6;
+      this.VisualAI.Text = "VisualAI";
+      this.VisualAI.UseVisualStyleBackColor = true;
+      // 
+      // VisualTest
+      // 
+      this.VisualTest.Location = new System.Drawing.Point(8, 15);
+      this.VisualTest.Name = "VisualTest";
+      this.VisualTest.Size = new System.Drawing.Size(75, 23);
+      this.VisualTest.TabIndex = 0;
+      this.VisualTest.Text = "Test";
+      this.VisualTest.UseVisualStyleBackColor = true;
+      this.VisualTest.Click += new System.EventHandler(this.VisualTest_Click);
+      // 
       // Analysis
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1467,6 +1492,7 @@
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
+      this.VisualAI.ResumeLayout(false);
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -1595,6 +1621,8 @@
     private System.Windows.Forms.Button btnRemoveStock;
     private System.Windows.Forms.ListBox StockBox;
     private System.Windows.Forms.Button btnMarketRun;
+    private System.Windows.Forms.TabPage VisualAI;
+    private System.Windows.Forms.Button VisualTest;
   }
 }
 

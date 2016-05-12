@@ -19,6 +19,7 @@ using System.IO.Pipes;
 using Generator;
 using System.Collections;
 using Generator.Database;
+using Generator.VisualAIs;
 
 namespace Generator
   {
@@ -49,6 +50,7 @@ namespace Generator
     TwitterBot _Twitter = new TwitterBot();
 
     MySQL db = new MySQL();
+    CVisualAI _visualAI = new CVisualAI();
 
     int PreviousVisemeMs = 0; //used to reduce overlap data
 
@@ -765,9 +767,18 @@ namespace Generator
 
     }
 
+
     #endregion
 
+    #region visual
 
+    private void VisualTest_Click(object sender, EventArgs e)
+    {
+      //_visualAI.GenerateToken();
+      _visualAI.CheckNSWF();
+    }
+
+    #endregion
   }
 
   class ListViewItemComparer : IComparer

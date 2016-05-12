@@ -134,6 +134,7 @@
     <Content Include="Templates\Weather_UK.txt" />
     <Compile Include="Templates\Quantify.cs" />
     <Compile Include="TwitterBot.cs" />
+    <Compile Include="VisualAIs\CVisualAI.cs" />
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherClass.cs" />
     <Compile Include="WeatherCodes.cs" />
