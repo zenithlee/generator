@@ -143,6 +143,8 @@
       this.GetMicrosoft = new System.Windows.Forms.Button();
       this.MarketStory = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
+      this.VisualAI = new System.Windows.Forms.TabPage();
+      this.VisualTest = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -161,8 +163,6 @@
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.VisualAI = new System.Windows.Forms.TabPage();
-      this.VisualTest = new System.Windows.Forms.Button();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -180,6 +180,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.CampaignChart)).BeginInit();
       this.Market.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).BeginInit();
+      this.VisualAI.SuspendLayout();
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.ContentPanel.SuspendLayout();
       this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -187,7 +188,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
       this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
-      this.VisualAI.SuspendLayout();
       this.SuspendLayout();
       // 
       // metrics
@@ -1289,6 +1289,27 @@
       this.GetApple.UseVisualStyleBackColor = true;
       this.GetApple.Click += new System.EventHandler(this.GetApple_Click);
       // 
+      // VisualAI
+      // 
+      this.VisualAI.Controls.Add(this.VisualTest);
+      this.VisualAI.Location = new System.Drawing.Point(4, 22);
+      this.VisualAI.Name = "VisualAI";
+      this.VisualAI.Padding = new System.Windows.Forms.Padding(3);
+      this.VisualAI.Size = new System.Drawing.Size(1120, 574);
+      this.VisualAI.TabIndex = 6;
+      this.VisualAI.Text = "VisualAI";
+      this.VisualAI.UseVisualStyleBackColor = true;
+      // 
+      // VisualTest
+      // 
+      this.VisualTest.Location = new System.Drawing.Point(8, 15);
+      this.VisualTest.Name = "VisualTest";
+      this.VisualTest.Size = new System.Drawing.Size(75, 23);
+      this.VisualTest.TabIndex = 0;
+      this.VisualTest.Text = "Test";
+      this.VisualTest.UseVisualStyleBackColor = true;
+      this.VisualTest.Click += new System.EventHandler(this.VisualTest_Click);
+      // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
@@ -1296,6 +1317,7 @@
       // timer1
       // 
       this.timer1.Interval = 125000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // statusStrip1
       // 
@@ -1426,27 +1448,6 @@
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // VisualAI
-      // 
-      this.VisualAI.Controls.Add(this.VisualTest);
-      this.VisualAI.Location = new System.Drawing.Point(4, 22);
-      this.VisualAI.Name = "VisualAI";
-      this.VisualAI.Padding = new System.Windows.Forms.Padding(3);
-      this.VisualAI.Size = new System.Drawing.Size(1120, 574);
-      this.VisualAI.TabIndex = 6;
-      this.VisualAI.Text = "VisualAI";
-      this.VisualAI.UseVisualStyleBackColor = true;
-      // 
-      // VisualTest
-      // 
-      this.VisualTest.Location = new System.Drawing.Point(8, 15);
-      this.VisualTest.Name = "VisualTest";
-      this.VisualTest.Size = new System.Drawing.Size(75, 23);
-      this.VisualTest.TabIndex = 0;
-      this.VisualTest.Text = "Test";
-      this.VisualTest.UseVisualStyleBackColor = true;
-      this.VisualTest.Click += new System.EventHandler(this.VisualTest_Click);
-      // 
       // Analysis
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1481,6 +1482,7 @@
       this.Market.ResumeLayout(false);
       this.Market.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).EndInit();
+      this.VisualAI.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
       this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -1492,7 +1494,6 @@
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
-      this.VisualAI.ResumeLayout(false);
       this.ResumeLayout(false);
       this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Generator
   partial class Analysis
   {
 
-    string MinePath = @"..\..\Data\mine\twitter";
+    string MinePath = @"..\..\Data\mine\twitter\";
     string CampaignsPath = @"..\..\Data\Campaigns\";
     bool CancelMining = false;
 
@@ -58,15 +59,33 @@ namespace Generator
 
       //string[] row = { text, author, Popularity, id };  
 
-      float TotalSentiment = 0;    
-      
+      float TotalSentiment = 0;
+
+      StringBuilder sb = new StringBuilder("INSERT INTO sl_twitter VALUES");
+
       foreach (Tweetinvi.Core.Interfaces.ITweet item in result) {        
         string sPre = StripAuthorFromTweet(item.Text);        
         
         float Sentiment = AnalyseSentence(sPre);
         AddToList(item.Text, item.CreatedBy.ScreenName, item.RetweetCount.ToString(), item.Id.ToString(), Sentiment.ToString(), CampaignResults);
+        AddToMine(item, Sentiment);
+        
+        //id
+        //postid
+        //author
+        //text
+        //retweets
+        //sentiment
+        //datecreated
+        //category
+        sb.AppendFormat(" (NULL,{0},'{1}','{2}','{3}',{4},{5},'{6}'),", item.Id, item.CreatedBy.ScreenName, item.Text, item.RetweetCount, Sentiment, item.CreatedAt, s);
         TotalSentiment += Sentiment;
       }
+
+      string q = sb.ToString();
+      q = q.TrimEnd(',');
+      q += ";";
+      AddToDB(q);
 
       TotalSentiment /= (float)result.Count();
 
@@ -74,6 +93,20 @@ namespace Generator
 
       CampaignChart.Series[s].Points.Add(TotalSentiment);
 
+    }
+
+    void AddToDB(string sb)
+    {      
+      db.Open();
+      db.Query(sb.ToString());
+      db.Close();
+    }
+
+    void AddToMine(Tweetinvi.Core.Interfaces.ITweet item, float Sentiment) {
+
+      QTweet q = new QTweet() { id=item.Id, author=item.CreatedBy.ScreenName, retweets=item.RetweetCount, sentiment=Sentiment, time=item.CreatedAt, text=item.Text };
+      string sData = JsonConvert.SerializeObject(q);            
+      File.WriteAllText(MinePath + item.Id + ".txt", sData);
     }
 
     float ClassifyText(string key, string s)
@@ -129,7 +162,7 @@ namespace Generator
       else
       {
         CampaignList.SelectedIndex=0;
-      }      
+      }
     }
 
     private void AddToCampaign_Click(object sender, EventArgs e)
@@ -192,9 +225,9 @@ namespace Generator
         sItems += s + "\r\n";
       }
 
-      if (!Directory.Exists(CampaignsPath))
+      if (!Directory.Exists(CampaignsPath + sc))
       {
-        Directory.CreateDirectory(CampaignsPath);
+        Directory.CreateDirectory(CampaignsPath + sc);
       }
       File.WriteAllText(CampaignsPath + sc + "\\keywords.txt", sItems);
       GetCampaigns();
@@ -264,62 +297,60 @@ namespace Generator
       FileInfo[] fi = di.GetFiles();
 
       Dictionary<string, float> Averages = new Dictionary<string, float>();
-      string Summary = "";      
+      Dictionary<string, List<float>> Values = new Dictionary<string, List<float>>();
+
+
+      foreach (string s in CampaignList.Items)
+      {
+        Values.Add(s, new List<float>());
+      }
+
+        string Summary = "";      
 
       float count = 0;
       int TotalCount = 0;
       int AverageEveryNItems = 10;
+      
         foreach (FileInfo f in fi)
-        {
-        TotalCount++;
+        {        
+          TotalCount++;
           String data = File.ReadAllText(f.FullName);
           data = data.ToLower();
           data = StripAuthorFromTweet(data);
-        if (CancelMining == true) break;
-        count++;
-        bool gotdata = false;
-        foreach (string s in CampaignList.Items)
+          if (CancelMining == true) break;
+          count++;
+          bool gotdata = false;
+          foreach (string s in CampaignList.Items)
           {        
-            if (data.Contains(s))
-              {
-            gotdata = true;
-            //CampaignSummary.Items.Add(sFile);
-            float sentiment = ClassifyText(s, data);
-            double corrected = CorrectSentiment(sentiment);
-            
-            if (Averages.ContainsKey(s)) { 
-                Averages[s] = (Averages[s] + sentiment)/2.0f;
-            }  
-              else
+            if (data.Contains(s.ToLower()))
             {
-              Averages.Add(s, sentiment);
-            }            
-
+              gotdata = true;
+              //CampaignSummary.Items.Add(sFile);
+              float sentiment = ClassifyText(s, data);
+              double corrected = CorrectSentiment(sentiment);
+              Values[s].Add((float)corrected);
+              AddGraphPoint(s, (float)corrected);
             }
           } //foreach
 
-        if ((count > AverageEveryNItems) )
-        {
-          AddGraphPoints(Averages);
-          count = 0;
-        }
+        //AddGraphPoints(Values);        
 
-        if (TotalCount % 5 == 1)
+        if (TotalCount % 55 == 1)
         {
           toolStripStatusLabel1.Text = "Mining " + TotalCount + "/" + fi.Length;
-          await Task.Delay(2);
+          await Task.Delay(1);
         }
-
-
-
         //CampaignSummary.Items.Add(s + "=" + corrected);
         //Summary += s + "=" + sentiment + "\r\n";
-
-
       }
 
+      List<double> avs = new List<double>();
+      foreach( string s in Values.Keys)
+      {        
+        double mean = Quantify.Mean(Values[s]);
+      }
 
-        foreach( KeyValuePair<string,float> k in Averages)
+      foreach ( KeyValuePair<string,float> k in Averages)
       {
         Summary += k.Key + "=" + CorrectSentiment(k.Value) + "\n";
         CampaignSummary.Items.Add(k.Key + "=" + CorrectSentiment(k.Value));

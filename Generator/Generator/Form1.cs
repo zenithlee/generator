@@ -30,8 +30,7 @@ namespace Generator
     string path = "../../NewsNet_Bin/Output/";
     string CurrentFile = "test";
     string CurrentProject;
-    string DataPath = "../Data/";
-    
+    string DataPath = "../Data/";    
 
     SpeechSynthesizer reader;
     List<string> items = new List<string>();

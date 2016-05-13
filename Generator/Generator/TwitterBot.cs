@@ -12,6 +12,17 @@ using System.Windows.Forms;
 
 namespace Generator
 {
+
+  class QTweet
+  {
+    public long id;
+    public int retweets;
+    public string text;
+    public string author;
+    public float sentiment;
+    public DateTime time;
+  }
+
   class TwitterBot
   {
 

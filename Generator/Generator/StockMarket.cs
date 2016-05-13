@@ -220,7 +220,17 @@ namespace Generator
       double p2 = Convert.ToDouble(so.l);
       double p3 = Convert.ToDouble(so.el) + Convert.ToDouble(so.cp);
       double p4 = Convert.ToDouble(so.l) - Convert.ToDouble(so.cp);
-      MarketChart.Series[so.t+"_mean"].Points.AddY(new object[] { p1 });
+      DataPointCollection col = MarketChart.Series[so.t + "_mean"].Points;
+     
+      List<float> values = new List<float>();
+      foreach( DataPoint d in col)
+      {
+        values.Add((float)d.YValues[0]);
+      }
+
+      double mean = Quantify.Mean(values);
+      
+      MarketChart.Series[so.t+"_mean"].Points.AddY(new object[] { mean });
       MarketChart.Series[so.t].Points.AddY(new object[] { p1, p2, p3, p4 });
     }
   }
