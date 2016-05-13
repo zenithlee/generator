@@ -117,7 +117,13 @@ namespace Generator
 
     public void AddGraphPoint(string key, float val)
     {
-      CampaignChart.Series[key].Points.Add(val);
+      if (CampaignChart.Series.IndexOf(key) < 0)
+      {
+        Series s = CampaignChart.Series.Add(key);
+        s.ChartType = SeriesChartType.Line;
+      }
+
+      CampaignChart.Series[key].Points.Add(val);      
     }
 
     public void AddGraphPoints( Dictionary<string,float> data)
@@ -314,6 +320,7 @@ namespace Generator
         foreach (FileInfo f in fi)
         {        
           TotalCount++;
+        //if (TotalCount < fi.Length-50) continue;
           String data = File.ReadAllText(f.FullName);
           data = data.ToLower();
           data = StripAuthorFromTweet(data);
@@ -329,7 +336,7 @@ namespace Generator
               float sentiment = ClassifyText(s, data);
               double corrected = CorrectSentiment(sentiment);
               Values[s].Add((float)corrected);
-              AddGraphPoint(s, (float)corrected);
+             // AddGraphPoint(s, (float)corrected);
             }
           } //foreach
 
@@ -342,12 +349,17 @@ namespace Generator
         }
         //CampaignSummary.Items.Add(s + "=" + corrected);
         //Summary += s + "=" + sentiment + "\r\n";
-      }
-
+      } 
       List<double> avs = new List<double>();
-      foreach( string s in Values.Keys)
+      foreach(string s in Values.Keys)
       {        
         double mean = Quantify.Mean(Values[s]);
+        Averages.Add(s, (float)mean);
+
+        foreach( float f in Values[s]) {
+          AddGraphPoint(s, f);
+          AddGraphPoint(s+"_mean", (float)mean);
+        }
       }
 
       foreach ( KeyValuePair<string,float> k in Averages)

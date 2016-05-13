@@ -50,6 +50,7 @@ namespace Generator
 
     MySQL db = new MySQL();
     CVisualAI _visualAI = new CVisualAI();
+    InteractionSimulator KBSim = new InteractionSimulator();
 
     int PreviousVisemeMs = 0; //used to reduce overlap data
 
@@ -778,6 +779,11 @@ namespace Generator
     }
 
     #endregion
+
+    private void VisualSimulateInteraction_Click(object sender, EventArgs e)
+    {
+      KBSim.Test(this);
+    }
   }
 
   class ListViewItemComparer : IComparer

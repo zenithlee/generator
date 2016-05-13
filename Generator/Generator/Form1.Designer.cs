@@ -163,6 +163,7 @@
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.VisualSimulateInteraction = new System.Windows.Forms.Button();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -1291,6 +1292,7 @@
       // 
       // VisualAI
       // 
+      this.VisualAI.Controls.Add(this.VisualSimulateInteraction);
       this.VisualAI.Controls.Add(this.VisualTest);
       this.VisualAI.Location = new System.Drawing.Point(4, 22);
       this.VisualAI.Name = "VisualAI";
@@ -1447,6 +1449,16 @@
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
+      // 
+      // VisualSimulateInteraction
+      // 
+      this.VisualSimulateInteraction.Location = new System.Drawing.Point(8, 44);
+      this.VisualSimulateInteraction.Name = "VisualSimulateInteraction";
+      this.VisualSimulateInteraction.Size = new System.Drawing.Size(75, 23);
+      this.VisualSimulateInteraction.TabIndex = 1;
+      this.VisualSimulateInteraction.Text = "Simulate";
+      this.VisualSimulateInteraction.UseVisualStyleBackColor = true;
+      this.VisualSimulateInteraction.Click += new System.EventHandler(this.VisualSimulateInteraction_Click);
       // 
       // Analysis
       // 
@@ -1624,6 +1636,7 @@
     private System.Windows.Forms.Button btnMarketRun;
     private System.Windows.Forms.TabPage VisualAI;
     private System.Windows.Forms.Button VisualTest;
+    private System.Windows.Forms.Button VisualSimulateInteraction;
   }
 }
 
