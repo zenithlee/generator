@@ -61,7 +61,7 @@ namespace Generator
 
       float TotalSentiment = 0;
 
-      StringBuilder sb = new StringBuilder("INSERT INTO sl_twitter VALUES");
+      StringBuilder sb = new StringBuilder("INSERT IGNORE INTO `sl_twitter` VALUES");
 
       foreach (Tweetinvi.Core.Interfaces.ITweet item in result) {        
         string sPre = StripAuthorFromTweet(item.Text);        
@@ -69,7 +69,7 @@ namespace Generator
         float Sentiment = AnalyseSentence(sPre);
         AddToList(item.Text, item.CreatedBy.ScreenName, item.RetweetCount.ToString(), item.Id.ToString(), Sentiment.ToString(), CampaignResults);
         AddToMine(item, Sentiment);
-        
+
         //id
         //postid
         //author
@@ -78,7 +78,9 @@ namespace Generator
         //sentiment
         //datecreated
         //category
-        sb.AppendFormat(" (NULL,{0},'{1}','{2}','{3}',{4},{5},'{6}'),", item.Id, item.CreatedBy.ScreenName, item.Text, item.RetweetCount, Sentiment, item.CreatedAt, s);
+        string formatForMySql = item.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss");
+        string text = item.Text.Replace("'", "''");
+        sb.AppendFormat(" (NULL,{0},'{1}','{2}',{3},{4},'{5}','{6}'),", item.IdStr, item.CreatedBy.ScreenName, text, item.RetweetCount, Sentiment, formatForMySql, s);
         TotalSentiment += Sentiment;
       }
 
@@ -98,7 +100,9 @@ namespace Generator
     void AddToDB(string sb)
     {      
       db.Open();
-      db.Query(sb.ToString());
+      string s = sb.ToString();
+      //s = db.Escape(s);
+      db.Query(s);
       db.Close();
     }
 
@@ -153,7 +157,16 @@ namespace Generator
 
     void Campaign_DoNext()
     {
-      if (CampaignList.Items.Count == 0) return;
+      if (CampaignName.Items.Count == 0) return;
+      if (CampaignName.SelectedIndex < 0)
+      {
+        CampaignName.SelectedIndex = 0;
+      }
+
+      if (CampaignList.Items.Count == 0) {
+        CampaignName.SelectedIndex++;
+        return;
+      }
       if ( CampaignList.SelectedIndex <0 )
       {       
         CampaignList.SelectedIndex = 0;
@@ -167,7 +180,21 @@ namespace Generator
       } 
       else
       {
-        CampaignList.SelectedIndex=0;
+        if ( CampaignName.SelectedIndex < CampaignName.Items.Count-1)
+        {          
+          CampaignName.SelectedIndex++;
+          if (CampaignList.Items.Count > 0)
+          {
+            CampaignList.SelectedIndex = 0;
+          }
+
+        } else
+        {
+          CampaignName.SelectedIndex = 0;
+        }
+        
+        
+        
       }
     }
 
@@ -402,7 +429,9 @@ namespace Generator
 
     private void CampaignActive_CheckedChanged(object sender, EventArgs e)
     {
-      timer1.Enabled = CampaignActive.Checked;
+      int interval = Convert.ToInt32(CampaignTimerRate.Text);
+      CampaignTimer.Interval = interval * 1000;
+      CampaignTimer.Enabled = CampaignActive.Checked;      
     }
 
     private void SaveGraph_Click(object sender, EventArgs e)

@@ -1,0 +1,1 @@
+{"id":730898023878950912,"retweets":0,"text":"#Mercedes plots huge push towards digitalisation - An increasingly... https://t.co/Uxzd2Nb4ae #Cars #LasVegas #mercedes-benz #NewYork #News","author":"car_parse","sentiment":0.0,"time":"2016-05-13T01:10:42+02:00"}

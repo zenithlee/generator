@@ -1,0 +1,1 @@
+{"id":730887942726619136,"retweets":1,"text":"#Toyota brings a hybrid to the RAV4 lineup: https://t.co/Hpl8fCZXTX https://t.co/AcJHFXS4ZJ","author":"DestinationToyo","sentiment":0.0,"time":"2016-05-13T00:30:39+02:00"}

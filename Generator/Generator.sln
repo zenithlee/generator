@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "Generator\Gene
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6BB53A60-7EA6-4754-8044-34034C2BBDF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infographica", "Infographica\Infographica.csproj", "{B711E85A-B8CC-4E1B-BF8E-EEE2A384535D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{4EA78FD8-3B51-402F-A067-B6E0DF0B72D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EA78FD8-3B51-402F-A067-B6E0DF0B72D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EA78FD8-3B51-402F-A067-B6E0DF0B72D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B711E85A-B8CC-4E1B-BF8E-EEE2A384535D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B711E85A-B8CC-4E1B-BF8E-EEE2A384535D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B711E85A-B8CC-4E1B-BF8E-EEE2A384535D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B711E85A-B8CC-4E1B-BF8E-EEE2A384535D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,1 @@
+{"id":730907551601025026,"retweets":0,"text":"New post: #Australia #science #TC #toyota Researchers are using Land Cruisers in the Outback as a wireless network https://t.co/tq1RXQCA4w","author":"infocrowler","sentiment":-0.00657894742,"time":"2016-05-13T01:48:34+02:00"}

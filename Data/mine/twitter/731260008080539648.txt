@@ -1,0 +1,1 @@
+{"id":731260008080539648,"retweets":0,"text":"#Toyota Hopes Its Fuel Cell Tech Can Win Back Its Green Image from #Tesla https://t.co/19nXQYIjSK #FuelCell https://t.co/1iUXqvJdal","author":"AMETEK_Nautlair","sentiment":-0.0625,"time":"2016-05-14T01:09:06+02:00"}

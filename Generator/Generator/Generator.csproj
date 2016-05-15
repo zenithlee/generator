@@ -49,6 +49,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Q.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
@@ -115,6 +118,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="InteractionSimulator.cs" />
+    <Compile Include="Settings\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quantify.cs" />
@@ -132,15 +141,26 @@
     <Content Include="Infographics\img\yellow_block.png" />
     <Content Include="Infographics\scripts\services.js" />
     <Content Include="Infographics\scripts\spreadsheet.js" />
+    <Content Include="Q.ico" />
     <Content Include="Templates\Weather_UK.txt" />
     <Compile Include="Templates\Quantify.cs" />
     <Compile Include="TwitterBot.cs" />
+    <Compile Include="VisualAIs\Clarifai.cs" />
     <Compile Include="VisualAIs\CVisualAI.cs" />
+    <Compile Include="VisualAIs\VisualAI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualAIs\VisualAI.Designer.cs">
+      <DependentUpon>VisualAI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherClass.cs" />
     <Compile Include="WeatherCodes.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,8 +171,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VisualAIs\VisualAI.resx">
+      <DependentUpon>VisualAI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Infographics\fonts\amaranth.zip" />
     <None Include="Infographics\fonts\theleagueof-league-gothic-64c3ede.zip" />
+    <None Include="Infographics\temp.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

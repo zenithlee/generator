@@ -1,0 +1,1 @@
+{"id":730904678683152384,"retweets":0,"text":"@GSElevator thought that was a #BMW 3series or a #Rolex?","author":"jrj_jacobs","sentiment":0.013888889,"time":"2016-05-13T01:37:09+02:00"}

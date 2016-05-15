@@ -1,0 +1,1 @@
+{"id":730895482235551745,"retweets":1,"text":"The 2016 #VW #Golf we test this week! https://t.co/mfGHb5O2Bx","author":"testdriventv","sentiment":0.03125,"time":"2016-05-13T01:00:37+02:00"}

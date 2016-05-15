@@ -1,0 +1,1 @@
+{"id":730907548954574848,"retweets":1,"text":"BMW will launch its autonomous, electric i NEXT 'innovation driver' in 2021 #bmw https://t.co/pz9FSdYOJF","author":"pattonnick94","sentiment":0.009615385,"time":"2016-05-13T01:48:33+02:00"}

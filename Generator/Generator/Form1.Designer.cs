@@ -110,6 +110,8 @@
       this.CampaignMineAverage = new System.Windows.Forms.Button();
       this.SaveGraph = new System.Windows.Forms.Button();
       this.panel1 = new System.Windows.Forms.Panel();
+      this.label3 = new System.Windows.Forms.Label();
+      this.CampaignTimerRate = new System.Windows.Forms.TextBox();
       this.btn_Campaign_New = new System.Windows.Forms.Button();
       this.CampaignActive = new System.Windows.Forms.CheckBox();
       this.BtnSaveCampaign = new System.Windows.Forms.Button();
@@ -117,11 +119,11 @@
       this.CampaignQuery1 = new System.Windows.Forms.TextBox();
       this.AddToCampaign = new System.Windows.Forms.Button();
       this.CampaignList = new System.Windows.Forms.ListBox();
-      this.RunCampaignNow = new System.Windows.Forms.Button();
       this.CampaignSummary = new System.Windows.Forms.ListBox();
       this.label13 = new System.Windows.Forms.Label();
       this.CampaignMineButton = new System.Windows.Forms.Button();
       this.CampaginGraphBar = new System.Windows.Forms.Button();
+      this.RunCampaignNow = new System.Windows.Forms.Button();
       this.CampaignGraphLine = new System.Windows.Forms.Button();
       this.CampaignChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.label12 = new System.Windows.Forms.Label();
@@ -144,13 +146,12 @@
       this.MarketStory = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
       this.VisualAI = new System.Windows.Forms.TabPage();
-      this.VisualTest = new System.Windows.Forms.Button();
+      this.tabSettings = new System.Windows.Forms.TabPage();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-      this.timer1 = new System.Windows.Forms.Timer(this.components);
+      this.CampaignTimer = new System.Windows.Forms.Timer(this.components);
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
       this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-      this.pictureBox5 = new System.Windows.Forms.PictureBox();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.campaignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,10 +161,13 @@
       this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+      this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
+      this.settings1 = new Generator.Options.Settings();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.VisualSimulateInteraction = new System.Windows.Forms.Button();
+      this.visualAI1 = new Generator.VisualAIs.VisualAI();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -182,12 +186,12 @@
       this.Market.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).BeginInit();
       this.VisualAI.SuspendLayout();
+      this.tabSettings.SuspendLayout();
       this.statusStrip1.SuspendLayout();
-      this.toolStripContainer1.ContentPanel.SuspendLayout();
       this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
       this.menuStrip1.SuspendLayout();
+      this.toolStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -410,6 +414,7 @@
       this.tabControl1.Controls.Add(this.TwitterCampaign);
       this.tabControl1.Controls.Add(this.Market);
       this.tabControl1.Controls.Add(this.VisualAI);
+      this.tabControl1.Controls.Add(this.tabSettings);
       this.tabControl1.Location = new System.Drawing.Point(0, 60);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
@@ -881,6 +886,7 @@
       this.TwitterCampaign.Controls.Add(this.panel1);
       this.TwitterCampaign.Controls.Add(this.CampaignMineButton);
       this.TwitterCampaign.Controls.Add(this.CampaginGraphBar);
+      this.TwitterCampaign.Controls.Add(this.RunCampaignNow);
       this.TwitterCampaign.Controls.Add(this.CampaignGraphLine);
       this.TwitterCampaign.Controls.Add(this.CampaignChart);
       this.TwitterCampaign.Controls.Add(this.label12);
@@ -937,6 +943,8 @@
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.BurlyWood;
+      this.panel1.Controls.Add(this.label3);
+      this.panel1.Controls.Add(this.CampaignTimerRate);
       this.panel1.Controls.Add(this.btn_Campaign_New);
       this.panel1.Controls.Add(this.CampaignActive);
       this.panel1.Controls.Add(this.BtnSaveCampaign);
@@ -944,7 +952,6 @@
       this.panel1.Controls.Add(this.CampaignQuery1);
       this.panel1.Controls.Add(this.AddToCampaign);
       this.panel1.Controls.Add(this.CampaignList);
-      this.panel1.Controls.Add(this.RunCampaignNow);
       this.panel1.Controls.Add(this.CampaignSummary);
       this.panel1.Controls.Add(this.label13);
       this.panel1.Location = new System.Drawing.Point(1, 29);
@@ -953,9 +960,27 @@
       this.panel1.Size = new System.Drawing.Size(232, 542);
       this.panel1.TabIndex = 32;
       // 
+      // label3
+      // 
+      this.label3.AutoSize = true;
+      this.label3.Location = new System.Drawing.Point(74, 9);
+      this.label3.Name = "label3";
+      this.label3.Size = new System.Drawing.Size(30, 13);
+      this.label3.TabIndex = 35;
+      this.label3.Text = "Rate";
+      this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      // 
+      // CampaignTimerRate
+      // 
+      this.CampaignTimerRate.Location = new System.Drawing.Point(108, 5);
+      this.CampaignTimerRate.Name = "CampaignTimerRate";
+      this.CampaignTimerRate.Size = new System.Drawing.Size(31, 20);
+      this.CampaignTimerRate.TabIndex = 34;
+      this.CampaignTimerRate.Text = "30";
+      // 
       // btn_Campaign_New
       // 
-      this.btn_Campaign_New.Location = new System.Drawing.Point(8, 12);
+      this.btn_Campaign_New.Location = new System.Drawing.Point(3, 3);
       this.btn_Campaign_New.Name = "btn_Campaign_New";
       this.btn_Campaign_New.Size = new System.Drawing.Size(51, 23);
       this.btn_Campaign_New.TabIndex = 31;
@@ -966,9 +991,10 @@
       // CampaignActive
       // 
       this.CampaignActive.AutoSize = true;
-      this.CampaignActive.Location = new System.Drawing.Point(165, 16);
+      this.CampaignActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.CampaignActive.Location = new System.Drawing.Point(151, 5);
       this.CampaignActive.Name = "CampaignActive";
-      this.CampaignActive.Size = new System.Drawing.Size(56, 17);
+      this.CampaignActive.Size = new System.Drawing.Size(71, 24);
       this.CampaignActive.TabIndex = 33;
       this.CampaignActive.Text = "Active";
       this.CampaignActive.UseVisualStyleBackColor = true;
@@ -1015,32 +1041,22 @@
       this.CampaignList.FormattingEnabled = true;
       this.CampaignList.Location = new System.Drawing.Point(2, 104);
       this.CampaignList.Name = "CampaignList";
-      this.CampaignList.Size = new System.Drawing.Size(219, 108);
+      this.CampaignList.Size = new System.Drawing.Size(219, 147);
       this.CampaignList.TabIndex = 21;
-      // 
-      // RunCampaignNow
-      // 
-      this.RunCampaignNow.Location = new System.Drawing.Point(147, 218);
-      this.RunCampaignNow.Name = "RunCampaignNow";
-      this.RunCampaignNow.Size = new System.Drawing.Size(75, 23);
-      this.RunCampaignNow.TabIndex = 23;
-      this.RunCampaignNow.Text = "RunNow";
-      this.RunCampaignNow.UseVisualStyleBackColor = true;
-      this.RunCampaignNow.Click += new System.EventHandler(this.RunCampaignNow_Click);
       // 
       // CampaignSummary
       // 
       this.CampaignSummary.FormattingEnabled = true;
-      this.CampaignSummary.Location = new System.Drawing.Point(6, 248);
+      this.CampaignSummary.Location = new System.Drawing.Point(6, 274);
       this.CampaignSummary.Name = "CampaignSummary";
-      this.CampaignSummary.Size = new System.Drawing.Size(216, 277);
+      this.CampaignSummary.Size = new System.Drawing.Size(216, 251);
       this.CampaignSummary.TabIndex = 24;
       // 
       // label13
       // 
       this.label13.AutoSize = true;
       this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-      this.label13.Location = new System.Drawing.Point(5, 228);
+      this.label13.Location = new System.Drawing.Point(9, 255);
       this.label13.Name = "label13";
       this.label13.Size = new System.Drawing.Size(50, 13);
       this.label13.TabIndex = 25;
@@ -1065,6 +1081,16 @@
       this.CampaginGraphBar.Text = "Bar";
       this.CampaginGraphBar.UseVisualStyleBackColor = true;
       this.CampaginGraphBar.Click += new System.EventHandler(this.CampaginGraphBar_Click);
+      // 
+      // RunCampaignNow
+      // 
+      this.RunCampaignNow.Location = new System.Drawing.Point(943, 59);
+      this.RunCampaignNow.Name = "RunCampaignNow";
+      this.RunCampaignNow.Size = new System.Drawing.Size(75, 23);
+      this.RunCampaignNow.TabIndex = 23;
+      this.RunCampaignNow.Text = "RunNow";
+      this.RunCampaignNow.UseVisualStyleBackColor = true;
+      this.RunCampaignNow.Click += new System.EventHandler(this.RunCampaignNow_Click);
       // 
       // CampaignGraphLine
       // 
@@ -1292,8 +1318,7 @@
       // 
       // VisualAI
       // 
-      this.VisualAI.Controls.Add(this.VisualSimulateInteraction);
-      this.VisualAI.Controls.Add(this.VisualTest);
+      this.VisualAI.Controls.Add(this.visualAI1);
       this.VisualAI.Location = new System.Drawing.Point(4, 22);
       this.VisualAI.Name = "VisualAI";
       this.VisualAI.Padding = new System.Windows.Forms.Padding(3);
@@ -1302,24 +1327,25 @@
       this.VisualAI.Text = "VisualAI";
       this.VisualAI.UseVisualStyleBackColor = true;
       // 
-      // VisualTest
+      // tabSettings
       // 
-      this.VisualTest.Location = new System.Drawing.Point(8, 15);
-      this.VisualTest.Name = "VisualTest";
-      this.VisualTest.Size = new System.Drawing.Size(75, 23);
-      this.VisualTest.TabIndex = 0;
-      this.VisualTest.Text = "Test";
-      this.VisualTest.UseVisualStyleBackColor = true;
-      this.VisualTest.Click += new System.EventHandler(this.VisualTest_Click);
+      this.tabSettings.Controls.Add(this.settings1);
+      this.tabSettings.Location = new System.Drawing.Point(4, 22);
+      this.tabSettings.Name = "tabSettings";
+      this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
+      this.tabSettings.Size = new System.Drawing.Size(1120, 574);
+      this.tabSettings.TabIndex = 7;
+      this.tabSettings.Text = "Settings";
+      this.tabSettings.UseVisualStyleBackColor = true;
       // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
       // 
-      // timer1
+      // CampaignTimer
       // 
-      this.timer1.Interval = 125000;
-      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      this.CampaignTimer.Interval = 15000;
+      this.CampaignTimer.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // statusStrip1
       // 
@@ -1342,7 +1368,6 @@
       // 
       // toolStripContainer1.ContentPanel
       // 
-      this.toolStripContainer1.ContentPanel.Controls.Add(this.pictureBox5);
       this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1152, 636);
       this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
@@ -1356,21 +1381,14 @@
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
       // 
-      // pictureBox5
-      // 
-      this.pictureBox5.Location = new System.Drawing.Point(4, -46);
-      this.pictureBox5.Name = "pictureBox5";
-      this.pictureBox5.Size = new System.Drawing.Size(30, 25);
-      this.pictureBox5.TabIndex = 0;
-      this.pictureBox5.TabStop = false;
-      // 
       // menuStrip1
       // 
       this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
       this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.campaignToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.toolsToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Size = new System.Drawing.Size(1152, 24);
@@ -1433,32 +1451,53 @@
       this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
       this.helpToolStripMenuItem.Text = "Help";
       // 
+      // toolsToolStripMenuItem
+      // 
+      this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+      this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+      this.toolsToolStripMenuItem.Text = "Tools";
+      // 
       // toolStrip1
       // 
       this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+      this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
       this.toolStrip1.Location = new System.Drawing.Point(3, 24);
       this.toolStrip1.Name = "toolStrip1";
-      this.toolStrip1.Size = new System.Drawing.Size(111, 25);
+      this.toolStrip1.Size = new System.Drawing.Size(35, 25);
       this.toolStrip1.TabIndex = 0;
+      // 
+      // toolStripButton1
+      // 
+      this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+      this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+      this.toolStripButton1.Name = "toolStripButton1";
+      this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+      this.toolStripButton1.Text = "toolStripButton1";
       // 
       // MarketTimer
       // 
       this.MarketTimer.Interval = 60000;
       this.MarketTimer.Tick += new System.EventHandler(this.MarketTimer_Tick_1);
       // 
+      // settings1
+      // 
+      this.settings1.Location = new System.Drawing.Point(8, 6);
+      this.settings1.Name = "settings1";
+      this.settings1.Size = new System.Drawing.Size(445, 371);
+      this.settings1.TabIndex = 0;
+      // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // VisualSimulateInteraction
+      // visualAI1
       // 
-      this.VisualSimulateInteraction.Location = new System.Drawing.Point(8, 44);
-      this.VisualSimulateInteraction.Name = "VisualSimulateInteraction";
-      this.VisualSimulateInteraction.Size = new System.Drawing.Size(75, 23);
-      this.VisualSimulateInteraction.TabIndex = 1;
-      this.VisualSimulateInteraction.Text = "Simulate";
-      this.VisualSimulateInteraction.UseVisualStyleBackColor = true;
-      this.VisualSimulateInteraction.Click += new System.EventHandler(this.VisualSimulateInteraction_Click);
+      this.visualAI1.Location = new System.Drawing.Point(3, 3);
+      this.visualAI1.Name = "visualAI1";
+      this.visualAI1.Size = new System.Drawing.Size(798, 552);
+      this.visualAI1.TabIndex = 0;
       // 
       // Analysis
       // 
@@ -1495,16 +1534,17 @@
       this.Market.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).EndInit();
       this.VisualAI.ResumeLayout(false);
+      this.tabSettings.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
-      this.toolStripContainer1.ContentPanel.ResumeLayout(false);
       this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
       this.toolStripContainer1.TopToolStripPanel.PerformLayout();
       this.toolStripContainer1.ResumeLayout(false);
       this.toolStripContainer1.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
+      this.toolStrip1.ResumeLayout(false);
+      this.toolStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -1582,7 +1622,7 @@
     private System.Windows.Forms.ComboBox SearchBox;
     private System.Windows.Forms.ColumnHeader Popular;
     private System.Windows.Forms.Button CopyToTweet;
-    private System.Windows.Forms.Timer timer1;
+    private System.Windows.Forms.Timer CampaignTimer;
     private System.Windows.Forms.Label label10;
     private System.Windows.Forms.TabPage TwitterCampaign;
     private System.Windows.Forms.Label label11;
@@ -1615,7 +1655,6 @@
     private System.Windows.Forms.StatusStrip statusStrip1;
     private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-    private System.Windows.Forms.PictureBox pictureBox5;
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem campaignToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
@@ -1635,8 +1674,13 @@
     private System.Windows.Forms.ListBox StockBox;
     private System.Windows.Forms.Button btnMarketRun;
     private System.Windows.Forms.TabPage VisualAI;
-    private System.Windows.Forms.Button VisualTest;
-    private System.Windows.Forms.Button VisualSimulateInteraction;
+    private System.Windows.Forms.TextBox CampaignTimerRate;
+    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.ToolStripButton toolStripButton1;
+    private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+    private System.Windows.Forms.TabPage tabSettings;
+    private Options.Settings settings1;
+    private VisualAIs.VisualAI visualAI1;
   }
 }
 

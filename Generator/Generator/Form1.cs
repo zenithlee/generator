@@ -20,6 +20,7 @@ using Generator;
 using System.Collections;
 using Generator.Database;
 using Generator.VisualAIs;
+using System.Reflection;
 
 namespace Generator
   {
@@ -772,18 +773,8 @@ namespace Generator
 
     #region visual
 
-    private void VisualTest_Click(object sender, EventArgs e)
-    {
-      //_visualAI.GenerateToken();
-      _visualAI.CheckNSWF();
-    }
 
     #endregion
-
-    private void VisualSimulateInteraction_Click(object sender, EventArgs e)
-    {
-      KBSim.Test(this);
-    }
   }
 
   class ListViewItemComparer : IComparer

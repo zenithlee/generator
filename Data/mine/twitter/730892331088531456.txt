@@ -1,0 +1,1 @@
+{"id":730892331088531456,"retweets":0,"text":"Thank you @CarMax for an awesome car buying experience. I adore my new car! 🚗 #BeepBeep #Toyota","author":"brunette214","sentiment":0.021875,"time":"2016-05-13T00:48:05+02:00"}

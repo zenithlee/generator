@@ -60,6 +60,18 @@ namespace Generator.VisualAIs
       //"grant_type=client_credentials"
     }
 
+    public string CheckImage(string s)
+    {
+      string modelURL = "http://api.clarifai.com/v1/tag/?model=general-v1.3&url=" + s + "&access_token=LO8jyZikbEtS0P4VwJWVruu2I8RiYr";
+      WebClient myWebClient = new WebClient();
+      // download & save in a databuffer)
+      byte[] myDataBuffer = myWebClient.DownloadData(modelURL);
+      // full data buffer -> string
+      string download = Encoding.ASCII.GetString(myDataBuffer);
+      return download;
+      
+    }
+
     public void CheckNSWF()
     {
       string vikingDude = "https://i.imgur.com/lnzsgv9.jpg";

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Infographica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Infographica"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Width="790" Height="570">
+        <TreeView x:Name="treeView" HorizontalAlignment="Left" Margin="10,52,0,170" Width="127"/>
+        <Menu x:Name="menu" Height="47" Margin="10,0" VerticalAlignment="Top">
+            <MenuItem x:Name="mnu_Campaign" Header="Campaign&#xD;&#xA;"/>
+            <Button x:Name="button" Content="Button" Width="75"/>
+        </Menu>
+        <DockPanel LastChildFill="False" Margin="142,47,10,39.5">
+            <Canvas Width="637"/>
+        </DockPanel>
+
+    </Grid>
+</Window>

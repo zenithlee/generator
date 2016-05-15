@@ -1,0 +1,1 @@
+{"id":731242885052571648,"retweets":0,"text":"Researchers are using #Toyota #LandCruisers in the Outback as a wireless network https://t.co/fbglsIw4CS","author":"TechnologyDems","sentiment":0.0,"time":"2016-05-14T00:01:04+02:00"}

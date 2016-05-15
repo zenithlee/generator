@@ -1,0 +1,1 @@
+{"id":730903913482706944,"retweets":0,"text":"#bmw NVIDIA Corporation Shares Surge on Strong Data-Center, Automotive Sales - Motley Fool https://t.co/l9NrSABvB4 https://t.co/fLy3bJxG5i","author":"BmwMotorsClub","sentiment":0.027777778,"time":"2016-05-13T01:34:07+02:00"}
