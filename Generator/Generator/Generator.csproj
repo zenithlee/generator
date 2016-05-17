@@ -146,7 +146,6 @@
     <Compile Include="Templates\Quantify.cs" />
     <Compile Include="TwitterBot.cs" />
     <Compile Include="VisualAIs\Clarifai.cs" />
-    <Compile Include="VisualAIs\CVisualAI.cs" />
     <Compile Include="VisualAIs\VisualAI.cs">
       <SubType>UserControl</SubType>
     </Compile>

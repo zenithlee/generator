@@ -49,8 +49,7 @@ namespace Generator
 
     TwitterBot _Twitter = new TwitterBot();
 
-    MySQL db = new MySQL();
-    CVisualAI _visualAI = new CVisualAI();
+    MySQL db = new MySQL();    
     InteractionSimulator KBSim = new InteractionSimulator();
 
     int PreviousVisemeMs = 0; //used to reduce overlap data

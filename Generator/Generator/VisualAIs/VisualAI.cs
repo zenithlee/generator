@@ -18,7 +18,7 @@ namespace Generator.VisualAIs
     string TokenURL = "https://api.clarifai.com/v1/token/";
     string ClientID = "s_Cw-z1pOGSQOq2yBowj0kwOIAS3BwBs_laBToCF";
     string ClientSecret = "OQWb6URIHDwYN1NoGB7fBv4YPWuCb_TdCz0Vovgg";
-    string AccessToken = "LO8jyZikbEtS0P4VwJWVruu2I8RiYr";
+    string AccessToken = "aPqMEfHXUQ2PedHWzLHLWVLVNDIxTH";
 
     public VisualAI()
     {
@@ -27,7 +27,7 @@ namespace Generator.VisualAIs
 
     public string CheckImage(string s)
     {
-      string modelURL = "http://api.clarifai.com/v1/tag/?model=general-v1.3&url=" + s + "&access_token=LO8jyZikbEtS0P4VwJWVruu2I8RiYr";
+      string modelURL = "http://api.clarifai.com/v1/tag/?model=general-v1.3&url=" + s + "&access_token=" + AccessToken;
       WebClient myWebClient = new WebClient();
       // download & save in a databuffer)
       byte[] myDataBuffer = myWebClient.DownloadData(modelURL);
@@ -37,11 +37,9 @@ namespace Generator.VisualAIs
 
     }
 
-    public void CheckNSWF()
-    {
-      string vikingDude = "https://i.imgur.com/lnzsgv9.jpg";
-      string nudeWoman = "https://i.imgur.com/aJXq544.jpg";
-      string modelURL = "http://api.clarifai.com/v1/tag/?model=nsfw-v0.1&url=" + nudeWoman + "&access_token=LO8jyZikbEtS0P4VwJWVruu2I8RiYr";
+    public string CheckNSWF(string s)
+    {      
+      string modelURL = "http://api.clarifai.com/v1/tag/?model=nsfw-v0.1&url=" + s + "&access_token=" + AccessToken;
       // make a webclient 
       WebClient myWebClient = new WebClient();
       // download & save in a databuffer)
@@ -49,11 +47,12 @@ namespace Generator.VisualAIs
       // full data buffer -> string
       string download = Encoding.ASCII.GetString(myDataBuffer);
 
-      ClarNSFW(download);
+      return download;
     }
 
     public void ClarNSFW(string download)
     {
+      string[] results;
 
       int iop = download.IndexOf("classes");
       int iof = download.IndexOf("docid_str");
@@ -123,8 +122,21 @@ namespace Generator.VisualAIs
     }
 
     private void VisualTest_Click(object sender, EventArgs e)
-    {     
-     CheckNSWF();    
+    {
+      string sImage = VisualPath.Text;
+      string result = CheckNSWF(sImage);     
+
+      Clarifai o = JsonConvert.DeserializeObject<Clarifai>(result);
+
+
+      for (int i = 0; i < o.Results[0].Resulted.Tag.Classes.Length; i++)
+      {
+        string sClass = o.Results[0].Resulted.Tag.Classes[i];
+        double sProbability = o.Results[0].Resulted.Tag.Probs[i];
+        VisualResultsList.Items.Add(sClass + "(" + sProbability + ")");
+      }
+      //VisualResultsList.Items.Add(o["item"]);
+
     }
   }
 
