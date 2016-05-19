@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,12 +56,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SXEControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SXEControl.Designer.cs">
-      <DependentUpon>SXEControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="SXEMain.resx">
       <DependentUpon>SXEMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,9 +68,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SXEControl.resx">
-      <DependentUpon>SXEControl.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -28,24 +28,12 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.sxe1 = new Quantifai.SXE();
       this.SuspendLayout();
-      // 
-      // sxe1
-      // 
-      this.sxe1.Location = new System.Drawing.Point(12, 9);
-      this.sxe1.Name = "sxe1";
-      this.sxe1.Size = new System.Drawing.Size(570, 526);
-      this.sxe1.TabIndex = 0;
       // 
       // SXEMain
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(868, 547);
-      this.Controls.Add(this.sxe1);
+      this.ClientSize = new System.Drawing.Size(510, 407);
       this.Name = "SXEMain";
-      this.Text = "Form1";
       this.ResumeLayout(false);
 
     }
