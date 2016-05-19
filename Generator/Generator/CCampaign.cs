@@ -21,6 +21,14 @@ namespace Generator
     void Analysis_Campaign()
     {
       GetCampaigns();
+      LoadSettings();
+      
+    }
+
+    void LoadSettings()
+    {
+      CampaignActive.Checked = settings1.CampaignActive;
+      CampaignTimerRate.Text = settings1.CampaignTickInterval.ToString();
     }
 
     private void btn_Campaign_New_Click(object sender, EventArgs e)
@@ -192,9 +200,6 @@ namespace Generator
         {
           CampaignName.SelectedIndex = 0;
         }
-        
-        
-        
       }
     }
 
@@ -429,9 +434,12 @@ namespace Generator
 
     private void CampaignActive_CheckedChanged(object sender, EventArgs e)
     {
-      int interval = Convert.ToInt32(CampaignTimerRate.Text);
-      CampaignTimer.Interval = interval * 1000;
-      CampaignTimer.Enabled = CampaignActive.Checked;      
+      int interval = (Convert.ToInt32(CampaignTimerRate.Text));
+      CampaignTimer.Interval = interval;
+      settings1.CampaignTickInterval = interval;
+      CampaignTimer.Enabled = CampaignActive.Checked;
+
+      settings1.CampaignActive = CampaignActive.Checked;
     }
 
     private void SaveGraph_Click(object sender, EventArgs e)

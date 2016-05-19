@@ -46,5 +46,17 @@ namespace Generator.Properties {
                 this["CampaignActive"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30000")]
+        public int CampaignTickInterval {
+            get {
+                return ((int)(this["CampaignTickInterval"]));
+            }
+            set {
+                this["CampaignTickInterval"] = value;
+            }
+        }
     }
 }

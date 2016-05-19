@@ -165,9 +165,9 @@
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
+      this.visualAI1 = new Generator.VisualAIs.VisualAI();
       this.settings1 = new Generator.Options.Settings();
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.visualAI1 = new Generator.VisualAIs.VisualAI();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -963,18 +963,18 @@
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(74, 9);
+      this.label3.Location = new System.Drawing.Point(60, 8);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(30, 13);
+      this.label3.Size = new System.Drawing.Size(46, 13);
       this.label3.TabIndex = 35;
-      this.label3.Text = "Rate";
+      this.label3.Text = "RateMS";
       this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // CampaignTimerRate
       // 
       this.CampaignTimerRate.Location = new System.Drawing.Point(108, 5);
       this.CampaignTimerRate.Name = "CampaignTimerRate";
-      this.CampaignTimerRate.Size = new System.Drawing.Size(31, 20);
+      this.CampaignTimerRate.Size = new System.Drawing.Size(44, 20);
       this.CampaignTimerRate.TabIndex = 34;
       this.CampaignTimerRate.Text = "30";
       // 
@@ -992,7 +992,7 @@
       // 
       this.CampaignActive.AutoSize = true;
       this.CampaignActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.CampaignActive.Location = new System.Drawing.Point(151, 5);
+      this.CampaignActive.Location = new System.Drawing.Point(158, 5);
       this.CampaignActive.Name = "CampaignActive";
       this.CampaignActive.Size = new System.Drawing.Size(71, 24);
       this.CampaignActive.TabIndex = 33;
@@ -1481,8 +1481,18 @@
       this.MarketTimer.Interval = 60000;
       this.MarketTimer.Tick += new System.EventHandler(this.MarketTimer_Tick_1);
       // 
+      // visualAI1
+      // 
+      this.visualAI1.Location = new System.Drawing.Point(3, 3);
+      this.visualAI1.Name = "visualAI1";
+      this.visualAI1.Size = new System.Drawing.Size(798, 552);
+      this.visualAI1.TabIndex = 0;
+      // 
       // settings1
       // 
+      this.settings1.AlwaysOnTop = false;
+      this.settings1.CampaignActive = false;
+      this.settings1.CampaignTickInterval = 30000;
       this.settings1.Location = new System.Drawing.Point(8, 6);
       this.settings1.Name = "settings1";
       this.settings1.Size = new System.Drawing.Size(445, 371);
@@ -1491,13 +1501,6 @@
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
-      // 
-      // visualAI1
-      // 
-      this.visualAI1.Location = new System.Drawing.Point(3, 3);
-      this.visualAI1.Name = "visualAI1";
-      this.visualAI1.Size = new System.Drawing.Size(798, 552);
-      this.visualAI1.TabIndex = 0;
       // 
       // Analysis
       // 
