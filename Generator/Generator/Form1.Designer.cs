@@ -30,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-      this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
       System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
       System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -146,9 +145,12 @@
       this.MarketStory = new System.Windows.Forms.TextBox();
       this.GetApple = new System.Windows.Forms.Button();
       this.VisualAI = new System.Windows.Forms.TabPage();
+      this.visualAI1 = new Generator.VisualAIs.VisualAI();
       this.tabSettings = new System.Windows.Forms.TabPage();
+      this.settings1 = new Generator.Options.Settings();
+      this.tabSXE = new System.Windows.Forms.TabPage();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-      this.CampaignTimer = new System.Windows.Forms.Timer(this.components);
+      this.CampaignTimer = new System.Windows.Forms.Timer();
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
       this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
@@ -164,10 +166,9 @@
       this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-      this.MarketTimer = new System.Windows.Forms.Timer(this.components);
-      this.visualAI1 = new Generator.VisualAIs.VisualAI();
-      this.settings1 = new Generator.Options.Settings();
-      this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.MarketTimer = new System.Windows.Forms.Timer();
+      this.analysisBindingSource = new System.Windows.Forms.BindingSource();
+      this.sxe1 = new Quantifai.SXE();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -187,6 +188,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).BeginInit();
       this.VisualAI.SuspendLayout();
       this.tabSettings.SuspendLayout();
+      this.tabSXE.SuspendLayout();
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
@@ -415,6 +417,7 @@
       this.tabControl1.Controls.Add(this.Market);
       this.tabControl1.Controls.Add(this.VisualAI);
       this.tabControl1.Controls.Add(this.tabSettings);
+      this.tabControl1.Controls.Add(this.tabSXE);
       this.tabControl1.Location = new System.Drawing.Point(0, 60);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
@@ -1327,6 +1330,13 @@
       this.VisualAI.Text = "VisualAI";
       this.VisualAI.UseVisualStyleBackColor = true;
       // 
+      // visualAI1
+      // 
+      this.visualAI1.Location = new System.Drawing.Point(3, 3);
+      this.visualAI1.Name = "visualAI1";
+      this.visualAI1.Size = new System.Drawing.Size(798, 552);
+      this.visualAI1.TabIndex = 0;
+      // 
       // tabSettings
       // 
       this.tabSettings.Controls.Add(this.settings1);
@@ -1337,6 +1347,27 @@
       this.tabSettings.TabIndex = 7;
       this.tabSettings.Text = "Settings";
       this.tabSettings.UseVisualStyleBackColor = true;
+      // 
+      // settings1
+      // 
+      this.settings1.AlwaysOnTop = false;
+      this.settings1.CampaignActive = false;
+      this.settings1.CampaignTickInterval = 30000;
+      this.settings1.Location = new System.Drawing.Point(8, 6);
+      this.settings1.Name = "settings1";
+      this.settings1.Size = new System.Drawing.Size(445, 371);
+      this.settings1.TabIndex = 0;
+      // 
+      // tabSXE
+      // 
+      this.tabSXE.Controls.Add(this.sxe1);
+      this.tabSXE.Location = new System.Drawing.Point(4, 22);
+      this.tabSXE.Name = "tabSXE";
+      this.tabSXE.Padding = new System.Windows.Forms.Padding(3);
+      this.tabSXE.Size = new System.Drawing.Size(1120, 574);
+      this.tabSXE.TabIndex = 8;
+      this.tabSXE.Text = "SXE";
+      this.tabSXE.UseVisualStyleBackColor = true;
       // 
       // openFileDialog1
       // 
@@ -1454,7 +1485,7 @@
       // toolsToolStripMenuItem
       // 
       this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-      this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+      this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
       this.toolsToolStripMenuItem.Text = "Tools";
       // 
       // toolStrip1
@@ -1481,26 +1512,16 @@
       this.MarketTimer.Interval = 60000;
       this.MarketTimer.Tick += new System.EventHandler(this.MarketTimer_Tick_1);
       // 
-      // visualAI1
-      // 
-      this.visualAI1.Location = new System.Drawing.Point(3, 3);
-      this.visualAI1.Name = "visualAI1";
-      this.visualAI1.Size = new System.Drawing.Size(798, 552);
-      this.visualAI1.TabIndex = 0;
-      // 
-      // settings1
-      // 
-      this.settings1.AlwaysOnTop = false;
-      this.settings1.CampaignActive = false;
-      this.settings1.CampaignTickInterval = 30000;
-      this.settings1.Location = new System.Drawing.Point(8, 6);
-      this.settings1.Name = "settings1";
-      this.settings1.Size = new System.Drawing.Size(445, 371);
-      this.settings1.TabIndex = 0;
-      // 
       // analysisBindingSource
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
+      // 
+      // sxe1
+      // 
+      this.sxe1.Location = new System.Drawing.Point(8, 15);
+      this.sxe1.Name = "sxe1";
+      this.sxe1.Size = new System.Drawing.Size(388, 364);
+      this.sxe1.TabIndex = 0;
       // 
       // Analysis
       // 
@@ -1538,6 +1559,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).EndInit();
       this.VisualAI.ResumeLayout(false);
       this.tabSettings.ResumeLayout(false);
+      this.tabSXE.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
       this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
@@ -1684,6 +1706,8 @@
     private System.Windows.Forms.TabPage tabSettings;
     private Options.Settings settings1;
     private VisualAIs.VisualAI visualAI1;
+    private System.Windows.Forms.TabPage tabSXE;
+    private Quantifai.SXE sxe1;
   }
 }
 
