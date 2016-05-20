@@ -14,7 +14,12 @@ namespace SXE
   {
     public SXEMain()
     {
-      InitializeComponent();
+      InitializeComponent();      
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+      sxe1.Setup();
     }
   }
 }
