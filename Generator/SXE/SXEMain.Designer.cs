@@ -28,34 +28,30 @@
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SXEMain));
       this.sxe1 = new Quantifai.SXE();
-      this.button1 = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // sxe1
       // 
-      this.sxe1.Location = new System.Drawing.Point(12, 36);
+      this.sxe1.AutoSize = true;
+      this.sxe1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+      this.sxe1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sxe1.BackgroundImage")));
+      this.sxe1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.sxe1.Location = new System.Drawing.Point(0, 0);
       this.sxe1.Name = "sxe1";
-      this.sxe1.Size = new System.Drawing.Size(711, 526);
+      this.sxe1.Size = new System.Drawing.Size(874, 585);
       this.sxe1.TabIndex = 0;
-      // 
-      // button1
-      // 
-      this.button1.Location = new System.Drawing.Point(12, 7);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(75, 23);
-      this.button1.TabIndex = 1;
-      this.button1.Text = "button1";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.button1_Click);
+      this.sxe1.Load += new System.EventHandler(this.sxe1_Load);
       // 
       // SXEMain
       // 
+      this.BackgroundImage = global::SXE.Properties.Resources.bg2;
       this.ClientSize = new System.Drawing.Size(874, 585);
-      this.Controls.Add(this.button1);
       this.Controls.Add(this.sxe1);
       this.Name = "SXEMain";
       this.ResumeLayout(false);
+      this.PerformLayout();
 
     }
 
@@ -63,7 +59,6 @@
     #endregion
 
     private Quantifai.SXE sxe1;
-    private System.Windows.Forms.Button button1;
   }
 }
 

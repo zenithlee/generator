@@ -21,5 +21,10 @@ namespace SXE
     {
       sxe1.Setup();
     }
+
+    private void sxe1_Load(object sender, EventArgs e)
+    {
+
+    }
   }
 }
