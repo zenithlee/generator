@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 //planet money
 //tim ferris 
+//thinking fast and slow
 
 /*
 The following table shows the suffix codes that can be used with span ID:
