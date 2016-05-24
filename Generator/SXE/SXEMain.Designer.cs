@@ -40,14 +40,14 @@
       this.sxe1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.sxe1.Location = new System.Drawing.Point(0, 0);
       this.sxe1.Name = "sxe1";
-      this.sxe1.Size = new System.Drawing.Size(874, 585);
+      this.sxe1.Size = new System.Drawing.Size(1034, 585);
       this.sxe1.TabIndex = 0;
       this.sxe1.Load += new System.EventHandler(this.sxe1_Load);
       // 
       // SXEMain
       // 
       this.BackgroundImage = global::SXE.Properties.Resources.bg2;
-      this.ClientSize = new System.Drawing.Size(874, 585);
+      this.ClientSize = new System.Drawing.Size(1034, 585);
       this.Controls.Add(this.sxe1);
       this.Name = "SXEMain";
       this.ResumeLayout(false);

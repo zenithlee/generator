@@ -21,6 +21,7 @@ namespace Quantifai
   {
     MySQL db = new MySQL();
     DataTable Values = new DataTable("Quantifai"); 
+    Mkt Market = new Mkt("../../Data/Stocks/GoogleAPI/Requests/");
 
     public SXE()
     {
@@ -37,8 +38,6 @@ namespace Quantifai
 
     void GetStocks(string sStock)
     {
-      
-
       Series series = null;
       StockChart.Series.Clear();
 
@@ -50,8 +49,7 @@ namespace Quantifai
       y2.ChartType = SeriesChartType.Line;
 
       Series y3 = StockChart.Series.Add("Forecast");
-      y3.ChartType = SeriesChartType.Line;
-      
+      y3.ChartType = SeriesChartType.Line;      
 
       if ( StockChart.Series.IndexOf(sStock)<0) {
         series = StockChart.Series.Add(sStock);
@@ -70,7 +68,7 @@ namespace Quantifai
         string myDate = db.GetDBString("datecreated", Reader);
         DateTime dateValue = DateTime.Parse(myDate);        
         double sentiment = db.GetDBDouble("sentiment", Reader);
-        StockChart.Series[sStock].Points.AddXY(dateValue.ToOADate(), sentiment);        
+        StockChart.Series[sStock].Points.AddXY(dateValue.ToOADate(), sentiment);
 
         object[] newRow = new object[3];
         newRow[0] = myDate;
@@ -79,7 +77,6 @@ namespace Quantifai
         Values.LoadDataRow(newRow,true);
       }
       Values.EndLoadData();
-
 
       Reader.Close();
       db.Close();
@@ -102,6 +99,11 @@ namespace Quantifai
       //call the service to get the thing
       string stock = StockText.Text;
       GetStocks(stock);
+    }
+
+    private void btn_Test_Click(object sender, EventArgs e)
+    {
+      Market.GetHistoricData("MSFT");
     }
   }
 }
