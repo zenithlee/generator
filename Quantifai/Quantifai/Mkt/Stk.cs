@@ -26,6 +26,16 @@ namespace Quantifai
       }
     }
 
+    public void AddPoint( DateTime time, double O,double C, double H, double L)
+    {
+      Tick t =new Tick();
+      t.time = time;
+      t.H = H;
+      t.L = L;
+      t.O = O;
+      t.C = C;
+    }
+
     public void PlotTo(Chart c)
     {
       Series s = c.Series.Add(sName);

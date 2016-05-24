@@ -21,7 +21,7 @@ namespace Quantifai
   {
     MySQL db = new MySQL();
     DataTable Values = new DataTable("Quantifai"); 
-    Mkt Market = new Mkt("../../Data/Stocks/GoogleAPI/Requests/");
+    Mkt Market = new Mkt("../../../Data/Stocks/GoogleAPI/Requests/");
 
     public SXE()
     {
@@ -43,7 +43,6 @@ namespace Quantifai
 
       Series y4 = StockChart.Series.Add("Forecast2");
       y4.ChartType = SeriesChartType.Range;
-
 
       Series y2 = StockChart.Series.Add("Average");
       y2.ChartType = SeriesChartType.Line;
@@ -91,7 +90,6 @@ namespace Quantifai
 
       StockLister.DataSource = Values;
       StockLister.Columns["text"].Width = 300;
-
     }
 
     private void btnTest_Click(object sender, EventArgs e)
@@ -103,7 +101,8 @@ namespace Quantifai
 
     private void btn_Test_Click(object sender, EventArgs e)
     {
-      Market.GetHistoricData("MSFT");
+      string stock = StockText.Text;
+      Market.GetHistoricData(stock);
     }
   }
 }

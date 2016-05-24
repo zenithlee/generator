@@ -52,7 +52,7 @@ namespace Quantifai
 {
   class Mkt
   {
-    string DataStorePath = "../../Data/Stocks/GoogleAPI/Requests/";
+    string DataStorePath = "../../../Data/Stocks/GoogleAPI/Requests/";
     List<Stk> Stks = new List<Stk>();
     //string URL = "http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
     string FullURL = "http://www.google.com/finance/getprices?q={stock}&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
@@ -98,6 +98,18 @@ namespace Quantifai
       //JsonSerializerSettings set = new JsonSerializerSettings();
       //StockClassObject[] o = JsonConvert.DeserializeObject<StockClassObject[]>(Result);
       //return o[0];
+
+      Stk std = new Stk();
+      foreach ( string line in lines)
+      {
+        string[] items = line.Split(',');
+        DateTime dt = new DateTime();
+        double c = Double.Parse(items[1]);
+        double h = Double.Parse(items[2]);
+        double l = Double.Parse(items[3]);
+        double o = Double.Parse(items[4]);
+        std.AddPoint(dt, o,c,h,l);
+      }
     }
 
     public string MakeWebRequest(string sURL, string Stock)
