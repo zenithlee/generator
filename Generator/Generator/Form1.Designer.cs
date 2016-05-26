@@ -32,13 +32,13 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analysis));
       this.RawWeather = new System.Windows.Forms.TextBox();
       this.button5 = new System.Windows.Forms.Button();
@@ -154,18 +154,6 @@
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
       this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-      this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-      this.campaignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-      this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
       metrics = new System.Windows.Forms.TabPage();
@@ -188,10 +176,7 @@
       this.VisualAI.SuspendLayout();
       this.tabSettings.SuspendLayout();
       this.statusStrip1.SuspendLayout();
-      this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
-      this.menuStrip1.SuspendLayout();
-      this.toolStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
       this.SuspendLayout();
       // 
@@ -1109,23 +1094,23 @@
       this.CampaignChart.BorderlineColor = System.Drawing.Color.Gainsboro;
       this.CampaignChart.BorderSkin.BackColor = System.Drawing.Color.SteelBlue;
       this.CampaignChart.BorderSkin.PageColor = System.Drawing.Color.LightGray;
-      chartArea1.Name = "ChartArea1";
-      this.CampaignChart.ChartAreas.Add(chartArea1);
-      legend1.Name = "Titles";
-      this.CampaignChart.Legends.Add(legend1);
+      chartArea3.Name = "ChartArea1";
+      this.CampaignChart.ChartAreas.Add(chartArea3);
+      legend3.Name = "Titles";
+      this.CampaignChart.Legends.Add(legend3);
       this.CampaignChart.Location = new System.Drawing.Point(251, 261);
       this.CampaignChart.Name = "CampaignChart";
-      series1.ChartArea = "ChartArea1";
-      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-      series1.Legend = "Titles";
-      series1.Name = "Series1";
-      this.CampaignChart.Series.Add(series1);
+      series3.ChartArea = "ChartArea1";
+      series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      series3.Legend = "Titles";
+      series3.Name = "Series1";
+      this.CampaignChart.Series.Add(series3);
       this.CampaignChart.Size = new System.Drawing.Size(675, 307);
       this.CampaignChart.TabIndex = 26;
       this.CampaignChart.Text = "chart2";
-      title1.Name = "Title1";
-      title1.Text = "Opinion";
-      this.CampaignChart.Titles.Add(title1);
+      title2.Name = "Title1";
+      title2.Text = "Opinion";
+      this.CampaignChart.Titles.Add(title2);
       this.CampaignChart.Click += new System.EventHandler(this.CampaignChart_Click);
       // 
       // label12
@@ -1270,19 +1255,19 @@
       // 
       // MarketChart
       // 
-      chartArea2.Name = "ChartArea1";
-      this.MarketChart.ChartAreas.Add(chartArea2);
-      legend2.Name = "Legend1";
-      this.MarketChart.Legends.Add(legend2);
+      chartArea4.Name = "ChartArea1";
+      this.MarketChart.ChartAreas.Add(chartArea4);
+      legend4.Name = "Legend1";
+      this.MarketChart.Legends.Add(legend4);
       this.MarketChart.Location = new System.Drawing.Point(452, 74);
       this.MarketChart.Name = "MarketChart";
-      series2.ChartArea = "ChartArea1";
-      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
-      series2.CustomProperties = "OpenCloseStyle=Triangle";
-      series2.Legend = "Legend1";
-      series2.Name = "Series1";
-      series2.YValuesPerPoint = 4;
-      this.MarketChart.Series.Add(series2);
+      series4.ChartArea = "ChartArea1";
+      series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
+      series4.CustomProperties = "OpenCloseStyle=Triangle";
+      series4.Legend = "Legend1";
+      series4.Name = "Series1";
+      series4.YValuesPerPoint = 4;
+      this.MarketChart.Series.Add(series4);
       this.MarketChart.Size = new System.Drawing.Size(662, 388);
       this.MarketChart.TabIndex = 4;
       this.MarketChart.Text = "chart1";
@@ -1385,113 +1370,13 @@
       // 
       // toolStripContainer1.ContentPanel
       // 
-      this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1152, 636);
+      this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1127, 660);
       this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
       this.toolStripContainer1.Name = "toolStripContainer1";
       this.toolStripContainer1.Size = new System.Drawing.Size(1152, 685);
       this.toolStripContainer1.TabIndex = 0;
       this.toolStripContainer1.Text = "toolStripContainer1";
-      // 
-      // toolStripContainer1.TopToolStripPanel
-      // 
-      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
-      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
-      // 
-      // menuStrip1
-      // 
-      this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.campaignToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.toolsToolStripMenuItem});
-      this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-      this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(1152, 24);
-      this.menuStrip1.TabIndex = 1;
-      this.menuStrip1.Text = "menuStrip1";
-      // 
-      // campaignToolStripMenuItem
-      // 
-      this.campaignToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
-      this.campaignToolStripMenuItem.Name = "campaignToolStripMenuItem";
-      this.campaignToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-      this.campaignToolStripMenuItem.Text = "Campaign";
-      // 
-      // loadToolStripMenuItem
-      // 
-      this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-      this.loadToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-      this.loadToolStripMenuItem.Text = "Load...";
-      // 
-      // saveToolStripMenuItem
-      // 
-      this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-      this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-      this.saveToolStripMenuItem.Text = "Save...";
-      // 
-      // saveAsToolStripMenuItem
-      // 
-      this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-      this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-      this.saveAsToolStripMenuItem.Text = "Save As...";
-      // 
-      // editToolStripMenuItem
-      // 
-      this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem});
-      this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-      this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-      this.editToolStripMenuItem.Text = "Edit";
-      // 
-      // copyToolStripMenuItem
-      // 
-      this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-      this.copyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-      this.copyToolStripMenuItem.Text = "Copy";
-      // 
-      // pasteToolStripMenuItem
-      // 
-      this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-      this.pasteToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-      this.pasteToolStripMenuItem.Text = "Paste";
-      // 
-      // helpToolStripMenuItem
-      // 
-      this.helpToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-      this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-      this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-      this.helpToolStripMenuItem.Text = "Help";
-      // 
-      // toolsToolStripMenuItem
-      // 
-      this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-      this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-      this.toolsToolStripMenuItem.Text = "Tools";
-      // 
-      // toolStrip1
-      // 
-      this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-      this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-      this.toolStrip1.Location = new System.Drawing.Point(3, 24);
-      this.toolStrip1.Name = "toolStrip1";
-      this.toolStrip1.Size = new System.Drawing.Size(35, 25);
-      this.toolStrip1.TabIndex = 0;
-      // 
-      // toolStripButton1
-      // 
-      this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-      this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-      this.toolStripButton1.Name = "toolStripButton1";
-      this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-      this.toolStripButton1.Text = "toolStripButton1";
       // 
       // MarketTimer
       // 
@@ -1511,7 +1396,7 @@
       this.Controls.Add(this.tabControl1);
       this.Controls.Add(this.toolStripContainer1);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-      this.MainMenuStrip = this.menuStrip1;
+      this.IsMdiContainer = true;
       this.Name = "Analysis";
       this.Text = "QUANTIFY";
       metrics.ResumeLayout(false);
@@ -1540,14 +1425,8 @@
       this.tabSettings.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
-      this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
-      this.toolStripContainer1.TopToolStripPanel.PerformLayout();
       this.toolStripContainer1.ResumeLayout(false);
       this.toolStripContainer1.PerformLayout();
-      this.menuStrip1.ResumeLayout(false);
-      this.menuStrip1.PerformLayout();
-      this.toolStrip1.ResumeLayout(false);
-      this.toolStrip1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -1658,16 +1537,6 @@
     private System.Windows.Forms.StatusStrip statusStrip1;
     private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-    private System.Windows.Forms.MenuStrip menuStrip1;
-    private System.Windows.Forms.ToolStripMenuItem campaignToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-    private System.Windows.Forms.ToolStrip toolStrip1;
     private System.Windows.Forms.Button btnUpload;
     private System.Windows.Forms.CheckBox MarketAuto;
     private System.Windows.Forms.Timer MarketTimer;
@@ -1679,8 +1548,6 @@
     private System.Windows.Forms.TabPage VisualAI;
     private System.Windows.Forms.TextBox CampaignTimerRate;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.ToolStripButton toolStripButton1;
-    private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
     private System.Windows.Forms.TabPage tabSettings;
     private Options.Settings settings1;
     private VisualAIs.VisualAI visualAI1;

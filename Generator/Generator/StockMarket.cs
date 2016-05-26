@@ -212,7 +212,7 @@ namespace Generator
         s.MarkerSize = 1;
         s.MarkerStep = 20;
         s.MarkerStyle = MarkerStyle.Diamond;
-        s.IsValueShownAsLabel = true;        
+        s.IsValueShownAsLabel = true;
       }
 
       //low high open close

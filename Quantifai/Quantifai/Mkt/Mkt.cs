@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 
 //planet money
 //tim ferris 
@@ -53,9 +54,10 @@ namespace Quantifai
   class Mkt
   {
     string DataStorePath = "../../../Data/Stocks/GoogleAPI/Requests/";
+    string Portfolio = "SXE";
     List<Stk> Stks = new List<Stk>();
     //string URL = "http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
-    string FullURL = "http://www.google.com/finance/getprices?q={stock}&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
+    string FullURL = "http://www.google.com/finance/getprices?q={stock}&x=NASD&i=86400&p=1Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
     public string SingleURL = "http://www.google.com/finance/info?";
 
     public void GetData(string Stock)
@@ -73,7 +75,7 @@ namespace Quantifai
     public Mkt(string inDataStorePath)
     {
       DataStorePath = inDataStorePath;
-      CheckPath();
+     // CheckPath();
     }
 
     public void CheckPath()
@@ -85,6 +87,15 @@ namespace Quantifai
       }
     }
 
+    public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+    {
+      // Unix timestamp is seconds past epoch
+      System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+      dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+      return dtDateTime;
+    }
+
+    //Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
     public void GetHistoricData(string Stock)
     {
       string URL = FullURL.Replace("{stock}", Stock);
@@ -100,15 +111,48 @@ namespace Quantifai
       //return o[0];
 
       Stk std = new Stk();
+      std.sName = Stock;
+      Stks.Add(std);
+      DateTime CurrentTime = new DateTime();
+      DateTime at = new DateTime();      
       foreach ( string line in lines)
       {
         string[] items = line.Split(',');
-        DateTime dt = new DateTime();
+
+        if (items[0].StartsWith("EXCHANGE")) continue;
+        if (items[0].StartsWith("MARKET_OPEN_MINUTE")) continue;
+        if (items[0].StartsWith("MARKET_CLOSE_MINUTE")) continue;
+        if (items[0].StartsWith("INTERVAL")) continue;
+        if (items[0].StartsWith("COLUMNS")) continue;
+        if (items[0].StartsWith("DATA")) continue;
+        if (items[0].StartsWith("TIMEZONE_OFFSET")) continue;
+        
+        if (items[0].StartsWith("a")){
+          string unix = items[0].Replace("a", "");
+          double db = Double.Parse(unix);
+          CurrentTime = UnixTimeStampToDateTime(db);
+          at = CurrentTime;
+        }
+        else {
+          int n = int.Parse(items[0]);
+          at = CurrentTime.AddDays(n);
+        }
+       
         double c = Double.Parse(items[1]);
         double h = Double.Parse(items[2]);
         double l = Double.Parse(items[3]);
         double o = Double.Parse(items[4]);
-        std.AddPoint(dt, o,c,h,l);
+        std.AddPoint(at, o,c,h,l);
+      }
+    }
+
+    public void PlotTo( Chart c)
+    {
+      c.Series.Clear();
+
+      foreach( Stk s in Stks )
+      {
+        s.PlotTo(c);
       }
     }
 

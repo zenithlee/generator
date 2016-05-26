@@ -21,6 +21,8 @@ using System.Collections;
 using Generator.Database;
 using Generator.VisualAIs;
 using System.Reflection;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace Generator
   {
@@ -63,7 +65,7 @@ namespace Generator
           
       Console.WriteLine(Directory.GetCurrentDirectory());
 
-      InitializeComponent();      
+      InitializeComponent();
 
       SetupReader();
            

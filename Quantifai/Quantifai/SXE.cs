@@ -103,6 +103,7 @@ namespace Quantifai
     {
       string stock = StockText.Text;
       Market.GetHistoricData(stock);
+      Market.PlotTo(StockChart);
     }
   }
 }

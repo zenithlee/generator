@@ -9,7 +9,7 @@ namespace Quantifai
 {
   class Stk
   {
-    string sName = "Demo";
+    public string sName = "Demo";
     List<Tick> TickList = new List<Tick>();
 
     public void CreateDummData()
@@ -34,16 +34,38 @@ namespace Quantifai
       t.L = L;
       t.O = O;
       t.C = C;
+      TickList.Add(t);
     }
 
     public void PlotTo(Chart c)
     {
       Series s = c.Series.Add(sName);
+      s.ChartType = SeriesChartType.Candlestick;
       s.XValueType = ChartValueType.DateTime;
-      s.ChartType = SeriesChartType.Stock;      
+      s.XAxisType = AxisType.Primary;    
+      DateTime minDate = new DateTime(2016, 01, 01);
+      DateTime maxDate = DateTime.Now;
+      c.ChartAreas[0].AxisX.Minimum = minDate.ToOADate();
+      c.ChartAreas[0].AxisX.Maximum = maxDate.ToOADate();
+
+      double min = 99999;
+      double max = 0;
+
       foreach ( Tick t in TickList) {
-        s.Points.AddXY(t.time.ToOADate(), new { t.H, t.L, t.O, t.C });        
+        object[] f = new object[] { t.H, t.L, t.O, t.C };
+        object date = t.time.ToOADate();
+        s.Points.AddXY(t.time, f);
+
+        min = Math.Min(t.H, min);
+        max = Math.Max(t.H, max);
       }
+
+      //int min = (int)c.ChartAreas[0].AxisY.Minimum;
+      //int max = (int)c.ChartAreas[0].AxisY.Maximum;
+
+     // c.ChartAreas[0].AxisY.Minimum = min;
+      //c.ChartAreas[0].AxisY.Maximum = max;      
+
     }
   }
 }

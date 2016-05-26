@@ -18,7 +18,7 @@ namespace Generator.VisualAIs
     string TokenURL = "https://api.clarifai.com/v1/token/";
     string ClientID = "s_Cw-z1pOGSQOq2yBowj0kwOIAS3BwBs_laBToCF";
     string ClientSecret = "OQWb6URIHDwYN1NoGB7fBv4YPWuCb_TdCz0Vovgg";
-    string AccessToken = "aPqMEfHXUQ2PedHWzLHLWVLVNDIxTH";
+    string AccessToken = "R30vz1A6X1uaHLVUkv7vJc1zURmRxe";
 
     public VisualAI()
     {
