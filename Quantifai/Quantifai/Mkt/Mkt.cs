@@ -56,8 +56,9 @@ namespace Quantifai
     string DataStorePath = "../../../Data/Stocks/GoogleAPI/Requests/";
     string Portfolio = "SXE";
     List<Stk> Stks = new List<Stk>();
+    string Period = "60d"; //or "1Y";
     //string URL = "http://www.google.com/finance/getprices?q=GOOG&x=NASD&i=86400&p=40Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
-    string FullURL = "http://www.google.com/finance/getprices?q={stock}&x=NASD&i=86400&p=1Y&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
+    string FullURL = "http://www.google.com/finance/getprices?q={stock}&x=NASD&i=86400&p={period}&f=d,c,v,k,o,h,l&df=cpct&auto=0&ei=Ef6XUYDfCqSTiAKEMg";
     public string SingleURL = "http://www.google.com/finance/info?";
 
     public void GetData(string Stock)
@@ -99,6 +100,8 @@ namespace Quantifai
     public void GetHistoricData(string Stock)
     {
       string URL = FullURL.Replace("{stock}", Stock);
+      URL = URL.Replace("{period}", Period);
+
       string Result = MakeWebRequest(URL, Stock);
       Result = Result.Replace("//", "");
       Result = Result.Trim();

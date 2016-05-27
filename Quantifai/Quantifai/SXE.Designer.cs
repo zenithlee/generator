@@ -83,6 +83,7 @@
       this.StockChart.Size = new System.Drawing.Size(553, 300);
       this.StockChart.TabIndex = 2;
       this.StockChart.Text = "chart1";
+      this.StockChart.AxisViewChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ViewEventArgs>(this.StockChart_AxisViewChanged);
       // 
       // StockText
       // 

@@ -37,35 +37,56 @@ namespace Quantifai
       TickList.Add(t);
     }
 
+    /*
+    foreach (ChartArea area in chart1.ChartAreas)
+    {
+      List<double> allNumbers = new List<double>();
+
+      foreach (Series item in chart1.Series)
+        if (item.ChartArea == area.Name)
+          allNumbers.AddRange(item.Points.Where((x, i) => i >= start && i <= end).Select(x => x.YValues[0]).ToList());
+
+      double ymin = allNumbers.Min();
+    double ymax = allNumbers.Max();
+
+      if (ymax > ymin)
+      {
+        double offset = 0.02 * (ymax - ymin);
+    area.AxisY.Maximum = ymax + offset;
+        area.AxisY.Minimum = ymin - offset;
+      }
+}
+*/
+
+//TODO: Rescale chart
+public void ReScale(Chart c)
+    {
+      DataPoint p = c.Series[0].Points.Min();
+      double min = p.YValues[0];
+      double max = (int)c.Series[0].Points.Max().YValues[0];
+
+      c.ChartAreas[0].AxisY.Minimum = min;
+      c.ChartAreas[0].AxisY.Maximum = max;
+    }
+
     public void PlotTo(Chart c)
     {
       Series s = c.Series.Add(sName);
       s.ChartType = SeriesChartType.Candlestick;
       s.XValueType = ChartValueType.DateTime;
-      s.XAxisType = AxisType.Primary;    
-      DateTime minDate = new DateTime(2016, 01, 01);
-      DateTime maxDate = DateTime.Now;
-      c.ChartAreas[0].AxisX.Minimum = minDate.ToOADate();
-      c.ChartAreas[0].AxisX.Maximum = maxDate.ToOADate();
+      s.XAxisType = AxisType.Primary;
+      //DateTime minDate = new DateTime(2016, 01, 01);
+      //DateTime maxDate = DateTime.Now;
+      //c.ChartAreas[0].AxisX.Minimum = minDate.ToOADate();
+      //c.ChartAreas[0].AxisX.Maximum = maxDate.ToOADate();      
 
-      double min = 99999;
-      double max = 0;
-
-      foreach ( Tick t in TickList) {
+      foreach (Tick t in TickList) {
         object[] f = new object[] { t.H, t.L, t.O, t.C };
         object date = t.time.ToOADate();
         s.Points.AddXY(t.time, f);
-
-        min = Math.Min(t.H, min);
-        max = Math.Max(t.H, max);
       }
 
-      //int min = (int)c.ChartAreas[0].AxisY.Minimum;
-      //int max = (int)c.ChartAreas[0].AxisY.Maximum;
-
-     // c.ChartAreas[0].AxisY.Minimum = min;
-      //c.ChartAreas[0].AxisY.Maximum = max;      
-
+      ReScale(c);
     }
   }
 }

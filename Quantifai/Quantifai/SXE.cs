@@ -28,7 +28,7 @@ namespace Quantifai
       InitializeComponent();
       Values.Columns.Add("Date");
       Values.Columns.Add("Text");
-      Values.Columns.Add("Q Score");
+      Values.Columns.Add("Q Score");      
     }
 
     public void Setup()
@@ -105,5 +105,13 @@ namespace Quantifai
       Market.GetHistoricData(stock);
       Market.PlotTo(StockChart);
     }
+
+    private void StockChart_AxisViewChanged(object sender, ViewEventArgs e)
+    {
+      if (e.Axis.AxisName == AxisName.X)
+      {
+       
+      }
+    }  
   }
 }
