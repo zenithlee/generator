@@ -149,6 +149,18 @@ namespace Quantifai
       }
     }
 
+    public void Clear(Chart c)
+    {
+      foreach( Series s in c.Series)
+      {
+        s.Points.Clear();
+      }
+
+      c.Series.Clear();
+     // c.ChartAreas.Clear();
+      
+    }
+
     public void PlotTo( Chart c)
     {
       c.Series.Clear();

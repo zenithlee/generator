@@ -112,6 +112,11 @@ namespace Quantifai
       {
        
       }
-    }  
+    }
+
+    private void btn_Clear_Click(object sender, EventArgs e)
+    {
+      Market.Clear(StockChart);
+    }
   }
 }

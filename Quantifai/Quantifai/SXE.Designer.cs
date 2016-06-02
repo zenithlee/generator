@@ -29,10 +29,10 @@
     private void InitializeComponent()
     {
       this.components = new System.ComponentModel.Container();
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
       this.btnTest = new System.Windows.Forms.Button();
       this.StockList = new System.Windows.Forms.ListBox();
       this.StockChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -40,6 +40,7 @@
       this.StockText = new System.Windows.Forms.TextBox();
       this.StockLister = new System.Windows.Forms.DataGridView();
       this.btn_Test = new System.Windows.Forms.Button();
+      this.btn_Clear = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.StockChart)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.StockLister)).BeginInit();
       this.SuspendLayout();
@@ -67,19 +68,19 @@
       // 
       // StockChart
       // 
-      chartArea1.Name = "ChartArea1";
-      this.StockChart.ChartAreas.Add(chartArea1);
-      legend1.Name = "Legend1";
-      this.StockChart.Legends.Add(legend1);
+      chartArea2.Name = "ChartArea1";
+      this.StockChart.ChartAreas.Add(chartArea2);
+      legend2.Name = "Legend1";
+      this.StockChart.Legends.Add(legend2);
       this.StockChart.Location = new System.Drawing.Point(142, 33);
       this.StockChart.Name = "StockChart";
-      series1.ChartArea = "ChartArea1";
-      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-      series1.Legend = "Legend1";
-      series1.Name = "Series1";
-      series1.Points.Add(dataPoint1);
-      series1.YValuesPerPoint = 2;
-      this.StockChart.Series.Add(series1);
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series2.Legend = "Legend1";
+      series2.Name = "Series1";
+      series2.Points.Add(dataPoint2);
+      series2.YValuesPerPoint = 2;
+      this.StockChart.Series.Add(series2);
       this.StockChart.Size = new System.Drawing.Size(553, 300);
       this.StockChart.TabIndex = 2;
       this.StockChart.Text = "chart1";
@@ -103,7 +104,7 @@
       // 
       // btn_Test
       // 
-      this.btn_Test.Location = new System.Drawing.Point(701, 33);
+      this.btn_Test.Location = new System.Drawing.Point(222, 6);
       this.btn_Test.Name = "btn_Test";
       this.btn_Test.Size = new System.Drawing.Size(75, 23);
       this.btn_Test.TabIndex = 5;
@@ -111,11 +112,22 @@
       this.btn_Test.UseVisualStyleBackColor = true;
       this.btn_Test.Click += new System.EventHandler(this.btn_Test_Click);
       // 
+      // btn_Clear
+      // 
+      this.btn_Clear.Location = new System.Drawing.Point(303, 6);
+      this.btn_Clear.Name = "btn_Clear";
+      this.btn_Clear.Size = new System.Drawing.Size(75, 23);
+      this.btn_Clear.TabIndex = 6;
+      this.btn_Clear.Text = "Clear";
+      this.btn_Clear.UseVisualStyleBackColor = true;
+      this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+      // 
       // SXE
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = global::Quantifai.Properties.Resources.bg2;
+      this.Controls.Add(this.btn_Clear);
       this.Controls.Add(this.btn_Test);
       this.Controls.Add(this.StockLister);
       this.Controls.Add(this.StockText);
@@ -140,5 +152,6 @@
     private System.Windows.Forms.TextBox StockText;
     private System.Windows.Forms.DataGridView StockLister;
     private System.Windows.Forms.Button btn_Test;
+    private System.Windows.Forms.Button btn_Clear;
   }
 }

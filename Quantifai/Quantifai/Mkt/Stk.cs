@@ -61,17 +61,36 @@ namespace Quantifai
 //TODO: Rescale chart
 public void ReScale(Chart c)
     {
-      DataPoint p = c.Series[0].Points.Min();
-      double min = p.YValues[0];
-      double max = (int)c.Series[0].Points.Max().YValues[0];
+      double miny = double.MaxValue;
+      double maxy = double.MinValue;
 
-      c.ChartAreas[0].AxisY.Minimum = min;
-      c.ChartAreas[0].AxisY.Maximum = max;
+      foreach( Series s in c.Series) { 
+      DataPointCollection p = s.Points;
+      
+      foreach( DataPoint dp in p)
+      {
+        miny = Math.Min(miny, dp.YValues[0]);
+        maxy = Math.Max(maxy, dp.YValues[0]);
+      }
+      }
+
+      c.ChartAreas[0].AxisY.Minimum = miny;
+      c.ChartAreas[0].AxisY.Maximum = maxy;
+      
     }
 
     public void PlotTo(Chart c)
-    {
-      Series s = c.Series.Add(sName);
+    {      
+      Series s;
+      if (c.Series.IndexOf(sName)>-1)
+      {
+        s = c.Series[sName];
+      }
+      else
+      {
+        s = c.Series.Add(sName);
+      }
+      
       s.ChartType = SeriesChartType.Candlestick;
       s.XValueType = ChartValueType.DateTime;
       s.XAxisType = AxisType.Primary;
