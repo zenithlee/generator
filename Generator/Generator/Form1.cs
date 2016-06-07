@@ -776,7 +776,6 @@ namespace Generator
 
 
     #endregion
-    
   }
 
   class ListViewItemComparer : IComparer

@@ -32,13 +32,13 @@
         {
       this.components = new System.ComponentModel.Container();
       System.Windows.Forms.TabPage metrics;
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analysis));
       this.RawWeather = new System.Windows.Forms.TextBox();
       this.button5 = new System.Windows.Forms.Button();
@@ -149,6 +149,8 @@
       this.visualAI1 = new Generator.VisualAIs.VisualAI();
       this.tabSettings = new System.Windows.Forms.TabPage();
       this.settings1 = new Generator.Options.Settings();
+      this.tabAnalyse = new System.Windows.Forms.TabPage();
+      this.analyser1 = new Quantifai.Analyse.Analyser();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.CampaignTimer = new System.Windows.Forms.Timer(this.components);
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -175,6 +177,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).BeginInit();
       this.VisualAI.SuspendLayout();
       this.tabSettings.SuspendLayout();
+      this.tabAnalyse.SuspendLayout();
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
@@ -400,6 +403,7 @@
       this.tabControl1.Controls.Add(this.Market);
       this.tabControl1.Controls.Add(this.VisualAI);
       this.tabControl1.Controls.Add(this.tabSettings);
+      this.tabControl1.Controls.Add(this.tabAnalyse);
       this.tabControl1.Location = new System.Drawing.Point(0, 60);
       this.tabControl1.Name = "tabControl1";
       this.tabControl1.SelectedIndex = 0;
@@ -1094,23 +1098,23 @@
       this.CampaignChart.BorderlineColor = System.Drawing.Color.Gainsboro;
       this.CampaignChart.BorderSkin.BackColor = System.Drawing.Color.SteelBlue;
       this.CampaignChart.BorderSkin.PageColor = System.Drawing.Color.LightGray;
-      chartArea3.Name = "ChartArea1";
-      this.CampaignChart.ChartAreas.Add(chartArea3);
-      legend3.Name = "Titles";
-      this.CampaignChart.Legends.Add(legend3);
+      chartArea1.Name = "ChartArea1";
+      this.CampaignChart.ChartAreas.Add(chartArea1);
+      legend1.Name = "Titles";
+      this.CampaignChart.Legends.Add(legend1);
       this.CampaignChart.Location = new System.Drawing.Point(251, 261);
       this.CampaignChart.Name = "CampaignChart";
-      series3.ChartArea = "ChartArea1";
-      series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-      series3.Legend = "Titles";
-      series3.Name = "Series1";
-      this.CampaignChart.Series.Add(series3);
+      series1.ChartArea = "ChartArea1";
+      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      series1.Legend = "Titles";
+      series1.Name = "Series1";
+      this.CampaignChart.Series.Add(series1);
       this.CampaignChart.Size = new System.Drawing.Size(675, 307);
       this.CampaignChart.TabIndex = 26;
       this.CampaignChart.Text = "chart2";
-      title2.Name = "Title1";
-      title2.Text = "Opinion";
-      this.CampaignChart.Titles.Add(title2);
+      title1.Name = "Title1";
+      title1.Text = "Opinion";
+      this.CampaignChart.Titles.Add(title1);
       this.CampaignChart.Click += new System.EventHandler(this.CampaignChart_Click);
       // 
       // label12
@@ -1255,19 +1259,19 @@
       // 
       // MarketChart
       // 
-      chartArea4.Name = "ChartArea1";
-      this.MarketChart.ChartAreas.Add(chartArea4);
-      legend4.Name = "Legend1";
-      this.MarketChart.Legends.Add(legend4);
+      chartArea2.Name = "ChartArea1";
+      this.MarketChart.ChartAreas.Add(chartArea2);
+      legend2.Name = "Legend1";
+      this.MarketChart.Legends.Add(legend2);
       this.MarketChart.Location = new System.Drawing.Point(452, 74);
       this.MarketChart.Name = "MarketChart";
-      series4.ChartArea = "ChartArea1";
-      series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
-      series4.CustomProperties = "OpenCloseStyle=Triangle";
-      series4.Legend = "Legend1";
-      series4.Name = "Series1";
-      series4.YValuesPerPoint = 4;
-      this.MarketChart.Series.Add(series4);
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
+      series2.CustomProperties = "OpenCloseStyle=Triangle";
+      series2.Legend = "Legend1";
+      series2.Name = "Series1";
+      series2.YValuesPerPoint = 4;
+      this.MarketChart.Series.Add(series2);
       this.MarketChart.Size = new System.Drawing.Size(662, 388);
       this.MarketChart.TabIndex = 4;
       this.MarketChart.Text = "chart1";
@@ -1340,6 +1344,25 @@
       this.settings1.Size = new System.Drawing.Size(445, 371);
       this.settings1.TabIndex = 0;
       // 
+      // tabAnalyse
+      // 
+      this.tabAnalyse.Controls.Add(this.analyser1);
+      this.tabAnalyse.Location = new System.Drawing.Point(4, 22);
+      this.tabAnalyse.Name = "tabAnalyse";
+      this.tabAnalyse.Padding = new System.Windows.Forms.Padding(3);
+      this.tabAnalyse.Size = new System.Drawing.Size(1120, 574);
+      this.tabAnalyse.TabIndex = 8;
+      this.tabAnalyse.Text = "Analyse";
+      this.tabAnalyse.UseVisualStyleBackColor = true;
+      // 
+      // analyser1
+      // 
+      this.analyser1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.analyser1.Location = new System.Drawing.Point(3, 3);
+      this.analyser1.Name = "analyser1";
+      this.analyser1.Size = new System.Drawing.Size(1114, 568);
+      this.analyser1.TabIndex = 0;
+      // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
@@ -1370,7 +1393,7 @@
       // 
       // toolStripContainer1.ContentPanel
       // 
-      this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1127, 660);
+      this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1152, 660);
       this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
       this.toolStripContainer1.Name = "toolStripContainer1";
@@ -1423,6 +1446,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.MarketChart)).EndInit();
       this.VisualAI.ResumeLayout(false);
       this.tabSettings.ResumeLayout(false);
+      this.tabAnalyse.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
       this.toolStripContainer1.ResumeLayout(false);
@@ -1552,6 +1576,8 @@
     private Options.Settings settings1;
     private VisualAIs.VisualAI visualAI1;
     private Quantifai.SXE sxe1;
+    private System.Windows.Forms.TabPage tabAnalyse;
+    private Quantifai.Analyse.Analyser analyser1;
   }
 }
 
