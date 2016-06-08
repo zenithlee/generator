@@ -16,7 +16,9 @@ main = new function() {
         ListGroup.addItem("item2","This is another Title", "Some more text to show in this lorem ipsum boxy");
         ListGroup.addItem("item3","This is yet another Title", "Some yet more text to show in this lorem ipsum boxy");
 
-        Popup.create("pop", "main", "Hello", "How you doin'?");
+        Popup.create("pop", "main", "Info", "How you doin'?");
+
+        Table.create("myTable", "main");
 
         this.setup();
     };
@@ -41,9 +43,9 @@ main = new function() {
 
 };
 
-window.onload = function() {    
+$(document).ready(function(){
     main.init();
-};
+});
 
 
 

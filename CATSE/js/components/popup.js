@@ -10,15 +10,8 @@ Popup = new function(){
         var html = self.html.replace("{id}", self.myID);
         html = html.replace("{title}", title);
         html = html.replace("{text}", text);
-        var parent = document.getElementById(containerId);
-        var el = document.createElement("div");
-        el.id = self.myID;
-        el.className = "col-sm-4";
-        el.style.cssText = "left:50%; top:40%; position:absolute; z-index:10; transform:translateX(-50%); display:none;";
-
-        el.innerHTML = html;
-        parent.appendChild(el);
-        el.addEventListener("click", this.clicked);
+        var el = $("#"+containerId).append(html);
+        $("#"+self.myID).click(self.clicked);
         self.bind();
         self.hide();
     };
