@@ -61,7 +61,7 @@
       this.label4 = new System.Windows.Forms.Label();
       this.button3 = new System.Windows.Forms.Button();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.tabControl1 = new System.Windows.Forms.TabControl();
+      this.tabSynthesize = new System.Windows.Forms.TabControl();
       this.tabPage1 = new System.Windows.Forms.TabPage();
       this.Test = new System.Windows.Forms.Button();
       this.button13 = new System.Windows.Forms.Button();
@@ -150,7 +150,6 @@
       this.tabSettings = new System.Windows.Forms.TabPage();
       this.settings1 = new Generator.Options.Settings();
       this.tabAnalyse = new System.Windows.Forms.TabPage();
-      this.analyser1 = new Quantifai.Analyse.Analyser();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.CampaignTimer = new System.Windows.Forms.Timer(this.components);
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -158,12 +157,15 @@
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.tabSynthTab = new System.Windows.Forms.TabPage();
+      this.analyser1 = new Quantifai.Analyse.Analyser();
+      this.textSynthesizer1 = new Quantifai.Generators.TextSynthesizer();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-      this.tabControl1.SuspendLayout();
+      this.tabSynthesize.SuspendLayout();
       this.tabPage1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -181,6 +183,7 @@
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
+      this.tabSynthTab.SuspendLayout();
       this.SuspendLayout();
       // 
       // metrics
@@ -393,22 +396,23 @@
       this.pictureBox1.TabStop = false;
       this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
       // 
-      // tabControl1
+      // tabSynthesize
       // 
-      this.tabControl1.Controls.Add(this.tabPage1);
-      this.tabControl1.Controls.Add(this.tabPage2);
-      this.tabControl1.Controls.Add(metrics);
-      this.tabControl1.Controls.Add(this.Twitter);
-      this.tabControl1.Controls.Add(this.TwitterCampaign);
-      this.tabControl1.Controls.Add(this.Market);
-      this.tabControl1.Controls.Add(this.VisualAI);
-      this.tabControl1.Controls.Add(this.tabSettings);
-      this.tabControl1.Controls.Add(this.tabAnalyse);
-      this.tabControl1.Location = new System.Drawing.Point(0, 60);
-      this.tabControl1.Name = "tabControl1";
-      this.tabControl1.SelectedIndex = 0;
-      this.tabControl1.Size = new System.Drawing.Size(1128, 600);
-      this.tabControl1.TabIndex = 16;
+      this.tabSynthesize.Controls.Add(this.tabPage1);
+      this.tabSynthesize.Controls.Add(this.tabPage2);
+      this.tabSynthesize.Controls.Add(metrics);
+      this.tabSynthesize.Controls.Add(this.Twitter);
+      this.tabSynthesize.Controls.Add(this.TwitterCampaign);
+      this.tabSynthesize.Controls.Add(this.Market);
+      this.tabSynthesize.Controls.Add(this.VisualAI);
+      this.tabSynthesize.Controls.Add(this.tabSettings);
+      this.tabSynthesize.Controls.Add(this.tabAnalyse);
+      this.tabSynthesize.Controls.Add(this.tabSynthTab);
+      this.tabSynthesize.Location = new System.Drawing.Point(0, 60);
+      this.tabSynthesize.Name = "tabSynthesize";
+      this.tabSynthesize.SelectedIndex = 0;
+      this.tabSynthesize.Size = new System.Drawing.Size(1128, 600);
+      this.tabSynthesize.TabIndex = 16;
       // 
       // tabPage1
       // 
@@ -1355,14 +1359,6 @@
       this.tabAnalyse.Text = "Analyse";
       this.tabAnalyse.UseVisualStyleBackColor = true;
       // 
-      // analyser1
-      // 
-      this.analyser1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.analyser1.Location = new System.Drawing.Point(3, 3);
-      this.analyser1.Name = "analyser1";
-      this.analyser1.Size = new System.Drawing.Size(1114, 568);
-      this.analyser1.TabIndex = 0;
-      // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
@@ -1410,13 +1406,39 @@
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
+      // tabSynthTab
+      // 
+      this.tabSynthTab.Controls.Add(this.textSynthesizer1);
+      this.tabSynthTab.Location = new System.Drawing.Point(4, 22);
+      this.tabSynthTab.Name = "tabSynthTab";
+      this.tabSynthTab.Padding = new System.Windows.Forms.Padding(3);
+      this.tabSynthTab.Size = new System.Drawing.Size(1120, 574);
+      this.tabSynthTab.TabIndex = 9;
+      this.tabSynthTab.Text = "Synthesize";
+      this.tabSynthTab.UseVisualStyleBackColor = true;
+      // 
+      // analyser1
+      // 
+      this.analyser1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.analyser1.Location = new System.Drawing.Point(3, 3);
+      this.analyser1.Name = "analyser1";
+      this.analyser1.Size = new System.Drawing.Size(1114, 568);
+      this.analyser1.TabIndex = 0;
+      // 
+      // textSynthesizer1
+      // 
+      this.textSynthesizer1.Location = new System.Drawing.Point(8, 6);
+      this.textSynthesizer1.Name = "textSynthesizer1";
+      this.textSynthesizer1.Size = new System.Drawing.Size(527, 307);
+      this.textSynthesizer1.TabIndex = 0;
+      // 
       // Analysis
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1152, 685);
       this.Controls.Add(this.statusStrip1);
-      this.Controls.Add(this.tabControl1);
+      this.Controls.Add(this.tabSynthesize);
       this.Controls.Add(this.toolStripContainer1);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.IsMdiContainer = true;
@@ -1427,7 +1449,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-      this.tabControl1.ResumeLayout(false);
+      this.tabSynthesize.ResumeLayout(false);
       this.tabPage1.ResumeLayout(false);
       this.tabPage1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1452,6 +1474,7 @@
       this.toolStripContainer1.ResumeLayout(false);
       this.toolStripContainer1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
+      this.tabSynthTab.ResumeLayout(false);
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -1473,7 +1496,7 @@
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabSynthesize;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox report;
@@ -1578,6 +1601,8 @@
     private Quantifai.SXE sxe1;
     private System.Windows.Forms.TabPage tabAnalyse;
     private Quantifai.Analyse.Analyser analyser1;
+    private System.Windows.Forms.TabPage tabSynthTab;
+    private Quantifai.Generators.TextSynthesizer textSynthesizer1;
   }
 }
 

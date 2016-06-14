@@ -28,11 +28,11 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 0.2D);
-      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 0.2D);
+      System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
       this.btnAnalyseOpen = new System.Windows.Forms.Button();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.SentimentView = new System.Windows.Forms.ListView();
@@ -46,6 +46,7 @@
       this.listPopularity = new System.Windows.Forms.ListView();
       this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.btnLoadText = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -87,24 +88,24 @@
       // 
       // chart1
       // 
-      chartArea4.Area3DStyle.Enable3D = true;
-      chartArea4.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-      chartArea4.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea4);
-      legend4.Name = "Legend1";
-      this.chart1.Legends.Add(legend4);
+      chartArea3.Area3DStyle.Enable3D = true;
+      chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+      chartArea3.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea3);
+      legend3.Name = "Legend1";
+      this.chart1.Legends.Add(legend3);
       this.chart1.Location = new System.Drawing.Point(394, 66);
       this.chart1.Name = "chart1";
-      series4.ChartArea = "ChartArea1";
-      series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-      series4.Legend = "Legend1";
-      series4.Name = "Series1";
-      dataPoint7.AxisLabel = "AxistLabel";
-      dataPoint7.Label = "MyLabel";
-      dataPoint7.LegendText = "LegendText";
-      series4.Points.Add(dataPoint7);
-      series4.Points.Add(dataPoint8);
-      this.chart1.Series.Add(series4);
+      series3.ChartArea = "ChartArea1";
+      series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+      series3.Legend = "Legend1";
+      series3.Name = "Series1";
+      dataPoint5.AxisLabel = "AxistLabel";
+      dataPoint5.Label = "MyLabel";
+      dataPoint5.LegendText = "LegendText";
+      series3.Points.Add(dataPoint5);
+      series3.Points.Add(dataPoint6);
+      this.chart1.Series.Add(series3);
       this.chart1.Size = new System.Drawing.Size(464, 178);
       this.chart1.TabIndex = 3;
       this.chart1.Text = "chart1";
@@ -162,10 +163,21 @@
       // 
       this.columnHeader4.Text = "Frequency";
       // 
+      // btnLoadText
+      // 
+      this.btnLoadText.Location = new System.Drawing.Point(84, 3);
+      this.btnLoadText.Name = "btnLoadText";
+      this.btnLoadText.Size = new System.Drawing.Size(75, 23);
+      this.btnLoadText.TabIndex = 9;
+      this.btnLoadText.Text = "Load TXT...";
+      this.btnLoadText.UseVisualStyleBackColor = true;
+      this.btnLoadText.Click += new System.EventHandler(this.btnLoadText_Click);
+      // 
       // Analyser
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.Controls.Add(this.btnLoadText);
       this.Controls.Add(this.listPopularity);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.txtAverage);
@@ -197,5 +209,6 @@
     private System.Windows.Forms.ListView listPopularity;
     private System.Windows.Forms.ColumnHeader columnHeader3;
     private System.Windows.Forms.ColumnHeader columnHeader4;
+    private System.Windows.Forms.Button btnLoadText;
   }
 }

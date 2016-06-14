@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Windows.Forms.DataVisualization.Charting;
 
+using Quantifai.Utilities;
+
 namespace Quantifai.Analyse
 {
   public partial class Analyser : UserControl
@@ -27,6 +29,24 @@ namespace Quantifai.Analyse
     {      
       openFileDialog1.ShowDialog();
       AnalyseFile(openFileDialog1.FileName);
+    }
+
+    private void btnLoadText_Click(object sender, EventArgs e)
+    {
+      openFileDialog1.ShowDialog();
+      AnalyseText(openFileDialog1.FileName);
+    }
+
+    void AnalyseText(string sFile)
+    {
+      string s = File.ReadAllText(sFile);
+      TextTools t = new TextTools();
+
+      foreach (KeyValuePair<string, int> item in t.FindPhrases(s)) {
+        string[] subs = new string[] { item.Key, item.Value.ToString() };
+        ListViewItem li = new ListViewItem(subs);
+        SentimentView.Items.Add(li);
+      }
     }
 
     void AnalyseFile(String sFile)
@@ -121,5 +141,7 @@ namespace Quantifai.Analyse
       com.Ascending = Ascending;
       SentimentView.Sort();    
   }
+
+    
   }
 }

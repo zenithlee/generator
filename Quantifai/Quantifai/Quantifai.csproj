@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="Database\MySQL.cs" />
+    <Compile Include="Generators\TextSynthesizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generators\TextSynthesizer.Designer.cs">
+      <DependentUpon>TextSynthesizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mkt\Mkt.cs" />
     <Compile Include="Mkt\Stk.cs" />
     <Compile Include="Mkt\StockClass.cs" />
@@ -126,11 +132,16 @@
       <DependentUpon>SXE.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ListViewItemComparer.cs" />
+    <Compile Include="Generators\Markov.cs" />
     <Compile Include="Utilities\QMath.cs" />
+    <Compile Include="Utilities\TextTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Analyse\Analyser.resx">
       <DependentUpon>Analyser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generators\TextSynthesizer.resx">
+      <DependentUpon>TextSynthesizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -171,6 +182,7 @@
   <ItemGroup>
     <Content Include="Themes\MetroDark\HowToApplyTheme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\Generator\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\Generator\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
