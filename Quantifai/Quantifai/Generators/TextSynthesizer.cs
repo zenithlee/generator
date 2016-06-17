@@ -23,7 +23,7 @@ namespace Quantifai.Generators
       chain.Load(txtInput.Text);
       string result = "";
 
-      while ( result.Length < 300 )
+      while ( result.Length < 1000 )
       {
         result += chain.Output();
       }

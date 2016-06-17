@@ -150,6 +150,9 @@
       this.tabSettings = new System.Windows.Forms.TabPage();
       this.settings1 = new Generator.Options.Settings();
       this.tabAnalyse = new System.Windows.Forms.TabPage();
+      this.analyser1 = new Quantifai.Analyse.Analyser();
+      this.tabSynthTab = new System.Windows.Forms.TabPage();
+      this.textSynthesizer1 = new Quantifai.Generators.TextSynthesizer();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.CampaignTimer = new System.Windows.Forms.Timer(this.components);
       this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -157,9 +160,6 @@
       this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
       this.MarketTimer = new System.Windows.Forms.Timer(this.components);
       this.analysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.tabSynthTab = new System.Windows.Forms.TabPage();
-      this.analyser1 = new Quantifai.Analyse.Analyser();
-      this.textSynthesizer1 = new Quantifai.Generators.TextSynthesizer();
       metrics = new System.Windows.Forms.TabPage();
       metrics.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -180,10 +180,10 @@
       this.VisualAI.SuspendLayout();
       this.tabSettings.SuspendLayout();
       this.tabAnalyse.SuspendLayout();
+      this.tabSynthTab.SuspendLayout();
       this.statusStrip1.SuspendLayout();
       this.toolStripContainer1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).BeginInit();
-      this.tabSynthTab.SuspendLayout();
       this.SuspendLayout();
       // 
       // metrics
@@ -1359,6 +1359,32 @@
       this.tabAnalyse.Text = "Analyse";
       this.tabAnalyse.UseVisualStyleBackColor = true;
       // 
+      // analyser1
+      // 
+      this.analyser1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.analyser1.Location = new System.Drawing.Point(3, 3);
+      this.analyser1.Name = "analyser1";
+      this.analyser1.Size = new System.Drawing.Size(1114, 568);
+      this.analyser1.TabIndex = 0;
+      // 
+      // tabSynthTab
+      // 
+      this.tabSynthTab.Controls.Add(this.textSynthesizer1);
+      this.tabSynthTab.Location = new System.Drawing.Point(4, 22);
+      this.tabSynthTab.Name = "tabSynthTab";
+      this.tabSynthTab.Padding = new System.Windows.Forms.Padding(3);
+      this.tabSynthTab.Size = new System.Drawing.Size(1120, 574);
+      this.tabSynthTab.TabIndex = 9;
+      this.tabSynthTab.Text = "Synthesize";
+      this.tabSynthTab.UseVisualStyleBackColor = true;
+      // 
+      // textSynthesizer1
+      // 
+      this.textSynthesizer1.Location = new System.Drawing.Point(8, 6);
+      this.textSynthesizer1.Name = "textSynthesizer1";
+      this.textSynthesizer1.Size = new System.Drawing.Size(780, 445);
+      this.textSynthesizer1.TabIndex = 0;
+      // 
       // openFileDialog1
       // 
       this.openFileDialog1.FileName = "openFileDialog1";
@@ -1406,32 +1432,6 @@
       // 
       this.analysisBindingSource.DataSource = typeof(Generator.Analysis);
       // 
-      // tabSynthTab
-      // 
-      this.tabSynthTab.Controls.Add(this.textSynthesizer1);
-      this.tabSynthTab.Location = new System.Drawing.Point(4, 22);
-      this.tabSynthTab.Name = "tabSynthTab";
-      this.tabSynthTab.Padding = new System.Windows.Forms.Padding(3);
-      this.tabSynthTab.Size = new System.Drawing.Size(1120, 574);
-      this.tabSynthTab.TabIndex = 9;
-      this.tabSynthTab.Text = "Synthesize";
-      this.tabSynthTab.UseVisualStyleBackColor = true;
-      // 
-      // analyser1
-      // 
-      this.analyser1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.analyser1.Location = new System.Drawing.Point(3, 3);
-      this.analyser1.Name = "analyser1";
-      this.analyser1.Size = new System.Drawing.Size(1114, 568);
-      this.analyser1.TabIndex = 0;
-      // 
-      // textSynthesizer1
-      // 
-      this.textSynthesizer1.Location = new System.Drawing.Point(8, 6);
-      this.textSynthesizer1.Name = "textSynthesizer1";
-      this.textSynthesizer1.Size = new System.Drawing.Size(527, 307);
-      this.textSynthesizer1.TabIndex = 0;
-      // 
       // Analysis
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1469,12 +1469,12 @@
       this.VisualAI.ResumeLayout(false);
       this.tabSettings.ResumeLayout(false);
       this.tabAnalyse.ResumeLayout(false);
+      this.tabSynthTab.ResumeLayout(false);
       this.statusStrip1.ResumeLayout(false);
       this.statusStrip1.PerformLayout();
       this.toolStripContainer1.ResumeLayout(false);
       this.toolStripContainer1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.analysisBindingSource)).EndInit();
-      this.tabSynthTab.ResumeLayout(false);
       this.ResumeLayout(false);
       this.PerformLayout();
 

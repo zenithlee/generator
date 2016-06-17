@@ -36,22 +36,25 @@
       // txtInput
       // 
       this.txtInput.Location = new System.Drawing.Point(14, 14);
+      this.txtInput.MaxLength = 632767;
       this.txtInput.Multiline = true;
       this.txtInput.Name = "txtInput";
-      this.txtInput.Size = new System.Drawing.Size(242, 255);
+      this.txtInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+      this.txtInput.Size = new System.Drawing.Size(346, 379);
       this.txtInput.TabIndex = 0;
       // 
       // txtOutput
       // 
-      this.txtOutput.Location = new System.Drawing.Point(262, 14);
+      this.txtOutput.Location = new System.Drawing.Point(366, 14);
       this.txtOutput.Multiline = true;
       this.txtOutput.Name = "txtOutput";
-      this.txtOutput.Size = new System.Drawing.Size(242, 255);
+      this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+      this.txtOutput.Size = new System.Drawing.Size(364, 379);
       this.txtOutput.TabIndex = 1;
       // 
       // btnProcess
       // 
-      this.btnProcess.Location = new System.Drawing.Point(429, 275);
+      this.btnProcess.Location = new System.Drawing.Point(667, 399);
       this.btnProcess.Name = "btnProcess";
       this.btnProcess.Size = new System.Drawing.Size(75, 23);
       this.btnProcess.TabIndex = 2;
@@ -67,7 +70,7 @@
       this.Controls.Add(this.txtOutput);
       this.Controls.Add(this.txtInput);
       this.Name = "TextSynthesizer";
-      this.Size = new System.Drawing.Size(520, 307);
+      this.Size = new System.Drawing.Size(745, 434);
       this.ResumeLayout(false);
       this.PerformLayout();
 
