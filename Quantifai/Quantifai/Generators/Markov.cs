@@ -26,13 +26,20 @@ namespace Quantifai.Generators
   {
     int RandCounter = 0; //for consecutive calls
     ArrayList startindex = new ArrayList();
-    public Hashtable Words = new Hashtable(1024, .1f);
+    public Hashtable Words = new Hashtable(2048, .1f);
+
+    public void Clear()
+    {
+      Words = new Hashtable(2048, .1f);
+      startindex = new ArrayList();
+    }
     public void Load(string Input)
     {
+      if (Input.Length == 0) return;
       Input = Input.Replace("\r", "");
       Input = Input.Replace("\n", "");
-      startindex = new ArrayList();
-      Words = new Hashtable(1024, .1f);
+     // startindex = new ArrayList();
+      //Words = new Hashtable(1024, .1f);
       Structs.RootWord w = new Structs.RootWord();
       Structs.Child c = new Structs.Child();
       string[] s = Input.Replace("\r\n", " ").Replace("\t", " ").Replace("  ", " ").Split(' ');
@@ -113,7 +120,8 @@ namespace Quantifai.Generators
     {
       string output = "";
       Random r = new Random(++RandCounter + Environment.TickCount + startindex.Count);
-      Structs.RootWord w = (Structs.RootWord)Words[((string)startindex[r.Next(startindex.Count)]).ToLower()];
+      int rIndex = r.Next(startindex.Count);
+      Structs.RootWord w = (Structs.RootWord)Words[((string)startindex[rIndex]).ToLower()];
       output = w.Word + " ";
       Structs.Child c = new Structs.Child();
       ArrayList a = new ArrayList();

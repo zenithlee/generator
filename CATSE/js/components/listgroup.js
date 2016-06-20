@@ -9,7 +9,7 @@ ListGroup = new function() {
 
     this.create = function(ID){
         this.myID = ID;
-    }
+    };
 
     this.show = function( parent ){
         var el = document.createElement("div")
@@ -17,12 +17,12 @@ ListGroup = new function() {
         var html = self.GroupTemplate.replace("{groupid}", this.myID);
         el.innerHTML = html;
         document.body.appendChild(el);
-    }
+    };
 
     this.myNode = function() {
         var el = document.getElementById(this.myID);
         return el;
-    }
+    };
 
     this.addItem = function(ID, title, text, active){
         var el = document.createElement("a");
@@ -36,7 +36,7 @@ ListGroup = new function() {
         this.myNode().appendChild(el);
         el.addEventListener("click", this.clicked);
         self.elements.push(el);
-    }
+    };
 
     this.clicked = function(event) {
         //set active item

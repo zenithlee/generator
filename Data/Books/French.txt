@@ -1,0 +1,1469 @@
+UMI GA KIKOERU
+
+SCRIPTS FRANÇAIS
+ ====================================================================
+SCRIPTS : Umi ga kikoeru (je peux entendre la mer)
+                                                                      (French scripts -- Please keep the headlines intact)
+Version Française 0.99 - Novembre 19998.
+=====================================================================
+
+Ces scripts sont une traduction originale du film "Umi ga kikoeru", réalisé par la jeune équipe 
+des fameux studios GHIBLI. Ceci est le fruit d'un travail de fans, qui n'est en rien une atteinte 
+à de quelconques droits d'auteurs, ni une traduction officielle ; il s'agit d'offrir à un public 
+passionné ou non une traduction la plus honnête et la plus fidèle possible de cette oeuvre, 
+et d'en permettre une bonne compréhension. 
+Nous espérons ainsi contenter les personnes imperméables à la langue originale, et nous 
+opposer aux tendances à la déontologie douteuse de certains éditeurs quant aux adaptations 
+(P2, Oneamis, Tokyo Bab, que de martyrs...)
+
+Les seules voies de diffusion de ces scripts étant les voies personnelles, _n'hésitez pas à le 
+distribuer_ à toute personne susceptible d'être intéressée. Nous serions ravis de les voir 
+placés sur des sites Internet personnels.
+Toute utilisation commerciale ou toute altération est, bien sûr, interdite sans consentement.
+Ne modifiez en rien le contenu, et préservez ces notes s.v.p..
+
+La conception de ces scripts a pris plusieurs mois, et le plus grand soin a été apporté pour
+prendre pour base la version originale des dialogues (les années d'études payent^^). 
+L'adaptation est donc _très littérale_, et pensée pour une lecture en direct.
+
+Toute suggestion, correction, ou commentaire, est le bienvenu ! 
+(Contactez " nospan-sylg@chez.com " sans le nospan- ).
+Signalez nous toute ambiguité. Les lettres d'encouragement sont également 
+appréciées ^_^.
+--Sylvain GOUPIL  :yashao@rocketmail.com
+----------
+Notice :
+*A gauche, les personnages, à droite les paroles.
+Les prénoms ont été retenus pour presque tous les personnages. Les Japonais s'appellent 
+très souvent par les noms de famille comme avec les prénoms, avec diverses nuances ; ceci est 
+préservé dans ces scripts. Par contre, les suffixes (-kun, -san, etc.) ont été abandonnés.
+Lorsqu'il peut y avoir confusion, les noms de famille sont, les premières fois, indiqués en majuscules.
+*"[...]" sont des indications sur les actions en cours, le temps, et surtout sur les lieux de l'action.
+*"{...}" indique la traduction éventuelle de quelque chose écrit à l'écran (panneaux, etc.)
+*Les différences de dialectes dans ce film sont très importantes. Ces nuances sont 
+remarquables à l'écoute avec un peu d'entraînement. Dans ces scripts, le Tôkyô-ben de Rikako est rendu 
+par un niveau de langue un peu plus correct que ceux de Kôchi. C'est pourquoi le protagoniste a parfois des répliques très "parlées", ce n'est pas innocent, et plutôt fidèle. 
+Ceci n'a pas lieu lors de la narration (en VO comme ici).
+*  "Taku :" indique les paroles réelles de Taku.
+  "Taku *:" indique les pensées de Taku au moment de la scène.
+  "Taku °:" indique que Taku est ici _narrateur_ passif.
+*Les notes en fin de script vous fourniront plus de détails.
+-----------------
+
+
+{Tokuma Shôten éditions,
+Réseau Nihon Terebi,
+et Studio Ghibli,
+présentent}
+
+{Une histoire de 
+HIMURO Saeko,}
+
+[Gare de Kichijôji, Tôkyô] 
+Annonce :
+        Un train va bientôt arriver voie n° 4. Pour votre sécurité, veuillez rester derrière la 
+        ligne blanche.
+
+Titre :
+   Umi ga kikoeru   
+(Je peux entendre la mer) (1)
+
+[Chez Taku, Tôkyô]
+[Aéroport de Tôkyô]
+{Panneau : Kôchi /KOCHI -- Vol n° 56 --14 h 00 -- Porte n°1}
+[Dans l'avion]
+Annonce : 
+        Merci de votre patience ; notre avion est sur le point de décoller.
+Taku °:
+        La première fois que Matsuno et moi avons rencontré Rikako,
+        c'était il y a deux ans, en 2nde année de lycée, un jour de plein été comme celui-là.
+        Ce jour là, j'ai reçu un appel de Matsuno pendant mon petit job.
+[Au restaurant, à Obiyamachi]
+Cuisinier :
+        Allez "l'intérimaire", lave ça vite ! Il y en a d'autres qui arrivent.
+Taku :
+        Ouiii.
+Patronne :
+        Taku, téléphone.
+Taku :
+        Merci beaucoup.
+Taku :
+        Allô ?
+Yutaka :
+        Morisaki.
+Taku :
+        Oh, Matsuno ?
+Yutaka :
+        Tu finis tôt aujourd'hui ; tu pourras passer à l'école ?
+        Le séminaire est fini, mais je vais rester ici un moment.
+Taku :
+        Compris.
+        Excusez-moi. J'ai une affaire urgente aujourd'hui, je ne pourrai pas travailler cet après-midi.
+Patronne :
+        Attends une seconde...
+Taku :
+        "Excusez-moi de partir si tôt".(2)
+Patron :
+        On ne peut plus rien attendre des jeunes.
+Taku :
+        A plus tard !
+[En vélo, Taku passe du centre, au port de Kôchi, et à son école](3)
+Taku :
+        Matsuno.
+Yutaka :
+        Tu es venu si vite !?
+Taku :
+        C'est toi qui m'as appelé !
+Yutaka :
+        Viens voir un peu.
+Taku :
+        Qui c'est ? On la voit mal.
+Yutaka :
+        C'est la nouvelle élève transférée dans ma classe. Elle s'appelle Rikako MUTO.
+Taku :
+        Pour le second semestre ?
+Yutaka :
+        Oui.
+Taku :
+        C'est étrange... Les nouveaux sont rares en deuxième année. (4)
+Yutaka :
+        C'est pourtant son cas. Et elle vient de Tôkyô.
+        Mon prof KOSUGI m'a demandé de lui faire visiter l'école.
+Taku :
+        Ah ? Parce que tu es chef de classe ?
+        ... On dirait que ça te plaît.
+Yutaka :
+        Ca me branche en effet, MUTO est très mignonne !
+Taku :
+        Eh ?... Je ne la voie pas, et je ne peux pas entrer dans le bureau des profs.
+Yutaka :
+        Nous ne pouvons pas y aller uniquement pour la voir, mais si tu veux on peut prétendre avoir une question...
+Taku :
+        Non, ça ira, je n'ai pas envie d'entrer là-dedans. Les profs savent que je ne prends aucun cours d'été 
+        puisque je travaille.
+Yutaka :
+        Est-ce que tu penses encore à ce voyage du collège ?
+Taku :
+        Je m'en fiche. Mais je n'aime pas la façon dont ils ont annulé ce voyage et se rattrapent en nous 
+        emmenant dans un endroit fantaisiste comme Hawaii.
+Yutaka :
+        Tout le monde est ravi d'aller à Hawaii, alors l'école peut facilement manipuler les élèves. Les 
+        profs disent que l'on devrait s'amuser, puis concentrer tous nos efforts pour les examens d'entrée.
+Taku :
+        Ca prend beaucoup de fric d'aller à Hawaii, alors il faut que je bosse!
+Yutaka :
+        Ce serait idiot que tu t'entêtes, et que tu finisses derrière les autres élèves. Essaies d'étudier un 
+        peu.
+Taku :
+        Ouais... Au fait, qu'est-ce qu'il t'arrive aujourd'hui ? Quelque chose t'inquiète ?
+Yutaka :
+        Non, je voulais juste te parler un peu.
+Taku :
+        Je vais prendre mon vélo, attends-moi à la grille.
+Yutaka :
+        OK.
+Taku °:
+        Du collège au lycée, 6 ans durant, MATSUNO et moi n'avons jamais été dans la même classe. Malgré 
+        cela, j'ai toujours senti qu'il était mon meilleur ami.
+        La première fois que j'ai rencontré MATSUNO, c'était lorsque l'école a brutalement annulé notre
+        voyage de collège.
+[2 ans et quelques plus tôt, au même collège-lycée]
+Annonce :
+        Cela est certes soudain, mais nous avons dû annuler le voyage des Troisièmes année de collège 
+        de cette année. (5)
+        Nous avons décidé qu'à présent il n'y aurait plus qu'un seul voyage du collège au lycée.
+        Vos notes ont terminé dernières des écoles publiques lors du dernier examen national annuel. (6)
+        Nous ne pouvons regarder en face les anciens ni vos parents, qui ont préservé la bonne tradition.
+        Nous voulons que les aînés du lycée se battent lors du second examen afin de rétablir l'honneur.
+        S'ils n'y parviennent pas, le sacrifice des Troisièmes aura été inutile.
+Elève :
+        Allons voir Sayama plus tard. Hey, Taku !
+Taku °:
+        C'était tellement ridicule, que certains d’entre nous sommes allés protester auprès des professeurs.
+[Bureau des profs]
+Taku :
+        Eh bien, nous n'arrivons pas à comprendre. Nous ne pensons pas que nos notes monteront en 
+        annulant le voyage du collège. Comme il n'y a pas de bonne explication je crois que beaucoup 
+        d'entre nous ne sommes pas très convaincus...
+Proviseur :
+        Vous pourriez vous plaindre si vous étiez classé parmi les 100 premiers élèves ! (7)
+Taku :
+        J'étais 89e cette fois-ci !
+Proviseur :
+        ... Est-ce que vous n'agissez pas ainsi parce que votre professeur est une femme !?
+Taku °:
+        Je ne pensais pas que l'école raviverait les protestations après cela. Cependant, au 
+        rassemblement matinal une semaine plus tard...
+Proviseur :
+        La décision d'annuler le voyage du collège a été approuvée même par le conseil parental.
+        Certains élèves semblent encore en faire grand cas, aussi nous souhaiterions qu'ils s'en 
+        expliquent clairement.
+        Afin de nous assurer de qui n'est pas satisfait, que ceux-ci veuillent bien lever la main dès 
+        maintenant.
+Fille :
+        Ils sont courageux, hein ?
+Taku °:
+        C'était Yutaka MATSUNO.
+Proviseur :
+Très bien. Il y aura une réunion d'explication. Venez en classe d'art après l'école s.v.p. 
+Ce sera tout.
+[Classe d'art]
+Tableau :
+        La réunion d'explication a été ajournée. Inscrivez votre nom et n° de classe sur une feuille de 
+        papier et exprimez votre opinion sur l'annulation du voyage du collège.
+Feuille :
+        3e année - Classe 3 - Taku MORISAKI
+Feuille :
+        Cette annulation n'a aucun sens, et je pense qu'il ne s'agit que de conforter la conscience des 
+        professeurs et des parents.
+[Yutaka entre]
+Yutaka :
+        Je viens de voir YAMAMURA dans les escaliers. Il m'a demandé de te dire qu'il était désolé. 
+        Pardonnes-lui.
+Taku :
+        Quel idiot.
+Feuille :
+        Yutaka MATSUNO - 3e année - Classe 4
+        Je ne puis comprendre l'annulation car c'est une décision strictement partiale.
+        Dix ou vingt ans après être diplômé de cette école, je penserai toujours que vos décisions 
+        étaient très injustes.
+Taku :
+        Waoh... Tu penses déjà à dix ou vingt ans dans l'avenir...
+Taku °:
+        Depuis lors, à l'intérieur de moi, Matsuno a toujours été un peu différent des autres.
+[Retour aux vacances d'été]  
+Yutaka :
+        Voici Taku MORISAKI, de la classe 4.          
+        Et voici notre nouvelle élève, Rikako MUTO.
+Rikako :
+        Bon, j'y vais. "Tu m'aideras pour le second semestre".  (8)
+Taku :
+        Toi alors... déjà après elle !?
+Yutaka :
+        Mais pas du tout. Elle m'a demandé où était la librairie Kinsendo. Comme ses bouquins sont 
+        là-bas, elle voulait les prendre.
+[Centre-ville]
+Taku :
+        ... et j'ai appris que le cuistôt à mon boulot avait été un gros gars de la mafia. Parfois il squatte 
+        et fume exactement comme à leur habitude.(9)
+        ... Qu'est-ce qu'il y a ?
+Yutaka :
+        Eh bien, je me demandais si elle avait des problèmes pour être transférée à cette période de 
+        l'année.
+Taku *:
+        D'accord, je comprends... Je vois pourquoi Matsuno m'a réellement appelé...
+Taku :
+        Peut-être que son père a été muté, je pense.
+Yutaka :
+        A plus tard !
+Taku °:
+        Quand j'ai réalisé que Matsuno était attiré par elle, je me suis particulièrement inquiété.
+        "Ne vas pas vers elle. Les femmes ne s’intéressent qu’à l’apparence d'un mec. Les femmes
+        ne peuvent jamais trouver ton vrai fond..."
+[Le lycée]
+Elève :
+        J'y vais !!
+Taku °:
+        Quand le second semestre commença, Rikako fit une forte impression parmi les innocents jeunes 
+        provinciaux que nous étions.
+Elève A :
+        Hey, Morisaki, regarde du côté des filles, c'est intéressant.
+Taku :
+        Tu parles d'Ariga...? Ils sont impressionnants, je sais.
+Elève A :
+        Non, le court du fond !
+Taku :
+        Elle "touche bien"...!
+Elève A :
+        SERI, du club de tennis, s'est faite traiter comme une gamine.
+[Vestiaires]
+Elève B :
+        Muto a été excellente !
+Elève A :
+        Elle joue comme une pro ! Elle a dû s'entraîner dur.
+Elève C :
+        Les filles de Tôkyô frappent vraiment la balle différemment.
+Elève B :
+        C'est fascinant !
+Elève C :
+        Et elle a de belles jambes.
+Elève A :
+        Mais une fille comme ça a l'air d'être entêtée.
+Taku :
+        Ah, Muto s'est faite plutôt remarquer !
+Yutaka :
+        Ne dis pas des choses comme ça !
+Taku :
+        Hey, Matsuno !
+Yutaka :
+        Désolé. Il semble que Muto ait été un peu perdue en classe. Je m'inquiétais de ce qu'elle soit 
+        différente.
+Taku :
+        Hm... perdue ?
+Yutaka :
+        De façons très diverses.
+
+[Tableau de résultats] :
+        {N° 12 : MUTO Rikako.}
+Taku :
+        Elle s'est classée 12e si rapidement.
+Tadashi :
+        Elle réussit en sport comme en études, c'est une "Superwoman" !
+        Et toi Taku, tu...
+Taku :
+        92ème !
+Tadashi :
+        Tu étais un si bon élève au collège...
+Fille A : 
+        Quelle attitude !
+Fille B :
+        Une snob !
+Akiko :
+        Arrêtez ! Ne parlez pas comme ça.-- Le cours va commencer.
+Tadashi :
+        Qu'est-ce que tu as ? Perdu dans l'admiration de Muto ?
+Taku :
+        Non. Je pensais juste qu'elle n'avait pas l'air si heureuse.
+Tadashi :
+        A quoi penses-tu !? elle est 12ème ! 12ème !
+[Chez Taku]
+Mère de Taku :
+        Il paraît qu'une certaine MUTO a été transférée dans ton niveau.
+Taku :
+        Hm. Pourquoi ?
+Mère de Taku :
+        C'est une élève brillante dit-on. Pas étonnant qu'elle soit de Tôkyô.
+Taku :
+        Comment tu sais tout ça ?
+Mère de Taku :
+        C'était au meeting de l'Union Agricole.
+        Sa mère est la soeur du propriétaire des fameux vergers MUTO.
+        A propos de la mère de Rikako...
+Taku :
+        Hum...?
+Mère de Taku :
+        Elle est revenue ici à cause de problèmes familiaux, en ramenant son fils et sa fille.
+Taku :
+        Problèmes familiaux ?... Ils ont peut-être divorcé.
+        Je me demande si le père de Muto est toujours à Tôkyô.
+Mère de Taku :
+        Ca je ne sais pas.
+Taku :
+        "C'était très bon". (2)
+Mère de Taku :
+        Atsushi ! Pourquoi est-ce que tu en mets partout !?
+Taku :
+        Pauvre Muto. Si elle travaillait si bien elle pouvait aller dans un bon lycée de Tôkyô.
+        C'est dommage que les enfants aient dû venir à cause de leurs parents.
+Mère de Taku :
+        C'est différent pour une mère ! N'importe laquelle emporterait ses enfants avec elle !
+Taku :
+        Qu'est-ce qui te prend, d'être si énervée? 
+Mère de Taku :
+        Cela a dû être difficile pour elle de rentrer comme ça. Comment pourrait-elle laisser ses enfants 
+        et penser à quelque chose comme qu'ils aient une bonne école ?
+        La plupart des mères dans ce cas feraient pareil.
+Taku :
+         ... par expérience, hein.
+Mère de Taku :
+        Tu devras être gentil avec Muto. Ca ne doit pas être évident d'arriver dans un endroit pareil.
+Taku :
+        Oui, oui...
+{télévision : Gokaider !!!}(10)
+[Plus tard]
+Mère de Taku :
+        Taku ! Taku, téléphone !
+Taku :
+        Oui !
+        Allô ? ah, Matsuno ? Comment va ?
+Yutaka :
+        Bien.
+Taku :
+        Qu'est-ce qu'il y a ?
+Yutaka :
+        Ce n'était pas nécessaire que je t'appelle mais...
+Taku :
+        Uh ?
+Yutaka :
+        Je suis allé chez Muto aujourd'hui.
+Taku :
+        Chez Muto ?
+Yutaka :
+        Muto était absente avec un rhume aujourd'hui, et j'ai appris qu'elle vivait seule, alors je me suis 
+        inquiété.
+Taku :
+        Elle vit toute seule...?
+        Ce n'est pourtant pas si loin de Hariga à l'école.
+Yutaka :
+        Non.
+Taku :
+        Et tu es allé la voir par toi-même ?
+Yutaka :
+        Oui. Quand j'y suis allé, Muto était seule et dormait.
+Taku :
+        Elle dormait... et...?
+Yutaka :
+        C'est tout.
+Taku :
+        Oui.
+Yutaka :
+        C'est tout.
+Taku :
+        Oui.
+Taku *:
+        Tu aimes ce genre de filles, Matsuno...
+Taku °:
+        Mars arriva, et nous sommes finalement partis pour le voyage du lycée que nous attendions tant.
+[Hawaii]
+Elève 1 :
+        Morisaki.
+Taku :
+        Hein ?
+Elève 1 :
+        Tu ne vas pas à la plage ?
+Elève 2 :
+        On devra rentrer à Kôchi demain.
+Taku :
+        C'est que, mon estomac est un peu dérangé depuis ce matin.
+Elève 1 :
+        Mon pauvre vieux...
+Elève 2 :
+        Bon, à plus.
+Taku :
+        Ouais.
+Taku °:
+        Et puis, ce voyage du lycée allait me ruiner la vie, jusqu'à beaucoup plus tard.
+Rikako :
+        Morisaki !... Pourrais-tu me prêter de l'argent ?
+Taku :
+        De l'argent ? Qu'y a-t-il ? Tu as trop dépensé ?
+Rikako :
+        Euh, et bien...
+        En fait, il semble que j'aie perdu tout mon argent.
+Taku :
+        Ah !? C'est un gros problème ! Tu l'as signalé à ton prof ?
+        Si ce sont des Travelers Cheques et que tu les contactes, tu pourras les récupérer !
+Rikako :
+        Je n'ai pas envie de me faire gronder.
+Taku :
+        Qu'est-ce que tu dis ?! Sois sérieuse, ton argent est très important !
+Rikako :
+        Hi, hi, hi...
+        Excuse-moi. Tu avais comme l'accent d'un acteur de vieux films. On s'assoit ?
+        J'étais aussi très ennuyée. Je vais t'expliquer clairement :
+        Mon argent était en liquide parce que je trouvais les Travelers Cheques peu pratiques, alors...
+Taku :
+        Ce n'étaient que des dollars ?
+Rikako :
+        Oui, environ $400. Ils ont disparu avant même que j'aie pu en utiliser.
+Taku :
+        Tu n'aurais pas dû emmener tout l'argent en liquide. Les 30 000 autres Yen étaient sensés être 
+        en Travelers Cheques.
+Rikako :
+        Mais personne ne respecte toutes ces règles ! Et puis quoi, voilà que tu parles comme un prof !
+        Es-tu un élève si modèle ?! C'est bien différent de ce que j'ai entendu sur toi, je suis déçue.
+Taku :
+        ... Avec ton accent de Tôkyô on croirait ton attitude provocatrice.
+Rikako :
+        Tu dis ?... Je n'avais pas l'intention de me disputer !
+        Eh ?
+Taku :
+        Ouais, et moi je ne suis pas un acteur démodé !
+Rikako :
+        Morisaki, tu es du genre plutôt rancunier. C'est la première fois qu'on me dit que je semble 
+        provocatrice. Est-ce qu'on me trouve vraiment ainsi ?
+Taku :
+        Oui ,tout le monde le pense. Personne ne te le dit parce que tu leur répondrais qu'ils ont l'air 
+        d'acteurs de vieux films.
+Rikako :
+        Ca va, arrêtes !... C'était de ma faute. Je ne voulais pas me moquer de toi.
+        Mais dans les films, ils utilisent volontairement un tel accent provincial : Je ne pensais pas que cela 
+        existait vraiment, mais quand je suis arrivée à Kôchi, tout le monde parlait avec cet accent. Ca m'a 
+        étonné.
+        C'est la première fois que j’en parle à quelqu'un. Je le pensais, mais je ne l'ai jamais dit.
+Taku :
+        Ouais, tu ferais mieux pas.
+Rikako :
+        Hm... Le langage est quelque chose d'important.
+        Parfois je n'arrivais même pas à comprendre. J'ai l'impression d'être détestée lorsque que je leur 
+        demande ce qu'elles veulent dire.
+Taku :
+        Détestée ?... Par qui ?
+Rikako :
+        Les mecs de la classe surtout. Ils ne me parlent que très rarement, à part le chef de classe, 
+        Matsuno. C'est un type sympa, non ?
+Taku :
+        Oui, Matsuno est un chic type.
+        C'est de Matsuno que tu as entendu parler de moi ?
+Rikako :
+        Oui. On t'a vu travailler pendant les vacances de Noël, avec ton tablier au restaurant 
+       d'Obiyamachi.
+       Matsuno disait que tu travaillais très dur. Et puis il m'a raconté plein de choses : Comme tu étais 
+       incontrôlable au collège, et votre "réunion d'explication"...
+Taku :
+        Il t'a même parlé de ça ?
+Rikako :
+        Dis, en ayant travaillé pendant l'été et l'hiver tu as dû gagner beaucoup d'argent.
+Taku :
+        Combien il te faut ?
+Rikako :
+        Combien peux-tu me prêter ?
+Taku :
+        Je n'ai apporté que 60 000 Yen et 400 Dollars.
+        Je n'en ai rien dépensé : je pourrais prêter les 300 Dollars.
+Rikako :
+        C'est vrai ? Dis, tu ne pourrais pas plutôt me prêter 60 000 Yen ?
+Taku :
+        Attends-moi ici.
+        ... 60 000 Yen !?
+Rikako :
+        Je te remercie beaucoup, Morisaki-sama.
+Taku :
+        Comment veux-tu l'argent ? Je te le donne ici ?
+Rikako :
+        Tu es quelqu'un de très prudent, n'est-ce pas. Assieds-toi dans cette chaise.
+        Enveloppes l'argent dans ce mouchoir et redonnes-le moi.
+Taku :
+        Ah, on a l'air de faire un commerce illégal...
+Rikako :
+        Je te rembourserai de retour au Japon, mais ça risque de ne pas être très tôt. Je sais où avoir 
+        l'argent, mais ce ne sera pas tout de suite.
+Taku :
+        Bah, peu importe quand tu l'auras.
+Rikako :
+        Est-ce que tu pourrais n'en parler à personne ?
+Taku :
+        Oui mais, pourquoi ?
+Rikako :
+        Si Maman l'apprend elle va devenir folle.
+Taku *:
+        Maman ?...
+        Quel genre de fille est-elle donc ? Ah !!
+Yutaka :
+        Salut.
+Taku :
+        J'étais surpris que cette fille me connaisse, et euh...
+        On dirait que vous avez fait la pair tous les deux, et que vous avez eu un rancard...
+Yutaka :
+        Ce n'était pas un rendez-vous.
+        Quand je l'ai rencontrée pendant les vacances d'hiver à Obiyamachi, j'ai beaucoup hésité mais je
+        l'ai invitée à voir un film. A mon étonnement elle a accepté.
+        J'étais nerveux et j'ai pas su quoi lui dire. Mais quand on est passés devant le restaurant où tu 
+        travaillais j'en ai profité pour remplir cette conversation un peu vide. Tu m'as sauvé.
+Taku :
+        C'est parce que tu lui as parlé de moi qu'elle m'a demandé de lui faire un prêt.
+Yutaka :
+        Elle t'a demandé... un prêt ?
+Taku :
+        Oui. Elle disait qu'elle avait perdu du fric.
+        Elle m'a vu passer, et elle a dû se souvenir que j'avais travaillé et gagné de l'argent.
+Yutaka :
+        Eh...? Elle a perdu de l'argent !? La pauvre.
+        Au fait, tu veux faire un tour en ville ?
+Taku :
+        Bonne idée !
+Yutaka :
+        Je vais laisser mon maillot dans ma chambre, attends une seconde.
+Taku :
+        Ok.
+[Le soir]
+Fille :
+        Tu es bronzée !!
+Garçon :
+        Délicieux. -Regarde ça comme c'est bon !
+Rikako :
+        Je t'avais dit de n'en parler à personne, et tu l'as déjà dit à Matsuno.
+Taku :
+        Eh ?... Qu'est-ce que Matsuno a dit ?
+Rikako :
+        Il m'a demandé si j'avais besoin de l'argent qu'il lui restait.
+Taku :
+        Ah, c'est un type vraiment sympa, non ?
+Rikako :
+        Je lui ai emprunté 20 000 Yen, mais n'en parle plus à personne ! Je vais avoir des ennuis !
+        Tu es bavard pour un mec, Morisaki.
+Taku :
+        Mais quelle fille est-elle, pour être élevée comme ça !??
+Taku °:
+        Le lendemain, nous sommes revenus à Kôchi.
+        J'avais acheté des "photos coquines" de Rikako à mon ami Suda, en guise de revanche. Je 
+        pensais que l'idée avait marché, et que je n'aurai plus affaire à elle.
+        Quand la troisième année a commencé, Rikako et moi étions dans la même classe. (11)
+Rikako :
+        Yumi, on déjeune ?
+Yumi :
+        Oui !
+Taku °:
+        Rikako s'était trouvée une amie. Elle était de la classe, s'appelait Yumi KOHAMA, et était plutôt 
+        tranquille.
+        Toutefois, même durant la "Golden week", Rikako ne m'avait toujours pas remboursé.(12)
+        C'était comme si elle avait complètement oublié.
+[Chez Taku]
+Mère de Taku :
+        Taku, téléphone. C'est de la part de KOHAMA.
+Taku :
+        Allô, Kohama ? Tu appelles d'une cabine ?
+Yumi :
+        Morisaki, je ne sais pas ce que je dois faire.
+Taku :
+        Qu'est-ce qu'il y a !?
+Yumi :
+        Aujourd'hui, Rikako et moi devions aller à Osaka pour un concert et y rester deux nuits.
+        Mais arrivées à l'aéroport, Rikako a dit qu'en réalité elle allait à Tôkyô. Elle disait qu'elle avait tout prévu. 
+        Et là je lui ai dit que j'allais aux toilettes, pour pouvoir t'appeler.
+Taku :
+        Qu'est-ce que c'est que tout ça !?
+Yumi :
+        Rikako a dit que ce n'était pas si grave d'aller à Tôkyô comme ce n'était que pour deux nuits. 
+        Elle m'a dit qu'elle avait déjà acheté deux tickets pour Tôkyô. mais je ne veux pas mentir à ma 
+        mère !
+Taku :
+        Calme-toi. Tu n'as qu'à ne pas aller avec elle. Refuse simplement et laisse-la partir seule.
+Yumi :
+        Mais la mère de Rikako n'a accepté ce voyage que parce que je l'accompagnais, alors il faut 
+        qu'on parte ensemble. Qu'est-ce que je dois faire ???
+Taku :
+        Ce que tu peux... Eh ? Attends un peu, pourquoi tu me le demandes à moi, d'abord !?
+Yumi :
+        Parce que Rikako m'a dit qu'elle t'avait emprunté de l'argent pour les billets. Si vous êtes si 
+        proches tu dois pouvoir la convaincre.
+        S'il te plaît Morisaki, viens à l'aéroport. Notre vol est à 11h 30, il te reste une heure et demi.
+        Je t'en prie, viens vite !
+Taku *:
+        Cet argent !
+        ... Ce n'était qu'un mensonge, qu'elle avait perdu son argent à Hawaii !
+        C'était pour le voyage d'aujourd'hui ! Comment a-t-elle pu me prendre pour un tel idiot ?! 
+        C'en est trop !
+Yumi :
+        Morisaki, tu es venu !
+Taku :
+        Où est Muto ?
+Yumi :
+        Elle est aux toilettes. Elle m'a dit qu'elle ne se sentait pas bien depuis ce matin. J'espère qu'elle se 
+        sentira assez mal pour devoir annuler ce voyage, mais…  
+Taku :
+        De toute façon, ce que fait Muto est mal. Si tu es son amie, pourquoi tu ne lui donnes pas une 
+        leçon ?
+Yumi :
+        Mais Rikako dit qu'elle veut vraiment aller voir son Papa. Je la comprends, la pauvre.
+Taku :
+        Papa ? Il s'agit de son père ?
+Rikako :
+        Quoi !? Qu'est-ce que tu fais ici ?
+        Tu l'as appelé, Yumi ?
+Yumi :
+        Rikako, arrêtons de mentir à nos parents. Si tu disais la vérité à ta mère ?
+Rikako :
+        Maman ne me laisserait jamais y aller !
+        C'est pour ça que j'ai tout préparé depuis longtemps.
+Taku :
+        Ah, attendez une seconde.
+        Kohama, pourquoi ne pas appeler ta mère, lui dire que tu te sens mal et que tu veux rentrer ?
+Yumi :
+        Euh, mais...
+Taku :
+        Dis-lui aussi que Muto s'inquiétait mais ne voulait pas gâcher les places de concert, alors elle est partie 
+        toute seule.
+        Tes parents te disent beaucoup de choses, mais c'est juste qu'ils s'inquiètent pour toi. Je ne pense 
+        pas qu'ils disent quoi que ce soit de Muto.
+Yumi :
+        C'est vrai !
+        Ma mère ne connaît pas la tienne, elle ne lui dira rien de tout ça !
+Rikako :
+        Très bien, vas-y.
+Yumi :
+        Je vais téléphoner !
+Taku :
+        Kohama a été vraiment bien élevée, pas comme d'autres. 
+        Elle n'a pas changé d'avis pour aller s'amuser à Tôkyô. Uh !...
+        ... Tu ne vas pas très bien ?
+Rikako :
+        C'est à cause du 1er jour de mes règles. Parfois je dois même rester couchée à cause d'anémie.
+Taku :
+        Rester couchée...?
+Rikako :
+        Les hommes ne connaissent pas ça.
+Taku :
+        Est-ce que tu vas partir quand même ?
+Rikako :
+        Je récupérerai l'argent que je t'ai emprunté auprès de mon père, alors ne t'inquiètes pas, d’accord ?
+Taku :
+        Si tu es nerveuse d'y aller toute seule... je pourrais y aller avec toi...
+Rikako :
+        C'est vrai ? Tu ferais vraiment ça pour moi ?
+[Dans l'avion]
+Taku :
+        Dis-moi...
+Rikako :
+        Oui ?
+Taku :
+        Ton père sait que tu viens, n'est-ce pas ?
+        Il viendra à l'aéroport d'Haneda ?
+Rikako :
+        Je ne pense pas.
+Taku :
+        Tu penses que ton père me trouvera un endroit pour dormir ?
+Rikako :
+        Bien sûr. Je le lui demanderai.
+        Tu sais, j'ai l'intention de dire à Papa que j'aimerais retourner avec lui, vivre à Tôkyô.
+Annonce :
+        Votre attention s'il vous plaît : cet avion va bientôt atterrir à l'aéroport d'Haneda...
+{Panneau : quai d'embarquement monorail}
+Taku °:
+        En marchant dans Tôkyô avec Rikako, je pensais qu'elle m'avait eu encore une fois. Pourtant je 
+        ne pouvais pas la laisser comme ça aller seule à Tôkyô.
+Rikako :
+        Vraiment, la sortie Sud est magnifique avec ces cerisiers. Le bas-quartier de Seijo est par ici.
+Taku :
+        Eh...
+Rikako :
+        La maison des parents de Papa était par ici ; c'étaient des champs autrefois.
+Taku :
+        Ah ?
+Rikako :
+        Et puis une société les a acquis, et on nous a donné la meilleure maison.
+Taku :
+        Ah...
+Rikako :
+        C'en était même trop grand pour une famille de quatre : Papa doit se sentir un peu triste tout 
+        seul.
+Taku :
+        Il va être heureux de te voir lui rendre visite.
+[Devant l'immeuble]
+Rikako :
+        Ca faisait longtemps !...
+Femme : 
+        Qui est-ce ?
+Rikako :
+        Euh, je suis bien chez Mr MUTO ?
+Femme : 
+        Oui, mais...
+Rikako :
+        Est-ce que Papa est là .
+Mr MUTO :
+        Rikako ? Attends dans le hall, j'arrive.
+
+Mr MUTO :
+        Ah, ah, c'est une surprise que tu sois venue sans prévenir. Tu es venue seule ?
+Rikako :
+        Avec mon "boyfriend" de Kôchi. Comme c'est les vacances on est venus ensembles.
+Mr MUTO :
+        Ah bon ? Merci de t'en être occupé. Si on prenait un thé quelque part ?
+Rikako :
+        Je voudrais voir la maison. Qu'est devenue ma chambre ?
+Mr MUTO :
+        Bon, montons.
+        Hm, toi, je suis désolé mais, ne pourrais-tu pas patienter un petit peu ici ?
+Taku :
+        O-Oui... pfff...
+[Une femme passe]
+Mr MUTO :
+        Morisaki. Je te suis reconnaissant d'avoir raccompagné Rikako d'aussi loin.
+        Il paraît que tu n'as pas encore trouvé où loger, aussi je t'ai réservé une chambre dans cet 
+        hôtel.
+       Et puis, Rikako t'a emprunté de l'argent paraît-il. Merci beaucoup.
+
+Taku °:
+        Je me sentais sincèrement désolé pour elle.
+Taku :
+        Ah, allô, Maman ?
+Mère de Taku : 
+        Taku ! On va bientôt dîner, dépêches-toi de rentrer.
+Taku :
+        C'est que, je suis occupé et je ne peux pas rentrer.
+Mère de Taku :
+        Dans ce cas on va commencer à dîner. Ne rentres pas trop tard.
+Taku :
+        En fait je suis à Tôkyô...
+Mère de Taku :
+        Tôkyô ? Qu'est-ce que tu me racontes, je t'ai vu ce matin.
+Taku :
+        Mais j'ai "sauté" en avion jusqu'à Tôkyô.
+Mère de Taku :
+        Ehhhh !?
+Taku :
+        J'devais accompagner quelqu'un.
+Mère de Taku :
+        Qui est ce "quelqu'un" ?
+Taku :
+        De toute façon je reviens après-demain.
+Mère de Taku :
+        Expliques-moi ça un peu mieux...
+[On frappe]
+Mère de Taku :
+        Allô ? Allô !?
+Taku :
+        Ah, je t'expliquerai dès que je rentrerai ; là je dois raccrocher.
+Mère de Taku :
+        Attends, Taku !
+Taku :
+        Muto...
+        Qu'est-ce que tu as ?
+Rikako :
+        Je vais rester ici. comme la note revient à Papa, j'en ai bien le droit, non ?
+Taku °:
+        Eh...
+        C'était encore pire que dans un "drama", je pensais. (13)
+Taku :
+        Muto. Tu prends une bière ?
+        Tu ne bois pas ? Parfois on va boire discrètement apres l'école...
+Rikako :
+        Fais-moi un "Kokuhai". (14)
+Rikako :
+        Nous en buvions chez des amis, lors de fêtes, entre camarades. (15)
+Rikako :
+        Papa disait qu'il partait en voyage avec son amie pendant ces jours fériés.
+Taku :
+        Ah ouais ? Ce sont les vacances !
+Rikako :
+        Ma chambre a été complètement refaite.
+        Le papier peint est devenu vert foncé !... Je hais le vert !
+Taku :
+        Hm, oui, le vert c'est pas terrible.
+Rikako :
+        Et les lavabos en émail ! C'est ridicule ! C'est démodé depuis longtemps.
+Rikako :
+        Tu sais Morisaki, quand ma mère et mon père se disputaient, je pensais que Maman était 
+        stupide. Elle s'énervait beaucoup, et comme Papa essayait de se défendre, ils se sont bêtement 
+        séparés comme pour un divorce. 
+        Mon frère et moi avons été séparés de nos amis pour être transférés dans d'autres écoles.
+        J'ai toujours appuyé Papa, mais Papa n'était pas de mon côté.
+Taku :
+        De ton côté ? Allons...
+Rikako :
+        Je n'ai pas beaucoup de chance.
+Taku :
+        C'est dommage pour toi, mais essaies d'être gentille avec ta mère en rentrant. Tu as bien pris un 
+        apart' seule pour protester contre elle.
+Rikako :
+        J'ai pris cet apartement parce que je pensais qu'il n'était pas bon qu'on reste tous les trois chez Maman. 
+        Ce n'était pas pour protester.
+Taku :
+        Ouais, mais...
+Rikako :
+        Ca ne te regarde pas Morisaki.
+Télé :
+        "Bonsoir. Comment vous occupez-vous en ce premier jour de "Golden Week" ?..."
+Taku *:
+        Moi non plus, je n'ai pas vraiment beaucoup de chance.
+[Le matin]
+Rikako :
+        Morisaki !
+Taku :
+        Hm ?
+Rikako :
+        Debout ! dépêches-toi.
+        Tu te réveilles enfin. Je n'ai pas pu utiliser le lavabo ni la baignoire : j'ai dû aller au rez-de-
+        chaussée.
+Taku :
+        Désolé.
+Rikako :
+        Tu pourrais m'excuser environ 30 minutes ? Je voudrais me préparer pour voir quelqu'un.
+Taku :
+        Ton père ?
+Rikako :
+        Mon petit copain du lycée d'ici. Je viens de l'appeler, et comme ça fait longtemps il vient me 
+        rencontrer à cet hôtel.
+Taku :
+        Ah, c'est bien.
+Rikako :
+        Je voudrais me préparer vite : il faut que je prenne la douche, tu peux sortir vite ?
+[En ville]
+Taku °:
+        C'est probablement à ce moment là que je me suis décidé à étudier dans une université de Tôkyô.
+        Sans doute étais-je soulagé de sentir que Rikako essayait de se reprendre.
+[L'hôtel]
+Rikako :
+        Tu arrives juste à temps. Mon ami vient d'appeler du hall.
+Taku :
+        Ah oui ?
+Rikako :
+        Bon, j'y vais !
+        Ah ! Comment on fait pour la clé ? Tu ressors Morisaki ?
+Taku :
+        J'vais faire un somme dans la chambre, files-la moi.
+Rikako :
+        Vraiment ? Je suis navrée.
+Taku :
+        T'en fais pas. Amuses-toi bien.
+[Téléphone]
+Taku :
+        Oui ?
+Rikako :
+        Morisaki, Excuses-moi, mais tu ne pourrais pas venir en bas, au salon de thé ?
+Taku :
+        Qu'est-ce qu'il y a ? tu as oublié ton sac ?
+Rikako :
+        Non, mais viens ! Penses que c'est pour m'aider.
+Taku :
+        Allons, qu'est-ce qu'il y a cette fois...!?
+[Salon de thé]
+Rikako :
+        Morisaki, par ici !
+        Voici Morisaki. Il s'inquiétait et m'a accompagnée jusqu'à Tôkyô.
+        Morisaki, voici mon ex-camarade, OKADA.
+OKADA : 
+        Salut.
+        Rikako, tu t'es déjà fait un petit ami !? Ca me choque un peu.
+Rikako :
+        C'est toi qui dit ça ?! Je ne pensais pas que tu sortirais avec Ryoko si peu de temps après mon 
+        départ. Je me suis senties comme trahie ! Non mais...
+Okada :
+        Ehh ??? Mais toi tu es bien plus mignonne. Même Ryoko le dit : "A coté de Rikako je n'ai l'air 
+        de rien".
+Rikako :
+        Ecoutes ça Morisaki ! tu ne trouves pas ça choquant ?
+        Je suis sortie avec Okada pendant un an, et il a fréquenté une autre 2 mois après que je sois partie. Et c'était 
+        une de mes amies.
+Taku :
+        Bah, c'est comme ça.
+Rikako :
+        C'est un type plutôt cool, n'est-ce pas ?
+Okada :
+        Ah, ah.
+        J'en ai déjà parlé avec Ryoko : Si nous allions tous au ciné, avec lui et toi ? 
+        Un "double rendez-vous", quoi..
+Rikako :
+        Je voudrais bien y aller, mais... Papa doit venir tout à l'heure et on doit déjeuner ensemble, hein ?
+Okada :
+        J'aurais prévu quelque chose pour vous si j'avais su que tu venais, c'est dommage. 
+        Enfin, ta mère est un peu méchante avec toi : Si tu prépares l'examen d'entrée d'universités d'ici, 
+        il aurait mieux valu te laisser. Mais elle t'a obligée à la suivre ; elle ne pensait pas beaucoup à ses 
+        enfants.
+Taku :
+        Qu'est-ce que c'est ces histoires de penser aux enfants !? Ce n'est plus une collégienne !
+Rikako :
+        Qu'est-ce que tu as Morisaki ?
+Taku :
+        C'est absurde !... Toi, et ce mec.
+Okada :
+        On dirait qu'il est un peu jaloux de moi. Je suis désolé.
+Taku °:
+        J'en étais désappointé.
+        Cette Rikako qui était toujours digne, n'était plus à Tôkyô qu'une enfant flirtant et souriant à des 
+        types stupides !
+[On frappe]
+Rikako :
+        Muto...
+Rikako :
+        Okada m'a demandé de te dire qu'il ne t'en voulait pas.
+        Il est vraiment stupide n'est-ce pas ?
+        Lorsque nous sortions ensembles, je le trouvais gentil et généreux. 
+        Au début je t'ai appelé pour "faire bien", mais quand tu es parti en nous laissant tous les deux 
+        seuls, je me suis sentie bête.
+        Quels enfantillages ; de sa part, comme de moi.
+Taku :
+        Bah, je comprends que ça t'ait choqué qu'il en ait fréquenté une autre.
+Rikako :
+        Tu ne comprends vraiment rien, Morisaki.
+        J'étais choquée parce que Okada m'est apparu comme totalement différent.
+        Ce garçon ne parle que de lui-même. Il ne m'a même pas demandé comment je trouvais Kôchi.
+        En fait il a toujours été comme ça ; c'est juste que je ne l'avais pas réalisé.
+Rikako :
+        Ce soir je resterai chez ma tante : rester tous les deux dans la même chambre c’est un peu douteux.
+        On se reverra demain au guichet de l'aéroport.
+        ... Ce voyage à Tôkyô fut affreux, n'est ce pas ?
+Taku °:
+        On aurait dit qu'en 30 minutes, Rikako était comme devenue adulte.
+[Au lycée]
+Rikako :
+        Hey, Yumi, où l'as-tu acheté ?
+Yumi :
+        Tu en voudrais un aussi ?
+Taku °:
+        Les vacances finies, les cours ont recommencé : Rikako agissait comme si rien ne s'était passé.
+        Comme auparavant, on ne la voyait qu'avec Yumi Kohama.
+[Aux toilettes]
+Akiko :
+        Dis-moi si je me trompe : ce n'est pas que je m'en fais pour toi, mais si je ne t'en parle pas tu 
+        risques de te retrouver seule... Je sais que tu as des raisons mais tu pourrais...
+Rikako :
+        Laisses-moi tranquille !
+[Le toit]
+Taku :
+        Comment ont été tes examens ?
+Yutaka :
+        Pas très fort... Pendant les grandes vacances, j'irai dans une "école de bachotage".
+Taku :
+        Ah ? Des cours intensifs...
+Yutaka :
+        Ca me changera un peu.
+        Dis...
+Taku :
+        Oui ?
+Yutaka :
+        Ne te fâches pas si je te demande quelque chose d'étrange.
+        Pendant les vacances, tu es allé en voyage avec Muto.
+Taku :
+        Ah... En effet. Comment le sais-tu ?
+Yutaka :
+        Comment...? C'est ce qui se raconte beaucoup, tu ne l'avais pas remarqué ?
+Taku :
+        Non, du tout.
+Yutaka :
+        C'est tout à fait toi.
+        Comme vous y êtes resté deux jours, on a préféré ne pas en plaisanter ouvertement : c'est resté 
+        une rumeur.
+Taku :
+        Ecoute, je ne sais pas ce que tu as entendu, mais Muto est uniquement allée voir son père.
+Yutaka :
+        C'est bien ce qu'on m'a dit.
+Taku :
+        On t'a dit... mais, qui ? Kohama ?
+Yutaka :
+        Kohama ? Pourquoi Kohama ? 
+        De Muto elle-même.
+        L'autre jour je l'ai rencontrée à la librairie, et je lui ai demandé.
+[flashback]
+Rikako :
+        Encore cette histoire !?
+        Je suis allée à Tôkyô avec Morisaki, effectivement, et nous sommes restés au même hôtel. 
+        En quoi cela te regarde ??
+Yutaka :
+        Je... Je t'aime, Muto.
+Rikako :
+        ... Je déteste Kôchi... et je déteste les gens qui ont l'accent de Kôchi !
+        Je ne pourrai jamais m'en faire d'ami, ça me dégoutte rien que d'y penser. (16)
+[Le toit]
+Taku :
+        Ca la... dégoutte ?
+Yutaka :
+        C'est ça... c'était assez brutal.
+Taku :
+        C'est pour ça que tu as eu de telles notes ?
+Yutaka :
+        Je me changerai les idées pendant les grandes vacances.
+Taku :
+        Ca la dégoutte : ça c'est trop fort !
+Yutaka :
+        Morisaki.
+[En classe]
+Rikako :
+        Tu achèterais le rouge ou le blanc ?
+Yumi :
+        Le rouge.
+Rikako :
+        Mais le blanc...
+Taku :
+        Il faut que je te parle une seconde. Suis-moi !
+Rikako :
+        Quoi !?
+Rikako :
+        Qu'est-ce qu'il y a ? Je préférerais que tu ne me parles pas à l'école, on nous regarde.
+Taku :
+        Il paraît que tu as dit à Matsuno que nous sommes restés au même hôtel à Tôkyô.
+Rikako :
+        Je lui ai dit, oui.
+Taku :
+        C'est toi qui as insisté pour rester avec moi !
+        Avec ces histoires tu sais dans quoi tu me mets ?!
+Rikako :
+        Quoi ??
+Taku :
+        A cause de toi j'ai de gros problèmes ! Tu n'es qu'une peste !!
+(aïe~)
+Rikako :
+        Tu es vraiment attentionné envers tes amis !!!
+        Ca suffit !
+Taku *:
+        Assurément, ce voyage à Tôkyô ne fut rien de bon, ni pour Rikako, ni pour moi.
+Taku °:
+        L'automne arriva.
+        Rikako était comme toujours à l'écart. Toutefois ses notes allaient au moins toujours plus haut.
+        Et puis, lorsqu'arriva le dernier festival du lycée...
+[Stand Udon et Soba] (17)
+Fille 1 :
+        Approchez, qui veut des "Udon" ?
+Fille 2 :
+        Hé, elle n'est même pas ici aujourd'hui non plus.
+Fille 3 :
+        Je suis sure qu'elle manquera la danse demain. Elle n'a jamais fait les exercices.
+Fille 2 :
+        Quelle idiote !
+Fille 1 :
+        Elle essaie d'améliorer ses notes en ne participant pas au festival.
+Fille 3 :
+        Hm, il faudrait qu'on lui parle.
+Fille 2 :
+        On essaie demain ? Je vais...
+Homme :
+        Excusez-moi.
+Filles 123 !
+        Bienvenue !
+[le lendemain]
+Annonce :
+        Annonce du comité d'organisation : le dernier programme d'aujourd'hui étant le "paradis de 
+        danse", que les groupes qui ont fini de nettoyer viennent au terrain de sport. Je répète...
+Rikako :
+        C'est tout ce que vous aviez à me dire ? Je suis pressée alors...
+Fille 1 :
+        Attends ! Qu'est-ce que tu veux dire par "tu es pressée" !? Qu'est-ce que tu fais de l'unité de 
+        la classe ?
+Rikako :
+        Quoi, l'unité de la classe !? On dirait un politicien, c'est ridicule !
+Fille 1 :
+        Tu ne penses qu'à toi-même. Tu crois que ça marche en société ?
+Rikako :
+        De quelle société vous parlez, où l'on ne pourrait pas penser à soi ??
+        Les gens le feraient pour moi peut-être ?! C'est bien  normal que je pense à moi.
+Fille 2 :
+        Tu fais comme si tu te foutais des mecs, alors que tu flirts sans cesse.
+        Tu as même fait des avances à YAMAGIDA.
+Rikako :
+        Yamagida ? Qui c'est ? Jamais vu, ni entendu ce nom !
+        Amènes-le moi ici, je lui dirai ce que j'en pense !
+Fille 2 :
+        Ehhh ? Qu'est-ce que tu dis...?
+Akiko :
+        Arrêtez ! Vous allez ternir votre dossier scolaire.
+        Ce n'est pas la peine de pleurer pour une fille comme elle.
+Fille 3 :
+        Souviens-toi de ça !
+Akiko :
+        Il se peut que je t'aie mal jugée.
+Rikako :
+        Morisaki !? Depuis quand es-tu là ?!
+Taku :
+        Oh ?... Je suis venu jeter ça ; je viens d'entendre des voix...
+        Tu as de la classe, de ne pas avoir été intimidée devant toutes ces filles. 
+        Celle qui t'a attaquée a même pleuré... C'est remarquable !
+Rikako :
+        Idiot ! Tu n'es qu'une peste !
+Yutaka :
+        Hé !
+Taku :
+        Ah...!
+Yutaka :
+        J'ai vu Muto, elle courrait. On aurait dit qu'elle pleurait.
+Taku :
+        Ah, elle a tout juste été maltraitée, par des filles de la classe. 
+        Elle a séché les exercices et les répétitions alors... Mais elle a été la plus forte, elles n'ont pas pu 
+        lui faire grand chose.
+        C'est bien Muto ! Elle garde un courage remarquable !...
+Yutaka :
+        Tu ne les as pas arrêtées !?
+Taku :
+        Si je l'avais fait, elles m'auraient répondu que je la colle de trop.
+        Ca lui apprendra.
+        Après tout, elle est insolente !
+(ouch!)
+Yutaka :
+        Pauvre imbécile !
+
+Taku °:
+        A ce moment, je pensais que, le lendemain, je pourrais à nouveau parler normalement avec 
+        Matsuno.
+        Toutefois, Matsuno et moi avons par la suite été diplômés, sans que nous ne nous soyons parlé.
+        Quant à Rikako, elle est allée à l'université locale, à Kôchi. Matsuno à Kyôto. Et moi à une 
+        université de Tôkyô. 
+        Nous fûmes séparés.
+[Retour dans l'avion qui atterrit](18)
+Annonce :
+        Mmes et Ms, notre avion est arrivé à l'aéroport de Kôchi. Nous vous remercions de...
+[Dehors]
+Yutaka :
+        Hey, Morisaki.
+Taku :
+        Matsuno ?
+Taku :
+        Tu t'es dérangé pour venir me chercher.
+Yutaka :
+        Bah, j'ai eu mon permis de conduire le mois dernier.
+Taku :
+        Tu es si consciencieux que tu es déjà allé à l'école de conduite.
+        Moi, j'ai bien pris un mois pour m'habituer à la ville, un mois pour m'habituer à l'université, et 
+        un mois pour m'habituer à mon job. Et maintenant c'est déjà les grandes vacances.  (19)
+Yutaka :
+        Il doit y avoir des différences culturelles entre Tôkyô et Kyôto.
+        Kyôto a une culture plus similaire à celle d'ici, je m'y suis fait facilement.
+        Enfin, c'est bien que Kôchi ne soit pas si encombré.
+Taku :
+        Ici tu peux tout trouver au même endroit, c'est plaisant. 
+        On dit que Tôkyô est pratique, mais dès que tu veux te déplacer, ça prend facilement une heure.
+Yutaka :
+        Si tu as une heure tu peux aller à Katsurahama et te balader.
+Taku :
+        C'est vrai. Mais même pour aller au stade Jingu, avec le changement de train ça prend une 
+        heure.
+Yutaka :
+        Par contre à Kyôto si tu as une heure tu peux aller à Oosaka, à Biwako, ou encore à Nara.
+Taku :
+        Ah ? On dirait que c'est plutôt bien là-bas.
+Taku :
+        Eh, tu entres ?
+Yutaka :
+        Non, pas aujourd'hui. Tes parents doivent t'attendre.
+        Je te verrai sans doute demain aux retrouvailles de classe.
+Taku :
+        Ah.
+Yutaka :
+        Ah ! Il y a quelque chose que je pensais te dire depuis longtemps : J'étais vraiment désolé 
+        pour ça.
+Taku :
+        ... Ah, je vois, c'est pour ça que tu es venu me ramener. Ah ah ah ah ah.
+Yutaka :
+        Je t'appellerai plus tard.
+Taku :
+        Dis, tu ne veux pas faire un petit tour ? Ca fait si longtemps.
+[Sur la digue]
+Yutaka :
+        A cette époque, je t'ai frappé parce que j'ai compris que tu te retenais à cause de moi. 
+        Je n'avais pas réalisé jusqu'alors... le fait que tu aimais Muto.
+Taku :
+        Matsuno et moi sommes resté une heure à cet endroit. (20)
+        Puis nous sommes rentrés. 
+
+[Réunion des anciens élèves de la classe]
+{Panneau : "Réservé"}
+Garçon 1 : 
+        Megumi, tu es à Oosaka ? C'est près de chez moi, à Kobe !
+Megumi :
+        Ah ! Tu bois ?
+Garçon 2 :
+        Mais pourquoi aurais-je à parler aux anciens pour quitter le club !?
+Fille 1 : 
+        Avec cet homme je suis allée à Disneyland. Nous étions en retard et il n'y avait plus de train.
+Fille 2 :
+        Et qu'est-ce que vous avez fait ??
+Garçon 2 :
+        Mais même pour un club de ski, il y a tous ces entraînements. Etre rappelé tout le temps : 
+        c'est insoutenable !!
+Taku :
+        Eh, ne bois pas autant Yamao !
+Tadashi YAMAO :
+        Elle est en retard.
+Yutaka :
+        En retard ? Qui ça !?
+Tadashi :
+        Elle est en retard.
+Garçon 3 :
+        Vas-y !   (?)
+(applaudissements)
+Taku :
+        Eh bien...?
+Akiko :
+        Yamamoto vient juste d'avouer. Il était amoureux de Nishimura.
+Taku :
+        Il s'est décidé.
+Akiko :
+        On dirait qu'un couple est né.
+Tadashi :
+        Très bien, je vais me confesser aussi.
+        En fait, j'aime KOHAMA Yumi... depuis très longtemps !
+Garçon Y: 
+        Ahhh, quelle bravoure ! Tu es vraiment un homme !
+Tadashi :
+        Je l'ai toujours appréciée. Elle était toujours derrière la fameuse Muto, mais elle était si 
+        mignonne ! Alors que toi tu ne faisais que regarder Muto...
+Taku :
+        Qu'est-ce que tu me chantes là ?...
+(baboom)
+Taku :
+        Regardes-toi...
+        Tu veux aller aux toilettes ?
+Garçon Y?:
+        Hey, Yamao, est-ce que tu vas bien ?
+Akiko :
+        Muto ne viendra-t-elle vraiment pas...?
+        Muto m'a dit qu'elle regrettait de t'avoir dit des choses horribles, Matsuno.
+Yutaka :
+        Eh !?
+Taku :
+        Je crois qu'il est vraiment "fait".
+        Au fait, tu es devenue vraiment mignonne, Shimizu.
+Akiko :
+        Je te remercie. Mais Muto aussi est devenue très belle, bien qu'elle l'était déjà beaucoup.
+Taku :
+        Ah...!?
+Yutaka :
+        Shimizu disait qu'elle avait rencontré Muto.
+Taku :
+        Muto n'est pas ici.
+Akiko :
+        Je l'ai rencontrée hier chez le vendeur de glaces.
+        Je lui ai parlé de la réunion de la classe mais... elle doit être rentrée chez elle à présent.
+Taku :
+        Rentrée...?
+Taku :
+        Est-ce que Muto ne serait pas à Tôkyô ?
+Akiko :
+        Oui. Je pensais moi aussi qu'elle allait à l'université de Kôchi. J'ai entendu dire qu'elle s'y était 
+        présentée et avait été reçue, mais qu'elle avait en même temps été reçue à une université de 
+        Tôkyô !
+Taku :
+        Quand tu es tombée sur elle, tu lui as fait : "Ah ! Ca fait longtemps qu'on ne s'est pas vues ! 
+        Qu'est-ce que tu deviens ?" ?
+Akiko :
+        Comment tu sais ça !?
+Taku :
+        Eh, je pensais que tu n'aimais pas beaucoup Muto.
+Akiko :
+        C'est vrai... je ne l'aimais pas. Je le détestais presque même. Mais quand je l'ai rencontrée je ne 
+        pouvais plus croire que je la détestais. C'est un peu comme changer de sièges !
+        A l'école primaire, quand on se retrouve à la place voisine d'un enfant qu'on n'aime pas, on 
+        voudrait ne plus du tout retourner à l'école ! Avec une vision si fermée, on ne supporte pas 
+        que cette personne s'approche.
+        Lorsqu'on est ouvert à d'autres choses comme des cours privés ou du piano, alors ces quelques
+        personnes ne nous importent plus.
+Taku :
+        En fait, Shimizu, cela voudrait dire qu'en réfléchissant, tu réalises avoir eu cette vision "étroite", 
+        et que c'est pour cela que Muto t'apparaissait antipathique ?
+Akiko :
+        C'était très puéril. 
+        C'était un peu de ma faute, mais, Muto reconnaît qu'elle était elle-même tout aussi bornée !
+Fille :
+        Oh, Yumi !
+Garçon :
+        Oh, KOHAMA !!
+Tadashi :
+        Kohama...? ...Kohama. Kohamaaa ! KOHAMA ! KOHAMA !!
+
+[Dehors]
+Taku :
+        Hé, allez dépêches-toi !
+Taku :
+        Eh ? Kohama, tu as aussi rencontré Muto ?
+Yumi :
+        Oui. J'aurais bien aimé que Rikako vienne.
+Yutaka :
+        Je pensais qu'elle allait venir moi aussi.
+Taku :
+        Ahh.
+Yumi :
+        Au fait, Rikako m'a dit qu'il y avait quelqu'un à Tôkyô qu'elle voulait revoir.
+        Mais je ne savais pas qui c'est.
+        Celui qu'elle voulait rencontrer était un type "qui dormait dans une baignoire".
+Akiko :
+        C'est magnifique quand on n'a pas vu ça depuis longtemps n'est-ce pas ?
+        Le château.
+Taku *:
+        Ce château de Kôchi tout illuminé, regardé ainsi, seul, ne me semble être qu'une perte 
+       d'électricité.
+        Si j'étais avec Rikako, sans doute trouverais-je cela magnifique. 
+        Lorsque nous étions au lycée, je souhaitais bavarder avec elle de multiples choses...
+        Avec Rikako, comme en cet instant, j'aurais voulu contempler, là haut, ce château.
+Rikako :
+        "Morisaki, tu ne pourrais pas me prêter de l'argent ?"
+        "Et puis quoi, on dirait tout à fait un prof !!! Es-tu un élève si "modèle", Morisaki ? Ce n'est pas 
+        du tout ce que j'ai entendu sur toi, je suis déçue."
+        "Je t'avais dit de n'en parler à personne, et tu l'as déjà dit à Matsuno." 
+        "Tu es bavard pour un mec, Morisaki." 
+        "Tu sais, j'ai l'intention de dire à Papa que j'aimerais retourner avec lui, vivre à Tôkyô."
+        "Je vais rester ici. Comme la note revient à Papa, j'en ai bien le droit, non ?"
+        "Ma chambre, elle a été complètement refaite ! Le papier peint est devenu vert foncé !!"
+        "J'ai toujours appuyé Papa, mais Papa n'était pas de mon côté." "Je n'ai pas beaucoup de chance."
+        "Quels enfantillages, de sa part, comme de moi." "Ce voyage à Tôkyô fut affreux, n'est-ce pas ?"
+        "Tu es vraiment attentionné envers tes amis !!! Ca suffit !" "Idiot ! Tu n'es qu'une peste !!"
+
+        "Ah, ah. A Tôkyô, il y a quelqu'un que je voudrais revoir. Je vais te dire, qui est cette personne ; 
+        c'est celui qui dort dans la baignoire."
+
+[Tôkyô, quelques jours plus tard, gare de Kichijôji](21)
+Annonce :
+        Le train va bientôt arriver voie n° 3. Pour votre sécurité, veuillez rester derrière la ligne blanche.
+
+Taku :
+        Ah... C'est bien ce que je ressentais... Je l'aime vraiment.
+(22)
+
+{Crédits } :
+
+Doubleurs :
+Taku MORISAKI :         Norio TOBITA
+Rikako MUTO :           Yôko SAKAMOTO
+Yutaka MATSUNO :        Seki TOSHIHIKO
+Yumi KOHAMA :   Harue AYAKU (?)
+Tadashi YAMAO : Hikaru MORIKAWA (?)
+Mura KAWA (?) : Maru TOKU (?)
+
+Auteur : Saeko HIMURO (23)
+
+Chanson de fin : "Michiru"
+Musique de : Shigeru NAGATA
+Chantée par : Yôko SAKAMOTO ("Rikako") (24)
+
+Réalisateur : Tomomi MOCHIZUKI  (25)
+
+Chara-designer / Directeur cellulos : Katsuya KONDO
+
+Directeurs artistiques : Katsuya KONDO, Yaowa TANAKA(?)
+
+Producteurs : Tarahasa NOZOMI (?), Tôru HORIKOSHI, Shinichiro MAEDA, Michio YOUKO.
+
+STUDIOS GHIBLI 
+
+Traducteur français : 
+Sylvain GOUPIL, www.chez.com/sylg
+
+
+Notes :
+
+ (1) Pourquoi ce titre ? La seule référence à la mer dans le film est le voyage à Hawaii. C'est là qu'a 
+véritablement eu lieu le premier vrai contact entre Rikako et Taku. C'est aussi là qu'a été prise la 
+photo que l'on voit au début, et que conservait Taku. Le film étant surtout composé de souvenirs, 
+c'est probablement, en quelque sorte, une réminiscence de l'impression qu'il a de ce lieu quand il se 
+souvient de leur rencontre. 
+Ghibli a par la suite attribué à ce film le nom "international" d'"Ocean Waves", mais le fandom 
+anglophone l'avait depuis longtemps baptisé déjà, littéralement, I can hear the Ocean/sea. 
+Et puis, Umi ga kikoeru, c'est le titre du roman de Saeko HIMURO ! (cf. note 23)
+(2) Formule de politesse toute faite.
+(3) Kôchi est en effet une ville portuaire (comme tant d'autres !) du sud du Japon, au Sud de l'île de 
+Shikoku. C'est une région purement provinciale, très chaude, avec un dialecte/accent très marqué.
+(4) En deuxième année de lycée, sur trois.
+Il est nécessaire ici de connaître l'année scolaire nippone : d'Avril à Février. Le changement d'année 
+scolaire ne se fait pas avec les vacances d'été, bien qu'elles soient aussi les plus longues (idem France). 
+Ici donc, Taku et les autres lycéens sont en pleines grandes vacances, mais entre les deux semestres 
+de l'année scolaire.
+(5) Les troisièmes années de collège, équivalent en âge à notre classe de Troisième, puisque collège 
+comme lycée font trois ans chacun ; le collège débute un an plus tard qu'en France.
+(6) Les écoles publiques sont généralement les plus cotées et les meilleures, ce qui n'est pas forcément 
+le cas en France.
+(7) Au niveau régional, probablement.
+(8) Ou "accorde-moi ta bienveillance..."
+(9) Posture véridique des bandes et petits yakuzas.
+(10) Non, ne cherchez pas une série appelée Gokaider qui serait passée à 18h 30, c'est un nom fictif, 
+mais évocateur et amusant. Après de courtes recherches, V-Gundam nous est apparue comme série
+du genre qui ait pu être diffusée à l'époque de la conception du film... Si vous en 
+voyez d'autres, mailto:nospan-sylg@chez.com .
+(11) Terminale. 
+(12) "Golden week" : 1ère semaine de Mai, période de vacances générales.
+(13) "Drama" : désigne de fameux feuilletons en tous genres, à l'eau de rose ou policiers, avec des 
+acteurs -ou idols- japonais pas forcement talentueux, et qui durent, qui durent...
+(14) Whisky avec une quelconque boisson gazeuse, souvent Coca.
+(15) A Tôkyô bien sûr, pas Kôchi.
+(16) Ou "ça me fait frémir" (d'effroi...).
+(17) Soupes de nouilles, avec ou sans viande... tres bon, et un luxe quand on est ryuugakusei ! !
+(Au fait, un porco rosso se cache quelque part dans ce festival ! -le trouverez-vous ?)
+(18) C'est là que finit toute la narration précédente.
+(19) C'est juste le compte ! cf. note n°4.
+(20) Ce mot pour "endroit" sous-entend une idée de "hauteur", ce qui est intéressant : il s'agit bien sûr 
+du haut de cette digue, au bord de la baie de Kôchi. Mais c'est aussi terriblement poétique quand on 
+considère que Taku et Matsuno contemplaient à ce moment leur situation et les quelques mois relatés 
+par Taku jusqu'à ce moment du film. Un grand moment de compréhension réciproque, un peu 
+nostalgique.
+(21) La station de Kichijôji, sur la ligne Chuo (JR) de Tôkyô (8 stations a l’ouest de Shinjuku, et je dois
+dire un quartier tres residentiel, calme et agreable ^^). Ghibli avait autrefois un studio dans ce 
+quartier de Kichijôji, mais ils déménagèrent à Koganei en 1992. 
+(Hey, un  Marco Pagot se cache ici ! (cf note 17))
+(22) !!!!! Nous aussi !!!!!! ^_^
+(23) Le roman de Saeko HIMURO fut publié par Tokuma Shôten, comme indiqué dans les avant-
+titres, au prix de 1200 Yen. Sa référence : "ISBN4-19-125064-7". Ce livre a été illustré par Katsuya 
+KONDO, le chara-deigner et Directeur d'animation de ce film : le générique de fin, qui nous offre une 
+épilogue au film, est formé d'illustrations de sa main. Ce roman a aussi été publié épisodiquement 
+dans "Animage". Saeko HIMURO est une auteur de "romans Shôjo" très populaire, et très sensible. 
+Elle écrivit une suite à Umi, "Umi ga Kikoeru 2 : Ai ga Arukara" ("Parce qu'il y a l'amour (/"I" ?)), 
+également illustrée par Katsuya Kondo, publiée par Tokuma Shôten, "ISBN4-19-860287-5", en 
+japonais, au prix de 1,200 Yen.
+(24)  Oui, oui, c'est bien elle ! 
+(25) Tomomi MOCHIZUKI, véritable maitre de l'Animation, est notamment celui à qui l'on doit le 
+sublime film de fin d'Orange Road (ano hi ni kaeritai). Il a réalisé Umi à l'âge de 34 ans, devenant le 
+premier réalisateur de Ghibli autre que Miyazaki et Takahata. Il s'agissait, avec ce téléfilm, d'un défi 
+pour les plus jeunes membres de Ghibli (d'une vingtaine ou trentaine d'années). En définitive, le 
+temps et les budgets ont tous été dépassés, mais le résultat est ce merveilleux petit film.
+(**)  Quelques pages web sur Umi : 
+http://www.nausicaa.net/~miyazaki/umi                                     http://www.yk.rim.or.jp/~wadakun/getro/animation/Umi.html   http://www.geocities.com/Tokyo/Towers/2180/umiVF.html  (ces scripts devraient s'y trouver)
+http://www.chez.com/sylg  (pas Umi, mais l’auteur)
+http://www.nausicaa.net
+
+--------------------
+  
