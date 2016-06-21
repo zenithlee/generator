@@ -22,7 +22,7 @@ var main = function(){
         Table.create("myTable", "main");
 
         var _Graph = new Graph("main", "myGraph");
-        _Graph.show("main");
+        _Graph.show("./data/data2.tsv");
 
         this.setup();
     };
