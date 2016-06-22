@@ -21,8 +21,11 @@ var main = function(){
 
         Table.create("myTable", "main");
 
-        var _Graph = new Graph("main", "myGraph");
-        _Graph.show("./data/data2.tsv");
+        var _Graph = new BarGraph("main", "myGraph");
+        _Graph.show("./data/data.tsv");
+
+        var _Pie = new PieChart("main", "myGraph2");
+        _Pie.show("./data/piedata.csv");
 
         this.setup();
     };

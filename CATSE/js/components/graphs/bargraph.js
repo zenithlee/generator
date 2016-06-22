@@ -2,7 +2,7 @@
  * Created by karll on 2016/06/17.
  */
 
-var Graph = function(parentID, newID){
+var BarGraph = function(parentID, newID){
     var self = this;
     self.id  = "";
     self.parentID = "";
