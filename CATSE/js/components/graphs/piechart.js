@@ -101,10 +101,10 @@ var PieChart = function(parentID, newID){
                             .attr("y", i*25-80)
                             .attr("width", 60)
                             .attr("height", 20)
-                            .style("fill", "red");
+                            .style("fill", color(i));
 
                         g.append("text")
-                            .attr("x", 140)
+                            .attr("x", 130)
                             .attr("y", i * 25-65)
                             .attr("height",30)
                             .attr("width",100)
