@@ -28,7 +28,16 @@ var main = function(){
         _Pie.show("./data/piedata.csv");
 
         this.setup();
+
+        self.test();
     };
+
+    self.test = function() {
+        $("body").append("<div id='what' class='container col-lg-3'><p>part 1</p><p>part 2</p><p>part 3</p><p>part 4</p><p>part 5</p></div>");
+        d3.selectAll("#what p")
+            .data([4, 8, 15, 16, 23, 42])
+            .style("font-size", function(d) { return d + "px"; });
+    }
 
     self.setup = function() {
 

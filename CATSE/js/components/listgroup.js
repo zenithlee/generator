@@ -1,7 +1,7 @@
 ListGroup = new function() {
     var self = this;
 
-    self.GroupTemplate = '<div class="col-sm-4"><div class="list-group" id="{groupid}"></div></div>';
+    self.GroupTemplate = '<div class="col-sm-4 col-lg-offset-8"><div class="list-group" id="{groupid}"></div></div>';
     self.ItemTemplate = '<h4 class="list-group-item-heading">{title}</h4><p class="list-group-item-text">{text}</p>';
 
     self.myID = "";
