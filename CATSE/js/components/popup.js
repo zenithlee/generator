@@ -1,7 +1,7 @@
 Popup = new function(){
 
     var self = this;
-    self.html = popupTemplate;
+    self.html = PopupTemplate;
     self.myID = "";
 
     self.create = function(newID,containerId,title, text){

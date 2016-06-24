@@ -1,22 +1,23 @@
-ListGroup = new function() {
+var ListGroup = function(parentID, newID) {
     var self = this;
 
-    self.GroupTemplate = '<div class="col-sm-4 col-lg-offset-8"><div class="list-group" id="{groupid}"></div></div>';
+    self.GroupTemplate = '<div class="span4 col-md-offset-8 col-sm-offset-8"><div class="list-group" id="{groupid}"></div></div>';
     self.ItemTemplate = '<h4 class="list-group-item-heading">{title}</h4><p class="list-group-item-text">{text}</p>';
 
     self.myID = "";
     this.elements = [];
 
-    this.create = function(ID){
-        this.myID = ID;
+    self.constructor= function(parentID, newID){
+        self.myID = newID;
+        self.parentID = parentID;
     };
 
-    this.show = function( parent ){
+    this.show = function( ){
+        var parent = document.getElementById(self.parentID);
         var el = document.createElement("div")
-        //el.id = this.myID;
         var html = self.GroupTemplate.replace("{groupid}", this.myID);
         el.innerHTML = html;
-        document.body.appendChild(el);
+        parent.appendChild(el);
     };
 
     this.myNode = function() {
@@ -51,4 +52,6 @@ ListGroup = new function() {
 
         postal.publish({channel:CATCHANNEL, topic:"chat", data:{title:el.data}});
     }
+
+    self.constructor(parentID, newID);
 }
