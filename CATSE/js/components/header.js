@@ -9,14 +9,14 @@ var Header = function(parentID, newID){
     };
 
     self.show = function(title) {
-        //var html = self.html.replace("{title}", title);
+        var html = self.html.replace("{title}", title);
         var parent = document.getElementById(self.parentID);
         var node = document.createElement("div");
         node.id = self.id;
         node.className = "";
-        node.innerHTML = self.html;
+        node.innerHTML = html;
         parent.appendChild(node);
-    }
+    };
 
     self.constructor(parentID, newID);
 };

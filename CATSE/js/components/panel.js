@@ -19,6 +19,12 @@ var Panel = function(parentID, newID) {
         self.addContent(html);
     };
 
+    self.showWithImage = function(imageURL,text) {
+        var html = PanelTemplateWithImage.replace("{text}", text);
+        html = html.replace("{image}", imageURL);
+        self.addContent(html);
+    };
+
     self.addContent = function(html){
         var parent = document.getElementById(self.parentID);
         var node = document.createElement("div");
@@ -26,7 +32,7 @@ var Panel = function(parentID, newID) {
         node.className = "";
         node.innerHTML = html;
         parent.appendChild(node);
-    }
+    };
 
     self.constructor(parentID, newID);
 };

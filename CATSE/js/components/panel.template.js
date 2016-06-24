@@ -12,3 +12,10 @@ var PanelTemplateWithHeading = '<div class="col-sm-8">\
 {text}\
     </div>\
 </div></div>';
+
+var PanelTemplateWithImage = '<div class="col-sm-8">\
+<div class="panel panel-default panel-info">\
+    <div class="panel-body">\
+{image}{text}\
+    </div>\
+</div></div>';
