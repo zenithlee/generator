@@ -19,8 +19,9 @@ var Panel = function(parentID, newID) {
         self.addContent(html);
     };
 
-    self.showWithImage = function(imageURL,text) {
+    self.showWithImage = function(imageURL, heading, text) {
         var html = PanelTemplateWithImage.replace("{text}", text);
+        html = html.replace(/\{heading\}/g, heading);
         html = html.replace("{image}", imageURL);
         self.addContent(html);
     };

@@ -21,28 +21,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12160229">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding>
-                <marker date="1467010857701" expanded="true" signature="3360:3689" placeholder="..." />
-                <marker date="1467010857701" expanded="true" signature="3360:3690" placeholder="..." />
-                <marker date="1467010857701" expanded="true" signature="3360:3691" placeholder="..." />
-                <marker date="1467010857701" expanded="true" signature="3432:3445" placeholder="..." />
-                <marker date="1467010857701" expanded="true" signature="3655:3688" placeholder="..." />
+                <marker date="1467019328786" expanded="true" signature="4051:4380" placeholder="..." />
+                <marker date="1467019328786" expanded="true" signature="4051:4381" placeholder="..." />
+                <marker date="1467019328786" expanded="true" signature="4051:4382" placeholder="..." />
+                <marker date="1467019328786" expanded="true" signature="4123:4136" placeholder="..." />
+                <marker date="1467019328786" expanded="true" signature="4346:4379" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boxwhiskers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boxwhiskers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/components/graphs/boxwhiskers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20298508">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.137931">
+              <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/components/panel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panel.template.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/components/panel.template.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <folding>
+                <marker date="1467019501210" expanded="true" signature="42:135" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="42:136" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="77:135" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="107:127" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="193:196" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="193:347" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="239:282" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="239:341" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="313:333" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="403:423" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="403:543" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="403:652" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="403:664" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="424:543" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="454:543" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="472:543" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="586:639" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="586:644" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="586:651" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="586:652" placeholder="..." />
+                <marker date="1467019501210" expanded="true" signature="653:658" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,8 +193,6 @@
         <option value="$PROJECT_DIR$/js/components/popup.js" />
         <option value="$PROJECT_DIR$/js/components/popup.template.js" />
         <option value="$PROJECT_DIR$/js/components/listgroup.js" />
-        <option value="$PROJECT_DIR$/js/components/panel.template.js" />
-        <option value="$PROJECT_DIR$/js/components/panel.js" />
         <option value="$PROJECT_DIR$/js/components/header.template.js" />
         <option value="$PROJECT_DIR$/js/components/ticker.js" />
         <option value="$PROJECT_DIR$/js/components/ticker.template.js" />
@@ -162,8 +202,10 @@
         <option value="$PROJECT_DIR$/js/components/graphs/box.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/data/morley.csv" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/components/graphs/boxwhiskers.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/components/panel.js" />
+        <option value="$PROJECT_DIR$/js/components/panel.template.js" />
       </list>
     </option>
   </component>
@@ -246,6 +288,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CATSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,7 +443,7 @@
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -402,13 +490,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CATSE.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -658,27 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/panel.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <marker date="1466750902786" expanded="true" signature="42:135" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="42:136" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="77:135" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="107:127" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="193:196" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="193:347" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="239:282" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="239:341" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="313:333" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="403:520" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="449:514" placeholder="..." />
-            <marker date="1466750902786" expanded="true" signature="479:506" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/components/popup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -771,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/panel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5593705">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/components/graphs/box.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
@@ -827,25 +879,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/boxwhiskers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.137931">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/dust.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/panel.template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
-            <marker date="1467010857701" expanded="true" signature="3360:3689" placeholder="..." />
-            <marker date="1467010857701" expanded="true" signature="3360:3690" placeholder="..." />
-            <marker date="1467010857701" expanded="true" signature="3360:3691" placeholder="..." />
-            <marker date="1467010857701" expanded="true" signature="3432:3445" placeholder="..." />
-            <marker date="1467010857701" expanded="true" signature="3655:3688" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="42:135" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="42:136" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="77:135" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="107:127" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="193:196" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="193:347" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="239:282" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="239:341" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="313:333" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="403:423" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="403:543" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="403:652" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="403:664" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="424:543" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="454:543" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="472:543" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="586:639" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="586:644" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="586:651" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="586:652" placeholder="..." />
+            <marker date="1467019501210" expanded="true" signature="653:658" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/graphs/boxwhiskers.js">
+    <entry file="file://$PROJECT_DIR$/js/components/panel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20298508">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12160229">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <marker date="1467019328786" expanded="true" signature="4051:4380" placeholder="..." />
+            <marker date="1467019328786" expanded="true" signature="4051:4381" placeholder="..." />
+            <marker date="1467019328786" expanded="true" signature="4051:4382" placeholder="..." />
+            <marker date="1467019328786" expanded="true" signature="4123:4136" placeholder="..." />
+            <marker date="1467019328786" expanded="true" signature="4346:4379" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

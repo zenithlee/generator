@@ -14,8 +14,13 @@ var PanelTemplateWithHeading = '<div class="col-sm-8">\
 </div></div>';
 
 var PanelTemplateWithImage = '<div class="col-sm-8">\
-<div class="panel panel-default panel-info">\
-    <div class="panel-body">\
-{image}{text}\
+<div class="media">\
+    <div class="media-left">\
+    <a href="#">\
+    <img class="media-object" src="{image}" alt="{heading}">\
+    </a>\
     </div>\
-</div></div>';
+    <div class="media-body">\
+    <h4 class="media-heading">{heading}</h4>\
+    {text}\
+</div></div></div>';
