@@ -21,138 +21,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19456366">
-              <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
-                <marker date="1466772304133" expanded="true" signature="3250:3579" placeholder="..." />
-                <marker date="1466772304133" expanded="true" signature="3250:3580" placeholder="..." />
-                <marker date="1466772304133" expanded="true" signature="3250:3581" placeholder="..." />
-                <marker date="1466772304133" expanded="true" signature="3322:3335" placeholder="..." />
-                <marker date="1466772304133" expanded="true" signature="3545:3578" placeholder="..." />
+                <marker date="1467010857701" expanded="true" signature="3360:3689" placeholder="..." />
+                <marker date="1467010857701" expanded="true" signature="3360:3690" placeholder="..." />
+                <marker date="1467010857701" expanded="true" signature="3360:3691" placeholder="..." />
+                <marker date="1467010857701" expanded="true" signature="3432:3445" placeholder="..." />
+                <marker date="1467010857701" expanded="true" signature="3655:3688" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/header.js">
+      <file leaf-file-name="boxwhiskers.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/components/graphs/boxwhiskers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.20298508">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.template.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/header.template.js">
+      <file leaf-file-name="morley.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/morley.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-              <folding>
-                <marker date="1466757547955" expanded="true" signature="95:123" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:160" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:318" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:382" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:549" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1193" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1688" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1746" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1748" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1759" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1764" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1766" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="95:1767" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="124:160" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="161:318" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="319:382" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="684:1193" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="725:1193" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="968:1193" placeholder="..." />
-                <marker date="1466757547955" expanded="true" signature="1194:1688" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticker.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/ticker.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ticker.template.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/ticker.template.js">
+      <file leaf-file-name="box.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/components/graphs/box.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-              <folding>
-                <marker date="1466765589142" expanded="true" signature="22:51" placeholder="..." />
-                <marker date="1466765589142" expanded="true" signature="22:58" placeholder="..." />
-                <marker date="1466765589142" expanded="true" signature="51:52" placeholder="..." />
-                <marker date="1466765589142" expanded="true" signature="51:56" placeholder="..." />
-                <marker date="1466765589142" expanded="true" signature="51:57" placeholder="..." />
-                <marker date="1466765589142" expanded="true" signature="51:58" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticker.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/ticker.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.template.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/panel.template.js">
+      <file leaf-file-name="box.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/components/graphs/box.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
-              <folding>
-                <marker date="1466750902786" expanded="true" signature="42:135" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="42:136" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="77:135" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="107:127" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="193:196" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="193:347" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="239:282" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="239:341" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="313:333" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="403:520" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="449:514" placeholder="..." />
-                <marker date="1466750902786" expanded="true" signature="479:506" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/popup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/components/panel.js">
+      <file leaf-file-name="piechart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/components/graphs/piechart.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="6" selection-start-line="10" selection-start-column="3" selection-end-line="13" selection-end-column="6" />
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -161,8 +90,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2307692">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state vertical-scroll-proportion="-19.615385">
+              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -176,18 +105,14 @@
         <option value="HTML File" />
         <option value="Jade File" />
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/components/header.js.html" />
-        <option value="$PROJECT_DIR$/js/components/header.view.js" />
-        <option value="$PROJECT_DIR$/js/components/headerts.ts" />
-        <option value="$PROJECT_DIR$/js/components/navbar.handelbars" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/js/components/navbar.js" />
         <option value="$PROJECT_DIR$/css/bootstrap.theme.css" />
@@ -228,13 +153,17 @@
         <option value="$PROJECT_DIR$/js/components/listgroup.js" />
         <option value="$PROJECT_DIR$/js/components/panel.template.js" />
         <option value="$PROJECT_DIR$/js/components/panel.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/components/header.template.js" />
         <option value="$PROJECT_DIR$/js/components/ticker.js" />
         <option value="$PROJECT_DIR$/js/components/ticker.template.js" />
         <option value="$PROJECT_DIR$/js/components/header.js" />
         <option value="$PROJECT_DIR$/css/ticker.css" />
+        <option value="$PROJECT_DIR$/js/components/graphs/box.css" />
+        <option value="$PROJECT_DIR$/js/components/graphs/box.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/data/morley.csv" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/components/graphs/boxwhiskers.js" />
       </list>
     </option>
   </component>
@@ -317,66 +246,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CATSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -533,28 +402,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/components/popup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/popup.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/table.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -763,14 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/graphs/piechart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/components/graphs/legend.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -779,34 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/graph.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/piedata.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/graphs/piechart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024320457">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/graphs/bargraph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024320457">
-          <caret line="51" column="39" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -872,22 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/panel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="6" selection-start-line="10" selection-start-column="3" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2307692">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3729569">
@@ -925,18 +724,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/components/ticker.js">
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/bargraph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.6809728">
+          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/components/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.09728183">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/ticker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19456366">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -958,23 +765,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/ticker.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
+        <state vertical-scroll-proportion="0.075780086">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5593705">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/box.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/piechart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20208023">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/piechart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/box.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/morley.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19456366">
-          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <marker date="1466772304133" expanded="true" signature="3250:3579" placeholder="..." />
-            <marker date="1466772304133" expanded="true" signature="3250:3580" placeholder="..." />
-            <marker date="1466772304133" expanded="true" signature="3250:3581" placeholder="..." />
-            <marker date="1466772304133" expanded="true" signature="3322:3335" placeholder="..." />
-            <marker date="1466772304133" expanded="true" signature="3545:3578" placeholder="..." />
+            <marker date="1467010857701" expanded="true" signature="3360:3689" placeholder="..." />
+            <marker date="1467010857701" expanded="true" signature="3360:3690" placeholder="..." />
+            <marker date="1467010857701" expanded="true" signature="3360:3691" placeholder="..." />
+            <marker date="1467010857701" expanded="true" signature="3432:3445" placeholder="..." />
+            <marker date="1467010857701" expanded="true" signature="3655:3688" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/graphs/boxwhiskers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20298508">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

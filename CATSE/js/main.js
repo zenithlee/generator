@@ -28,6 +28,9 @@ var main = function(){
         var _Pie = new PieChart("main", "myGraph2");
         _Pie.show("./data/piedata.csv");
 
+        var _Box = new BoxWhiskers("main", "myBox");
+        _Box.show("Dynamic Data", "./data/morley.csv");
+
         //row
         $("#main").append("<div id='myRow' class='row show-grid'>");
 
