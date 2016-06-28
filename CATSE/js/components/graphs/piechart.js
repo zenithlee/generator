@@ -118,6 +118,26 @@ var PieChart = function(parentID, newID){
             }
         });
 
+        setInterval(function () {
+            var svg = d3.select("#"+self.id)
+                .transition();
+
+                svg.select("d")
+                .attr("d",22);
+
+        }, 2000)
+    };
+
+    self.randomize = function(d) {
+        if (!d.randomizer) d.randomizer = self.randomizer(10);
+        return d.map(d.randomizer);
+    };
+
+    self.randomizer = function(d) {
+        var k = d3.max(d) * .02;
+        return function(d) {
+            return Math.max(min, Math.min(max, d + k * (Math.random() - .5)));
+        };
     };
 
     function type(d) {

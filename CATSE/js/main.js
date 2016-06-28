@@ -32,24 +32,30 @@ var main = function(){
         _Box.show("Dynamic Data", "./data/morley.csv");
 
         //row
-        $("#main").append("<div id='myRow' class='row show-grid'>");
 
-        var _Panel = new Panel("myRow", "myPanel");
+
+        var _Panel = new Panel("main", "myPanel", 8);
         _Panel.show("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
 
-        var _List = new ListGroup("myRow","lg");
+        var _List = new ListGroup("main","lg");
         _List.show("myRow");
         _List.addItem("item1","This is a Title", "Some text to show in this lorem ipsum boxy", true);
         _List.addItem("item2","This is another Title", "Some more text to show in this lorem ipsum boxy");
         _List.addItem("item3","This is yet another Title", "Some yet more text to show in this lorem ipsum boxy");
 
         ///row
-        $("#main").append("</div>");
 
-        var _Panel2 = new Panel("myRow", "myPanel2");
+
+        $("#main").append("<div id='myRow' class='row show-grid'>");
+
+        var _Panel2 = new Panel("myRow", "myPanel2", 4);
         _Panel2.showWithHeading("<a name='about'></a> ABOUT The Title","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
-        var _Panel3 = new Panel("myRow", "myPanel3");
+        var _Panel3 = new Panel("myRow", "myPanel3", 4);
         _Panel3.showWithImage("./images/dust.png","Hello","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+        var _Panel4 = new Panel("myRow", "myPanel4", 4);
+        _Panel4.showWithImage("./images/sandstone.png","Hello","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+
+        $("#main").append("</div>");
 
         this.setup();
 
