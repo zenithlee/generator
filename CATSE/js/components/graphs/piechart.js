@@ -9,6 +9,7 @@ var PieChart = function(parentID, newID){
     self.html = '<div class="col-sm-4" id="{graphid}">Graph Title</div>';
     self.showLabels = false;
     self.showLegend = true;
+    self.svg = {};
 
     var width = 360,
         height = 200,
@@ -48,7 +49,7 @@ var PieChart = function(parentID, newID){
     };
 
     self.setupGraph = function(dataFilePath) {
-        var svg = d3.select("#"+self.id).append("svg")
+        self.svg = d3.select("#"+self.id).append("svg")
             .attr("width", width)
             .attr("height", height)
             .append("g")
@@ -57,7 +58,7 @@ var PieChart = function(parentID, newID){
         d3.csv(dataFilePath, self.type, function(error, data) {
             if (error) throw error;
 
-            var g = svg.selectAll(".arc")
+            var g = self.svg.selectAll(".arc")
                 .data(pie(data))
                 .enter().append("g")
                 .attr("class", "arc");
@@ -83,7 +84,7 @@ var PieChart = function(parentID, newID){
                 // create one row per segment.
                 //var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
 
-                var legend = svg.append("g")
+                var legend = self.svg.append("g")
                     .attr("class", "legend")
                     .attr("x",  65)
                     .attr("y", 25)
@@ -122,7 +123,7 @@ var PieChart = function(parentID, newID){
             var svg = d3.select("#"+self.id)
                 .transition();
 
-                svg.select("d")
+                var sel = svg.select("g")
                 .attr("d",22);
 
         }, 2000)

@@ -2,5 +2,8 @@ ManifestFileVersion: 0
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: _pages
+      Name: _main
+      Dependencies: {}
+    Info_1:
+      Name: uitest
       Dependencies: {}

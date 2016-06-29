@@ -5,27 +5,31 @@ using System;
 
 public class Browser : MonoBehaviour {
 
-  string URL;
-  string AssetName = "";
+  string URL = "http://localhost:63342/CATSE/bundles/_main";
+  string AssetName = "main";
 
   public InputField urlField;
+  public GameObject ContentHolder;
+  public Canvas mainCanvas;
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+    urlField.text = URL;
+  }
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
+  public void CleanCache()
+  {
+    Caching.CleanCache();
+  }
+
   public void GO()
   {
-    URL = urlField.text;
-    if ( URL == "~start")
-    {    
-    }
+    URL = urlField.text;    
     StartCoroutine(LoadCache());
   }
 
@@ -34,35 +38,29 @@ public class Browser : MonoBehaviour {
     while (!Caching.ready)
       yield return null;
 
-    var www = WWW.LoadFromCacheOrDownload("http://test.com/myassetBundle.unity3d", 1);
+    var www = WWW.LoadFromCacheOrDownload(URL, 1);
     yield return www;
     if (!string.IsNullOrEmpty(www.error))
     {
       Debug.Log(www.error);
       yield return null;
     }
-    var myLoadedAssetBundle = www.assetBundle;
-
-    var asset = myLoadedAssetBundle.mainAsset;
-  }
-
-  IEnumerator LoadPage()
-  {
-    using (WWW www = new WWW(URL))
+    AssetBundle bundle = www.assetBundle;
+    if (AssetName == "")
+      Instantiate(bundle.mainAsset);
+    else
     {
-      yield return www;
-      if (www.error != null)
-        throw new Exception("WWW download had an error:" + www.error);
-      AssetBundle bundle = www.assetBundle;
-      if (AssetName == "")
-        Instantiate(bundle.mainAsset);
-      else
-        Instantiate(bundle.LoadAsset(AssetName));
-      // Unload the AssetBundles compressed contents to conserve memory
-      bundle.Unload(false);
-  }
-}
-
-
-
+      GameObject[] g = bundle.LoadAllAssets<GameObject>();
+      foreach( GameObject go in g)
+      {
+        GameObject gi = Instantiate(go);
+        gi.transform.parent = ContentHolder.transform;
+        yield return new WaitForEndOfFrame();
+        go.transform.localPosition = Vector3.zero;
+        go.transform.localScale = Vector3.one;
+      }      
+    }
+    // Unload the AssetBundles compressed contents to conserve memory
+    bundle.Unload(false);
+  }  
 }

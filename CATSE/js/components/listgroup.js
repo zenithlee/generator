@@ -3,6 +3,7 @@ var ListGroup = function(parentID, newID) {
 
     self.GroupTemplate = '<div class="span4 col-md-offset-8 col-sm-offset-8"><div class="list-group" id="{groupid}"></div></div>';
     self.ItemTemplate = '<h4 class="list-group-item-heading">{title}</h4><p class="list-group-item-text">{text}</p>';
+    self.badge = '<span class="badge">{amt}</span>';
 
     self.myID = "";
     this.elements = [];
